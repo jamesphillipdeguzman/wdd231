@@ -1,3 +1,5 @@
+// Define courses object details here...
+
 const courses = [
     {
         subject: 'CSE',
@@ -93,3 +95,141 @@ year.innerHTML = `<span class="highlight">${todaysDate.getFullYear()}</span>`;
 
 const lastModified = document.querySelector('#lastModified');
 lastModified.innerHTML = `<span class="highlight">${formattedDateTime}</span>`;
+
+const allCourses = document.querySelector('#all');
+const cseOnly = document.querySelector('#cse');
+const wddOnly = document.querySelector('#wdd');
+
+
+
+
+
+// Populate the courses in Web and Computer Programming...
+function populateCourse() {
+
+    // All courses...
+
+    document.querySelector('#all').onclick = function () {
+
+
+        const myCourses = document.querySelector('.courses');
+
+
+        myCourses.innerHTML = '';
+
+
+
+        for (i = 0; i < courses.length; i++) {
+            const courseItemA = document.createElement('a');
+            const courseItem = document.createElement('li');
+            courseItem.style.listStyleType = 'none';
+            courseItem.style.backgroundColor = '#fff';
+            courseItem.style.padding = '10px 10px';
+            courseItem.style.color = '#000';
+
+            let status = '';
+
+            if (courses[i].completed === true) {
+                status = 'Complete';
+                courseItem.style.backgroundColor = 'green';
+            } else {
+                status = 'In Progress';
+                courseItem.style.backgroundColor = 'yellow';
+            }
+
+
+
+            courseItem.innerHTML = `${courses[i].subject} ${courses[i].number} - ${status} `;
+            myCourses.appendChild(courseItem);
+            courseItem.appendChild(courseItemA);
+        }
+
+    }
+
+
+
+    // All CSEs...
+
+    document.querySelector('#cse').onclick = function () {
+
+
+        const myCourses = document.querySelector('.courses');
+
+        myCourses.innerHTML = '';
+
+        for (i = 0; i < courses.length; i++) {
+            const courseItemA = document.createElement('a');
+            const courseItem = document.createElement('li');
+            courseItem.style.listStyleType = 'none';
+            courseItem.style.backgroundColor = '#fff';
+            courseItem.style.padding = '10px 10px';
+            courseItem.style.color = '#000';
+
+            let status = '';
+
+            if (courses[i].completed === true) {
+                status = 'Complete';
+                courseItem.style.backgroundColor = 'green';
+            } else {
+                status = 'In Progress';
+                courseItem.style.backgroundColor = 'yellow';
+            }
+
+            if (courses[i].subject === 'CSE') {
+                courseItem.innerHTML = `${courses[i].subject} ${courses[i].number} - ${status} `;
+                myCourses.appendChild(courseItem);
+                courseItem.appendChild(courseItemA);
+            }
+
+
+
+        }
+
+    }
+
+
+    // All WDDs...
+
+    document.querySelector('#wdd').onclick = function () {
+
+
+        const myCourses = document.querySelector('.courses');
+
+        myCourses.innerHTML = '';
+
+        for (i = 0; i < courses.length; i++) {
+            const courseItemA = document.createElement('a');
+            const courseItem = document.createElement('li');
+            courseItem.style.listStyleType = 'none';
+            courseItem.style.backgroundColor = '#fff';
+            courseItem.style.padding = '10px 10px';
+            courseItem.style.color = '#000';
+
+            let status = '';
+
+            if (courses[i].completed === true) {
+                status = 'Complete';
+                courseItem.style.backgroundColor = 'green';
+            } else {
+                status = 'In Progress';
+                courseItem.style.backgroundColor = 'yellow';
+            }
+
+            if (courses[i].subject === 'WDD') {
+                courseItem.innerHTML = `${courses[i].subject} ${courses[i].number} - ${status} `;
+                myCourses.appendChild(courseItem);
+                courseItem.appendChild(courseItemA);
+            }
+
+
+
+        }
+
+    }
+
+}
+
+// Call the function above...
+populateCourse();
+
+
