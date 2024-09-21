@@ -132,7 +132,7 @@ nav.top-navlinks ul li a:hover {
     flex-direction: row;
     flex-wrap: nowrap;
     justify-content: space-between;
-    margin: 100px;
+    margin: 65px;
     max-width: 100vw;
     padding: 0 100px;
     background-color: rgba(0, 0, 0, 0.1);
@@ -272,6 +272,12 @@ footer img {
         display: flex;
         flex-direction: column;
         align-items: center;
+
+    }
+
+    .student h1 {
+        text-align: center;
+        font-size: 1rem;
     }
 
     .student img {
@@ -298,9 +304,32 @@ footer img {
         margin: 10px 0;
     }
 
+    nav.top-navlinks ul li a {
+        font-size: 0.9rem;
+    }
+
+
     .container {
         display: flex;
         flex-direction: column;
+        flex: 0;
+        font-size: 0.8rem;
+        justify-content: flex-start;
+
+    }
+
+    .course-work,
+    .courses-taken,
+    .country {
+        max-width: 80vw;
+        flex-wrap: nowrap;
+        flex: auto;
+
+    }
+
+
+    footer {
+        font-size: 0.8rem;
     }
 
 }
