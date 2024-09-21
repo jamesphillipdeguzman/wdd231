@@ -31,6 +31,7 @@ body {
 .student img {
     margin-right: 2rem;
     border: 2px solid #764a4a;
+    height: auto;
 }
 
 header {
@@ -40,6 +41,15 @@ header {
     flex-direction: column;
     justify-content: center;
     max-width: 100%;
+
+}
+
+.active::after {
+
+    content: '📌';
+    display: block;
+    margin-top: -25px;
+    margin-left: -25px;
 
 }
 
@@ -65,12 +75,13 @@ nav.top-navlinks ul {
     margin-top: 10px;
     padding: 10px 0px;
 
+
 }
 
 nav.top-navlinks ul li {
     display: flex;
     align-content: center;
-    justify-content: space-evenly;
+    justify-content: space-around;
     padding: 0 50px;
     border: 1px solid #000;
     /* border: 1px solid #777; */
@@ -79,7 +90,8 @@ nav.top-navlinks ul li {
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
     background-color: #006eb6;
-    margin: 0 10px;
+    margin: 0 auto;
+
     flex: 1;
 }
 
@@ -87,20 +99,21 @@ nav.top-navlinks ul li {
 nav.top-navlinks ul li a {
 
     text-decoration: none;
-    color: white;
-    background-color: #006eb6;
+    color: #fff;
+    background-color: #931621ff;
     transition-timing-function: ease-in-out;
     transition-delay: 0.2s;
     transition: width 2s, height 2s, transform 2s;
-    margin: auto;
+    margin: 0 auto;
     padding: 0 50px;
     flex: 1;
+
 
 }
 
 nav.top-navlinks ul li:hover,
 nav.top-navlinks ul li a:hover {
-    background-color: #764a4a;
+    background-color: #931621ff;
     transition-timing-function: ease-in;
     transition-delay: 0.1s;
 
@@ -115,7 +128,7 @@ nav.top-navlinks ul li a:hover {
 .container {
     align-items: center;
     display: flex;
-    flex-direction: column;
+    flex-direction: row;
     flex-wrap: nowrap;
     height: auto;
     justify-content: space-around;
@@ -151,16 +164,17 @@ nav.top-navlinks ul li a:hover {
 
 }
 
-.course-work h2,
-.courses-taken h2,
-.country h2 {
-    background-color: #006eb6;
+.course-work h3,
+.courses-taken h3,
+.country h3 {
+    background-color: #28464bff;
     border-top-left-radius: 5px;
     border-top-right-radius: 5px;
     border-bottom-left-radius: 0%;
     border-bottom-right-radius: 0%;
     text-align: center;
     padding: 10px;
+    color: #fff;
 }
 
 
@@ -207,6 +221,19 @@ nav.course-navlinks ul li a {
 .country>img {
     align-content: center;
     margin: auto;
+    padding: 10px 10px;
+}
+
+
+#currentyear,
+#lastModified {
+    font-weight: 200;
+    color: #fff;
+}
+
+.highlight {
+    font-weight: 200;
+    color: #fff;
 }
 
 
@@ -214,8 +241,50 @@ nav.course-navlinks ul li a {
 
 footer {
 
-    background-color: #006eb6;
+    background-color: rgba(0, 0, 0, 1);
     text-align: center;
+    justify-content: center;
     color: #fff;
+
+
+}
+
+footer img {
+    height: auto;
+    margin-top: 15px;
+}
+
+/* ================= MOBILE VIEW ================= */
+
+@media (max-width: 950px) {
+
+    .student {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .student img {
+        margin: 0 auto;
+    }
+
+    nav.top-navlinks ul {
+        display: flex;
+        flex-direction: column;
+    }
+
+
+    nav.top-navlinks ul li {
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        margin: 10px 0;
+    }
+
+    .container {
+        display: flex;
+        flex-direction: column;
+    }
 
 }

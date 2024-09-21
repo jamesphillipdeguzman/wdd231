@@ -89,7 +89,7 @@ const formattedDateTime = formattedDate + " " + timeFormat;
 
 const year = document.querySelector('#currentyear');
 year.innerHTML = `<span class="highlight">${todaysDate.getFullYear()}</span>`;
-
+// year.innerHTML = `${todaysDate.getFullYear()}`
 
 const lastModified = document.querySelector('#lastModified');
 lastModified.innerHTML = `<span class="highlight">${formattedDateTime}</span>`;
