@@ -139,10 +139,12 @@ function populateCourse() {
 
 
 
-            courseItem.innerHTML = `${courses[i].subject} ${courses[i].number} - ${status} `;
+            courseItem.innerHTML = `${courses[i].subject} ${courses[i].number} - ${status} - ${courses[i].credits} credits`;
             myCourses.appendChild(courseItem);
             courseItem.appendChild(courseItemA);
         }
+
+
 
     }
 
@@ -176,7 +178,7 @@ function populateCourse() {
             }
 
             if (courses[i].subject === 'CSE') {
-                courseItem.innerHTML = `${courses[i].subject} ${courses[i].number} - ${status} `;
+                courseItem.innerHTML = `${courses[i].subject} ${courses[i].number} - ${status} - ${courses[i].credits} credits`;
                 myCourses.appendChild(courseItem);
                 courseItem.appendChild(courseItemA);
             }
@@ -216,7 +218,7 @@ function populateCourse() {
             }
 
             if (courses[i].subject === 'WDD') {
-                courseItem.innerHTML = `${courses[i].subject} ${courses[i].number} - ${status} `;
+                courseItem.innerHTML = `${courses[i].subject} ${courses[i].number} - ${status} - ${courses[i].credits} credits`;
                 myCourses.appendChild(courseItem);
                 courseItem.appendChild(courseItemA);
             }
