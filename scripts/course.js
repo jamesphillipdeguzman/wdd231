@@ -109,14 +109,13 @@ const wddOnly = document.querySelector('#wdd');
 
 
 
-
-
 // Populate the courses in Web and Computer Programming...
 function populateCourse() {
 
     // All courses...
 
-    document.querySelector('#all').onclick = function () {
+
+    document.querySelector('#all').addEventListener('click', () => {
 
 
         const myCourses = document.querySelector('.courses');
@@ -128,13 +127,15 @@ function populateCourse() {
         for (i = 0; i < courses.length; i++) {
 
             const courseItem = document.createElement('li');
+
             courseItem.style.listStyleType = 'none';
             courseItem.style.backgroundColor = '#fff';
-            courseItem.style.border = '1px solid #000';
+            courseItem.style.border = '1px solid #ccc';
             courseItem.style.padding = '10px';
             courseItem.style.margin = '10px';
             courseItem.style.color = '#000';
-
+            courseItem.style.borderRadius = '5px';
+            courseItem.style.boxShadow = '0px 0px 3px #888';
 
             let status = '';
 
@@ -149,26 +150,34 @@ function populateCourse() {
                 courseItem.style.backgroundColor = 'gray';
             }
 
-            // Accumuluator for course credits
+            // Accumulator for course credits
             courseCredits += courses[i].credits;
 
             let myCourselist = `${courses[i].subject} ${courses[i].number} - ${status} - ${courses[i].credits} credits`;
-            courseItem.innerHTML = myCourselist;
+            courseItem.innerHTML = `${myCourselist}`;
             myCourses.appendChild(courseItem);
 
         }
 
         // Show credit total here...
-        let courseCreditTotal = document.createTextNode(`Total Credits Required: ${courseCredits}`)
-        myCourses.appendChild(courseCreditTotal);
+        const myCourseCredits = document.createElement('li');
+        myCourseCredits.style.textAlign = 'center';
+        myCourseCredits.style.listStyleType = 'none';
+        myCourseCredits.style.backgroundColor = '#fff';
+        myCourseCredits.style.border = '1px solid #ccc';
+        myCourseCredits.style.padding = '10px';
+        myCourseCredits.style.margin = '10px';
+        myCourseCredits.style.color = '#000';
+        myCourseCredits.style.alignItems = 'center';
+        myCourseCredits.style.boxShadow = '0px 0px 3px #888';
+        myCourseCredits.innerHTML = `Total Credits Required: ${courseCredits}`;
+        myCourses.appendChild(myCourseCredits);
 
-    }
-
-
+    });
 
     // All CSEs...
 
-    document.querySelector('#cse').onclick = function () {
+    document.querySelector('#cse').addEventListener('click', () => {
 
 
         const myCourses = document.querySelector('.courses');
@@ -179,10 +188,12 @@ function populateCourse() {
 
             const courseItem = document.createElement('li');
             courseItem.style.listStyleType = 'none';
-            courseItem.style.border = '1px solid #000';
+            courseItem.style.border = '1px solid #ccc';
             courseItem.style.padding = '10px';
             courseItem.style.margin = '10px';
             courseItem.style.color = '#000';
+            courseItem.style.borderRadius = '5px';
+            courseItem.style.boxShadow = '0px 0px 3px #888';
 
             let status = '';
 
@@ -206,13 +217,12 @@ function populateCourse() {
 
 
         }
-
-    }
+    });
 
 
     // All WDDs...
 
-    document.querySelector('#wdd').onclick = function () {
+    document.querySelector('#wdd').addEventListener('click', () => {
 
 
         const myCourses = document.querySelector('.courses');
@@ -223,10 +233,12 @@ function populateCourse() {
 
             const courseItem = document.createElement('li');
             courseItem.style.listStyleType = 'none';
-            courseItem.style.border = '1px solid #000';
+            courseItem.style.border = '1px solid #ccc';
             courseItem.style.padding = '10px';
             courseItem.style.margin = '10px';
             courseItem.style.color = '#000';
+            courseItem.style.borderRadius = '5px';
+            courseItem.style.boxShadow = '0px 0px 3px #888';
 
             let status = '';
 
@@ -247,15 +259,12 @@ function populateCourse() {
 
             }
 
-
-
         }
 
-    }
+    });
+
 
 }
 
-// Call the function above...
+// Call function above...
 populateCourse();
-
-
