@@ -7,7 +7,7 @@ const courses = [
         title: 'Introduction to Programming',
         credits: 2,
         certificate: 'Web and Computer Programming',
-        description: 'This course will introduce students to programming. It will introduce the building blocks of programming languages (variables, decisions, calculations, loops, array, and input/output) and use them to solve problems.',
+        description: 'This course will introduce heros to programming. It will introduce the building blocks of programming languages (variables, decisions, calculations, loops, array, and input/output) and use them to solve problems.',
         technology: [
             'Python'
         ],
@@ -19,7 +19,7 @@ const courses = [
         title: 'Web Fundamentals',
         credits: 2,
         certificate: 'Web and Computer Programming',
-        description: 'This course introduces students to the World Wide Web and to careers in web site design and development. The course is hands on with students actually participating in simple web designs and programming. It is anticipated that students who complete this course will understand the fields of web design and development and will have a good idea if they want to pursue this degree as a major.',
+        description: 'This course introduces heros to the World Wide Web and to careers in web site design and development. The course is hands on with heros actually participating in simple web designs and programming. It is anticipated that heros who complete this course will understand the fields of web design and development and will have a good idea if they want to pursue this degree as a major.',
         technology: [
             'HTML',
             'CSS'
@@ -32,7 +32,7 @@ const courses = [
         title: 'Programming with Functions',
         credits: 2,
         certificate: 'Web and Computer Programming',
-        description: 'CSE 111 students become more organized, efficient, and powerful computer programmers by learning to research and call functions written by others; to write, call , debug, and test their own functions; and to handle errors within functions. CSE 111 students write programs with functions to solve problems in many disciplines, including business, physical science, human performance, and humanities.',
+        description: 'CSE 111 heros become more organized, efficient, and powerful computer programmers by learning to research and call functions written by others; to write, call , debug, and test their own functions; and to handle errors within functions. CSE 111 heros write programs with functions to solve problems in many disciplines, including business, physical science, human performance, and humanities.',
         technology: [
             'Python'
         ],
@@ -56,7 +56,7 @@ const courses = [
         title: 'Dynamic Web Fundamentals',
         credits: 2,
         certificate: 'Web and Computer Programming',
-        description: 'This course builds on prior experience in Web Fundamentals and programming. Students will learn to create dynamic websites that use JavaScript to respond to events, update content, and create responsive user experiences.',
+        description: 'This course builds on prior experience in Web Fundamentals and programming. heros will learn to create dynamic websites that use JavaScript to respond to events, update content, and create responsive user experiences.',
         technology: [
             'HTML',
             'CSS',
@@ -70,7 +70,7 @@ const courses = [
         title: 'Frontend Web Development I',
         credits: 2,
         certificate: 'Web and Computer Programming',
-        description: 'This course builds on prior experience with Dynamic Web Fundamentals and programming. Students will focus on user experience, accessibility, compliance, performance optimization, and basic API usage.',
+        description: 'This course builds on prior experience with Dynamic Web Fundamentals and programming. heros will focus on user experience, accessibility, compliance, performance optimization, and basic API usage.',
         technology: [
             'HTML',
             'CSS',
@@ -123,6 +123,7 @@ function populateCourse() {
         myCourses.innerHTML = '';
 
         let courseCredits = 0;
+        let courseCreditsCompleted = 0;
 
         for (i = 0; i < courses.length; i++) {
 
@@ -157,6 +158,14 @@ function populateCourse() {
             courseItem.innerHTML = `${myCourselist}`;
             myCourses.appendChild(courseItem);
 
+
+            if ((courses[i].subject === 'WDD' || courses[i].subject === 'CSE') && courses[i].completed === true) {
+                // Accumulator for course credits
+                courseCreditsCompleted += courses[i].credits;
+
+
+            }
+
         }
 
         // Show credit total here...
@@ -170,7 +179,7 @@ function populateCourse() {
         myCourseCredits.style.color = '#000';
         myCourseCredits.style.alignItems = 'center';
         myCourseCredits.style.boxShadow = '0px 0px 3px #888';
-        myCourseCredits.innerHTML = `Total Credits Required: ${courseCredits}`;
+        myCourseCredits.innerHTML = `Total Credits Completed: ${courseCreditsCompleted}/${courseCredits}`;
         myCourses.appendChild(myCourseCredits);
 
     });
@@ -184,6 +193,8 @@ function populateCourse() {
 
         myCourses.innerHTML = '';
 
+        let courseCredits = 0;
+
         for (i = 0; i < courses.length; i++) {
 
             const courseItem = document.createElement('li');
@@ -208,15 +219,33 @@ function populateCourse() {
                 courseItem.style.backgroundColor = 'gray';
             }
 
-            if (courses[i].subject === 'CSE') {
+
+            if (courses[i].subject === 'CSE' && courses[i].completed === true) {
+                // Accumulator for course credits
+                courseCredits += courses[i].credits;
                 courseItem.innerHTML = `${courses[i].subject} ${courses[i].number} - ${status} - ${courses[i].credits} credits`;
                 myCourses.appendChild(courseItem);
 
             }
 
 
-
         }
+
+        // Show credit total here...
+        const myCourseCredits = document.createElement('li');
+        myCourseCredits.style.textAlign = 'center';
+        myCourseCredits.style.listStyleType = 'none';
+        myCourseCredits.style.backgroundColor = '#fff';
+        myCourseCredits.style.border = '1px solid #ccc';
+        myCourseCredits.style.padding = '10px';
+        myCourseCredits.style.margin = '10px';
+        myCourseCredits.style.color = '#000';
+        myCourseCredits.style.alignItems = 'center';
+        myCourseCredits.style.boxShadow = '0px 0px 3px #888';
+        myCourseCredits.innerHTML = `Total Credits: ${courseCredits} credits`;
+        myCourses.appendChild(myCourseCredits);
+
+
     });
 
 
@@ -229,6 +258,8 @@ function populateCourse() {
 
         myCourses.innerHTML = '';
 
+        let courseCredits = 0;
+
         for (i = 0; i < courses.length; i++) {
 
             const courseItem = document.createElement('li');
@@ -253,13 +284,29 @@ function populateCourse() {
                 courseItem.style.backgroundColor = 'gray';
             }
 
-            if (courses[i].subject === 'WDD') {
+            if (courses[i].subject === 'WDD' && courses[i].completed === true) {
+                // Accumulator for course credits
+                courseCredits += courses[i].credits;
                 courseItem.innerHTML = `${courses[i].subject} ${courses[i].number} - ${status} - ${courses[i].credits} credits`;
                 myCourses.appendChild(courseItem);
 
             }
 
         }
+
+        // Show credit total here...
+        const myCourseCredits = document.createElement('li');
+        myCourseCredits.style.textAlign = 'center';
+        myCourseCredits.style.listStyleType = 'none';
+        myCourseCredits.style.backgroundColor = '#fff';
+        myCourseCredits.style.border = '1px solid #ccc';
+        myCourseCredits.style.padding = '10px';
+        myCourseCredits.style.margin = '10px';
+        myCourseCredits.style.color = '#000';
+        myCourseCredits.style.alignItems = 'center';
+        myCourseCredits.style.boxShadow = '0px 0px 3px #888';
+        myCourseCredits.innerHTML = `Total Credits: ${courseCredits} credits`;
+        myCourses.appendChild(myCourseCredits);
 
     });
 

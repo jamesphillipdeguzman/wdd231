@@ -20,7 +20,7 @@ body {
 
 /* ================= HEADER ================= */
 
-.student {
+.hero {
     display: flex;
     align-content: center;
     justify-content: center;
@@ -28,11 +28,18 @@ body {
 
 }
 
-.student img {
+.hero img {
     margin-right: 2rem;
+    margin-top: 10px;
     /* border: 2px solid #764a4a; */
     height: auto;
     box-shadow: 0px 0px 2px #888;
+}
+
+figcaption {
+    text-align: center;
+    font-size: 0.8em;
+    font-style: italic;
 }
 
 header {
@@ -96,7 +103,7 @@ nav.top-navlinks ul li {
     border-bottom-left-radius: 0px;
     border-bottom-right-radius: 0px;
     background-color: #006eb6;
-    margin: 0 auto;
+    margin: 10px;
 
     flex: 1;
 }
@@ -205,6 +212,7 @@ nav.course-navlinks ul li {
     padding: 2px 10px;
 
 
+
 }
 
 nav.course-navlinks ul li:hover {
@@ -212,17 +220,17 @@ nav.course-navlinks ul li:hover {
     color: #fff;
     transition-timing-function: ease-in;
     transition-delay: 0.1s;
-
+    font-weight: 600;
 
 }
 
 nav.course-navlinks ul li a {
-    text-decoration: none;
-    text-align: center;
-    background-color: #764a4a;
-    color: #fff;
+
+    color: #000;
     padding: 3px;
     margin: 0 auto;
+    text-decoration: none;
+    text-align: center;
 
 
 }
@@ -283,7 +291,7 @@ footer img {
         position: absolute;
         top: 2px;
         right: 15px;
-        color: firebrick;
+        color: #000;
         background: none;
         display: block;
 
@@ -308,42 +316,57 @@ footer img {
         /* display the menu when the hamburger icon is clicked */
     }
 
+    nav.top-navlinks ul li:hover,
+    nav.top-navlinks ul li a:hover {
+        background-color: #931621ff;
+        transition-timing-function: ease-in;
+        transition-delay: 0.1s;
+
+    }
+
+
     .active::after {
 
         content: '📌';
         display: block;
-        margin-top: -25px;
+        /* margin-top: -50px;
+        margin-left: -60px; */
+        margin: 0;
+        margin-top: -18px;
         margin-left: -60px;
 
     }
 
-    .student {
+    .hero {
         display: flex;
         flex-direction: column;
         align-items: center;
 
     }
 
-    .student h1 {
+    .hero h1 {
         text-align: center;
         font-size: 1.5rem;
         margin: 20px auto;
     }
 
-    .student img {
-        margin: 0 auto;
+    .hero img {
+
+        margin-top: 10px auto;
+
     }
 
     nav.top-navlinks {
         display: none;
         text-align: center;
 
+
     }
 
     nav.top-navlinks ul {
 
         flex-direction: column;
-        margin: 0 auto;
+        margin: 20px;
     }
 
 
@@ -352,11 +375,40 @@ footer img {
         border-top-right-radius: 0px;
         border-bottom-left-radius: 0px;
         border-bottom-right-radius: 0px;
-        margin: 10px 0;
+        margin: 10px;
+
+    }
+
+    nav.top-navlinks ul li {
+        display: flex;
+        align-content: center;
+        justify-content: space-around;
+        padding: 0 50px;
+        border: 1px solid #000;
+        /* border: 1px solid #777; */
+        border-top-left-radius: 0px;
+        border-top-right-radius: 15px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        background-color: #006eb6;
+        margin: 10px;
+
+        flex: 1;
+    }
+
+    nav.course-navlinks ul li:hover {
+        background-color: #764a4a;
+        color: #fff;
+        transition-timing-function: ease-in;
+        transition-delay: 0.1s;
+        font-weight: 600;
+
     }
 
     nav.top-navlinks ul li a {
         font-size: 0.9rem;
+        background-color: #006eb6;
+        margin: 10px;
     }
 
 
@@ -367,7 +419,7 @@ footer img {
         font-size: 0.8rem;
         justify-content: space-between;
         max-width: 100%;
-        margin: 0;
+        margin: 10px;
 
 
     }
