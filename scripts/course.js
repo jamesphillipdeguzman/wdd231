@@ -80,9 +80,16 @@ const courses = [
     }
 ];
 
+
+const hamburgerBtn = document.querySelector('#menu');
+const navigationBtn = document.querySelector('.top-navlinks');
+
+hamburgerBtn.addEventListener('click', () => {
+    hamburgerBtn.classList.toggle('open');
+    navigationBtn.classList.toggle('open');
+});
+
 // Get the year
-
-
 const todaysDate = new Date();
 const dateFormat = { year: 'numeric', month: 'short', day: 'numeric' };
 const timeFormat = todaysDate.toLocaleTimeString();
@@ -114,37 +121,46 @@ function populateCourse() {
 
         const myCourses = document.querySelector('.courses');
 
-
         myCourses.innerHTML = '';
 
-
+        let courseCredits = 0;
 
         for (i = 0; i < courses.length; i++) {
-            const courseItemA = document.createElement('a');
+
             const courseItem = document.createElement('li');
             courseItem.style.listStyleType = 'none';
             courseItem.style.backgroundColor = '#fff';
-            courseItem.style.padding = '10px 10px';
+            courseItem.style.border = '1px solid #000';
+            courseItem.style.padding = '10px';
+            courseItem.style.margin = '10px';
             courseItem.style.color = '#000';
+
 
             let status = '';
 
             if (courses[i].completed === true) {
                 status = 'Complete';
                 courseItem.style.backgroundColor = 'green';
-            } else {
+            } else if (courses[i].completed === false) {
                 status = 'In Progress';
                 courseItem.style.backgroundColor = 'yellow';
+            } else {
+                status = 'Not started';
+                courseItem.style.backgroundColor = 'gray';
             }
 
+            // Accumuluator for course credits
+            courseCredits += courses[i].credits;
 
-
-            courseItem.innerHTML = `${courses[i].subject} ${courses[i].number} - ${status} - ${courses[i].credits} credits`;
+            let myCourselist = `${courses[i].subject} ${courses[i].number} - ${status} - ${courses[i].credits} credits`;
+            courseItem.innerHTML = myCourselist;
             myCourses.appendChild(courseItem);
-            courseItem.appendChild(courseItemA);
+
         }
 
-
+        // Show credit total here...
+        let courseCreditTotal = document.createTextNode(`Total Credits Required: ${courseCredits}`)
+        myCourses.appendChild(courseCreditTotal);
 
     }
 
@@ -160,11 +176,12 @@ function populateCourse() {
         myCourses.innerHTML = '';
 
         for (i = 0; i < courses.length; i++) {
-            const courseItemA = document.createElement('a');
+
             const courseItem = document.createElement('li');
             courseItem.style.listStyleType = 'none';
-            courseItem.style.backgroundColor = '#fff';
-            courseItem.style.padding = '10px 10px';
+            courseItem.style.border = '1px solid #000';
+            courseItem.style.padding = '10px';
+            courseItem.style.margin = '10px';
             courseItem.style.color = '#000';
 
             let status = '';
@@ -172,15 +189,18 @@ function populateCourse() {
             if (courses[i].completed === true) {
                 status = 'Complete';
                 courseItem.style.backgroundColor = 'green';
-            } else {
+            } else if (courses[i].completed === false) {
                 status = 'In Progress';
                 courseItem.style.backgroundColor = 'yellow';
+            } else {
+                status = 'Not started';
+                courseItem.style.backgroundColor = 'gray';
             }
 
             if (courses[i].subject === 'CSE') {
                 courseItem.innerHTML = `${courses[i].subject} ${courses[i].number} - ${status} - ${courses[i].credits} credits`;
                 myCourses.appendChild(courseItem);
-                courseItem.appendChild(courseItemA);
+
             }
 
 
@@ -200,11 +220,12 @@ function populateCourse() {
         myCourses.innerHTML = '';
 
         for (i = 0; i < courses.length; i++) {
-            const courseItemA = document.createElement('a');
+
             const courseItem = document.createElement('li');
             courseItem.style.listStyleType = 'none';
-            courseItem.style.backgroundColor = '#fff';
-            courseItem.style.padding = '10px 10px';
+            courseItem.style.border = '1px solid #000';
+            courseItem.style.padding = '10px';
+            courseItem.style.margin = '10px';
             courseItem.style.color = '#000';
 
             let status = '';
@@ -212,15 +233,18 @@ function populateCourse() {
             if (courses[i].completed === true) {
                 status = 'Complete';
                 courseItem.style.backgroundColor = 'green';
-            } else {
+            } else if (courses[i].completed === false) {
                 status = 'In Progress';
                 courseItem.style.backgroundColor = 'yellow';
+            } else {
+                status = 'Not started';
+                courseItem.style.backgroundColor = 'gray';
             }
 
             if (courses[i].subject === 'WDD') {
                 courseItem.innerHTML = `${courses[i].subject} ${courses[i].number} - ${status} - ${courses[i].credits} credits`;
                 myCourses.appendChild(courseItem);
-                courseItem.appendChild(courseItemA);
+
             }
 
 
