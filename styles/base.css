@@ -78,6 +78,7 @@ nav.top-navlinks {
 }
 
 #menu {
+    /* hide the hamburger button in wide-screen view */
     display: none;
 }
 
@@ -302,20 +303,21 @@ footer img {
 
     #menu::before {
         content: "☰";
-        /*hamburger menu icon */
+        /* When menu is closed, display the hamburger icon */
 
     }
 
     #menu.open::before {
         content: "X";
-        /*click to go back*/
+        /* When menus is opened, display the 'X' button to close the menu */
 
     }
 
 
     .top-navlinks.open {
-        display: flex;
-        /* display the menu when the hamburger icon is clicked */
+        display: block;
+        /* display the menu when the hamburger icon is clicked; 
+        display block only activates when top-navlinks have the open class*/
     }
 
     nav.top-navlinks ul li:hover,
@@ -330,6 +332,7 @@ footer img {
     .active::after {
 
         content: '📌';
+        /* wayfinder: marks home tab as active */
         display: block;
         /* margin-top: -50px;
         margin-left: -60px; */
@@ -359,7 +362,9 @@ footer img {
     }
 
     nav.top-navlinks {
+
         display: none;
+        /* hide the menu by default in mobile view */
         text-align: center;
 
 
