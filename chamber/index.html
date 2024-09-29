@@ -1,98 +1,113 @@
-<!doctype html>
-<html lang="en-US">
+<!DOCTYPE html>
+<html lang="en">
 
 <head>
-    <title>James De Guzman's Course Page</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="WDD231 | James Phillip De Guzman | Web and Computer Programming">
-    <meta name="author"
-        content="James Phillip De Guzman is a BYU-Idaho hero pursuing his first certificate, Web and Computer Programming">
-    <meta property="og:title" content="James De Guzman's Course Page">
-    <meta property="og:description" content="WDD231 | James Phillip De Guzman | Web and Frontend Development I">
-    <meta property="og:image" content="https://jamesdeguzman.com/images/project-images/portfolio-7.webp">
-    <meta property="og:url" content="https://jamesphillipdeguzman.github.io/wdd231/index.html">
-    <meta property="og:type" content="website">
-    <meta property="og:site-name" content="https://jamesdeguzman.com/">
-
-
+    <title>Iloilo Chamber of Commerce</title>
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="styles/base.css">
-    <link rel="stylesheet" href="styles/normalize.css">
-    <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <script src="scripts/course.js" defer></script>
+    <meta name="description"
+        content="Iloilo Chamber of Commerce | WDD 231 | Web Frontend Development I | James Phillip De Guzman">
+    <meta name="author" content="James Phillip K. De Guzman">
+    <meta property="og:type" content="website">
+    <meta property="og:title" content="Iloilo Chamber of Commerce">
+    <meta property="og:description" content="Iloilo Chamber of Commerce home page">
+    <meta property="og:image" content="https://jamesphillipdeguzman.github.io/wdd231/chamber/images/hero.jpg">
+    <meta property="og:image:alt" content="Dinagyang: Hero image of Iloilo Chamber of Commerce">
+    <meta property="og:image:width" content="1200">
+    <meta property="og:image:height" content="630">
+    <meta property="og:url" content="https://jamesphillipdeguzman.github.io/wdd231/chamber/">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
 
+    <link rel="shortcut icon" href="images/favicon/favicon.ico" type="image/x-icon">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/chamber.css">
+    <script src="scripts/chamber.js" defer></script>
 </head>
 
 <body>
     <header>
-        <div class="hero">
 
-            <picture>
-                <source srcset="images/james-close-up.webp" media="(max-width: 950px)">
-                <img src="images/james.webp" alt="A solo picture of James De Guzman wearing a WNS jacket and BYU shirt"
-                    height="100" width="100">
-            </picture>
-
-
-            <h1>James De Guzman's Course Page</h1>
-            <button id="menu" aria-label="menu"></button>
-
-        </div>
-        <nav class="top-navlinks">
-            <ul>
-                <li><a href="index.html" id="home" class="active">Home</a></li>
-                <li><a href="#" id="chamber">Chamber</a></li>
-                <li><a href="https://github.com/jamesphillipdeguzman/wdd231" id="github-profile">GitHub</a></li>
-                <li><a href="https://www.linkedin.com/in/jamesphillipdeguzman/" id="linkedin">LinkedIn</a></li>
-            </ul>
-        </nav>
-    </header>
-    <main class="container">
-        <section class="course-work">
-            <h3>Course Work - WDD 231</h3>
-            <ul>
-                <li>Week 1: Course Home Page</li>
-                <li>Week 2: Chamber Course Directory Page</li>
-                <li>Week 3: Chamber Home Page</li>
-            </ul>
-
-        </section>
-
-
-
-        <section class="courses-taken">
-            <h3>Web and Computer Programming Certificate</h3>
-            <nav class="course-navlinks">
+        <div class="nav-links-wrapper">
+            <!-- <nav class="navlinks1">
                 <ul>
-                    <li><a href="#" id="all">All</a></li>
-                    <li><a href="#" id="cse">CSE</a></li>
-                    <li><a href="#" id="wdd">WDD</a></li>
+                    <li><a href="https://jamesdeguzman.com/">James</a></li>
+                    <li><a href="#">About</a></li>
+
+                </ul>
+            </nav> -->
+            <img class="icc" src="images/favicon/android-chrome-192x192.png" alt="ICC: Iloilo Chamber of Commerce"
+                width="35" height="35">
+            <nav class="navlinks2">
+
+                <ul>
+                    <li><a href="https://jamesphillipdeguzman.github.io/wdd231">Home</a></li>
+                    <li><a href="https://jamesphillipdeguzman.github.io/wdd231/chamber/directory.html">Directory</a>
+                    </li>
+                    <li><a href="#">Join</a></li>
+                    <li><a href="#">Discover</a></li>
                 </ul>
             </nav>
-            <span class="courses"></span>
 
 
-        </section>
+        </div>
 
-        <section class="country">
-            <h3>Iloilo, Philippines</h3>
-            <figure>
-                <a href="https://en.wikipedia.org/wiki/Iloilo_City" target="_blank">
-                    <img src="images/iloilo-business-park.webp"
-                        alt="iloilo business park festive walk top view with clock tower mandurriao iloilo city 10 22 2022"
-                        height="100" width="150">
-                </a>
-                <figcaption>Iloilo Business Park</figcaption>
-            </figure>
-        </section>
+        <h1>Iloilo Chamber of Commerce</h1>
+        <img src="images/hero2.jpg" width="1200" height="300" alt="Dinagyang: Hero image of Iloilo Chamber of Commerce">
+    </header>
+    <div class="container">
 
-    </main>
+        <aside class="left-sidebar">
+            <h2>Left Sidebar</h2>
+            <ul>
+                <li><a href="#">Link 1</a></li>
+                <li><a href="#">Link 2</a></li>
+                <li><a href="#">Link 3</a></li>
+            </ul>
+        </aside>
+        <main>
+            <h2>This is a holy grail using flex layout</h2>
+            <p>This is the main content area. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla,
+                neque eget dictum tincidunt, leo justo faucibus arcu, sed efficitur nulla ligula ut turpis. Donec nec
+                bibendum nunc, eu facilisis nisi. Fusce sed sem vel risus eleifend rhoncus. Nulla facilisi. Phasellus
+                vel felis non nisi malesuada lacinia at et eros.</p>
+            <p>This is the main content area. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla,
+                neque eget dictum tincidunt, leo justo faucibus arcu, sed efficitur nulla ligula ut turpis. Donec nec
+                bibendum nunc, eu facilisis nisi. Fusce sed sem vel risus eleifend rhoncus. Nulla facilisi. Phasellus
+                vel felis non nisi malesuada lacinia at et eros.</p>
+            <p>This is the main content area. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla,
+                neque eget dictum tincidunt, leo justo faucibus arcu, sed efficitur nulla ligula ut turpis. Donec nec
+                bibendum nunc, eu facilisis nisi. Fusce sed sem vel risus eleifend rhoncus. Nulla facilisi. Phasellus
+                vel felis non nisi malesuada lacinia at et eros.</p>
+            <p>This is the main content area. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla,
+                neque eget dictum tincidunt, leo justo faucibus arcu, sed efficitur nulla ligula ut turpis. Donec nec
+                bibendum nunc, eu facilisis nisi. Fusce sed sem vel risus eleifend rhoncus. Nulla facilisi. Phasellus
+                vel felis non nisi malesuada lacinia at et eros.</p>
+            <p>This is the main content area. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla,
+                neque eget dictum tincidunt, leo justo faucibus arcu, sed efficitur nulla ligula ut turpis. Donec nec
+                bibendum nunc, eu facilisis nisi. Fusce sed sem vel risus eleifend rhoncus. Nulla facilisi. Phasellus
+                vel felis non nisi malesuada lacinia at et eros.</p>
 
+
+        </main>
+        <aside class="right-sidebar">
+            <h2>Right Sidebar</h2>
+            <ul>
+                <li><a href="#">Link 4</a></li>
+                <li><a href="#">Link 5</a></li>
+                <li><a href="#">Link 6</a></li>
+            </ul>
+        </aside>
+    </div>
     <footer class="bottom-details">
         <p>&copy;<span id="currentyear"></span> 🎻 James Phillip De Guzman 🎻 Iloilo, Philippines <img
                 src="images/philippines.png" alt="Philippine country small footer icon" width="30"> </p>
