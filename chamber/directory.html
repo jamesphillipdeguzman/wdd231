@@ -51,7 +51,8 @@
 
                 <ul>
                     <li><a href="https://jamesphillipdeguzman.github.io/wdd231">Home</a></li>
-                    <li><a href="https://jamesphillipdeguzman.github.io/wdd231/chamber/directory.html">Directory</a>
+                    <li><a class="active"
+                            src="https://jamesphillipdeguzman.github.io/wdd231/chamber/directory.html">Directory</a>
                     </li>
                     <li><a href="#">Join</a></li>
                     <li><a href="#">Discover</a></li>
@@ -61,8 +62,9 @@
 
         </div>
 
-        <h1>Iloilo Chamber of Commerce</h1>
-        <img src="images/hero2.jpg" width="1200" height="300" alt="Dinagyang: Hero image of Iloilo Chamber of Commerce">
+
+        <img src="images/hero2.jpg" width="1200" height="300" alt="Seaside: Hero image of Iloilo Chamber of Commerce">
+
     </header>
     <div class="container">
 
@@ -75,43 +77,35 @@
             </ul>
         </aside>
         <main>
-            <h2>This is a holy grail using flex layout</h2>
-            <p>This is the main content area. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla,
-                neque eget dictum tincidunt, leo justo faucibus arcu, sed efficitur nulla ligula ut turpis. Donec nec
-                bibendum nunc, eu facilisis nisi. Fusce sed sem vel risus eleifend rhoncus. Nulla facilisi. Phasellus
-                vel felis non nisi malesuada lacinia at et eros.</p>
-            <p>This is the main content area. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla,
-                neque eget dictum tincidunt, leo justo faucibus arcu, sed efficitur nulla ligula ut turpis. Donec nec
-                bibendum nunc, eu facilisis nisi. Fusce sed sem vel risus eleifend rhoncus. Nulla facilisi. Phasellus
-                vel felis non nisi malesuada lacinia at et eros.</p>
-            <p>This is the main content area. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla,
-                neque eget dictum tincidunt, leo justo faucibus arcu, sed efficitur nulla ligula ut turpis. Donec nec
-                bibendum nunc, eu facilisis nisi. Fusce sed sem vel risus eleifend rhoncus. Nulla facilisi. Phasellus
-                vel felis non nisi malesuada lacinia at et eros.</p>
-            <p>This is the main content area. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla,
-                neque eget dictum tincidunt, leo justo faucibus arcu, sed efficitur nulla ligula ut turpis. Donec nec
-                bibendum nunc, eu facilisis nisi. Fusce sed sem vel risus eleifend rhoncus. Nulla facilisi. Phasellus
-                vel felis non nisi malesuada lacinia at et eros.</p>
-            <p>This is the main content area. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed fringilla,
-                neque eget dictum tincidunt, leo justo faucibus arcu, sed efficitur nulla ligula ut turpis. Donec nec
-                bibendum nunc, eu facilisis nisi. Fusce sed sem vel risus eleifend rhoncus. Nulla facilisi. Phasellus
-                vel felis non nisi malesuada lacinia at et eros.</p>
+            <h1>Iloilo Chamber of Commerce</h1>
+            <div class="search">
+                <h3>Search</h3> <input type="text" id="business-name" name="business-name"
+                    placeholder="Enter a business name">
+            </div>
+            <div class="layout">
+                <button onclick="fetchMembers()" id="grid">⏹️Grid</button><br>
+                <button id="list">📄List</button><br>
+            </div>
+
+            <div id="businesses"></div>
 
 
         </main>
-        <aside class="right-sidebar">
-            <h2>Right Sidebar</h2>
-            <ul>
-                <li><a href="#">Link 4</a></li>
-                <li><a href="#">Link 5</a></li>
-                <li><a href="#">Link 6</a></li>
-            </ul>
-        </aside>
+
     </div>
     <footer class="bottom-details">
-        <p>&copy;<span id="currentyear"></span> 🎻 James Phillip De Guzman 🎻 Iloilo, Philippines <img
-                src="images/philippines.png" alt="Philippine country small footer icon" width="30"> </p>
-        <p>Last Update: <span id="lastModified"></span></p>
+        <div class="left-footer">
+            <p>&copy;<span id="currentyear"></span> 🎻 James Phillip De Guzman 🎻 </p>
+            <p> Iloilo, Philippines <img src="images/philippines.png" alt="Philippine country small footer icon"
+                    width="30"> </p>
+            <p>Last Update: <span id="lastModified"></span></p>
+            <p>
+        </div>
+        <div class="horizontal"></div>
+        <div class="right-footer">
+            <li><a href="https://byui-cse.github.io/wdd231-ww-course/week01/chamber-site-plan.html">Site Plan</a>
+                </p>
+        </div>
     </footer>
 </body>
 
