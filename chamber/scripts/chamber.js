@@ -218,6 +218,7 @@ async function fetchMembersList() {
 
             const img = document.createElement('img');
             img.id = 'business-img';
+            img.loading = 'lazy';
 
             const ul = document.createElement('ul');
             ul.id = 'business-ul';

@@ -380,12 +380,11 @@ footer {
 }
 
 footer.bottom-details {
-    background-color: var(--accent2-color);
+    background-color: RGBA(0, 0, 0, 0.9);
     color: #fff;
     font-family: var(--default-font);
     font-size: small;
     margin-top: auto;
-
     padding: 20px;
     width: 100%;
     height: auto;
