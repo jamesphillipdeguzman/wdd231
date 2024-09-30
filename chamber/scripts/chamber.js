@@ -1,10 +1,10 @@
-// const hamburgerBtn = document.querySelector('#menu');
-// const navigationBtn = document.querySelector('.top-navlinks');
+const hamburgerBtn = document.querySelector('#menu');
+const navigationBtn = document.querySelector('.navlinks2');
 
-// hamburgerBtn.addEventListener('click', () => {
-//     hamburgerBtn.classList.toggle('open');
-//     navigationBtn.classList.toggle('open');
-// });
+hamburgerBtn.addEventListener('click', () => {
+    hamburgerBtn.classList.toggle('open');
+    navigationBtn.classList.toggle('open');
+});
 
 // Get the year
 const todaysDate = new Date();
@@ -20,9 +20,26 @@ year.innerHTML = `<span class="highlight">${todaysDate.getFullYear()}</span>`;
 const lastModified = document.querySelector('#lastModified');
 lastModified.innerHTML = `<span class="highlight">${formattedDateTime}</span>`;
 
+const grid = document.querySelector('#grid');
+grid.addEventListener('click', () => {
+    if (grid) {
+        fetchMembersGrid();
+    }
 
 
-async function fetchMembers() {
+});
+
+const list = document.querySelector('#list');
+list.addEventListener('click', () => {
+    if (list) {
+        fetchMembersList();
+    }
+
+
+});
+
+
+async function fetchMembersGrid() {
 
     try {
 
@@ -31,74 +48,90 @@ async function fetchMembers() {
         // const response = await fetch(`data/members.json/${businessName}`);
         // console.log(businessName);
 
-        const response = await fetch('data/members.json');
+        const response = await fetch('data/members.json'); // fetch the json file from a relative path
         // const response = await fetch(`data/members.json/${businessName}`);
 
-        if (!response.ok) {
+        if (!response.ok) { // Check if no response 
             throw new Error('Could not fetch resource');
         }
 
-        const data = await response.json();
+        const data = await response.json();  // await for Promise to resolve or be rejected and parse the result as json object
         // console.log(JSON.stringify(data));
-        console.log(data);
+        console.log(data); // log result to console
 
-        const businesses = document.getElementById('businesses');
+        const businesses = document.getElementById('businesses'); // target the businesses div by id
 
-        console.log(data.length);
+        console.log(data.length); // get the length of the data
 
+        businesses.innerHTML = ''; // reset display; avoid duplicating the card display.
 
-
+        // iterate through each business item from your parsed json data...
         data.forEach(business => {
 
-            const container = document.createElement('div');
-            container.style.display = 'grid';
-            container.style.gridTemplateColumns = 'repeat(3, 2fr)';
+            businesses.style.display = 'grid';
+            businesses.style.gridTemplateColumns = 'repeat(auto-fill, minmax(250px, 1fr))';
+            businesses.style.gap = '5px';
+            businesses.style.alignItems = 'center';
+            businesses.style.alignContent = 'center';
+            businesses.style.justifyContent = 'center';
+            businesses.style.fontFamily = 'Gowun Batang';
+            businesses.style.width = '80vw';
+            businesses.style.padding = '5px 5px';
+
+
+            const container = document.createElement('div'); // create a div 
+            container.className = 'container';
+            container.style.display = 'flex';
+            container.style.flexDirection = 'column';
+            container.style.alignContent = 'center';
+            container.style.alignItems = 'left';
+            container.style.maxWidth = '100vw';
             container.style.listStyleType = 'none';
             container.style.backgroundColor = '#fff';
             container.style.border = '1px solid #ccc';
-            container.style.padding = '10px';
-            container.style.margin = '10px';
+            container.style.paddingRight = '0';
+            container.style.margin = '0 10px';
             container.style.color = '#000';
             container.style.borderRadius = '5px';
             container.style.boxShadow = '0px 0px 3px #888';
+            container.style.height = '400px';
+
+
+
+            const subcontainer = document.createElement('div');
+            // subcontainer.style.display = 'flex';
+            subcontainer.className = 'subcontainer';
+            // subcontainer.style.flexDirection = 'column';
+
+
+            const p = document.createElement('p');
+            p.className = 'business-labels';
+            // p.style.fontWeight = '300px';
+            // p.style.marginBottom = '30px';
+            // p.style.paddingBottom = '20px';
 
             const img = document.createElement('img');
-            img.className = 'business-img';
+            img.id = 'business-img';
+            // img.style.paddingTop = '50px';
+
+
             // businessImg.style.display = ''
 
 
 
-            container.innerHTML = `Name: ${business.name}  
-                                    Address: ${business.address} 
-                                    Phone: ${business.contact}
-                                    <img src=${business.image}>`;
+            container.innerHTML = `<img id='business-img' src=${business.image} width='150px' height='auto'>
+                                    <span class='business-labels'> Name: </span> <p>${business.name}</p>  
+                                    <span class='business-labels'> Address: </span> <p> ${business.address}</p>
+                                    <span class='business-labels'> Phone: </span> <p>${business.contact}</p>`;
 
+            subcontainer.appendChild(p);
+            subcontainer.appendChild(img);
+            subcontainer.appendChild(container);
             businesses.appendChild(container);
-            businesses.appendChild(img);
+
 
 
         });
-
-
-
-        // for (i = 1; i <= data.length - 1; i++) {
-
-        //     const businessItem = document.createElement('li');
-        //     businesses.style.listStyleType = 'none';
-        //     businesses.style.backgroundColor = '#fff';
-        //     businesses.style.border = '1px solid #ccc';
-        //     businesses.style.padding = '10px';
-        //     businesses.style.margin = '10px';
-        //     businesses.style.color = '#000';
-        //     businesses.style.borderRadius = '5px';
-        //     businesses.style.boxShadow = '0px 0px 3px #888';
-
-
-        //     businesses.innerHTML = JSON.stringify(data[i].name);
-
-        //     businesses.appendChild(businessItem);
-        // }
-        // return data;
 
 
     }
@@ -109,10 +142,111 @@ async function fetchMembers() {
 
 
 
+};
+
+
+async function fetchMembersList() {
+
+    try {
+
+        // const businessName = document.querySelector('#business-name').value.toLowerCase();
+
+        // const response = await fetch(`data/members.json/${businessName}`);
+        // console.log(businessName);
+
+        const response = await fetch('data/members.json'); // fetch the json file from a relative path
+        // const response = await fetch(`data/members.json/${businessName}`);
+
+        if (!response.ok) { // Check if no response 
+            throw new Error('Could not fetch resource');
+        }
+
+        const data = await response.json();  // await for Promise to resolve or be rejected and parse the result as json object
+        // console.log(JSON.stringify(data));
+        console.log(data); // log result to console
+
+        const businesses = document.getElementById('businesses'); // target the businesses div by id
+
+        console.log(data.length); // get the length of the data
+
+        businesses.innerHTML = ''; // reset display; avoid duplicating the card display.
+
+        // iterate through each business item from your parsed json data...
+        data.forEach(business => {
+
+            businesses.style.display = 'flex';
+            businesses.style.flexDirection = 'column';
+            businesses.style.gap = '5px';
+            // businesses.style.alignItems = 'center';
+            // businesses.style.alignContent = 'center';
+            businesses.style.justifyContent = 'center';
+            businesses.style.fontFamily = 'Gowun Batang';
+
+            const container = document.createElement('div'); // create a div 
+            container.className = 'container';
+            container.style.display = 'flex';
+            container.style.flexDirection = 'row';
+            container.style.alignContent = 'left';
+            container.style.alignItems = 'left';
+            container.style.maxWidth = '90vw';
+            container.style.listStyleType = 'none';
+            container.style.backgroundColor = '#fff';
+            container.style.border = '1px solid #ccc';
+            container.style.padding = '1px';
+            container.style.margin = '1px';
+            container.style.color = '#000';
+            // container.style.borderRadius = '5px';
+            container.style.boxShadow = '0px 0px 3px #888';
+            container.style.height = '400px';
+            container.style.maxWidth = '60vw';
+            container.style.fontSize = 'small';
+
+
+            const subcontainer = document.createElement('div');
+            // subcontainer.style.display = 'flex';
+            subcontainer.className = 'subcontainer';
+            // subcontainer.style.flexDirection = 'column';
+
+
+            const p = document.createElement('p');
+            p.className = 'business-labels';
+            // p.style.fontWeight = '300px';
+            // p.style.marginBottom = '30px';
+            // p.style.paddingBottom = '20px';
+
+            const img = document.createElement('img');
+            img.id = 'business-img';
+            // img.style.paddingTop = '50px';
+
+
+            // businessImg.style.display = ''
+
+
+
+            container.innerHTML = ` <span class='business-labels'> Name: </span> <p>${business.name}</p>  
+                                    <span class='business-labels'> Address: </span> <p> ${business.address}</p>
+                                    <span class='business-labels'> Phone: </span> <p>${business.contact}</p>`;
+
+            subcontainer.appendChild(p);
+            subcontainer.appendChild(img);
+            subcontainer.appendChild(container);
+            businesses.appendChild(container);
+
+
+
+        });
+
+
+    }
+
+    catch (error) {
+        console.error(error);
+    }
 
 
 
 }
 
-fetchMembers();
+
+
 

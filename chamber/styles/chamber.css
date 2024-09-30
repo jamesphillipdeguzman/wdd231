@@ -7,6 +7,7 @@
     --secondary-color: #1EA896;
     --accent1-color: #4C5454;
     --accent2-color: #523F38;
+    --highlight: yellow;
     --base-color: #FFFFFF;
     --divider-color: RGBA(0, 0, 0, 0.1);
 
@@ -29,9 +30,11 @@ html {
     display: flex;
     flex-direction: column;
     font-family: var(--primary-font);
-    height: 100%;
+    height: auto;
+    max-width: 100%;
     margin: 0;
     padding: 0;
+    width: 100%;
 
 }
 
@@ -40,12 +43,14 @@ html {
 
 h1 {
     font-family: var(--heading-font);
+    font-weight: 300;
     text-align: center;
-    color: black;
+    color: var(--accent1-color);
 }
 
 h2 {
-    border: 2px solid #ccc;
+    /* border: 2px solid #ccc; */
+    color: var(--highlight);
     font-family: var(--heading-font);
     margin: 20px;
     text-align: center;
@@ -60,6 +65,7 @@ header {
 
 
     color: #fff;
+    margin: 0;
     padding: 0;
     width: 100%;
 }
@@ -79,12 +85,15 @@ p {
     width: 100%;
     max-width: 100%;
     margin: 0 auto;
+    padding: 0;
 
 }
 
 
 /* ================= NAVIGATION ================= */
-
+#menu {
+    display: none;
+}
 
 div.nav-links-wrapper {
     align-content: center;
@@ -95,8 +104,17 @@ div.nav-links-wrapper {
     padding: 0;
     position: fixed;
     text-align: center;
+    max-width: 100vw;
     width: 100%;
 
+}
+
+div.nav-links-wrapper a {
+    font-size: 1rem;
+}
+
+div.nav-links-wrapper img {
+    margin-top: 3px;
 }
 
 .active::after {
@@ -151,9 +169,17 @@ a {
 .navlinks2 li:hover {
     background-color: var(--primary-color);
     /* Change background color on hover */
-    transition: background-color 0.3s ease;
+    transition: background-color 0.3s ease-in;
 }
 
+/* ================= HERO IMAGE ================= */
+div.hero img {
+
+    padding: 0;
+    /* margin: 0 auto; */
+    max-width: 100%;
+    margin-bottom: -4px;
+}
 
 
 /* ================= MAIN ================= */
@@ -164,32 +190,114 @@ main {
     /* flex: 1; */
     background-color: var(--base-color);
     padding: 0;
+    margin: 10px auto;
+    max-width: 100vw;
+    width: 100%;
 }
 
 main>p {
     /* flex: 1; */
     padding: 20px;
+    margin: 20px;
 }
 
+div.container {
+    margin: 0 auto;
+    padding: 10px;
+    max-width: 100vw;
+
+}
+
+div#businesses {
+    align-items: center;
+    align-content: center;
+    justify-content: center;
+    max-width: 100%;
+    max-width: 100vw;
+    padding: 0;
+    margin: 0 auto;
+    width: 100%;
+}
+
+div#businesses p {
+    align-items: center;
+    font-size: 0.7rem;
+    max-width: 100vw;
+    margin-top: 12px;
+    margin-left: 5px;
+    padding: 0;
+    width: 100%;
+}
+
+.subcontainer {
+    max-width: 100vw;
+    width: 100%;
+}
+
+#business-img {
+    display: flex;
+    flex-direction: column;
+    margin: 5px;
+    padding: 5px;
+    background-color: #1EA896;
+    align-items: center;
+
+
+}
+
+.business-labels {
+    font-family: var(--heading-font);
+    font-weight: 800;
+    font-size: 1rem;
+    margin: 5px 0;
+    padding: 5px;
+
+}
+
+p {
+    font-family: var(--paragraph-font);
+    font-weight: 300;
+    padding-left: 5px;
+}
+
+
+.subcontainer img {
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width: 300px;
+}
+
+/* .subcontainer p {
+    font-size: 0.2rem;
+    background-color: #1EA896;
+} */
+
 div.layout {
-    padding: 20px;
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+    margin: 0;
 }
 
 div.layout button {
+    align-content: center;
     align-items: center;
     justify-content: center;
-    align-content: center;
+    margin: 15px 15px;
+    max-width: 60%;
+    padding: 10px;
     width: 70px;
-    max-width: 50%;
-
 }
 
 div.search {
+    align-content: center;
+    align-items: center;
     display: flex;
     flex-direction: row;
     justify-content: center;
-    align-items: center;
-    align-content: center;
+
 }
 
 div.search h3 {
@@ -197,6 +305,7 @@ div.search h3 {
     font-weight: 400;
 }
 
+/* attribute selector for input text */
 input[type="text"] {
     width: 150px;
     align-self: center;
@@ -206,14 +315,14 @@ input[type="text"] {
 /* ================= SIDE BARS ================= */
 
 .left-sidebar {
-    padding: 0.9rem 50px;
+    padding: 0;
     line-height: 1rem;
     width: 200px;
 }
 
 .left-sidebar>h2 {
     font-size: medium;
-    margin: 0 auto;
+    margin: 40px auto 10px;
     width: 100%;
     text-align: center;
 
@@ -221,9 +330,9 @@ input[type="text"] {
 
 .left-sidebar a:hover {
 
-    background-color: var(--primary-color);
+    /* background-color: var(--primary-color); */
     transition: background-color 0.3s ease;
-
+    text-decoration: underline;
     height: auto;
 
 }
@@ -231,7 +340,7 @@ input[type="text"] {
 
 .left-sidebar>ul li {
 
-    margin: 10px auto;
+    margin: 25px auto 2px;
 
 
 }
@@ -239,6 +348,7 @@ input[type="text"] {
 .left-sidebar>ul {
     display: flex;
     flex-direction: column;
+    margin: 0;
     padding: 0;
 }
 
@@ -246,35 +356,46 @@ input[type="text"] {
 
 aside {
     background-color: var(--accent1-color);
+    border: 1px solid var(--accent2-color);
+    box-shadow: 0px 0px 2px RGBA(0, 0, 0, 0.5);
     margin: 0;
     padding: 0;
     flex: 0 0 auto;
 
+
 }
+
+
+
 
 /* ================= FOOTER ================= */
 
 footer {
+    align-items: center;
     display: flex;
     flex-direction: row;
     justify-content: space-evenly;
-    align-items: center;
+
+
 }
 
 footer.bottom-details {
     background-color: var(--accent2-color);
     color: #fff;
     font-family: var(--default-font);
+    font-size: small;
     margin-top: auto;
     padding: 0;
 
     width: 100%;
+    height: auto;
 
 }
 
 footer.left-footer {
     align-items: flex-start;
     justify-content: flex-start;
+
 }
 
 footer.right-footer {
@@ -292,9 +413,130 @@ div.horizontal {
 }
 
 /* Responsive adjustments */
-@media all and (max-width: 768px) {
+@media all and (max-width: 592px) {
+
+    #menu {
+        font-size: 1.5rem;
+        border: 0;
+        position: absolute;
+        top: 2px;
+        right: 15px;
+        color: var(--base-color);
+        background: none;
+        display: block;
+
+    }
+
+
+    #menu::before {
+        content: "☰";
+        /* When menu is closed, display the hamburger icon */
+
+    }
+
+    #menu.open::before {
+        content: "X";
+        /* When menus is opened, display the 'X' button to close the menu */
+
+    }
+
+    .navlinks2 {
+        display: none;
+    }
+
+    .navlinks2.open {
+        display: block;
+    }
+
+    .hero img {
+        max-width: 100vw;
+        height: auto;
+
+    }
+
+
     .container {
         flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: left;
+        margin: 0;
+
+    }
+
+    body {
+        max-width: 100vw;
+    }
+
+    main {
+        display: flex;
+        flex-direction: column;
+        align-content: center;
+        margin: 5px;
+        padding: 5px;
+    }
+
+    aside.left-sidebar {
+
+        max-width: 100vw;
+        height: auto;
+        border-radius: 10px;
+        border: 1px solid #000;
+        box-shadow: 0px 2px 8px #888;
+    }
+
+    .nav-links-wrapper {
+        align-content: center;
+        align-items: center;
+        flex-direction: column;
+        justify-content: center;
+
+        max-width: 100vw;
+
+
+    }
+
+    .navlinks2 {
+        padding: 0 20px;
+        max-width: 100%;
+    }
+
+    .nav-links-wrapper img {
+        height: auto;
+        width: 50px;
+        margin: 20px auto;
+    }
+
+    div.businesses {
+
+        max-width: 100vw;
+    }
+
+    #business-img {
+        display: flex;
+        flex-direction: column;
+        margin-top: 20px;
+        padding: 10px;
+        background-color: #1EA896;
+
+
+    }
+
+    .left-sidebar {
+        width: 100%;
+    }
+}
+
+/* @media all and (max-width: 300px) {
+    .container {
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+    }
+
+    main {
+        display: flex;
+        align-content: center;
     }
 
     .nav-links-wrapper {
@@ -305,4 +547,4 @@ div.horizontal {
     .left-sidebar {
         width: 100%;
     }
-}
+} */
