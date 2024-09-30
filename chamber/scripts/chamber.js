@@ -106,28 +106,33 @@ async function fetchMembersGrid() {
 
             const p = document.createElement('p');
             p.className = 'business-labels';
-            // p.style.fontWeight = '300px';
-            // p.style.marginBottom = '30px';
-            // p.style.paddingBottom = '20px';
 
             const img = document.createElement('img');
             img.id = 'business-img';
-            // img.style.paddingTop = '50px';
+
+            const ul = document.createElement('ul');
+            ul.id = 'business-ul';
+
+            const li = document.createElement('li');
+            li.id = 'business-li';
+
+            const a = document.createElement('a');
+            a.id = 'business-links';
 
 
-            // businessImg.style.display = ''
 
-
-
-            container.innerHTML = `<img id='business-img' src=${business.image} width='150px' height='auto'>
+            container.innerHTML = ` <a href='${business.url}'><img id='business-img' src=${business.image} width='150px' height='auto'></a>
                                     <span class='business-labels'> Name: </span> <p>${business.name}</p>  
                                     <span class='business-labels'> Address: </span> <p> ${business.address}</p>
                                     <span class='business-labels'> Phone: </span> <p>${business.contact}</p>`;
-
+            subcontainer.appendChild(a);
+            subcontainer.appendChild(li);
+            subcontainer.appendChild(ul);
             subcontainer.appendChild(p);
             subcontainer.appendChild(img);
             subcontainer.appendChild(container);
             businesses.appendChild(container);
+
 
 
 
@@ -177,8 +182,8 @@ async function fetchMembersList() {
             businesses.style.display = 'flex';
             businesses.style.flexDirection = 'column';
             businesses.style.gap = '5px';
-            // businesses.style.alignItems = 'center';
-            // businesses.style.alignContent = 'center';
+            businesses.style.alignItems = 'flex-start';
+            businesses.style.alignContent = 'flex-start';
             businesses.style.justifyContent = 'center';
             businesses.style.fontFamily = 'Gowun Batang';
 
@@ -188,17 +193,17 @@ async function fetchMembersList() {
             container.style.flexDirection = 'row';
             container.style.alignContent = 'left';
             container.style.alignItems = 'left';
-            container.style.maxWidth = '90vw';
+
             container.style.listStyleType = 'none';
             container.style.backgroundColor = '#fff';
             container.style.border = '1px solid #ccc';
-            container.style.padding = '1px';
-            container.style.margin = '1px';
+            container.style.padding = '0';
+            container.style.marginLeft = '5px';
             container.style.color = '#000';
             // container.style.borderRadius = '5px';
             container.style.boxShadow = '0px 0px 3px #888';
             container.style.height = '400px';
-            container.style.maxWidth = '60vw';
+            container.style.maxWidth = '100vw';
             container.style.fontSize = 'small';
 
 
@@ -210,23 +215,28 @@ async function fetchMembersList() {
 
             const p = document.createElement('p');
             p.className = 'business-labels';
-            // p.style.fontWeight = '300px';
-            // p.style.marginBottom = '30px';
-            // p.style.paddingBottom = '20px';
 
             const img = document.createElement('img');
             img.id = 'business-img';
-            // img.style.paddingTop = '50px';
 
+            const ul = document.createElement('ul');
+            ul.id = 'business-ul';
 
-            // businessImg.style.display = ''
+            const li = document.createElement('li');
+            li.id = 'business-li';
+
+            const a = document.createElement('a');
+            a.id = 'business-links';
 
 
 
             container.innerHTML = ` <span class='business-labels'> Name: </span> <p>${business.name}</p>  
                                     <span class='business-labels'> Address: </span> <p> ${business.address}</p>
-                                    <span class='business-labels'> Phone: </span> <p>${business.contact}</p>`;
-
+                                    <span class='business-labels'> Phone: </span> <p>${business.contact}</p> 
+                                    <a href='${business.url}'><img id='business-img' src=${business.image} width='50px' height='auto'></a>`;
+            subcontainer.appendChild(a);
+            subcontainer.appendChild(li);
+            subcontainer.appendChild(ul);
             subcontainer.appendChild(p);
             subcontainer.appendChild(img);
             subcontainer.appendChild(container);
