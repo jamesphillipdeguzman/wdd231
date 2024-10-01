@@ -25,26 +25,34 @@
 
     <body>
         <header>
-            <h1>Latter Day Prophets: A fetch API Demo</h1>
+            <h1>Latter Day Prophets</h1>
 
 
         </header>
         <main>
-            <h2>Latter-Day Prophet Cards</h2>
-            <!-- <button id="showCards">Click Me</button> -->
-            <div id="cards"></div>
+            <h2>Fetch API Demo</h2>
+
+            <label for="dynamic-prophets">Select</label>
+            <select name="dynamic-prophets" id="dynamic-prophets">
+                <option value="all">Choose one</option>
+            </select>
+            <figure class="card-wrapper">
+
+                <div id="cards"></div>
+                <span id="stats"></span>
+
+            </figure>
+
 
         </main>
 
 
         <footer class="bottom-details">
-            <div class="left-footer">
-                <p>&copy;<span id="currentyear"></span> 🎻 James Phillip De Guzman 🎻 Latter-Day Prophets</p>
-                <p> Iloilo, Philippines <img src="images/philippines.png" alt="Philippine country small footer icon"
-                        width="30"> </p>
-                <p>Last Update: <span id="lastModified"></span></p>
-                <p>
-            </div>
+
+            <p>&copy;<span id="currentyear"></span> 🎻 James Phillip De Guzman 🎻 Latter-Day Prophets</p>
+            <p> Iloilo, Philippines <img src="images/philippines.png" alt="Philippine country small footer icon"
+                    width="30"> </p>
+            <p>Last Update: <span id="lastModified"></span></p>
 
         </footer>
     </body>
