@@ -33,7 +33,7 @@ async function getProphetData() {
             // output the result into a table in your dev console...
             console.table(data.prophets);
             // pass in the parsed json object to displayAllProphets function...
-            // displayAllProphets(data.prophets);
+            displayAllProphets(data.prophets);
             dropdownProphets(data.prophets);
 
 
