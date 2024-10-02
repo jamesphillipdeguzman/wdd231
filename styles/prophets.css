@@ -157,7 +157,7 @@ footer.bottom-details {
 }
 
 
-@media screen and (max-width < 630px) {
+@media screen and (max-width: 630px) {
     h1 {
         font-size: medium;
         text-align: center;
