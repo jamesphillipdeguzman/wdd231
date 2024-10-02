@@ -448,11 +448,11 @@ footer.right-footer {
 }
 
 .right-footer a {
-    color: #000;
+    color: #fff;
 }
 
 .bottom-details p {
-    color: #000;
+    color: #fff;
     font-family: var(--default-font);
 
 }
@@ -631,7 +631,7 @@ div.horizontal {
 
     footer.bottom-details p,
     a {
-        color: #000;
+        color: #fff;
         font-size: 0.8rem;
         padding: 5px;
         max-width: 100vw;
@@ -639,7 +639,7 @@ div.horizontal {
     }
 
     .bottom-details p {
-        color: #000;
+        color: #fff;
         font-family: var(--default-font);
     }
 
@@ -748,7 +748,7 @@ div.horizontal {
 
     footer.bottom-details p,
     a {
-        color: #000;
+        color: #fff;
         padding: 5px;
         font-size: 0.6rem;
     }
