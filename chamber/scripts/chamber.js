@@ -1,6 +1,13 @@
 const hamburgerBtn = document.querySelector('#menu');
 const navigationBtn = document.querySelector('.navlinks2');
 
+// const navigationBtnA = document.querySelector('.navlinks2 > a');
+
+// navigationBtnA.addEventListener('click', (event) => {
+//     event.preventDefault();
+//     navigationBtnA.classList.toggle('active');
+// })
+
 hamburgerBtn.addEventListener('click', () => {
     hamburgerBtn.classList.toggle('open');
     navigationBtn.classList.toggle('open');

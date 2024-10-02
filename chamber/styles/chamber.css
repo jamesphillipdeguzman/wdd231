@@ -34,7 +34,7 @@ html {
     max-width: 100%;
     margin: 0;
     padding: 0;
-    width: 100%;
+    /* width: 100%; */
 
 }
 
@@ -79,13 +79,13 @@ p {
 
 div.container {
     display: flex;
+    justify-content: space-around;
     flex: 1;
     flex-direction: row;
     flex-wrap: nowrap;
-    width: 100%;
-
-    margin: 0 auto;
+    height: 400px;
     padding: 0;
+    margin: 0 auto;
     max-width: 100vw;
     width: 100%;
 
@@ -130,7 +130,7 @@ div.nav-links-wrapper img {
 .active {
 
     /* content: '📌'; */
-    display: block;
+    /* display: block; */
     color: #fff;
     /* background-color: var(--highlight); */
     text-decoration: underline;
@@ -191,7 +191,7 @@ div.hero img {
     padding: 0;
     /* margin: 0 auto; */
     max-width: 100vw;
-    width: 100%;
+    /* width: 100%; */
 
     margin-bottom: -4px;
 }
@@ -208,7 +208,7 @@ main {
     padding: 0;
     margin: 10px auto;
     max-width: 100vw;
-    width: 100%;
+    /* width: 100%; */
 }
 
 main>p {
@@ -230,11 +230,11 @@ div#businesses {
     align-items: center;
     align-content: center;
     justify-content: center;
-    max-width: 100%;
+    /* max-width: 100%; */
     max-width: 100vw;
     padding: 0;
     margin: 0 auto;
-    width: 100%;
+    /* width: 100%; */
 }
 
 div#businesses p {
@@ -244,12 +244,12 @@ div#businesses p {
     margin-top: 12px;
     margin-left: 5px;
     padding: 0;
-    width: 100%;
+    /* width: 100%; */
 }
 
 .subcontainer {
     max-width: 100vw;
-    width: 100%;
+    /* width: 100%; */
 }
 
 #business-img {
@@ -267,8 +267,9 @@ div#businesses p {
     font-family: var(--heading-font);
     font-weight: 800;
     font-size: 1rem;
-    margin: 0 3px;
-    padding-top: 10px;
+    margin: 0;
+    padding: 10px;
+    height: 50px;
 
 }
 
@@ -276,8 +277,9 @@ p.business-labels {
     background-color: #1EA896;
     font-family: var(--paragraph-font);
     font-weight: 300;
-    font-size: 2.3rem;
-    padding-left: 5px;
+    font-size: 2rem;
+    /* padding-left: 5px; */
+
 }
 
 
@@ -285,7 +287,7 @@ p.business-labels {
     align-content: center;
     justify-content: center;
     align-items: center;
-    width: 300px;
+    width: 600px;
 }
 
 /* .subcontainer p {
@@ -327,7 +329,8 @@ div.search h3 {
 
 /* attribute selector for input text */
 input[type="text"] {
-    width: 150px;
+    height: 40px;
+    width: 350px;
     align-self: center;
 }
 
@@ -407,7 +410,8 @@ footer.bottom-details {
     font-size: small;
     margin-top: auto;
     padding: 20px;
-    width: 100%;
+    max-width: 100vw;
+    /* width: 100%; */
     height: auto;
 
 }
@@ -433,7 +437,7 @@ div.horizontal {
 }
 
 /* Responsive adjustments */
-@media (width < 680px) {
+@media (width < 900px) {
 
     .hero {
         padding-top: 50px;
@@ -444,7 +448,7 @@ div.horizontal {
         border: 0;
         position: absolute;
         top: 8px;
-        right: 20px;
+        right: 35px;
         color: var(--base-color);
         background: none;
         display: block;
@@ -502,6 +506,7 @@ div.horizontal {
         padding: 5px;
         max-width: 100vw;
 
+
     }
 
     div.container a {
@@ -539,7 +544,7 @@ div.horizontal {
         box-shadow: 0px 2px 8px #888;
         height: auto;
         margin: 0 auto;
-        max-width: 50vw;
+        max-width: 100vw;
     }
 
     aside.left-sidebar ul {
@@ -584,11 +589,11 @@ div.horizontal {
         display: flex;
         flex-direction: column;
         max-width: 100vw;
-        width: 100%;
+        /* width: 100%; */
     }
 
     .left-sidebar {
-        width: 100%;
+        width: 100vw;
 
     }
 
@@ -597,7 +602,7 @@ div.horizontal {
         font-size: 0.8rem;
         padding: 5px;
         max-width: 100vw;
-        width: 100%;
+        /* width: 100%; */
     }
 
     .bottom-details p {
@@ -638,15 +643,18 @@ div.horizontal {
 
     .navlinks2 {
         display: none;
+
     }
+
 
     .navlinks2.open {
         display: block;
+
     }
 
 
     .hero {
-        padding-top: 70px;
+        padding-top: 10px;
     }
 
     .businesses {
@@ -654,12 +662,12 @@ div.horizontal {
         flex-direction: row;
     }
 
-    .container {
+    div.container {
         display: flex;
         flex: 1;
         flex-direction: row;
         flex-wrap: nowrap;
-        width: 100%;
+        /* width: 100%; */
         max-width: 100%;
         margin: 0 auto;
         padding: 0;
@@ -692,6 +700,13 @@ div.horizontal {
         display: none;
         padding-bottom: 30px;
     }
+
+    input[type="text"] {
+        height: 35px;
+        width: 150px;
+        align-self: center;
+    }
+
 
     footer.bottom-details p,
     a {
