@@ -112,10 +112,12 @@ const dropdownMembers = (members) => {
 
         // Create the dropdown list only if empty initially...
         if (document.querySelector('#dynamic-businesses').value == '') {
+
             const option = document.createElement('option');
 
             option.value = memberName;
             option.textContent = memberName;
+
             selector.append(option);
 
 
