@@ -29,6 +29,7 @@ html {
 
     display: flex;
     flex-direction: column;
+    font-size: 1rem;
     font-family: var(--primary-font);
     height: auto;
     max-width: 100%;
@@ -37,6 +38,11 @@ html {
     /* width: 100%; */
 
 }
+
+/* Desktop View */
+
+/* @media (min-width: 901px) { */
+
 
 /* ================= HEADER ================= */
 
@@ -464,8 +470,10 @@ div.horizontal {
     height: 50px;
 }
 
-/* Responsive adjustments */
-@media all and (max-width: 900px) {
+/* } */
+
+/* Mobile view*/
+@media (max-width: 900px) {
 
     .hero {
         padding-top: 50px;
@@ -476,7 +484,7 @@ div.horizontal {
         border: 0;
         position: absolute;
         top: 8px;
-        right: 35px;
+        right: 30px;
         color: var(--base-color);
         background: none;
         display: block;
@@ -531,6 +539,8 @@ div.horizontal {
     div.container {
         display: flex;
         flex-direction: column;
+        flex: 1 1 100%;
+        /* Full width on mobile */
         justify-content: center;
         align-content: center;
         align-items: center;
@@ -648,14 +658,16 @@ div.horizontal {
     }
 }
 
-@media all and (max-width: 361px) {
+/* Mobile view 2 */
+
+@media (max-width: 330px) {
 
     #menu {
         font-size: 1.5rem;
         border: 0;
         position: absolute;
         top: 8px;
-        right: 20px;
+        right: 30px;
         color: var(--base-color);
         background: none;
         display: block;
@@ -702,7 +714,8 @@ div.horizontal {
 
     div.container {
         display: flex;
-        flex: 1;
+        flex: 1 1 100%;
+        /* Full width on mobile */
         flex-direction: row;
         flex-wrap: nowrap;
         /* width: 100%; */
