@@ -91,6 +91,14 @@ div.container {
 
 }
 
+div.container a {
+    display: flex;
+    align-items: center;
+    align-items: center;
+    justify-content: center;
+}
+
+
 
 /* ================= NAVIGATION ================= */
 #menu {
@@ -249,7 +257,7 @@ div#businesses p {
     flex-direction: column;
     margin: 5px;
     padding: 5px;
-    background-color: #1EA896;
+    /* background-color: #1EA896; */
     align-items: center;
 
 
@@ -259,14 +267,16 @@ div#businesses p {
     font-family: var(--heading-font);
     font-weight: 800;
     font-size: 1rem;
-    margin: 5px 0;
-    padding: 5px;
+    margin: 0 3px;
+    padding-top: 10px;
 
 }
 
-p {
+p.business-labels {
+    background-color: #1EA896;
     font-family: var(--paragraph-font);
     font-weight: 300;
+    font-size: 2.3rem;
     padding-left: 5px;
 }
 
@@ -423,14 +433,18 @@ div.horizontal {
 }
 
 /* Responsive adjustments */
-@media (min-width:444px) and (max-width: 680px) {
+@media (width < 680px) {
+
+    .hero {
+        padding-top: 50px;
+    }
 
     #menu {
         font-size: 1.5rem;
         border: 0;
         position: absolute;
         top: 8px;
-        right: 15px;
+        right: 20px;
         color: var(--base-color);
         background: none;
         display: block;
@@ -474,11 +488,8 @@ div.horizontal {
     .business-labels {
 
         font-size: small;
-        /* margin-bottom: 50px;
-        padding-bottom: 50px; */
-        /* align-content: center;
-        justify-content: center;
-        align-items: center; */
+        margin: 0 3px;
+        padding-top: 10px;
     }
 
     div.container {
@@ -491,6 +502,19 @@ div.horizontal {
         padding: 5px;
         max-width: 100vw;
 
+    }
+
+    div.container a {
+        display: flex;
+        align-items: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    div.container p {
+        text-align: center;
+        align-items: center;
+        padding-top: 0;
     }
 
 
@@ -544,11 +568,7 @@ div.horizontal {
         margin: 20px auto;
     }
 
-    div.container p {
-        text-align: center;
-        align-items: center;
-        padding-top: 0;
-    }
+
 
     div.businesses {
         display: flex;
@@ -567,24 +587,15 @@ div.horizontal {
         width: 100%;
     }
 
-    #business-img {
-        display: flex;
-        flex-direction: column;
-        margin-top: 20px;
-        padding: 10px;
-        background-color: #1EA896;
-
-
-    }
-
     .left-sidebar {
         width: 100%;
 
     }
 
-    footer.bottom-details {
-
-        padding: 20px;
+    footer.bottom-details p,
+    a {
+        font-size: 0.8rem;
+        padding: 5px;
         max-width: 100vw;
         width: 100%;
     }
@@ -598,12 +609,55 @@ div.horizontal {
     }
 }
 
-@media (min-width: 200px) and (max-width: 380px) {
+@media (width < 515px) {
+
+    #menu {
+        font-size: 1.5rem;
+        border: 0;
+        position: absolute;
+        top: 8px;
+        right: 20px;
+        color: var(--base-color);
+        background: none;
+        display: block;
+
+    }
+
+
+    #menu::before {
+        content: "☰";
+        /* When menu is closed, display the hamburger icon */
+
+    }
+
+    #menu.open::before {
+        content: "X";
+        /* When menus is opened, display the 'X' button to close the menu */
+
+    }
+
+    .navlinks2 {
+        display: none;
+    }
+
+    .navlinks2.open {
+        display: block;
+    }
+
+
+    .hero {
+        padding-top: 70px;
+    }
+
+    .businesses {
+        display: flex;
+        flex-direction: row;
+    }
 
     .container {
         display: flex;
         flex: 1;
-        flex-direction: column;
+        flex-direction: row;
         flex-wrap: nowrap;
         width: 100%;
         max-width: 100%;
@@ -611,6 +665,18 @@ div.horizontal {
         padding: 0;
 
     }
+
+    div.container a {
+        display: flex;
+        align-items: center;
+        align-items: center;
+        justify-content: center;
+    }
+
+    div.container p {
+        margin-bottom: 20px;
+    }
+
 
     h1 {
         font-size: 1.3rem;
@@ -625,6 +691,12 @@ div.horizontal {
     aside.left-sidebar {
         display: none;
         padding-bottom: 30px;
+    }
+
+    footer.bottom-details p,
+    a {
+        padding: 5px;
+        font-size: 0.6rem;
     }
 
 

@@ -89,20 +89,16 @@ async function fetchMembersGrid() {
             container.style.listStyleType = 'none';
             container.style.backgroundColor = '#fff';
             container.style.border = '1px solid #ccc';
-            // container.style.paddingRight = '0';
-            // container.style.margin = '0 10px';
             container.style.color = '#000';
             container.style.borderRadius = '5px';
             container.style.boxShadow = '0px 0px 3px #888';
             container.style.height = '400px';
-
-
+            container.style.width = '100%';
+            container.style.maxWidth = '100vw';
 
             const subcontainer = document.createElement('div');
-            // subcontainer.style.display = 'flex';
-            subcontainer.className = 'subcontainer';
-            // subcontainer.style.flexDirection = 'column';
 
+            subcontainer.className = 'subcontainer';
 
             const p = document.createElement('p');
             p.className = 'business-labels';
@@ -112,13 +108,17 @@ async function fetchMembersGrid() {
 
             const ul = document.createElement('ul');
             ul.id = 'business-ul';
+            ul.style.display = 'flex';
+            ul.style.alignItems = 'center';
+            ul.style.justifyItems = 'center';
+            ul.style.alignContent = 'center';
+            ul.style.margin = '0 auto';
 
             const li = document.createElement('li');
             li.id = 'business-li';
 
             const a = document.createElement('a');
             a.id = 'business-links';
-
 
 
             container.innerHTML = ` <a href='${business.url}'><img id='business-img' src=${business.image} width='150px' height='auto'></a>
@@ -134,8 +134,6 @@ async function fetchMembersGrid() {
             businesses.appendChild(container);
 
 
-
-
         });
 
 
@@ -144,7 +142,6 @@ async function fetchMembersGrid() {
     catch (error) {
         console.error(error);
     }
-
 
 
 };
@@ -203,6 +200,7 @@ async function fetchMembersList() {
             // container.style.borderRadius = '5px';
             container.style.boxShadow = '0px 0px 3px #888';
             container.style.height = '400px';
+            container.style.width = '100%';
             container.style.maxWidth = '100vw';
             container.style.fontSize = 'small';
 
@@ -237,10 +235,13 @@ async function fetchMembersList() {
                                     <span class='business-labels'> Address: </span> <p> ${business.address}</p>
                                     <span class='business-labels'> Phone: </span> <p>${business.contact}</p> 
                                     <a href='${business.url}'><img id='business-img' src=${business.image} width='50px' height='auto'></a>`;
+
             container.appendChild(a);
+
             container.appendChild(li);
+
             container.appendChild(ul);
-            container.appendChild(p);
+            // container.appendChild(p);
 
             businesses.appendChild(container);
 
