@@ -68,8 +68,12 @@
         </div>
 
         <div class="hero">
-            <img src="images/hero2.jpg" width="1200" height="300"
-                alt="Seaside: Hero image of Iloilo Chamber of Commerce">
+            <picture>
+                <source srcset="images/hero.webp" media="(max-width: 680px)">
+                <img src="images/hero2.jpg" width="1200" height="300"
+                    alt="Seaside: Hero image of Iloilo Chamber of Commerce">
+            </picture>
+
         </div>
     </header>
     <div class="container">
@@ -90,10 +94,14 @@
                     placeholder="Enter a business name">
             </div>
             <div class="layout">
-                <button id="grid">⏹️Grid</button>
-                <button id="list">📄List</button>
+
+                <button id="grid"><img src="images/grid.svg" alt="grid button for grid layout" width="30"
+                        height="30"></button>
+                <button id="list"><img src="images/list.svg" alt="list button for list layout" width="20"
+                        height="20"></button>
             </div>
 
+            <!-- Populat businesses here dynamically through your javascript code -->
             <div id="businesses"></div>
 
 

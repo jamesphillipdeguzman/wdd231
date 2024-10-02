@@ -69,7 +69,7 @@ async function fetchMembersGrid() {
         data.forEach(business => {
 
             businesses.style.display = 'grid';
-            businesses.style.gridTemplateColumns = 'repeat(auto-fill, minmax(250px, 1fr))';
+            businesses.style.gridTemplateColumns = 'repeat(auto-fit, minmax(200px, 2fr))';
             businesses.style.gap = '5px';
             businesses.style.alignItems = 'center';
             businesses.style.alignContent = 'center';
@@ -89,8 +89,8 @@ async function fetchMembersGrid() {
             container.style.listStyleType = 'none';
             container.style.backgroundColor = '#fff';
             container.style.border = '1px solid #ccc';
-            container.style.paddingRight = '0';
-            container.style.margin = '0 10px';
+            // container.style.paddingRight = '0';
+            // container.style.margin = '0 10px';
             container.style.color = '#000';
             container.style.borderRadius = '5px';
             container.style.boxShadow = '0px 0px 3px #888';
@@ -190,15 +190,15 @@ async function fetchMembersList() {
             const container = document.createElement('div'); // create a div 
             container.className = 'container';
             container.style.display = 'flex';
-            container.style.flexDirection = 'row';
+            // container.style.flexDirection = 'row';
             container.style.alignContent = 'left';
             container.style.alignItems = 'left';
 
             container.style.listStyleType = 'none';
             container.style.backgroundColor = '#fff';
             container.style.border = '1px solid #ccc';
-            container.style.padding = '0';
-            container.style.marginLeft = '5px';
+            // container.style.padding = '0';
+            // container.style.marginLeft = '5px';
             container.style.color = '#000';
             // container.style.borderRadius = '5px';
             container.style.boxShadow = '0px 0px 3px #888';
@@ -207,10 +207,12 @@ async function fetchMembersList() {
             container.style.fontSize = 'small';
 
 
-            const subcontainer = document.createElement('div');
+            // const subcontainer = document.createElement('div');
+
+            // subcontainer.className = 'subcontainer';
             // subcontainer.style.display = 'flex';
-            subcontainer.className = 'subcontainer';
             // subcontainer.style.flexDirection = 'column';
+            // subcontainer.style.height = 'auto';
 
 
             const p = document.createElement('p');
@@ -235,12 +237,11 @@ async function fetchMembersList() {
                                     <span class='business-labels'> Address: </span> <p> ${business.address}</p>
                                     <span class='business-labels'> Phone: </span> <p>${business.contact}</p> 
                                     <a href='${business.url}'><img id='business-img' src=${business.image} width='50px' height='auto'></a>`;
-            subcontainer.appendChild(a);
-            subcontainer.appendChild(li);
-            subcontainer.appendChild(ul);
-            subcontainer.appendChild(p);
-            subcontainer.appendChild(img);
-            subcontainer.appendChild(container);
+            container.appendChild(a);
+            container.appendChild(li);
+            container.appendChild(ul);
+            container.appendChild(p);
+
             businesses.appendChild(container);
 
 
