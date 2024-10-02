@@ -82,6 +82,12 @@ section.card {
     margin: 0 auto;
     padding: 0;
 
+
+}
+
+.portrait {
+    width: 200px;
+    height: auto;
 }
 
 .label {
@@ -226,6 +232,11 @@ footer.bottom-details {
         align-items: center;
         align-content: center;
         justify-content: center;
+    }
+
+    .portrait {
+        width: 200px;
+        height: auto;
     }
 
     figure.card-wrapper {
