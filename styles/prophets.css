@@ -163,6 +163,8 @@ footer.bottom-details {
     color: #fff;
     font-size: small;
     text-align: center;
+    margin: 10px;
+    padding: 10px;
     max-width: 100%;
     width: 100%;
     background-color: rgba(0, 0, 0, 0.8);
