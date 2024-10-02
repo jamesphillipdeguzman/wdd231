@@ -465,7 +465,7 @@ div.horizontal {
 }
 
 /* Responsive adjustments */
-@media (width < 900px) {
+@media all and (max-width: 900px) {
 
     .hero {
         padding-top: 50px;
@@ -648,7 +648,7 @@ div.horizontal {
     }
 }
 
-@media (width < 361px) {
+@media all and (max-width: 361px) {
 
     #menu {
         font-size: 1.5rem;
