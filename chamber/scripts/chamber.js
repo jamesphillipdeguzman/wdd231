@@ -225,7 +225,7 @@ const filterMembers = (members, filter) => {
     stats.append(address);
     stats.append(contact);
 
-    stats.append(url);
+    // stats.append(url);
 
     card.append(stats);
     card.append(logolink);
