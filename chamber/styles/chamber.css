@@ -306,6 +306,9 @@ div.layout {
 div.layout button {
     align-content: center;
     align-items: center;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 1px #888;
+    border-radius: 4px;
     justify-content: center;
     margin: 15px 15px;
     max-width: 60%;
@@ -313,16 +316,27 @@ div.layout button {
     width: 70px;
 }
 
-div.search {
-    align-content: center;
+#dynamic-businesses {
+    /* align-content: center;
     align-items: center;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    width: 100px; */
+    align-items: center;
+    border-radius: 4px;
+    justify-content: center;
+    height: 40px;
+    margin-top: 2rem;
+    padding-right: 2rem;
+    margin: 0 auto;
+    text-align: left;
+
+    width: 200px;
 
 }
 
-div.search h3 {
+#dynamic-businesses h3 {
     font-size: medium;
     font-weight: 400;
 }
@@ -403,8 +417,10 @@ footer {
 
 }
 
+
+
 footer.bottom-details {
-    background-color: RGBA(0, 0, 0, 0.9);
+    background-color: var(--accent2-color);
     color: #fff;
     font-family: var(--default-font);
     font-size: small;
@@ -429,6 +445,11 @@ footer.right-footer {
     justify-content: flex-end;
 
 }
+
+.bottom-details p {
+    font-family: var(--default-font);
+}
+
 
 div.horizontal {
     border: 1px solid var(--divider-color);
@@ -480,6 +501,10 @@ div.horizontal {
         max-width: 100vw;
         height: auto;
 
+    }
+
+    .left-sidebar {
+        display: none;
     }
 
     div#businesses {
@@ -614,7 +639,7 @@ div.horizontal {
     }
 }
 
-@media (width < 515px) {
+@media (width < 361px) {
 
     #menu {
         font-size: 1.5rem;
@@ -626,6 +651,10 @@ div.horizontal {
         background: none;
         display: block;
 
+    }
+
+    .left-sidebar {
+        display: none;
     }
 
 
@@ -654,7 +683,7 @@ div.horizontal {
 
 
     .hero {
-        padding-top: 10px;
+        padding-top: 20px;
     }
 
     .businesses {
