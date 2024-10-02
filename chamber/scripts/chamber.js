@@ -83,7 +83,8 @@ async function fetchMembersGrid() {
             businesses.style.justifyContent = 'center';
             businesses.style.fontFamily = 'Gowun Batang';
             businesses.style.width = '80vw';
-            businesses.style.padding = '5px 5px';
+            businesses.style.padding = '5px 0';
+            businesses.style.margin = '0';
 
 
             const container = document.createElement('div'); // create a div 
@@ -99,8 +100,9 @@ async function fetchMembersGrid() {
             container.style.color = '#000';
             container.style.borderRadius = '5px';
             container.style.boxShadow = '0px 0px 3px #888';
-            container.style.height = '400px';
+            container.style.height = '25rem';
             container.style.width = '100%';
+            container.style.margin = '0';
             container.style.maxWidth = '100vw';
 
             const subcontainer = document.createElement('div');
@@ -206,7 +208,7 @@ async function fetchMembersList() {
             container.style.color = '#000';
             // container.style.borderRadius = '5px';
             container.style.boxShadow = '0px 0px 3px #888';
-            container.style.height = '400px';
+            container.style.height = '25rem';
             container.style.width = '100%';
             container.style.maxWidth = '100vw';
             container.style.fontSize = 'small';
