@@ -148,7 +148,7 @@ const filterMembers = (members, filter) => {
     businesses.style.fontFamily = 'Gowun Batang';
     businesses.style.width = '80vw';
     businesses.style.padding = '5px 0';
-    businesses.style.margin = '0';
+    businesses.style.margin = '0 auto';
     // Create a section element and define its class name
     const card = document.createElement('section');
     card.style.display = 'flex';

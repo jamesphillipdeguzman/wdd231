@@ -326,7 +326,7 @@ div.layout button {
     padding-right: 2rem;
     margin: 0 auto;
     text-align: left;
-    width: 470px;
+    max-width: 50%;
 
 }
 
