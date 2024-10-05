@@ -206,11 +206,16 @@
 
     }
 
+    .left-footer {
+        margin-top: 20px;
+    }
+
     footer.bottom-details p,
     a {
         color: #fff;
         font-size: 0.8rem;
-        padding: 0.5rem;
+        padding: 0.2rem;
+        /* margin: 5px; */
         max-width: 100vw;
         /* width: 100%; */
     }
@@ -218,10 +223,24 @@
     .bottom-details p {
         color: #fff;
         font-family: var(--default-font);
+
     }
+
+    .bottom-details {
+
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+    }
+
+
 
     #menu {
         font-family: Arial, Helvetica, sans-serif;
+    }
+
+    .horizontal {
+        display: none;
     }
 }
 
@@ -386,10 +405,18 @@
     footer.bottom-details p,
     a {
         color: #fff;
-        padding: 5px;
+        /* padding: 5px; */
         font-size: 0.6rem;
     }
 
+    .bottom-details {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .horizontal {
+        display: none;
+    }
 
 
 }
