@@ -272,12 +272,12 @@ async function fetchMembersGrid() {
 
             businesses.style.display = 'grid';
             businesses.style.gridTemplateColumns = 'repeat(auto-fit, minmax(200px, 2fr))';
-            businesses.style.gap = '5px';
+            businesses.style.gap = '0.5rem';
             businesses.style.alignItems = 'center';
             businesses.style.alignContent = 'center';
             businesses.style.justifyContent = 'center';
             // businesses.style.fontFamily = 'Montserrat';
-            businesses.style.maxWidth = '80vw';
+            // businesses.style.maxWidth = '80vw';
             businesses.style.padding = '5px 0';
             businesses.style.margin = '0 auto';
 
@@ -297,8 +297,8 @@ async function fetchMembersGrid() {
             container.style.boxShadow = '0px 0px 3px #888';
             container.style.height = '25rem';
             container.style.width = '100%';
-            container.style.margin = '0 1rem';
-            container.style.maxWidth = '100vw';
+            // container.style.margin = '0 1rem';
+            // container.style.maxWidth = '100vw';
 
             const subcontainer = document.createElement('div');
 
@@ -384,7 +384,7 @@ async function fetchMembersList() {
 
             businesses.style.display = 'flex';
             businesses.style.flexDirection = 'column';
-            businesses.style.gap = '5px';
+            businesses.style.gap = '0.5rem';
             businesses.style.alignItems = 'flex-start';
             businesses.style.alignContent = 'flex-start';
             businesses.style.justifyContent = 'center';
@@ -408,8 +408,8 @@ async function fetchMembersList() {
             container.style.boxShadow = '0px 0px 3px #888';
             container.style.height = '25rem';
             container.style.width = '100%';
-            container.style.margin = '0 1rem';
-            container.style.maxWidth = '100vw';
+            // container.style.margin = '0 1rem';
+            // container.style.maxWidth = '100vw';
             container.style.fontSize = 'small';
 
 
