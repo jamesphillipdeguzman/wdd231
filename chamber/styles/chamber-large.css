@@ -57,7 +57,7 @@ h2 {
     /* border: 2px solid #ccc; */
     color: var(--highlight);
     font-family: var(--heading-font);
-    margin: 2.2rem;
+    /* margin-top: 2rem; */
     text-align: center;
 }
 
@@ -285,8 +285,9 @@ div#businesses p {
     flex-direction: column;
     margin: 5px;
     padding: 5px;
+    margin: 0 auto;
     /* background-color: #1EA896; */
-    align-items: center;
+    align-content: center;
 
 
 }
@@ -434,6 +435,16 @@ aside {
     flex: 0 0 auto;
 
 
+
+}
+
+aside.left-sidebar {
+    height: 100vh;
+}
+
+aside.left-sidebar ul {
+    border-top: 1px solid rgba(255, 255, 255, 0.2);
+
 }
 
 aside.left-sidebar ul li {
@@ -507,6 +518,7 @@ footer.right-footer {
     padding-top: 10px;
 
 }
+
 
 
 div.horizontal {

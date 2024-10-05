@@ -1,3 +1,9 @@
+
+// Use ES Modules to import fetchMembers and dropdownMembers from fetch-members.js
+import { fetchMembers, dropdownMembers } from "./fetch-members.js";
+
+
+
 const hamburgerBtn = document.querySelector('#menu');
 const navigationBtn = document.querySelector('.menuLinks');
 
@@ -45,24 +51,24 @@ list.addEventListener('click', () => {
 
 
 
-async function fetchMembers() {
-    try {
-        const response = await fetch('data/members.json'); // fetch the json file from a relative path
+// async function fetchMembers() {
+//     try {
+//         const response = await fetch('data/members.json'); // fetch the json file from a relative path
 
 
-        if (!response.ok) { // Check if no response 
-            throw new Error('Could not fetch resource');
-        }
+//         if (!response.ok) { // Check if no response 
+//             throw new Error('Could not fetch resource');
+//         }
 
-        const members = await response.json();  // await for Promise to resolve or be rejected and parse the result as json object
-        dropdownMembers(members);
-        return members;
+//         const members = await response.json();  // await for Promise to resolve or be rejected and parse the result as json object
+//         dropdownMembers(members);
+//         return members;
 
 
-    } catch (error) {
-        console.error(error);
-    }
-}
+//     } catch (error) {
+//         console.error(error);
+//     }
+// }
 
 
 const dynamicBusinesses = document.querySelector('#dynamic-businesses');
@@ -98,36 +104,10 @@ async function main(filter) {
 }
 
 
-// Populate your dropdown with the chamber's  member's names.
 
-const dropdownMembers = (members) => {
-
-    const selector = document.querySelector('#dynamic-businesses');
-
-    members.forEach((member) => {
-
-
-        // populate the dropdown with the member's names
-        const memberName = `${member.id} ${member.name}`;
-
-        // Create the dropdown list only if empty initially...
-        if (document.querySelector('#dynamic-businesses').value == '') {
-
-            const option = document.createElement('option');
-
-            option.value = memberName;
-            option.textContent = memberName;
-
-            selector.append(option);
-
-
-        }
-
-
-    });
-
-}
 fetchMembers();
+
+// fetchMembers();
 
 // ============== FILTER A MEMBER ====================
 
@@ -204,6 +184,7 @@ const filterMembers = (members, filter) => {
     // Create an img element and define its class name
     const logo = document.createElement('img');
     logo.className = 'grid';
+    logo.style.margin = '20px auto';
 
     // Set properties for your image element here...
     logo.setAttribute('src', `${members[filter - 1].image}`);
@@ -458,5 +439,3 @@ async function fetchMembersList() {
 
 
 }
-
-
