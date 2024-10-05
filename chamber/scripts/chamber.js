@@ -1,5 +1,5 @@
 const hamburgerBtn = document.querySelector('#menu');
-const navigationBtn = document.querySelector('.navlinks2');
+const navigationBtn = document.querySelector('.menuLinks');
 
 
 hamburgerBtn.addEventListener('click', () => {
@@ -145,8 +145,8 @@ const filterMembers = (members, filter) => {
     businesses.style.alignItems = 'center';
     businesses.style.alignContent = 'center';
     businesses.style.justifyContent = 'center';
-    businesses.style.fontFamily = 'Gowun Batang';
-    businesses.style.width = '80vw';
+    // businesses.style.fontFamily = 'Montserrat';
+    businesses.style.maxWidth = '80vw';
     businesses.style.padding = '5px 0';
     businesses.style.margin = '0 auto';
     // Create a section element and define its class name
@@ -171,6 +171,8 @@ const filterMembers = (members, filter) => {
 
     const name = document.createElement('h4');
     name.style.color = '#000';
+    name.style.fontFamily = 'var(--default-font)';
+    name.style.textAlign = 'center';
 
     const address = document.createElement('p');
     const contact = document.createElement('p');
@@ -181,7 +183,7 @@ const filterMembers = (members, filter) => {
 
 
     id.innerHTML = `<span class="label">ID:</span> ${members[filter - 1].id}`;
-    name.innerHTML = `<span class="label">Name:</span> ${members[filter - 1].name}`;
+    name.innerHTML = `<span class="label"></span> ${members[filter - 1].name}`;
     address.innerHTML = `<span class="label">Address:</span> ${members[filter - 1].address}`;
     contact.innerHTML = `<span class="label">Contact:</span> ${members[filter - 1].contact}`;
     imageAlt.innerHTML = `<span class="label">About:</span> ${members[filter - 1].imageAlt}`;
@@ -274,10 +276,10 @@ async function fetchMembersGrid() {
             businesses.style.alignItems = 'center';
             businesses.style.alignContent = 'center';
             businesses.style.justifyContent = 'center';
-            businesses.style.fontFamily = 'Gowun Batang';
-            businesses.style.width = '80vw';
+            // businesses.style.fontFamily = 'Montserrat';
+            businesses.style.maxWidth = '80vw';
             businesses.style.padding = '5px 0';
-            businesses.style.margin = '0';
+            businesses.style.margin = '0 auto';
 
 
             const container = document.createElement('div'); // create a div 
@@ -301,6 +303,7 @@ async function fetchMembersGrid() {
             const subcontainer = document.createElement('div');
 
             subcontainer.className = 'subcontainer';
+
 
             const p = document.createElement('p');
             p.className = 'business-labels';
@@ -385,7 +388,8 @@ async function fetchMembersList() {
             businesses.style.alignItems = 'flex-start';
             businesses.style.alignContent = 'flex-start';
             businesses.style.justifyContent = 'center';
-            businesses.style.fontFamily = 'Gowun Batang';
+            businesses.style.margin = '0 auto';
+            // businesses.style.fontFamily = 'Montserrat';
 
             const container = document.createElement('div'); // create a div 
             container.className = 'container';
