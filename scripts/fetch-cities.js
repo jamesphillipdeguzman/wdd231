@@ -36,12 +36,66 @@ const dropdownCities = (cities) => {
             option.value = cityName;
             option.textContent = cityName;
 
+            const card = document.querySelector('.cities');
+
+            // Create an img element and define its class name
+            const img = document.createElement('img');
+            img.className = "city-img";
+            img.setAttribute("src", `${city.image}`);
+            img.setAttribute("alt", `The city of ${city.name}`);
+            img.setAttribute('loading', 'lazy');
+            img.setAttribute('width', '100');
+            img.setAttribute('height', '100');
+            img.style.border = '1px solid #ccc';
+            img.style.boxShadow = '0px 0px 4px #888';
+
+            const cardTitle = document.querySelector('.city-title');
+
+            cardTitle.append(selector);
+
             selector.append(option);
+            card.append(img);
+
+
+
+
         }
 
 
-    });
-}
 
-export { fetchCities, dropdownCities };
+
+    });
+    selectCities.addEventListener('change', (cities) => {
+
+        const card = document.querySelector('.cities');
+
+        // Create an img element and define its class name
+        const img = document.createElement('img');
+        img.className = "city-img";
+        img.setAttribute("src", `${city.image}`);
+        img.setAttribute("alt", `The city of ${city.name}`);
+        img.setAttribute('loading', 'lazy');
+        img.setAttribute('width', '100');
+        img.setAttribute('height', '100');
+        img.style.border = '1px solid #ccc';
+        img.style.boxShadow = '0px 0px 4px #888';
+
+        const cardTitle = document.querySelector('.city-title');
+
+        cardTitle.append(selector);
+
+        selector.append(option);
+        card.append(img);
+        // selectCities.innerHTML
+        // populateCities();
+        alert('ok');
+
+
+    });
+};
+
+
+
+
+// export { fetchCities, dropdownCities };
 

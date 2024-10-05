@@ -3,52 +3,62 @@
         {
             "id": "1",
             "name": "Quezon City",
-            "postcode": "1100"
+            "postcode": "1100",
+            "image": "images/cities/qc.webp"
         },
         {
             "id": "2",
             "name": "Manila",
-            "postcode": "1000"
+            "postcode": "1000",
+            "image": "images/cities/manila.webp"
         },
         {
             "id": "3",
             "name": "Cebu City",
-            "postcode": "6000"
+            "postcode": "6000",
+            "image": "images/cities/cebu.webp"
         },
         {
             "id": "4",
             "name": "Davao City",
-            "postcode": "8000"
+            "postcode": "8000",
+            "image": "images/cities/davao.webp"
         },
         {
             "id": "5",
             "name": "Zamboanga City",
-            "postcode": "7000"
+            "postcode": "7000",
+            "image": "images/cities/zamboanga.webp"
         },
         {
             "id": "6",
             "name": "Antipolo City",
-            "postcode": "1870"
+            "postcode": "1870",
+            "image": "images/cities/antipolo.webp"
         },
         {
             "id": "7",
             "name": "Pasig City",
-            "postcode": "1600"
+            "postcode": "1600",
+            "image": "images/cities/pasig.webp"
         },
         {
             "id": "8",
             "name": "Taguig City",
-            "postcode": "1630"
+            "postcode": "1630",
+            "image": "images/cities/taguig.webp"
         },
         {
             "id": "9",
             "name": "Iloilo City",
-            "postcode": "5000"
+            "postcode": "5000",
+            "image": "images/cities/iloilo.webp"
         },
         {
             "id": "10",
             "name": "General Santos City",
-            "postcode": "9500"
+            "postcode": "9500",
+            "image": "images/cities/gensan.webp"
         }
     ]
 }

@@ -1,82 +1,82 @@
-import { fetchCities, dropdownCities } from "./fetch-cities.js";
+
 
 // Define courses object details here...
 
 const courses = [
     {
-        subject: 'CSE',
+        subject: "CSE",
         number: 110,
-        title: 'Introduction to Programming',
+        title: "Introduction to Programming",
         credits: 2,
-        certificate: 'Web and Computer Programming',
-        description: 'This course will introduce heros to programming. It will introduce the building blocks of programming languages (variables, decisions, calculations, loops, array, and input/output) and use them to solve problems.',
+        certificate: "Web and Computer Programming",
+        description: "This course will introduce heros to programming. It will introduce the building blocks of programming languages (variables, decisions, calculations, loops, array, and input/output) and use them to solve problems.",
         technology: [
-            'Python'
+            "Python"
         ],
         completed: true
     },
     {
-        subject: 'WDD',
+        subject: "WDD",
         number: 130,
-        title: 'Web Fundamentals',
+        title: "Web Fundamentals",
         credits: 2,
-        certificate: 'Web and Computer Programming',
-        description: 'This course introduces heros to the World Wide Web and to careers in web site design and development. The course is hands on with heros actually participating in simple web designs and programming. It is anticipated that heros who complete this course will understand the fields of web design and development and will have a good idea if they want to pursue this degree as a major.',
+        certificate: "Web and Computer Programming",
+        description: "This course introduces heros to the World Wide Web and to careers in web site design and development. The course is hands-on with heros actually participating in simple web designs and programming. It is anticipated that heros who complete this course will understand the fields of web design and development and will have a good idea if they want to pursue this degree as a major.",
         technology: [
-            'HTML',
-            'CSS'
+            "HTML",
+            "CSS"
         ],
         completed: true
     },
     {
-        subject: 'CSE',
+        subject: "CSE",
         number: 111,
-        title: 'Programming with Functions',
+        title: "Programming with Functions",
         credits: 2,
-        certificate: 'Web and Computer Programming',
-        description: 'CSE 111 heros become more organized, efficient, and powerful computer programmers by learning to research and call functions written by others; to write, call , debug, and test their own functions; and to handle errors within functions. CSE 111 heros write programs with functions to solve problems in many disciplines, including business, physical science, human performance, and humanities.',
+        certificate: "Web and Computer Programming",
+        description: "CSE 111 heros become more organized, efficient, and powerful computer programmers by learning to research and call functions written by others; to write, call, debug, and test their own functions; and to handle errors within functions. CSE 111 heros write programs with functions to solve problems in many disciplines, including business, physical science, human performance, and humanities.",
         technology: [
-            'Python'
+            "Python"
         ],
         completed: true
     },
     {
-        subject: 'CSE',
+        subject: "CSE",
         number: 210,
-        title: 'Programming with Classes',
+        title: "Programming with Classes",
         credits: 2,
-        certificate: 'Web and Computer Programming',
-        description: 'This course will introduce the notion of classes and objects. It will present encapsulation at a conceptual level. It will also work with inheritance and polymorphism.',
+        certificate: "Web and Computer Programming",
+        description: "This course will introduce the notion of classes and objects. It will present encapsulation at a conceptual level. It will also work with inheritance and polymorphism.",
         technology: [
-            'C#'
+            "C#"
         ],
         completed: true
     },
     {
-        subject: 'WDD',
+        subject: "WDD",
         number: 131,
-        title: 'Dynamic Web Fundamentals',
+        title: "Dynamic Web Fundamentals",
         credits: 2,
-        certificate: 'Web and Computer Programming',
-        description: 'This course builds on prior experience in Web Fundamentals and programming. heros will learn to create dynamic websites that use JavaScript to respond to events, update content, and create responsive user experiences.',
+        certificate: "Web and Computer Programming",
+        description: "This course builds on prior experience in Web Fundamentals and programming. Heros will learn to create dynamic websites that use JavaScript to respond to events, update content, and create responsive user experiences.",
         technology: [
-            'HTML',
-            'CSS',
-            'JavaScript'
+            "HTML",
+            "CSS",
+            "JavaScript"
         ],
         completed: true
     },
     {
-        subject: 'WDD',
+        subject: "WDD",
         number: 231,
-        title: 'Frontend Web Development I',
+        title: "Frontend Web Development I",
         credits: 2,
-        certificate: 'Web and Computer Programming',
-        description: 'This course builds on prior experience with Dynamic Web Fundamentals and programming. heros will focus on user experience, accessibility, compliance, performance optimization, and basic API usage.',
+        certificate: "Web and Computer Programming",
+        description: "This course builds on prior experience with Dynamic Web Fundamentals and programming. Heros will focus on user experience, accessibility, compliance, performance optimization, and basic API usage.",
         technology: [
-            'HTML',
-            'CSS',
-            'JavaScript'
+            "HTML",
+            "CSS",
+            "JavaScript"
         ],
         completed: false
     }
@@ -110,19 +110,36 @@ const cseOnly = document.querySelector('#cse');
 const wddOnly = document.querySelector('#wdd');
 const selectCities = document.querySelector('#dynamic-cities');
 
-selectCities.addEventListener('click', () => {
-    // selectCities.innerHTML
-    // populateCities();
-    fetchCities();
-});
+// selectCities.addEventListener('change', () => {
+
+//     const card = document.querySelector('.cities');
+
+//     // Create an img element and define its class name
+//     const img = document.createElement('img');
+//     img.className = "city-img";
+//     img.setAttribute("src", `${city.image}`);
+//     img.setAttribute("alt", `The city of ${city.name}`);
+//     img.setAttribute('loading', 'lazy');
+//     img.setAttribute('width', '100');
+//     img.setAttribute('height', '100');
+//     img.style.border = '1px solid #ccc';
+//     img.style.boxShadow = '0px 0px 4px #888';
+
+//     const cardTitle = document.querySelector('.city-title');
+
+//     cardTitle.append(selector);
+
+//     selector.append(option);
+//     card.append(img);
+//     // selectCities.innerHTML
+//     // populateCities();
+//     alert('ok');
+
+
+// });
 // Populate cities
-function populateCities() {
 
-
-    alert('okay');
-}
-
-
+fetchCities();
 
 // Populate the courses in Web and Computer Programming...
 function populateCourse() {
