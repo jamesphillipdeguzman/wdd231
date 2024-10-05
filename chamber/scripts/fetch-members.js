@@ -29,8 +29,10 @@ const dropdownMembers = (members) => {
         // populate the dropdown with the member's names
         const memberName = `${member.id} ${member.name}`;
 
+        // Check if the option already exists...
+        const existingOption = Array.from(selector.options).some(option => option.value === `${member.id} ${member.name}`);
         // Create the dropdown list only if empty initially...
-        if (document.querySelector('#dynamic-businesses').value == '') {
+        if (!existingOption) {
 
             const option = document.createElement('option');
 

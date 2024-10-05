@@ -1,0 +1,54 @@
+{
+    "cities": [
+        {
+            "id": "1",
+            "name": "Quezon City",
+            "postcode": "1100"
+        },
+        {
+            "id": "2",
+            "name": "Manila",
+            "postcode": "1000"
+        },
+        {
+            "id": "3",
+            "name": "Cebu City",
+            "postcode": "6000"
+        },
+        {
+            "id": "4",
+            "name": "Davao City",
+            "postcode": "8000"
+        },
+        {
+            "id": "5",
+            "name": "Zamboanga City",
+            "postcode": "7000"
+        },
+        {
+            "id": "6",
+            "name": "Antipolo City",
+            "postcode": "1870"
+        },
+        {
+            "id": "7",
+            "name": "Pasig City",
+            "postcode": "1600"
+        },
+        {
+            "id": "8",
+            "name": "Taguig City",
+            "postcode": "1630"
+        },
+        {
+            "id": "9",
+            "name": "Iloilo City",
+            "postcode": "5000"
+        },
+        {
+            "id": "10",
+            "name": "General Santos City",
+            "postcode": "9500"
+        }
+    ]
+}

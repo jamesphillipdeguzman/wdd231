@@ -1,3 +1,5 @@
+import { fetchCities, dropdownCities } from "./fetch-cities.js";
+
 // Define courses object details here...
 
 const courses = [
@@ -106,6 +108,19 @@ lastModified.innerHTML = `<span class="highlight">${formattedDateTime}</span>`;
 const allCourses = document.querySelector('#all');
 const cseOnly = document.querySelector('#cse');
 const wddOnly = document.querySelector('#wdd');
+const selectCities = document.querySelector('#dynamic-cities');
+
+selectCities.addEventListener('click', () => {
+    // selectCities.innerHTML
+    // populateCities();
+    fetchCities();
+});
+// Populate cities
+function populateCities() {
+
+
+    alert('okay');
+}
 
 
 
