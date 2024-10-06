@@ -80,6 +80,29 @@ p {
     font-family: var(--paragraph-font);
 }
 
+.cta-btn {
+
+    align-self: center;
+    background: #084186;
+    border-radius: 5px;
+    box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.75);
+    color: #FFEDED;
+    font-family: var(--default-font);
+    font-weight: 700;
+    font-size: 15px;
+    height: 52px;
+    left: 850px;
+    margin: 0 auto;
+    -ms-flex-item-align: center;
+    -ms-grid-row-align: center;
+    position: absolute;
+    text-align: center;
+    top: 160px;
+    -webkit-box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.75);
+    max-width: 80vw;
+    width: 100px;
+}
+
 /* ================= CONTAINER ================= */
 
 div.container {
