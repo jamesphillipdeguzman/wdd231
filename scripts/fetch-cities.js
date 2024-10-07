@@ -36,6 +36,7 @@ const dropdownCities = (cities) => {
         console.log(existingOption);
 
         if (!existingOption) {
+
             const cityCurrentTemp = document.createElement('span');
             const cityName = document.createElement('p');
             const tempBox = document.createElement('figure');
@@ -67,6 +68,8 @@ const dropdownCities = (cities) => {
             const rank = document.createElement('p');
             const lat = document.createElement('p');
             const lon = document.createElement('p');
+            const population = document.createElement('p');
+            const tourist = document.createElement('p');
 
             const section = document.createElement('section');
             const span = document.createElement('span');
@@ -76,6 +79,9 @@ const dropdownCities = (cities) => {
 
             section.className = 'city-section';
             dataBox.className = 'city-dataBox';
+            tempBox.className = 'temp-box';
+            tourist.className = 'tourist-spot';
+            rank.className = 'rank';
 
             // Image properties
 
@@ -106,15 +112,21 @@ const dropdownCities = (cities) => {
 
             lat.textContent = `lat: ${city.latitude}`;
             lon.textContent = `lon: ${city.longitude}`;
-            const theCity = document.querySelector('#the-city');
-            theCity.textContent = `${city.name}`;
-            getURL(`${city.name}`, `${city.latitude}`, `${city.longitude}`);
+            population.textContent = `Population: ${city.population}`;
+            tourist.textContent = `Tourist spot: ${city.tourist_destinations.tourist1}`;
 
+
+            getURL(`${city.name}`);
+
+            // const theTemp = getURL(`${city.name}`);
             selector.append(option);
             cardTitle.append(selector);
-            span.append(rank);
+            span.append(tourist);
+            span.append(population);
+
             span.append(lat);
             span.append(lon);
+            span.append(rank);
             span.append(cityCurrentTemp);
             section.append(img);
             dataBox.append(span);
@@ -131,35 +143,28 @@ const dropdownCities = (cities) => {
 
     });
 
+    const dynamicCities = document.querySelector('#dynamic-cities');
+
+    dynamicCities.addEventListener('change', () => {
+        // alert(document.querySelector('#dynamic-cities').value);
+
+        const city = document.querySelector('#dynamic-cities').value;
 
 
-    // selectCities.addEventListener('change', (cities) => {
-
-    //     const card = document.querySelector('.cities-gallery');
-
-    //     // Create an img element and define its class name
-    //     const img = document.createElement('img');
-    //     img.className = "city-img";
-    //     img.setAttribute("src", `${ city.image }`);
-    //     img.setAttribute("alt", `The city of ${ city.name }`);
-    //     img.setAttribute('loading', 'lazy');
-    //     img.setAttribute('width', '100');
-    //     img.setAttribute('height', '100');
-    //     img.style.border = '1px solid #ccc';
-    //     img.style.boxShadow = '0px 0px 4px #888';
-
-    //     const cardTitle = document.querySelector('.city-title');
-
-    //     cardTitle.append(selector);
-
-    //     selector.append(option);
-    //     card.append(img);
-    //     // selectCities.innerHTML
-    //     // populateCities();
-    //     alert('ok');
 
 
-    // });
+        if (document.querySelector('#dynamic-cities').value == city) {
+            // alert('match!');
+            // Get weather API
+            getURL(`${city}`);
+
+
+
+        }
+
+    });
+
+
 };
 
 fetchCities();

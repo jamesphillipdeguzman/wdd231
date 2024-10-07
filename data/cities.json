@@ -9,11 +9,11 @@
             "latitude": 14.6760,
             "longitude": 121.0437,
             "population": 2994000,
-            "tourist_destinations": [
-                "Aguinaldo Shrine",
-                "Quezon Memorial Circle",
-                "Loyola Memorial Park"
-            ]
+            "tourist_destinations": {
+                "tourist1": "Aguinaldo Shrine",
+                "tourist2": "Quezon Memorial Circle",
+                "tourist3": "Loyola Memorial Park"
+            }
         },
         {
             "id": "2",
@@ -24,11 +24,11 @@
             "latitude": 14.5995,
             "longitude": 120.9842,
             "population": 1785000,
-            "tourist_destinations": [
-                "Intramuros",
-                "Rizal Park",
-                "National Museum Complex"
-            ]
+            "tourist_destinations": {
+                "tourist1": "Intramuros",
+                "tourist2": "Rizal Park",
+                "tourist3": "National Museum Complex"
+            }
         },
         {
             "id": "3",
@@ -39,11 +39,11 @@
             "latitude": 10.3157,
             "longitude": 123.8854,
             "population": 922611,
-            "tourist_destinations": [
-                "Magellan's Cross",
-                "Basilica Minore del Santo Niño",
-                "Taoist Temple"
-            ]
+            "tourist_destinations": {
+                "tourist1": "Magellan's Cross",
+                "tourist2": "Basilica Minore del Santo Niño",
+                "tourist3": "Taoist Temple"
+            }
         },
         {
             "id": "4",
@@ -54,11 +54,11 @@
             "latitude": 7.1907,
             "longitude": 125.4553,
             "population": 1633000,
-            "tourist_destinations": [
-                "Philippine Eagle Center",
-                "People's Park",
-                "Mount Apo"
-            ]
+            "tourist_destinations": {
+                "tourist1": "Philippine Eagle Center",
+                "tourist2": "People's Park",
+                "tourist3": "Mount Apo"
+            }
         },
         {
             "id": "5",
@@ -69,11 +69,11 @@
             "latitude": 6.8925,
             "longitude": 122.0872,
             "population": 861799,
-            "tourist_destinations": [
-                "Paseo del Mar",
-                "Fort Pilar",
-                "Pink Sand Beach"
-            ]
+            "tourist_destinations": {
+                "tourist1": "Paseo del Mar",
+                "tourist2": "Fort Pilar",
+                "tourist3": "Pink Sand Beach"
+            }
         },
         {
             "id": "6",
@@ -84,11 +84,11 @@
             "latitude": 14.5804,
             "longitude": 121.1200,
             "population": 776000,
-            "tourist_destinations": [
-                "Antipolo Cathedral",
-                "Hinulugang Taktak",
-                "Lourdes Church"
-            ]
+            "tourist_destinations": {
+                "tourist1": "Antipolo Cathedral",
+                "tourist2": "Hinulugang Taktak",
+                "tourist3": "Lourdes Church"
+            }
         },
         {
             "id": "7",
@@ -99,11 +99,11 @@
             "latitude": 14.5802,
             "longitude": 121.0850,
             "population": 803400,
-            "tourist_destinations": [
-                "Emerald Avenue",
-                "Pasig Rainforest Park",
-                "Metrowalk"
-            ]
+            "tourist_destinations": {
+                "tourist1": "Emerald Avenue",
+                "tourist2": "Pasig Rainforest Park",
+                "tourist3": "Metrowalk"
+            }
         },
         {
             "id": "8",
@@ -114,11 +114,11 @@
             "latitude": 14.5304,
             "longitude": 121.0509,
             "population": 886600,
-            "tourist_destinations": [
-                "Bonifacio Global City",
-                "SM Aura Premier",
-                "Heritage Park"
-            ]
+            "tourist_destinations": {
+                "tourist1": "Bonifacio Global City",
+                "tourist2": "SM Aura Premier",
+                "tourist3": "Heritage Park"
+            }
         },
         {
             "id": "9",
@@ -129,26 +129,26 @@
             "latitude": 10.6918,
             "longitude": 122.5621,
             "population": 454600,
-            "tourist_destinations": [
-                "Iloilo River Esplanade",
-                "Molo Church",
-                "Jaro Cathedral"
-            ]
+            "tourist_destinations": {
+                "tourist1": "Iloilo River Esplanade",
+                "tourist2": "Molo Church",
+                "tourist3": "Jaro Cathedral"
+            }
         },
         {
             "id": "10",
-            "name": "Gensan City",
+            "name": "General Santos City",
             "postcode": "9500",
             "image": "images/cities/gensan.webp",
             "rank": "10th",
             "latitude": 6.1045,
             "longitude": 125.1710,
             "population": 259000,
-            "tourist_destinations": [
-                "Fish Port Complex",
-                "Sarangani Bay",
-                "Panggal Festival"
-            ]
+            "tourist_destinations": {
+                "tourist1": "Fish Port Complex",
+                "tourist2": "Sarangani Bay",
+                "tourist3": "Panggal Festival"
+            }
         }
     ]
 }
