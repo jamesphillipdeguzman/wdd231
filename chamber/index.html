@@ -34,7 +34,16 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/chamber-large.css">
     <link rel="stylesheet" href="styles/chamber-small.css">
+    <!-- <link rel="stylesheet" href="../styles/course.css"> -->
     <!-- defer is not needed when the type of script is 'module'. -->
+
+    <!-- ** 1) Run script to populate the dropdown for the cities ** -->
+    <!-- <script src="scripts/fetch-cities.js" type="module"></script> -->
+    <!-- ** 2) Then, run script to get weather info for Iloilo ** -->
+    <script src="scripts/chamber-weather.js" defer></script>
+    <!-- ** 3) Finally, load default script to show chamber commerce ** -->
+
+
     <script src="scripts/chamber.js" type="module"></script>
 
 </head>
@@ -97,22 +106,20 @@
 
         </aside>
         <main>
-            <h1>Iloilo Chamber of Commerce Homepage</h1>
-            <label for="dynamic-businesses" aria-label="dynamic-businesses"></label>
-            <select name="dynamic-businesses" id="dynamic-businesses" aria-label="dynamic-businesses">
-                <option value="" id="select">Select</option>
+            <section class="weather-data">
+                <h3>
+                    <spans id="city-name"></spans>
+                </h3>
 
-            </select>
-            <div class="layout">
+                <figure>
+                    <img src="" alt="" id="city-image">
+                    <p>The current temperature in Iloilo City is <span id="current-temp"></span>
+                    </p>
 
-                <button id="grid"><img src="images/grid.svg" alt="grid button for grid layout" width="30"
-                        height="30"></button>
-                <button id="list"><img src="images/list.svg" alt="list button for list layout" width="20"
-                        height="20"></button>
-            </div>
-
-            <!-- Populate businesses here dynamically through your javascript code -->
-            <div id="businesses"></div>
+                    <figcaption></figcaption>
+                </figure>
+                <img id="weather-icon" src="" alt="">
+            </section>
 
 
         </main>

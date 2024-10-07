@@ -107,7 +107,7 @@ p {
 .cta-btn:hover {
     background-color: #83c38e;
     color: #000;
-    transition: background-color 0.3s ease-in;
+    transition: background-color 0.1s ease-in;
 }
 
 /* ================= CONTAINER ================= */
@@ -242,7 +242,7 @@ nav.menuLinks ul li a {
     background-color: rgba(0, 0, 0, 0.2);
     /* Change background color on hover */
 
-    transition: background-color 0.3s ease-in;
+    transition: background-color 0.1s ease-in;
 }
 
 
@@ -403,7 +403,10 @@ div.layout button:hover {
     font-weight: 400;
 }
 
-
+.weather-data {
+    background-color: #bed;
+    text-align: center;
+}
 
 /* attribute selector for input text */
 /* input[type="text"] {
