@@ -24,9 +24,14 @@
     <link rel="stylesheet" href="styles/course.css">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
-    <!-- <script src="scripts/course.js" type="module"></script> -->
-    <script src="scripts/fetch-cities.js" defer></script>
+
+    <!-- ** 1) Run script to populate the dropdown for the cities ** -->
+    <script src="scripts/fetch-cities.js" type="module"></script>
+    <!-- ** 2) Then, run script to get weather info for Iloilo ** -->
+    <script src="scripts/course-weather.js" defer></script>
+    <!-- ** 3) Finally, load default script to show my courses ** -->
     <script src="scripts/course.js" defer></script>
+
 
 
 </head>
@@ -91,9 +96,15 @@
                     <a href="https://en.wikipedia.org/wiki/Iloilo_City" target="_blank">
                         <img src="images/iloilo-business-park.webp"
                             alt="iloilo business park festive walk top view with clock tower mandurriao iloilo city 10 22 2022"
-                            height="100" width="150">
+                            height="300" width="300">
                     </a>
                     <figcaption>Iloilo Business Park</figcaption>
+                </figure>
+
+                <p>The current temperature in Iloilo City is <span id="current-temp"></span></p>
+                <figure>
+                    <img id="weather-icon" src="" alt="">
+                    <figcaption></figcaption>
                 </figure>
             </section>
 
@@ -104,12 +115,16 @@
             <section class="city-title">
                 <h3>Top 10 cities</h3>
             </section>
-            <section class="cities">
+            <section class="cities-gallery">
 
 
                 <select name="cities" id="dynamic-cities">Select a city</select>
 
+
             </section>
+            <!-- <section class="weather-info"></section> -->
+
+
 
 
         </aside>

@@ -240,15 +240,51 @@ nav.top-navlinks ul li a:hover {
 
 }
 
-.cities {
-    display: grid;
+.cities-gallery {
+    /* Apply gray background for the images in the gallery */
+    background-color: #333;
+    display: flex;
+    /* display: grid;
     grid-template-columns: repeat(auto-fit, minmax(100px, 1fr));
     grid-template-rows: repeat(3, 1fr);
     justify-content: center;
     align-items: center;
-    align-content: center;
-    gap: 5px;
+    align-content: center; */
+    padding: 10px;
+    gap: 3rem;
+    /* create horizonal scrolling for the image */
+    overflow: auto;
+    white-space: nowrap;
 }
+
+.cities-gallery img {
+    /* Apply opacity of 80% when not yet hovered with mouse */
+    opacity: 0.8;
+    /* background-color: #006eb6; */
+    /* transform: translateX(10px); */
+    transition: opacity 0.3s ease-in;
+
+}
+
+.cities-gallery img:hover {
+    /* Remove opacity and scale the city image on hover by 110% */
+    opacity: 1;
+    transform: translateY(0);
+    transform: scale(1.1);
+
+}
+
+.city-section {
+    margin: 3rem auto;
+    padding: 1rem;
+}
+
+.city-dataBox {
+    /* background-color: #006eb6; */
+    margin: 2rem auto;
+
+}
+
 
 nav.course-navlinks ul {
     display: flex;
@@ -268,7 +304,7 @@ nav.course-navlinks ul li {
 }
 
 nav.course-navlinks ul li:hover {
-    background-color: #764a4a;
+    background-color: rgba(0, 0, 0, 0.5);
     color: #fff;
     transition-timing-function: ease-in;
     transition-delay: 0.1s;
@@ -338,20 +374,28 @@ footer img {
 @media (max-width: 950px) {
 
     #menu {
-        font-size: 1.5rem;
-        border: 0;
-        position: absolute;
-        top: 2px;
-        right: 15px;
-        color: #000;
+
         background: none;
+        color: #000;
+        cursor: pointer;
         display: block;
+        border: 0;
+        font-size: 2rem;
+        padding: .2rem 2vw;
+        position: absolute;
+        right: 15px;
+        top: 8px;
 
     }
 
 
+
+
+
     #menu::before {
-        content: "☰";
+        /* content: "☰"; */
+        content: '\2630';
+
         /* When menu is closed, display the hamburger icon */
 
     }
@@ -453,7 +497,7 @@ footer img {
     }
 
     nav.course-navlinks ul li:hover {
-        background-color: #764a4a;
+        background-color: rgba(0, 0, 0, 0.5);
         color: #fff;
         transition-timing-function: ease-in;
         transition-delay: 0.1s;

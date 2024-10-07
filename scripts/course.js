@@ -1,5 +1,3 @@
-
-
 // Define courses object details here...
 
 const courses = [
@@ -110,7 +108,17 @@ const cseOnly = document.querySelector('#cse');
 const wddOnly = document.querySelector('#wdd');
 const selectCities = document.querySelector('#dynamic-cities');
 
-// selectCities.addEventListener('change', () => {
+selectCities.addEventListener('mouseenter', () => {
+    // alert('mouse enter');
+    selectCities.style.backgroundColor = 'rgba(0, 0, 0, 0.1)';
+});
+
+selectCities.addEventListener('mouseleave', () => {
+    // alert('mouse leave!');
+    selectCities.style.backgroundColor = 'rgba(255, 255, 255, 0.9)';
+});
+
+// selectCities.addEventListener('hover', () => {
 
 //     const card = document.querySelector('.cities');
 
@@ -138,8 +146,11 @@ const selectCities = document.querySelector('#dynamic-cities');
 
 // });
 // Populate cities
+// apiFetch();
+// fetchCities();
 
-fetchCities();
+// Fetch weather info for iloilo
+
 
 // Populate the courses in Web and Computer Programming...
 function populateCourse() {
