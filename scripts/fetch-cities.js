@@ -106,8 +106,9 @@ const dropdownCities = (cities) => {
 
             lat.textContent = `lat: ${city.latitude}`;
             lon.textContent = `lon: ${city.longitude}`;
-
-            getURL(`${city.latitude}`, `${city.longitude}`);
+            const theCity = document.querySelector('#the-city');
+            theCity.textContent = `${city.name}`;
+            getURL(`${city.name}`, `${city.latitude}`, `${city.longitude}`);
 
             selector.append(option);
             cardTitle.append(selector);
@@ -139,8 +140,8 @@ const dropdownCities = (cities) => {
     //     // Create an img element and define its class name
     //     const img = document.createElement('img');
     //     img.className = "city-img";
-    //     img.setAttribute("src", `${city.image}`);
-    //     img.setAttribute("alt", `The city of ${city.name}`);
+    //     img.setAttribute("src", `${ city.image }`);
+    //     img.setAttribute("alt", `The city of ${ city.name }`);
     //     img.setAttribute('loading', 'lazy');
     //     img.setAttribute('width', '100');
     //     img.setAttribute('height', '100');

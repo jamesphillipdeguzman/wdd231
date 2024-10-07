@@ -540,3 +540,12 @@ footer img {
     }
 
 }
+
+@media (max-width: 463px) {
+
+    #ilo-img {
+        width: 150px;
+        height: auto;
+    }
+
+}

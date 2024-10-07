@@ -4,34 +4,40 @@ const captionDesc = document.querySelector('figcaption');
 // const lat = 0;
 // const lon = 0;
 
-function getURL(lat, lon) {
+function getURL(city, lat, lon) {
     // API key: 0778f1befc62393b4badae75707b09a5
     // Iloilo City coordinates
     // const lat = 10.6918;
     // const lon = 122.5621;
-
     const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=0778f1befc62393b4badae75707b09a5`;
-    apiFetch(url);
-    return url;
+
+    apiFetch(city, url, lat, lon);
+    // return url;
 }
 
 
 // getURL();
 
 
-async function apiFetch(url) {
+async function apiFetch(city, url, lat, lon) {
     try {
+
+        const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=0778f1befc62393b4badae75707b09a5`;
         const response = await fetch(url);
 
         if (!response.ok) {
             throw new Error('The network could not be reached', await response.text());
         }
         else {
+
             const data = await response.json();
             console.table(data);
             // alert('hi there');
             displayResults(data);
+
         }
+
+
     }
     catch (error) {
         console.error('The error was: ', error);

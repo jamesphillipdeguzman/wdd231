@@ -21,8 +21,9 @@
     <link
         href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
-    <link rel="stylesheet" href="styles/course.css">
     <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/course.css">
+
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
     <!-- ** 1) Run script to populate the dropdown for the cities ** -->
@@ -94,18 +95,19 @@
                 <h3>Iloilo, Philippines</h3>
                 <figure>
                     <a href="https://en.wikipedia.org/wiki/Iloilo_City" target="_blank">
-                        <img src="images/iloilo-business-park.webp"
+                        <img id="ilo-img" src="images/iloilo-business-park.webp"
                             alt="iloilo business park festive walk top view with clock tower mandurriao iloilo city 10 22 2022"
                             height="300" width="300">
                     </a>
                     <figcaption>Iloilo Business Park</figcaption>
                 </figure>
 
-                <p>The current temperature in Iloilo City is <span id="current-temp"></span></p>
                 <figure>
-                    <img id="weather-icon" src="" alt="">
+                    <p>The current temperature in <span id="the-city"></span> is <span id="current-temp"></span></p>
+
                     <figcaption></figcaption>
                 </figure>
+                <img id="weather-icon" src="" alt="">
             </section>
 
 
