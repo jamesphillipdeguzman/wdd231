@@ -578,7 +578,7 @@ footer img {
 
 }
 
-@media (max-width: 463px) {
+@media (max-width: 398px) {
 
     #ilo-img {
         width: 150px;
@@ -589,8 +589,68 @@ footer img {
         display: flex;
         flex-direction: column;
         margin: 0 auto;
-        max-width: 26vw;
+        max-width: 100 vw;
 
+    }
+
+    .provinces p {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        max-width: 100 vw;
+
+    }
+
+    .dynamic-cities {
+        height: 2.8rem;
+        max-width: 100vw;
+
+    }
+
+    .city-title {
+        display: flex;
+        flex-direction: column;
+        height: 2.8rem;
+
+
+
+    }
+
+    .city-title h3 {
+        border-top-left-radius: 5px;
+        border-top-right-radius: 5px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+    }
+
+    .cities-gallery {
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        max-width: 100vw;
+
+
+    }
+
+    .city-img {
+        height: 150px;
+        width: 150px;
+
+    }
+
+    .city-dataBox,
+    .city-section {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-content: center;
+        align-items: center;
+    }
+
+    .city-dataBox img {
+        justify-content: center;
+        align-content: center;
+        align-items: center;
     }
 
 }
