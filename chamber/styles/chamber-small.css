@@ -294,10 +294,26 @@
         margin: 5px auto;
     }
 
-    .hero {
-        padding-top: 6rem;
+    hero {
+        position: relative;
+        display: inline-block;
 
     }
+
+    .hero-img {
+        display: block;
+    }
+
+    .cta-btn {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+
+        cursor: pointer;
+        z-index: 1;
+
+    }
+
 
     .cta-btn {
 
@@ -520,6 +536,27 @@
 }
 
 @media (max-width: 503px) {
+
+    hero {
+        position: relative;
+        display: inline-block;
+
+    }
+
+    .hero-img {
+        display: block;
+    }
+
+    .cta-btn {
+        position: absolute;
+        top: 30%;
+        left: 50%;
+
+        cursor: pointer;
+        z-index: 1;
+
+    }
+
     .cta-btn {
 
         align-self: center;
