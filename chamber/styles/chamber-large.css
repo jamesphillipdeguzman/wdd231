@@ -278,7 +278,7 @@ main {
     /* display: flex;
     flex-direction: column;
     flex: 1; */
-    grid-column: 3;
+    grid-column: 2;
     margin: 20px;
     padding: 0;
     /* margin: 0 auto; */
@@ -442,9 +442,19 @@ div.layout button:hover {
 
 }
 
+#chamber-meeting {
+    margin: 0.8rem auto;
+
+}
+
 button.cta-btn {
     /* padding: 30px; */
     margin: 30px;
+}
+
+#city-name {
+    font-weight: 900;
+    font-size: large;
 }
 
 /* attribute selector for input text */
@@ -461,6 +471,9 @@ button.cta-btn {
     padding: 0;
     line-height: 1rem;
     width: 200px;
+    /* Make quick links float */
+    position: fixed;
+    z-index: 10;
 
 }
 
@@ -511,10 +524,6 @@ aside {
 
 }
 
-aside.left-sidebar {
-    height: 100vh;
-
-}
 
 aside.left-sidebar ul {
     border-top: 1px solid rgba(255, 255, 255, 0.2);
