@@ -90,10 +90,10 @@ p {
 .cta-btn {
 
     align-self: center;
-    background: #2d783b;
+    background: rgba(0, 51, 102, 1);
     border-radius: 5px;
     box-shadow: 0px 5px 5px rgba(0, 0, 0, 0.2);
-    color: #000;
+    color: #fff;
     cursor: pointer;
     font-family: var(--default-font);
     font-weight: 700;
@@ -114,8 +114,8 @@ p {
 }
 
 .cta-btn:hover {
-    background-color: #11a141;
-    color: #000;
+    background-color: rgba(0, 51, 102, 0.9);
+    color: #fff;
     transition: background-color 0.1s ease-in;
 }
 
