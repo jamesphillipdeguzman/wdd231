@@ -241,8 +241,8 @@ async function fetchMembersGrid() {
         const data = await response.json();  // await for Promise to resolve or be rejected and parse the result as json object
 
         const members = data;
-
-        console.table(members); // log result to console
+        // log result to console
+        // console.table(members);
 
         const businesses = document.getElementById('businesses'); // target the businesses div by id
 

@@ -34,7 +34,7 @@ async function apiFetch(city, url) {
         else {
 
             const data = await response.json();
-            console.table(data);
+            // console.table(data);
             // alert('hi there');
             displayResults(data, city);
 

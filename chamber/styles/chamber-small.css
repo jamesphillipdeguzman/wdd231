@@ -78,16 +78,13 @@
         align-content: center;
         justify-content: center;
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        /* flex-direction: column; */
-        /* flex: 1 1 100%; */
-        /* Full width on mobile */
+        grid-template-columns: repeat(1, 1fr);
         justify-content: center;
         align-content: center;
         align-items: center;
         margin: 0 auto;
         padding: 0.4rem;
-        max-width: 100vw;
+        /* max-width: 100vw; */
 
 
     }
@@ -324,7 +321,8 @@
 @media (max-width: 403px) {
 
     #chamber-meeting {
-        width: 200px;
+        /* This ensures that chamber meeting image is within it's own frame */
+        max-width: 50vw;
         height: auto;
     }
 
@@ -432,19 +430,27 @@
 
     }
 
+    #featured-businesses {
+        max-width: 100vw;
+
+    }
+
 
     div.container {
         align-items: center;
         align-content: center;
         justify-content: center;
-        display: flex;
-        flex: 1 1 100%;
-        /* Full width on mobile */
-        flex-direction: row;
-        flex-wrap: nowrap;
-        max-width: 100%;
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        justify-content: center;
+        align-content: center;
+        align-items: center;
         margin: 0 auto;
-        padding: 0;
+        padding: 0.4rem;
+        max-width: 100vw;
+
+        /* width: 90%; */
+
 
     }
 

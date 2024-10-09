@@ -27,23 +27,23 @@ const displayFeatured = (members) => {
 
             // dynamicBusinesses.style.gridColumn = '2/3';
 
-            const container = document.createElement('div'); // create a div 
-            container.className = 'container';
-            container.style.display = 'flex';
-            container.style.flexDirection = 'column';
-            container.style.alignContent = 'center';
-            container.style.alignItems = 'left';
-            container.style.maxWidth = '100vw';
-            container.style.listStyleType = 'none';
-            container.style.backgroundColor = '#fff';
-            container.style.border = '1px solid #ccc';
-            container.style.color = '#000';
-            container.style.borderRadius = '5px';
-            container.style.boxShadow = '0px 0px 3px #888';
-            container.style.height = '30rem';
-            container.style.width = '400px';
-            // container.style.margin = '0 1rem';
-            // container.style.maxWidth = '100vw';
+            const wrapper = document.createElement('div'); // create a div 
+            wrapper.className = 'wrapper';
+            wrapper.style.display = 'flex';
+            wrapper.style.flexDirection = 'column';
+            wrapper.style.alignContent = 'center';
+            wrapper.style.alignItems = 'left';
+
+            wrapper.style.maxWidth = '80vw';// This ensures the business card is within the frame in mobile view
+            wrapper.style.listStyleType = 'none';
+            wrapper.style.backgroundColor = '#fff';
+            wrapper.style.border = '1px solid #ccc';
+            wrapper.style.color = '#000';
+            wrapper.style.borderRadius = '5px';
+            wrapper.style.boxShadow = '0px 0px 3px #888';
+            wrapper.style.height = '30rem';
+            wrapper.style.width = '25rem';
+
 
             const subcontainer = document.createElement('div');
 
@@ -75,7 +75,7 @@ const displayFeatured = (members) => {
             a.id = 'business-links';
 
 
-            container.innerHTML = ` <a href='${member.url}' aria-label='This is a ${member.imageAlt}'><img id='business-img' src=${member.image} alt=${member.imageAlt} width='150px' height='auto'></a>
+            wrapper.innerHTML = ` <a href='${member.url}' aria-label='This is a ${member.imageAlt}'><img id='business-img' src=${member.image} alt=${member.imageAlt} width='150px' height='auto'></a>
                                     <span class='business-labels'> Name: </span> <p>${member.name}</p>  
                                     <span class='business-labels'> Address: </span> <p> ${member.address}</p>
                                     <span class='business-labels'> Phone: </span> <p>${member.contact}</p>
@@ -86,8 +86,8 @@ const displayFeatured = (members) => {
             // subcontainer.appendChild(membershipLvl);
             subcontainer.appendChild(p);
             subcontainer.appendChild(img);
-            subcontainer.appendChild(container);
-            businesses.appendChild(container);
+            subcontainer.appendChild(wrapper);
+            businesses.appendChild(wrapper);
 
         }
 
@@ -110,7 +110,7 @@ async function fetchFeaturedMembers() {
 
         const members = await response.json();  // await for Promise to resolve or be rejected and parse the result as json object
 
-        console.table(members)
+        // console.table(members);
 
         displayFeatured(members);
 
