@@ -142,10 +142,10 @@ div.container {
 
 }
 
-#featured-businesses {
+/* #featured-businesses {
 
     transition: transform 0.3s;
-}
+} */
 
 
 div.container a {
@@ -165,11 +165,11 @@ div.container p {
 
 }
 
-div.container:hover {
+/* div.container:hover {
 
     transform: scale(1.02);
 
-}
+} */
 
 
 
