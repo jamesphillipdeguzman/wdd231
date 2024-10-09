@@ -56,6 +56,8 @@ const displayFeatured = (members) => {
 
             const img = document.createElement('img');
             img.id = 'business-img';
+            img.alt = `${member.imageAlt}`;
+
 
 
             const ul = document.createElement('ul');
@@ -73,7 +75,7 @@ const displayFeatured = (members) => {
             a.id = 'business-links';
 
 
-            container.innerHTML = ` <a href='${member.url}'><img id='business-img' src=${member.image} width='150px' height='auto'></a>
+            container.innerHTML = ` <a href='${member.url}' aria-label='This is a ${member.imageAlt}'><img id='business-img' src=${member.image} alt=${member.imageAlt} width='150px' height='auto'></a>
                                     <span class='business-labels'> Name: </span> <p>${member.name}</p>  
                                     <span class='business-labels'> Address: </span> <p> ${member.address}</p>
                                     <span class='business-labels'> Phone: </span> <p>${member.contact}</p>

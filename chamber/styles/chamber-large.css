@@ -113,7 +113,7 @@ p {
 }
 
 .cta-btn:hover {
-    background-color: #83c38e;
+    background-color: #11a141;
     color: #000;
     transition: background-color 0.1s ease-in;
 }
@@ -329,6 +329,10 @@ main {
     /* margin: 0 auto; */
     /* max-width: 100vw; */
     /* width: 100%; */
+}
+
+main h1 {
+    background-color: blanchedalmond;
 }
 
 main>p {
