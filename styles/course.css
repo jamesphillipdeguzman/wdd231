@@ -608,7 +608,7 @@ footer img {
 
 }
 
-@media (max-width: 398px) {
+@media (max-width: 600px) {
 
     #ilo-img {
         width: 150px;

@@ -251,8 +251,10 @@ async function fetchMembersGrid() {
         // Iterate through each business item from your parsed json data...
         members.forEach(member => {
 
+            dynamicBusinesses.style.display = 'grid';
+
             businesses.style.display = 'grid';
-            businesses.style.gridTemplateColumns = 'repeat(auto-fit, minmax(200px, 2fr))';
+            businesses.style.gridTemplateColumns = 'repeat(auto-fit, minmax(200px, 1fr))';
             businesses.style.gap = '0.5rem';
             businesses.style.alignItems = 'center';
             businesses.style.alignContent = 'center';
@@ -262,6 +264,7 @@ async function fetchMembersGrid() {
             businesses.style.padding = '5px 0';
             businesses.style.margin = '0 auto';
 
+            // dynamicBusinesses.style.gridColumn = '2/3';
 
             const container = document.createElement('div'); // create a div 
             container.className = 'container';
