@@ -38,13 +38,13 @@
     <!-- defer is not needed when the type of script is 'module'. -->
 
     <!-- ** 1) Run script to populate the dropdown for the cities ** -->
-    <!-- <script src="scripts/fetch-cities.js" type="module"></script> -->
+    <script src="scripts/chamber.js" type="module"></script>
     <!-- ** 2) Then, run script to get weather info for Iloilo ** -->
     <script src="scripts/chamber-weather.js" defer></script>
     <!-- ** 3) Finally, load default script to show chamber commerce ** -->
 
 
-    <script src="scripts/chamber.js" type="module"></script>
+    <script src="scripts/featured-members.js" defer></script>
 
 </head>
 
@@ -106,7 +106,8 @@
 
         </aside>
 
-        <main>
+        <article>
+
             <section class="keyevent">
                 <h3>Event: Iloilo Chamber of Commerce Conference 2025 </h3>
 
@@ -141,6 +142,19 @@
             </section>
 
 
+        </article>
+
+        <main>
+            <h1>Featured Members</h1>
+            <section class="featured-members">
+
+
+
+                <!-- Populate businesses here dynamically through your javascript code -->
+                <div id="featured-businesses"></div>
+
+            </section>
+
         </main>
 
     </div>
@@ -158,14 +172,14 @@
 
         <div class="socialLinks">
 
-            <a href="https://www.facebook.com/" target="_blank"><img src="images/facebook.png"
+            <a href="https://www.facebook.com/" target="_blank"><img src="images/icons8-facebook-50.png"
                     alt="Facebook icon 512 x 512" width="30" height="30"></a>
 
-            <a href="https://www.youtube.com/@jamesphillipdeguzman6495" target="_blank"><img src="images/youtube.png"
-                    alt="Youtube icon 512 x 512" width="30" height="30"></a>
+            <a href="https://www.youtube.com/@jamesphillipdeguzman6495" target="_blank"><img
+                    src="images/icons8-youtube-logo-50.png" alt="Youtube icon 512 x 512" width="30" height="30"></a>
 
-            <a href="https://www.linkedin.com/in/jamesphillipdeguzman/" target="_blank"><img src="images/linkedin.png"
-                    alt="LinkedIn icon 512 x 512" width="30" height="30"></a>
+            <a href="https://www.linkedin.com/in/jamesphillipdeguzman/" target="_blank"><img
+                    src="images/icons8-linkedin-50.png" alt="LinkedIn icon 512 x 512" width="30" height="30"></a>
 
 
         </div>

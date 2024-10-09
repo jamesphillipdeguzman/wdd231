@@ -222,6 +222,10 @@ const filterMembers = (members, filter) => {
 
 async function fetchMembersGrid() {
 
+    const leftSideBar = document.querySelector('.left-sidebar');
+
+    leftSideBar.style.display = 'none';
+
     // Clear the dropdown values to avoid duplicating the list again.
     document.querySelector('#dynamic-businesses').value = '';
 
@@ -271,7 +275,7 @@ async function fetchMembersGrid() {
             container.style.display = 'flex';
             container.style.flexDirection = 'column';
             container.style.alignContent = 'center';
-            container.style.alignItems = 'left';
+            container.style.alignItems = 'center';
             container.style.maxWidth = '100vw';
             container.style.listStyleType = 'none';
             container.style.backgroundColor = '#fff';
@@ -279,9 +283,9 @@ async function fetchMembersGrid() {
             container.style.color = '#000';
             container.style.borderRadius = '5px';
             container.style.boxShadow = '0px 0px 3px #888';
-            container.style.height = '25rem';
+            container.style.height = '23rem';
             container.style.width = '100%';
-            // container.style.margin = '0 1rem';
+            // container.style.margin = '0 2rem';
             // container.style.maxWidth = '100vw';
 
             const subcontainer = document.createElement('div');
@@ -339,6 +343,10 @@ async function fetchMembersGrid() {
 // ============== LIST VIEW ====================
 
 async function fetchMembersList() {
+
+    const leftSideBar = document.querySelector('.left-sidebar');
+
+    leftSideBar.style.display = 'block';
 
     // Clear the dropdown values to avoid duplicating the list again.
     document.querySelector('#dynamic-businesses').value = '';

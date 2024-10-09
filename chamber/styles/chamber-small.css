@@ -77,9 +77,10 @@
         align-items: center;
         align-content: center;
         justify-content: center;
-        display: flex;
-        flex-direction: column;
-        flex: 1 1 100%;
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        /* flex-direction: column; */
+        /* flex: 1 1 100%; */
         /* Full width on mobile */
         justify-content: center;
         align-content: center;
@@ -102,6 +103,12 @@
         text-align: center;
         align-items: center;
         padding-top: 0;
+    }
+
+
+    article {
+        grid-row: 2;
+        grid-column: 1 / span 2;
     }
 
     /* 
@@ -127,7 +134,7 @@
         /* display: flex;
         flex-direction: column;
         flex: 1; */
-        grid-column: 2;
+        grid-column: 1 /span 2;
         justify-content: center;
         margin: 20px;
         padding: 0;
@@ -153,6 +160,18 @@
 
     .cta-btn.open {
         display: block;
+    }
+
+    #business-img {
+        display: flex;
+        align-items: center;
+        margin: 0 auto;
+        padding: 5px;
+
+        /* background-color: #1EA896; */
+        align-content: center;
+
+
     }
 
     #dynamic-businesses {
@@ -301,6 +320,17 @@
 }
 
 /* Mobile view 2 */
+
+@media (max-width: 403px) {
+
+    #chamber-meeting {
+        width: 200px;
+        height: auto;
+    }
+
+}
+
+/* Mobile view 3 */
 
 @media (max-width: 230px) {
 
