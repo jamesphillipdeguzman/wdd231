@@ -5,7 +5,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Homepage | Iloilo Chamber of Commerce</title>
+    <title>Joinpage | Iloilo Chamber of Commerce</title>
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
         href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
@@ -16,7 +16,7 @@
         href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
         rel="stylesheet">
     <meta name="description"
-        content="Landing page of Iloilo Chamber of Commerce | WDD 231 | Web Frontend Development I | James Phillip De Guzman">
+        content="Join page of Iloilo Chamber of Commerce | WDD 231 | Web Frontend Development I | James Phillip De Guzman">
     <meta name="author" content="James Phillip K. De Guzman">
     <meta property="og:type" content="website">
     <meta property="og:title" content="Homepage | Iloilo Chamber of Commerce">
@@ -70,10 +70,10 @@
 
                 <ul>
                     <li><a href="https://jamesphillipdeguzman.github.io/wdd231/chamber/index.html">Home</a></li>
-                    <li><a href="https://jamesphillipdeguzman.github.io/wdd231/chamber/directory.html"
-                            class="current-menu-item">Directory</a>
+                    <li><a href="https://jamesphillipdeguzman.github.io/wdd231/chamber/directory.html">Directory</a>
                     </li>
-                    <li><a href="https://jamesphillipdeguzman.github.io/wdd231/chamber/join.html">Join</a></li>
+                    <li><a href="https://jamesphillipdeguzman.github.io/wdd231/chamber/join.html"
+                            class="current-menu-item">Join</a></li>
                     <li><a href="#">Discover</a></li>
                 </ul>
             </nav>
@@ -106,57 +106,46 @@
 
         </aside>
 
-        <article>
-            <h1>Welcome to Iloilo Chamber of Commerce</h1>
-            <section class="keyevent">
-                <h3>Event: Iloilo Chamber of Commerce Conference 2025 </h3>
-
-                <img src="images/chamber-meeting.webp" alt="Chamber meeting for Filipinos" id="chamber-meeting"
-                    width="300" height="200">
-                <p> Date: January 6, 2025 </p>
-                <p>Time: 8:00 AM - 11:00 AM</p>
-                <p>Location: Iloilo Convention Center (ICC) </p>
-                <p>
-                    Description:
-                    Join us for the inaugural Iloilo Chamber of Commerce Conference, where local business leaders will
-                    share best entrepreneurial practices and lead hands-on workshops for new members. This is a
-                    fantastic opportunity to network, learn, and enhance your business skills.
-                </p>
-                <p> Keynote Speaker: </p>
-                <p>Eldred Neal Sollesta</p>
-                <button class="cta-btn">Register</button>
-            </section>
-            <section class="weather-data">
-                <h3>Weather Forecast</h3>
-
-                <span id="city-name"></span>
-
-
-
-                <figure>
-                    <img src="images/day-city-view.webp" alt="day city view" id="city-image" width="150" height="75">
-                    <p>The current temperature in Iloilo City is <span id="current-temp"></span>
-                    </p>
-
-                    <figcaption></figcaption>
-                </figure>
-                <img src="images/cloudy.png" alt="cloudy weather icon" id="weather-icon" width="50" height="50">
-            </section>
-
-
-        </article>
 
         <main>
-            <h2>Featured Members</h2>
-            <section class="featured-members">
-                <h3>Gold or Silver Chamber Members</h3>
+            <h3>Join Iloilo Chamber of Commerce</h3>
+
+
+            <form formmethod="dialog" class="join-form">
+                <fieldset>
+                    <label for="firstname">
+                        First Name
+                        <input type="text" id="firstname" name="firstname" autocomplete="given-name">
+
+                    </label>
+                    <label for="lastname">
+                        Last Name
+                        <input type="text" id="lastname" name="lastname" autocomplete="family-name">
+
+                    </label>
+
+                    <label for="organization-title">
+                        Organization Title
+                        <input type="text" id="organization-title" organization-title"
+                            autocomplete="organization-title">
+                    </label>
+
+                    <label for="email">
+                        Email
+                        <input type="email" required id="email" name="email" autocomplete="email"
+                            placeholder="info@example.com">
+                    </label>
+                </fieldset>
 
 
 
-                <!-- Populate businesses here dynamically through your javascript code -->
-                <div id="featured-businesses"></div>
 
-            </section>
+            </form>
+
+
+
+
+
 
         </main>
 
