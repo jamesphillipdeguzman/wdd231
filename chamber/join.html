@@ -113,53 +113,61 @@
 
             <form formmethod="dialog" class="join-form">
                 <fieldset>
-                    <label for="firstname">
-                        First Name
-                        <input type="text" id="firstname" name="firstname" autocomplete="given-name">
+                    <div class="primary-info">
+                        <label for="firstname">
+                            First Name
+                            <input type="text" id="firstname" name="firstname" autocomplete="given-name">
 
-                    </label>
-                    <label for="lastname">
-                        Last Name
-                        <input type="text" id="lastname" name="lastname" autocomplete="family-name">
+                        </label>
+                        <label for="lastname">
+                            Last Name
+                            <input type="text" id="lastname" name="lastname" autocomplete="family-name">
 
-                    </label>
+                        </label>
 
-                    <label for="organization-title">
-                        Organization Title
-                        <input type="text" id="organization-title" organization-title"
-                            autocomplete="organization-title">
-                    </label>
+                        <label for="organization-title">
+                            Organization Title
+                            <input type="text" id="organization-title" organization-title"
+                                autocomplete="organization-title">
+                        </label>
 
-                    <label for="email">
-                        Email
-                        <input type="email" required id="email" name="email" autocomplete="email"
-                            placeholder="info@example.com">
-                    </label>
+                        <label for="email">
+                            Email
+                            <input type="email" required id="email" name="email" autocomplete="email"
+                                placeholder="info@example.com">
+                        </label>
 
-                    <label for="mobile">
-                        Mobile
-                        <input type="tel" required id="mobile" name="mobile" autocomplete="tel">
+                        <label for="mobile">
+                            Mobile
+                            <input type="tel" required id="mobile" name="mobile" autocomplete="tel">
 
-                    </label>
+                        </label>
 
-                    <label for="business">
-                        Business
-                        <input type="text" id="business" name="business" autocomplete="organization">
-                    </label>
-
-                    <label for="membership">
-                        Membership
-                        <select name="membership" id="membership">
-                            <option value="default" disabled>Choose a membership level</option>
-                            <option value="NP">Non-Profit Membership</option>
-                            <option value="bronze">Bronze Membership</option>
-                            <option value="silver">Silver Membership</option>
-                            <option value="gold">Gold Membership</option>
+                        <label for="business">
+                            Business
+                            <input type="text" id="business" name="business" autocomplete="organization">
+                        </label>
+                    </div>
 
 
-                        </select>
+                    <div class="radio-buttons">
+                        <h3>Membership</h3>
+                        <label class="radio-label" for="membership1">
 
-                    </label>
+                            <input type="radio" name="options" id="membership1" value="np">Free
+                        </label>
+                        <label class="radio-label" for="membership2">
+                            <input type="radio" name="options" id="membership2" value="bronze">Bronze
+                        </label>
+                        <label class="radio-label" for="membership3">
+                            <input type="radio" name="options" id="membership3" value="silver">Silver
+                        </label>
+                        <label class="radio-label" for="membership4">
+                            <input type="radio" name="options" id="membership4" value="gold">Gold
+                        </label>
+                    </div>
+
+
 
                     <label for="description">
                         <textarea name="description" id="description"></textarea>
