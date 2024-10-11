@@ -206,7 +206,7 @@
         align-items: center;
         border-radius: 4px;
         font-family: var(--default-font);
-        font-size: 1rem;
+        font-size: 0.9rem;
         justify-content: center;
         height: 2.5rem;
         margin-top: 2rem;
@@ -364,7 +364,11 @@
 
 
 
+    #dynamic-businesses {
 
+
+        font-size: 0.8rem;
+    }
 
     .nav-links-wrapper>img {
         width: 30px;

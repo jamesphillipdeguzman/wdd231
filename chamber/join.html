@@ -82,14 +82,22 @@
 
         </div>
 
-        <div class="hero">
-            <picture>
-                <source srcset="images/hero.webp" media="(max-width: 680px)" class="hero-img">
-                <img src="images/hero4.jpg" width="1200" height="350"
-                    alt="Seaside: Hero image of Iloilo Chamber of Commerce" class="hero-img">
-            </picture>
+        <div class="hero-container">
+            <div class="hero">
+                <picture>
+                    <source srcset="images/hero.webp" media="(max-width: 680px)" class="hero-img">
+                    <img src="images/hero4.jpg" width="1200" height="350"
+                        alt="Seaside: Hero image of Iloilo Chamber of Commerce" class="hero-img">
+                </picture>
 
+                <div class="overlay-text">
+                    <h1>Join Us!</h1>
+                </div>
+
+            </div>
         </div>
+
+
     </header>
     <div class="container">
 
@@ -108,53 +116,55 @@
 
 
         <main>
-            <h3>Join Iloilo Chamber of Commerce</h3>
+
 
 
             <form formmethod="dialog" class="join-form">
+
                 <fieldset>
-                    <div class="primary-info">
-                        <label for="firstname">
-                            First Name
-                            <input type="text" id="firstname" name="firstname" autocomplete="given-name">
+                    <h3>Please fill in the form</h3>
+                    <!-- <div class="primary-info"> -->
+                    <label for="firstname">
+                        First Name
+                        <input type="text" id="firstname" name="firstname" autocomplete="given-name">
 
-                        </label>
-                        <label for="lastname">
-                            Last Name
-                            <input type="text" id="lastname" name="lastname" autocomplete="family-name">
+                    </label>
+                    <label for="lastname">
+                        Last Name
+                        <input type="text" id="lastname" name="lastname" autocomplete="family-name">
 
-                        </label>
+                    </label>
 
-                        <label for="organization-title">
-                            Organization Title
-                            <input type="text" id="organization-title" organization-title"
-                                autocomplete="organization-title">
-                        </label>
+                    <label for="organization-title">
+                        Organization Title
+                        <input type="text" id="organization-title" organization-title"
+                            autocomplete="organization-title">
+                    </label>
 
-                        <label for="email">
-                            Email
-                            <input type="email" required id="email" name="email" autocomplete="email"
-                                placeholder="info@example.com">
-                        </label>
+                    <label for="email">
+                        Email
+                        <input type="email" required id="email" name="email" autocomplete="email"
+                            placeholder="info@example.com">
+                    </label>
 
-                        <label for="mobile">
-                            Mobile
-                            <input type="tel" required id="mobile" name="mobile" autocomplete="tel">
+                    <label for="mobile">
+                        Mobile
+                        <input type="tel" required id="mobile" name="mobile" autocomplete="tel">
 
-                        </label>
+                    </label>
 
-                        <label for="business">
-                            Business
-                            <input type="text" id="business" name="business" autocomplete="organization">
-                        </label>
-                    </div>
+                    <label for="business">
+                        Business
+                        <input type="text" id="business" name="business" autocomplete="organization">
+                    </label>
+                    <!-- </div> -->
 
 
                     <div class="radio-buttons">
                         <h3>Membership</h3>
                         <label class="radio-label" for="membership1">
 
-                            <input type="radio" name="options" id="membership1" value="np">Free
+                            <input type="radio" name="options" id="membership1" value="np">Non-profit
                         </label>
                         <label class="radio-label" for="membership2">
                             <input type="radio" name="options" id="membership2" value="bronze">Bronze
@@ -205,9 +215,8 @@
             <!-- <a href="https://byui-cse.github.io/wdd231-ww-course/week01/chamber-site-plan.html">Site Plan</a> -->
             <p>Iloilo Chamber of Commerce </p>
             <p>info@icc.com.ph </p>
-            <p>Mandurriao</p>
-            <p>Iloilo City</p>
-            <p>5000</p>
+            <p>Mandurriao, Iloilo City, 5000</p>
+
 
 
         </div>

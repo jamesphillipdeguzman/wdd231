@@ -224,7 +224,7 @@ async function fetchMembersGrid() {
 
     const leftSideBar = document.querySelector('.left-sidebar');
 
-    leftSideBar.style.display = 'none';
+    // leftSideBar.style.display = 'none';
 
     // Clear the dropdown values to avoid duplicating the list again.
     document.querySelector('#dynamic-businesses').value = '';
@@ -346,7 +346,7 @@ async function fetchMembersList() {
 
     const leftSideBar = document.querySelector('.left-sidebar');
 
-    leftSideBar.style.display = 'block';
+    // leftSideBar.style.display = 'block';
 
     // Clear the dropdown values to avoid duplicating the list again.
     document.querySelector('#dynamic-businesses').value = '';
