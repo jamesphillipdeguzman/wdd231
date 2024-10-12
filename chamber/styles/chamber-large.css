@@ -71,9 +71,10 @@ h1 {
 h2 {
     /* border: 2px solid #ccc; */
     /* color: var(--highlight); */
-    color: white;
+    color: var(--accent1-color);
     font-family: var(--heading-font);
-    /* margin-top: 2rem; */
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
     text-align: center;
 }
 
@@ -724,7 +725,7 @@ button.cta-btn {
 .membership-cards h2 {
     color: var(--accent1-color);
     font-family: var(--default-font);
-    font-size: 2.7rem;
+    font-size: 2.5rem;
     grid-column: 1 / span 2;
     text-align: center;
 }
@@ -828,43 +829,40 @@ button.cta-btn {
 
 .non-profit {
     animation-name: slidein;
-    animation-duration: 4s;
-    /* animation-delay: 1s; */
-    animation-timing-function: linear ease-in forwards;
+    animation-duration: 800ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
 
-    /* animation-iteration-count: 1; */
 }
 
 
 
 .bronze {
     animation-name: slidein;
-    animation-duration: 3s;
-    /* animation-delay: 1s; */
-    animation-timing-function: linear ease-in forwards;
+    animation-duration: 900ms;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
 
-    /* animation-iteration-count: 1; */
 }
 
 
 
 .silver {
     animation-name: slidein;
-    animation-duration: 2s;
-    /* animation-delay: 1s; */
-    animation-timing-function: linear ease-in forwards;
+    animation-duration: 1s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
 
-    /* animation-iteration-count: 1; */
 }
 
 
 
 .gold {
     animation-name: slidein;
-    animation-duration: 1s;
-    /* animation-delay: 1s; */
-    animation-timing-function: linear ease-in forwards;
-    /* animation-iteration-count: 1; */
+    animation-duration: 2s;
+    animation-timing-function: ease;
+    animation-fill-mode: forwards;
+
 }
 
 
