@@ -13,11 +13,7 @@ hamburgerBtn.addEventListener('click', () => {
     navigationBtn.classList.toggle('open');
 });
 
-// Get date and time format for timestamp
 
-const now = new Date();
-now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
-document.querySelector('#timestamp').value = now.toISOString().slice(0, 16);
 
 // Get the year
 const todaysDate = new Date();

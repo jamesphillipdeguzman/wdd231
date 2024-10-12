@@ -117,114 +117,116 @@
 
         <main>
 
+            <div class="join-wrapper">
 
+                <form formmethod="dialog" class="join-form">
 
-            <form formmethod="dialog" class="join-form">
+                    <fieldset>
+                        <h3>Please fill in the form</h3>
+                        <!-- <div class="primary-info"> -->
+                        <label for="firstname">
+                            First Name
+                            <input type="text" id="firstname" title="Enter your first name" name="firstname"
+                                autocomplete="given-name">
 
-                <fieldset>
-                    <h3>Please fill in the form</h3>
-                    <!-- <div class="primary-info"> -->
-                    <label for="firstname">
-                        First Name
-                        <input type="text" id="firstname" title="Enter your first name" name="firstname"
-                            autocomplete="given-name">
-
-                    </label>
-                    <label for="lastname">
-                        Last Name
-                        <input type="text" id="lastname" title="Enter your last name" name="lastname"
-                            autocomplete="family-name">
-
-                    </label>
-
-                    <label for="organization-title">
-                        Organization Title
-                        <input type="text" id="organization-title" title="Enter your organization title"
-                            organization-title" autocomplete="organization-title">
-                    </label>
-
-                    <label for="email">
-                        Email
-                        <input type="email" required id="email" title="Enter your email" name="email"
-                            autocomplete="email" placeholder="info@example.com">
-                    </label>
-
-                    <label for="mobile">
-                        Mobile
-                        <input type="tel" required id="mobile" title="Enter your mobile" name="mobile"
-                            autocomplete="tel">
-
-                    </label>
-
-                    <label for="business">
-                        Business
-                        <input type="text" id="business" title="Enter your business name" name="business"
-                            autocomplete="organization">
-                    </label>
-                    <!-- </div> -->
-
-
-                    <div class="radio-buttons">
-                        <h3>Membership Levels</h3>
-                        <label class="radio-label" for="membership1">
-
-                            <input type="radio" name="options" id="membership1" value="np">Non-Profit
                         </label>
-                        <label class="radio-label" for="membership2">
-                            <input type="radio" name="options" id="membership2" value="bronze">Bronze
+                        <label for="lastname">
+                            Last Name
+                            <input type="text" id="lastname" title="Enter your last name" name="lastname"
+                                autocomplete="family-name">
+
                         </label>
-                        <label class="radio-label" for="membership3">
-                            <input type="radio" name="options" id="membership3" value="silver">Silver
+
+                        <label for="organization-title">
+                            Organization Title
+                            <input type="text" id="organization-title" title="Enter your organization title"
+                                organization-title" autocomplete="organization-title">
                         </label>
-                        <label class="radio-label" for="membership4">
-                            <input type="radio" name="options" id="membership4" value="gold">Gold
+
+                        <label for="email">
+                            Email
+                            <input type="email" required id="email" title="Enter your email" name="email"
+                                autocomplete="email" placeholder="info@example.com">
                         </label>
+
+                        <label for="mobile">
+                            Mobile
+                            <input type="tel" required id="mobile" title="Enter your mobile" name="mobile"
+                                autocomplete="tel">
+
+                        </label>
+
+                        <label for="business">
+                            Business
+                            <input type="text" id="business" title="Enter your business name" name="business"
+                                autocomplete="organization">
+                        </label>
+                        <!-- </div> -->
+
+
+                        <div class="radio-buttons">
+                            <h3>Membership Levels</h3>
+                            <label class="radio-label" for="membership1">
+
+                                <input type="radio" name="options" id="membership1" value="np">Non-Profit
+                            </label>
+                            <label class="radio-label" for="membership2">
+                                <input type="radio" name="options" id="membership2" value="bronze">Bronze
+                            </label>
+                            <label class="radio-label" for="membership3">
+                                <input type="radio" name="options" id="membership3" value="silver">Silver
+                            </label>
+                            <label class="radio-label" for="membership4">
+                                <input type="radio" name="options" id="membership4" value="gold">Gold
+                            </label>
+                        </div>
+
+
+
+                        <label for="description">
+                            Business Description
+                            <textarea name="description" id="description"
+                                title="Enter your business description"></textarea>
+                        </label>
+
+                        <label for="timestamp">
+                            <input type="datetime-local" name="timestamp" id="timestamp" hidden>
+                        </label>
+
+                        <!-- <time datetime="" name="timestamp" id="timestamp"></time> -->
+
+                        <label for="submit">
+                            <input type="submit" name="submit" value="Submit">
+                        </label>
+
+
+
+                    </fieldset>
+
+
+                </form>
+
+                <div class="membership-cards">
+                    <h2>Choose a membership</h2><br>
+                    <div class="non-profit">
+                        <h3>Non-Profit</h3>
+                        <button class="membership-btns">Learn More</button>
+
                     </div>
-
-
-
-                    <label for="description">
-                        Business Description
-                        <textarea name="description" id="description"
-                            title="Enter your business description"></textarea>
-                    </label>
-
-                    <label for="timestamp">
-                        <input type="datetime-local" name="timestamp" id="timestamp" hidden>
-                    </label>
-
-                    <!-- <time datetime="" name="timestamp" id="timestamp"></time> -->
-
-                    <label for="submit">
-                        <input type="submit" name="submit" value="Submit">
-                    </label>
-
-
-
-                </fieldset>
-
-
-            </form>
-
-            <div class="membership-cards">
-                <h2>Choose a membership</h2><br>
-                <div class="non-profit">
-                    <h3>Non-Profit</h3>
-                    <button class="membership-btns">Learn More</button>
-
+                    <div class="bronze">
+                        <h3>Bronze</h3>
+                        <button class="membership-btns">Learn More</button>
+                    </div>
+                    <div class="silver">
+                        <h3>Silver</h3>
+                        <button class="membership-btns">Learn More</button>
+                    </div>
+                    <div class="gold">
+                        <h3>Gold</h3>
+                        <button class="membership-btns">Learn More</button>
+                    </div>
                 </div>
-                <div class="bronze">
-                    <h3>Bronze</h3>
-                    <button class="membership-btns">Learn More</button>
-                </div>
-                <div class="silver">
-                    <h3>Silver</h3>
-                    <button class="membership-btns">Learn More</button>
-                </div>
-                <div class="gold">
-                    <h3>Gold</h3>
-                    <button class="membership-btns">Learn More</button>
-                </div>
+
             </div>
 
         </main>
