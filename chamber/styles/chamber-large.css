@@ -11,6 +11,15 @@
     --base-color: #FFFFFF;
     --divider-color: RGBA(0, 0, 0, 0.1);
 
+    --light-bronze: RGBA(205, 127, 50, 0.3);
+    --bronze: RGBA(205, 127, 50, 1);
+
+    --light-silver: RGBA(192, 192, 192, 0.3);
+    --silver: RGBA(192, 192, 192, 1);
+
+    --light-gold: RGBA(218, 165, 32, 0.3);
+    --gold: RGBA(218, 165, 32, 1);
+
 }
 
 /* ================= PRESETS OR DEFAULTS ================= */
@@ -31,7 +40,7 @@
 
 body,
 html {
-    background-color: #ccc;
+    background-color: rgba(237, 233, 232, 0.1);
     display: flex;
     flex-direction: column;
     font-size: 1rem;
@@ -346,7 +355,7 @@ form.join-form {
     /* display: grid;
     grid-template-columns: repeat(2, 1fr);
     grid-template-rows: repeat(4, 1fr); */
-
+    color: var(--accent1-color);
     display: flex;
     flex-direction: column;
     justify-content: left;
@@ -356,8 +365,7 @@ form.join-form {
     align-items: flex-start;
     margin: 15px;
     padding: 15px;
-    max-width: 40vw;
-
+    max-width: 100vw;
     width: 100%;
 
 }
@@ -463,11 +471,15 @@ input[type="radio"] {
 
 /* ================= MAIN ================= */
 main {
+
     align-content: center;
     align-items: center;
-    background-color: var(--base-color);
+    /* background-color: var(--base-color); */
     border-radius: 5px;
-    box-shadow: 5px 5px 15px #888;
+    /* box-shadow: 5px 5px 15px #888; */
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+
     /* display: flex;
     flex-direction: column;
     flex: 1; */
@@ -667,6 +679,195 @@ button.cta-btn {
     align-self: center;
 } */
 
+/* ================= MEMBERSHIP CARDS ================= */
+/* Add CSS styling and animation here for the membership cards */
+
+/* Style */
+
+.membership-cards {
+    align-content: center;
+    align-items: center;
+    background-color: var(--light-silver);
+    border-radius: 4px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    align-self: self-start;
+    gap: 10px;
+    /* margin: 50px; */
+    margin-top: 30px;
+    height: 950px;
+    right: 50px;
+
+    width: 100%;
+
+
+    /* margin: 0 auto; */
+
+
+}
+
+.membership-cards h2 {
+    color: var(--accent1-color);
+    font-family: var(--default-font);
+    font-size: 2.7rem;
+    grid-column: 1 / span 2;
+    text-align: center;
+}
+
+.membership-cards h3 {
+    color: var(--accent1-color);
+    font-family: var(--paragraph-font);
+    font-size: 2rem;
+
+
+}
+
+
+.membership-btns {
+
+    border-radius: 5px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    height: 44px;
+    font-family: var(--default-font);
+
+    width: 80%;
+
+}
+
+.membership-btns:hover {
+    background-color: var(--accent1-color);
+    border-radius: 5px;
+    border: 1px solid var(--accent1-color);
+    color: #fff;
+    height: 44px;
+    font-family: var(--default-font);
+    transition: background-color 0.1s ease-in;
+    width: 80%;
+}
+
+/* Membership levels */
+
+.non-profit {
+    align-items: center;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 2px solid var(--accent1-color);
+    border-radius: 8px;
+    height: 150px;
+    grid-column: 1;
+    justify-content: center;
+    margin: 0 auto;
+    width: 90%;
+
+
+}
+
+.bronze {
+    align-items: center;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bronze);
+    border: 2px solid var(--light-bronze);
+    border-radius: 8px;
+    height: 150px;
+    justify-content: center;
+    margin: 0 auto;
+    width: 90%;
+
+
+}
+
+.silver {
+    align-items: center;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--silver);
+    border: 2px solid var(--light-silver);
+    border-radius: 8px;
+    height: 150px;
+    justify-content: center;
+    margin: 0 auto;
+    width: 90%;
+}
+
+.gold {
+    align-items: center;
+    align-content: center;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--gold);
+    border: 2px solid var(--light-gold);
+    border-radius: 8px;
+    height: 150px;
+    justify-content: center;
+    margin: 0 auto;
+    width: 90%;
+}
+
+
+/* ================= ANIMATE ================= */
+
+.non-profit {
+    animation-name: slidein;
+    animation-duration: 4s;
+    /* animation-delay: 1s; */
+    animation-timing-function: linear ease-in forwards;
+
+    /* animation-iteration-count: 1; */
+}
+
+
+
+.bronze {
+    animation-name: slidein;
+    animation-duration: 3s;
+    /* animation-delay: 1s; */
+    animation-timing-function: linear ease-in forwards;
+
+    /* animation-iteration-count: 1; */
+}
+
+
+
+.silver {
+    animation-name: slidein;
+    animation-duration: 2s;
+    /* animation-delay: 1s; */
+    animation-timing-function: linear ease-in forwards;
+
+    /* animation-iteration-count: 1; */
+}
+
+
+
+.gold {
+    animation-name: slidein;
+    animation-duration: 1s;
+    /* animation-delay: 1s; */
+    animation-timing-function: linear ease-in forwards;
+    /* animation-iteration-count: 1; */
+}
+
+
+@keyframes slidein {
+    25% {
+
+        transform: translateX(25%);
+    }
+
+
+    100% {
+
+        transform: translateX(0%);
+    }
+}
+
+
+/* ================= MODAL ================= */
 
 /* ================= SIDE BARS ================= */
 
