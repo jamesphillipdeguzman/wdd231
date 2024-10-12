@@ -1,9 +1,22 @@
 /* Mobile view */
-@media (max-width: 1006px) {
+@media (max-width: 774px) {
     /* ================= MEMBERSHIP CARDS ================= */
     /* Add CSS styling and animation here for the membership cards */
 
     /* Style */
+
+    .join-wrapper {
+        display: flex;
+        flex-direction: column;
+        /* max-width: 100vw; */
+        /* width: 100%; */
+    }
+
+    .join-form {
+        max-width: 100vw;
+        width: 100%;
+    }
+
 
     .membership-cards {
         align-content: center;
@@ -91,8 +104,8 @@
         align-content: center;
         display: flex;
         flex-direction: column;
-        background-color: var(--bronze);
-        border: 2px solid var(--light-bronze);
+        background-color: rgba(255, 255, 255, 0.5);
+        border: 3px solid var(--light-bronze);
         border-radius: 8px;
         height: 150px;
         justify-content: center;
@@ -107,8 +120,8 @@
         align-content: center;
         display: flex;
         flex-direction: column;
-        background-color: var(--silver);
-        border: 2px solid var(--light-silver);
+        background-color: rgba(255, 255, 255, 0.5);
+        border: 3px solid var(--light-silver);
         border-radius: 8px;
         height: 150px;
         justify-content: center;
@@ -121,8 +134,8 @@
         align-content: center;
         display: flex;
         flex-direction: column;
-        background-color: var(--gold);
-        border: 2px solid var(--light-gold);
+        background-color: rgba(255, 255, 255, 0.5);
+        border: 3px solid var(--light-gold);
         border-radius: 8px;
         height: 150px;
         justify-content: center;
@@ -145,6 +158,27 @@
         text-align: center;
     }
 
+    .membership-cards h3 {
+        color: #000;
+        font-family: var(--paragraph-font);
+        font-size: 2rem;
+
+
+    }
+
+    /* ================= MODAL ================= */
+
+    .modal {
+        width: 250px;
+    }
+
+    .modal-content h2 {
+        font-size: 2rem;
+    }
+
+    .modal-content ul {
+        font-size: 0.9rem;
+    }
 
     /* ================= HEADER ================= */
 
@@ -462,6 +496,7 @@
         max-width: 50vw;
         height: auto;
     }
+
 
 
 

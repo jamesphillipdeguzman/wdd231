@@ -10,23 +10,53 @@ document.addEventListener('DOMContentLoaded', () => {
     now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
     document.querySelector('#timestamp').value = now.toISOString().slice(0, 16);
 
+    const modal = document.getElementById('modal');
     const modal1 = document.getElementById('modal1');
     const modal2 = document.getElementById('modal2');
     const modal3 = document.getElementById('modal3');
     const modal4 = document.getElementById('modal4');
+    const modalBackdrop = document.getElementById('modalBackdrop');
     const modalBackdrop1 = document.getElementById('modalBackdrop1');
     const modalBackdrop2 = document.getElementById('modalBackdrop2');
     const modalBackdrop3 = document.getElementById('modalBackdrop3');
     const modalBackdrop4 = document.getElementById('modalBackdrop4');
+    const openModalBtns = document.getElementById('openModal');
     const openModalBtnsNonProfit = document.getElementById('openModal1');
     const openModalBtnsBronze = document.getElementById('openModal2');
     const openModalBtnsSilver = document.getElementById('openModal3');
     const openModalBtnsGold = document.getElementById('openModal4');
+    const closeModalBtns = document.getElementById('closeModal');
     const closeModalBtnsNonProfit = document.getElementById('closeModal1');
     const closeModalBtnsBronze = document.getElementById('closeModal2');
     const closeModalBtnsSilver = document.getElementById('closeModal3');
     const closeModalBtnsGold = document.getElementById('closeModal4');
-    // const closeModalBtnsNonProfit = document.getElementById('closeModal1');
+
+    // Thank you
+
+    // Open modal
+    openModalBtns.addEventListener('click', () => {
+        const email = document.querySelector('#email');
+        const mobile = document.querySelector('#mobile');
+
+        if (email.value != '' && mobile.value != '') {
+            modal.style.display = 'block';
+            modalBackdrop.style.display = 'block';
+        }
+
+    });
+
+    // Close modal
+    closeModalBtns.addEventListener('click', () => {
+        modal.style.display = 'none';
+        modalBackdrop.style.display = 'none';
+    });
+
+    // Close modal when clicking on backdrop
+    modalBackdrop.addEventListener('click', () => {
+        modal.style.display = 'none';
+        modalBackdrop.style.display = 'none';
+    });
+
 
     // Non-Profit
 

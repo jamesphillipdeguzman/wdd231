@@ -786,8 +786,8 @@ button.cta-btn {
     align-content: center;
     display: flex;
     flex-direction: column;
-    background-color: var(--bronze);
-    border: 2px solid var(--light-bronze);
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 3px solid var(--light-bronze);
     border-radius: 8px;
     height: 150px;
     justify-content: center;
@@ -802,8 +802,8 @@ button.cta-btn {
     align-content: center;
     display: flex;
     flex-direction: column;
-    background-color: var(--silver);
-    border: 2px solid var(--light-silver);
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 3px solid var(--light-silver);
     border-radius: 8px;
     height: 150px;
     justify-content: center;
@@ -816,8 +816,8 @@ button.cta-btn {
     align-content: center;
     display: flex;
     flex-direction: column;
-    background-color: var(--gold);
-    border: 2px solid var(--light-gold);
+    background-color: rgba(255, 255, 255, 0.5);
+    border: 3px solid var(--light-gold);
     border-radius: 8px;
     height: 150px;
     justify-content: center;
