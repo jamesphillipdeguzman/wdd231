@@ -206,24 +206,93 @@
 
                 </form>
 
+                <!-- NON-PROFIT MODAL -->
+
+                <div id="modalBackdrop1" class="backdrop" style="display: none;"></div>
+
+                <div id="modal1" class="modal" style="display: none;">
+                    <div class="modal-content">
+                        <span id="closeModal1" class="close">&times;</span>
+
+                        <h2>Non-Profit Membership ($0/Year)</h2>
+                        <ul>
+                            <li>✔ Access to Networking Events</li>
+                            <li>✔ Resource Library</li>
+                            <li>✔ Community Bulletin</li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <!-- BRONZE MODAL -->
+                <div id="modalBackdrop2" class="backdrop" style="display: none;"></div>
+
+                <div id="modal2" class="modal" style="display: none;">
+                    <div class="modal-content">
+                        <span id="closeModal2" class="close">&times;</span>
+
+                        <h2>Bronze Membership ($150/Year)</h2>
+                        <ul>
+                            <li>✔ Access to Networking Events</li>
+                            <li>✔ Discounted Event Fees: 10% off</li>
+                            <li>✔ Business Directory Listing</li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <!-- SILVER MODAL -->
+                <div id="modalBackdrop3" class="backdrop" style="display: none;"></div>
+
+                <div id="modal3" class="modal" style="display: none;">
+                    <div class="modal-content">
+                        <span id="closeModal3" class="close">&times;</span>
+
+                        <h2>Silver Membership ($300)</h2>
+                        <ul>
+                            <li>✔ Access to Networking Events</li>
+                            <li>✔ Discounted Event Fees: 20% off</li>
+                            <li>✔ Spotlight Feature</li>
+                        </ul>
+
+                    </div>
+                </div>
+
+                <!-- GOLD MODAL -->
+                <div id="modalBackdrop4" class="backdrop" style="display: none;"></div>
+
+                <div id="modal4" class="modal" style="display: none;">
+                    <div class="modal-content">
+                        <span id="closeModal4" class="close">&times;</span>
+
+                        <h2>Gold Membership ($600)</h2>
+                        <ul>
+                            <li>✔ Access to Networking Events</li>
+                            <li>✔ Premium Event Access: Free</li>
+                            <li>✔ Exclusive Networking Dinners</li>
+                        </ul>
+
+                    </div>
+                </div>
+
                 <div class="membership-cards">
                     <h2>Choose a membership</h2><br>
                     <div class="non-profit">
                         <h3>Non-Profit</h3>
-                        <button class="membership-btns">Learn More</button>
+                        <button id="openModal1" class="membership-btns">Learn More</button>
 
                     </div>
                     <div class="bronze">
                         <h3>Bronze</h3>
-                        <button class="membership-btns">Learn More</button>
+                        <button id="openModal2" class="membership-btns">Learn More</button>
                     </div>
                     <div class="silver">
                         <h3>Silver</h3>
-                        <button class="membership-btns">Learn More</button>
+                        <button id="openModal3" class="membership-btns">Learn More</button>
                     </div>
                     <div class="gold">
                         <h3>Gold</h3>
-                        <button class="membership-btns">Learn More</button>
+                        <button id="openModal4" class="membership-btns">Learn More</button>
                     </div>
                 </div>
 

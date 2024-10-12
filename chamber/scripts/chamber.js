@@ -2,7 +2,115 @@
 // Use ES Modules to import fetchMembers and dropdownMembers from fetch-members.js
 import { fetchMembers, dropdownMembers } from "./fetch-members.js";
 
+document.addEventListener('DOMContentLoaded', () => {
 
+    // Get date and time format for timestamp
+
+    const now = new Date();
+    now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
+    document.querySelector('#timestamp').value = now.toISOString().slice(0, 16);
+
+    const modal1 = document.getElementById('modal1');
+    const modal2 = document.getElementById('modal2');
+    const modal3 = document.getElementById('modal3');
+    const modal4 = document.getElementById('modal4');
+    const modalBackdrop1 = document.getElementById('modalBackdrop1');
+    const modalBackdrop2 = document.getElementById('modalBackdrop2');
+    const modalBackdrop3 = document.getElementById('modalBackdrop3');
+    const modalBackdrop4 = document.getElementById('modalBackdrop4');
+    const openModalBtnsNonProfit = document.getElementById('openModal1');
+    const openModalBtnsBronze = document.getElementById('openModal2');
+    const openModalBtnsSilver = document.getElementById('openModal3');
+    const openModalBtnsGold = document.getElementById('openModal4');
+    const closeModalBtnsNonProfit = document.getElementById('closeModal1');
+    const closeModalBtnsBronze = document.getElementById('closeModal2');
+    const closeModalBtnsSilver = document.getElementById('closeModal3');
+    const closeModalBtnsGold = document.getElementById('closeModal4');
+    // const closeModalBtnsNonProfit = document.getElementById('closeModal1');
+
+    // Non-Profit
+
+    // Open modal
+    openModalBtnsNonProfit.addEventListener('click', () => {
+        modal1.style.display = 'block';
+        modalBackdrop1.style.display = 'block';
+    });
+
+    // Close modal
+    closeModalBtnsNonProfit.addEventListener('click', () => {
+        modal1.style.display = 'none';
+        modalBackdrop1.style.display = 'none';
+    });
+
+    // Close modal when clicking on backdrop
+    modalBackdrop1.addEventListener('click', () => {
+        modal1.style.display = 'none';
+        modalBackdrop1.style.display = 'none';
+    });
+
+
+    // Bronze
+
+    // Open modal
+    openModalBtnsBronze.addEventListener('click', () => {
+        modal2.style.display = 'block';
+        modalBackdrop2.style.display = 'block';
+    });
+
+    // Close modal
+    closeModalBtnsBronze.addEventListener('click', () => {
+        modal2.style.display = 'none';
+        modalBackdrop2.style.display = 'none';
+    });
+
+    // Close modal when clicking on backdrop
+    modalBackdrop2.addEventListener('click', () => {
+        modal2.style.display = 'none';
+        modalBackdrop2.style.display = 'none';
+    });
+
+    // Silver
+
+    // Open modal
+    openModalBtnsSilver.addEventListener('click', () => {
+        modal3.style.display = 'block';
+        modalBackdrop3.style.display = 'block';
+    });
+
+    // Close modal
+    closeModalBtnsSilver.addEventListener('click', () => {
+        modal3.style.display = 'none';
+        modalBackdrop3.style.display = 'none';
+    });
+
+    // Close modal when clicking on backdrop
+    modalBackdrop3.addEventListener('click', () => {
+        modal3.style.display = 'none';
+        modalBackdrop3.style.display = 'none';
+    });
+
+    // Gold
+
+    // Open modal
+    openModalBtnsGold.addEventListener('click', () => {
+        modal4.style.display = 'block';
+        modalBackdrop4.style.display = 'block';
+    });
+
+    // Close modal
+    closeModalBtnsGold.addEventListener('click', () => {
+        modal4.style.display = 'none';
+        modalBackdrop4.style.display = 'none';
+    });
+
+    // Close modal when clicking on backdrop
+    modalBackdrop4.addEventListener('click', () => {
+        modal4.style.display = 'none';
+        modalBackdrop4.style.display = 'none';
+    });
+
+
+});
 
 const hamburgerBtn = document.querySelector('#menu');
 const navigationBtn = document.querySelector('.menuLinks');
@@ -459,9 +567,3 @@ async function fetchMembersList() {
 
 
 
-
-// Get date and time format for timestamp
-
-const now = new Date();
-now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
-document.querySelector('#timestamp').value = now.toISOString().slice(0, 16);
