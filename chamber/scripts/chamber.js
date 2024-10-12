@@ -35,12 +35,38 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Open modal
     openModalBtns.addEventListener('click', () => {
+
+        // Target the form elements to display on Thank You modal
+
+        const firstname = document.querySelector('#firstname');
+        const lastname = document.querySelector('#lastname');
+
         const email = document.querySelector('#email');
         const mobile = document.querySelector('#mobile');
+
+        const organizationName = document.querySelector('#business');
+        const timeStamp = document.querySelector('#timestamp');
+
+        // Target the li elements 
+        const fname = document.querySelector('#fname');
+        const lname = document.querySelector('#lname');
+        const emailAdd = document.querySelector('#email-add');
+        const phone = document.querySelector('#phone');
+        const orgName = document.querySelector('#organization-name');
+        const dateTimeStamp = document.querySelector('#date-timestamp');
+
 
         if (email.value != '' && mobile.value != '') {
             modal.style.display = 'block';
             modalBackdrop.style.display = 'block';
+
+            fname.textContent = `First Name: ${firstname.value}`;
+            lname.textContent = `Last Name: ${lastname.value}`;
+            emailAdd.textContent = `Email Address: ${email.value}`;
+            phone.textContent = `Contact Number: ${mobile.value}`;
+            orgName.textContent = `Organization: ${organizationName.value}`;
+            dateTimeStamp.textContent = `Submitted: ${timeStamp.value}`;
+
         }
 
     });
