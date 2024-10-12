@@ -33,6 +33,20 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeModalBtnsSilver = document.getElementById('closeModal3');
     const closeModalBtnsGold = document.getElementById('closeModal4');
     const submit = document.getElementById('submit');
+
+    // Have all modals display as none
+
+    modal.style.display = 'none';
+    modalBackdrop.style.display = 'none';
+    modal1.style.display = 'none';
+    modalBackdrop1.style.display = 'none';
+    modal2.style.display = 'none';
+    modalBackdrop2.style.display = 'none';
+    modal3.style.display = 'none';
+    modalBackdrop3.style.display = 'none';
+    modal4.style.display = 'none';
+    modalBackdrop4.style.display = 'none';
+
     // Thank you
 
     // Open modal
