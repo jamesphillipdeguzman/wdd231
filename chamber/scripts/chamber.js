@@ -10,6 +10,8 @@ document.addEventListener('DOMContentLoaded', () => {
     now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
     document.querySelector('#timestamp').value = now.toISOString().slice(0, 16);
 
+    // Target all modal elements
+
     const modal = document.getElementById('modal');
     const modal1 = document.getElementById('modal1');
     const modal2 = document.getElementById('modal2');
@@ -20,7 +22,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const modalBackdrop2 = document.getElementById('modalBackdrop2');
     const modalBackdrop3 = document.getElementById('modalBackdrop3');
     const modalBackdrop4 = document.getElementById('modalBackdrop4');
-    const openModalBtns = document.getElementById('openModal');
+
     const openModalBtnsNonProfit = document.getElementById('openModal1');
     const openModalBtnsBronze = document.getElementById('openModal2');
     const openModalBtnsSilver = document.getElementById('openModal3');
@@ -30,11 +32,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeModalBtnsBronze = document.getElementById('closeModal2');
     const closeModalBtnsSilver = document.getElementById('closeModal3');
     const closeModalBtnsGold = document.getElementById('closeModal4');
-
+    const submit = document.getElementById('submit');
     // Thank you
 
     // Open modal
-    openModalBtns.addEventListener('click', () => {
+    submit.addEventListener('click', () => {
 
         // Target the form elements to display on Thank You modal
 
