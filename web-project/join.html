@@ -61,7 +61,7 @@
             <form action="thankyou.html" method="dialog" class="join-form">
 
                 <fieldset>
-                    <h3>Please fill in the form</h3>
+                    <h3>Please subscribe to our weekly newsletter!</h3>
                     <!-- <div class="primary-info"> -->
                     <label for="firstname">
                         First Name
@@ -103,7 +103,7 @@
 
 
                     <label for="submit">
-                        <input type="submit" id="submit" name="submit" value="Submit">
+                        <input type="submit" id="submit" name="submit" value="I want to subscribe">
                     </label>
 
 
@@ -112,6 +112,27 @@
 
 
             </form>
+
+            <!-- THANK YOU MODAL -->
+
+            <div id="modalBackdrop" class="backdrop"></div>
+
+            <div id="modal" class="modal">
+                <div class="modal-content">
+                    <span id="closeModal" class="close">&times;</span>
+
+                    <h2>Thanks for subscribing!</h2>
+                    <ul>
+                        <li id="fname"></li>
+                        <li id="lname"></li>
+                        <li id="email-add"></li>
+                        <li id="phone"></li>
+                        <li id="organization-name"></li>
+                        <li id="date-timestamp"></li>
+                    </ul>
+
+                </div>
+            </div>
 
         </main>
     </div>
