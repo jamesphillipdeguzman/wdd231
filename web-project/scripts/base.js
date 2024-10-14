@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         signupBtn.addEventListener('click', () => {
             // open the contacts page when user clicks on signup button
-            window.location.href = 'signup.html';
+            window.location.href = 'join.html';
 
         });
 

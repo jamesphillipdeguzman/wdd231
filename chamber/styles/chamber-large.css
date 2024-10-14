@@ -365,8 +365,8 @@ form.join-form {
 
     align-content: flex-start;
     align-items: flex-start;
-    margin: 15px;
-    padding: 15px;
+    /* margin: 15px;
+    padding: 15px; */
     max-width: 100vw;
     width: 100%;
 

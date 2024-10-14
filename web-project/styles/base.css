@@ -263,7 +263,7 @@ p.project-desc {
 main {
 
     margin: 0 auto;
-    background-color: var(--accent-color1);
+    background-color: var(--secondary-color);
     padding: 10px;
     max-width: 78%;
     margin-bottom: 10px;
@@ -284,6 +284,7 @@ span#color1 {
 
 span#color2 {
     color: #533A71;
+    background-color: #fff;
 
 }
 
@@ -377,7 +378,7 @@ span#font2 {
 }
 
 .title {
-    color: var(--secondary-color);
+    color: var(--primary-color);
     font-size: large;
     font-weight: bold;
     /* margin-bottom: 20px; */
@@ -390,7 +391,7 @@ span#font2 {
     font-family: var(--primary-font);
     margin-bottom: 10px;
     text-align: center;
-    color: var(--secondary-color);
+    color: #fff;
     padding-bottom: 15px;
 }
 
@@ -434,7 +435,7 @@ span#font2 {
 }
 
 .bottom-section li {
-    color: var(--secondary-color);
+    color: #fff;
     font-family: var(--primary-font);
     list-style: none;
     padding: 5px 0;
@@ -547,7 +548,7 @@ input[type="email"] {
 }
 
 .wireframe a {
-    color: #000
+    color: #fff
 }
 
 
@@ -557,7 +558,7 @@ input[type="email"] {
 }
 
 .wireframe a:hover {
-    color: var(--secondary-color);
+    color: var(--accent-color1);
 
     border-bottom: 3px solid var(--accent-color1);
     border-radius: 5px;

@@ -17,6 +17,7 @@
     <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/base.css">
+    <link rel="stylesheet" href="styles/form.css">
     <link rel="icon" href="images/favicon_io/favicon.ico" type="image/x-icon">
     <meta property="og:title" content="My Personal Quotes Generator Website">
     <meta property="og:description" content="Quote Vitamins: A daily inspirational quotes web app.">
@@ -56,49 +57,61 @@
 
         <main>
 
-            <div class="hero">
-                <div class="image-container">
-                    <h1>My Site Plan</h1>
-                    <img src="images/quote-notebook-bg.webp" alt="picture of a notebook with wireframe sketches"
-                        width="200" height="100">
-                </div>
 
-            </div>
+            <form action="thankyou.html" method="dialog" class="join-form">
 
-            <div class="bottom-section">
+                <fieldset>
+                    <h3>Please fill in the form</h3>
+                    <!-- <div class="primary-info"> -->
+                    <label for="firstname">
+                        First Name
+                        <input type="text" id="firstname" title="Enter your first name" name="firstname"
+                            autocomplete="given-name">
+
+                    </label>
+                    <label for="lastname">
+                        Last Name
+                        <input type="text" id="lastname" title="Enter your last name" name="lastname"
+                            autocomplete="family-name">
+
+                    </label>
 
 
-                <p class="title">Site Name: Quote Vitamins</p>
-                <p class="desc">A daily inspirational quotes web app.</p>
+                    <label for="email">
+                        Email
+                        <input type="email" aria-required="true" required id="email" title="Enter your email"
+                            name="email" autocomplete="email" placeholder="info@example.com">
+                    </label>
 
-                <p class="title">Site Purpose:</p>
-                <p class="desc">My web project is all about giving back to the community by providing
-                    inspirational daily quotes to its visitors.</p>
-                <p class="title">Scenarios</p>
+                    <label for="mobile">
+                        Mobile
+                        <input type="tel" aria-required="true" required id="mobile" title="Enter your mobile"
+                            name="mobile" autocomplete="tel">
 
-                <ul>
-                    <li>What daily quotes could liven up a sad person?</li>
+                    </label>
 
-                    <li>Where can I find the best motivational quotes to share on social media?</li>
-                </ul>
 
-                <p class="title">Color Schema:</p>
-                <p class="desc">I will use icterine: <span id="color1">#F0F465</span> and English violet: <span
-                        id="color2">#533A71</span> as my <span id="color1">primary</span> and <span
-                        id="color2">secondary</span> colors.</p>
-                <p class="title">Typography:</p>
-                <p class="desc">My primary font is <span id="font1">Satisfy</span> and my secondary font is
-                    <span id="font2">Quicksand.</span>
-                </p>
-                <p class="title">Wireframes:</p>
-                <div class="wireframe">
-                    <ul>
-                        <li><a href="desktop-layout.html">Desktop Layout</a></li>
-                        <li><a href="mobile-layout.html">Mobile Layout</a></li>
-                    </ul>
-                </div>
 
-            </div>
+                    <label for="questions">
+                        Questions or Comments
+                        <textarea name="questions" id="questions" title="Enter any questions you might have"></textarea>
+                    </label>
+
+                    <label for="timestamp">
+                        <input type="datetime-local" name="timestamp" id="timestamp" aria-hidden="true" hidden>
+                    </label>
+
+
+                    <label for="submit">
+                        <input type="submit" id="submit" name="submit" value="Submit">
+                    </label>
+
+
+
+                </fieldset>
+
+
+            </form>
 
         </main>
     </div>
