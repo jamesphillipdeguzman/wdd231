@@ -386,6 +386,11 @@ span#font2 {
     border-radius: 5px;
 }
 
+#hero-img {
+    width: 100%;
+    height: auto;
+}
+
 .image-container {
     position: relative;
     display: inline-block;
