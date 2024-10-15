@@ -5,6 +5,7 @@
     --secondary-color: #533A71;
     --accent-color1: #50C5B7;
     --accent-color2: #6184D8;
+    --accent-color3: #4C5454;
 
 
     /* FONTS */
@@ -124,7 +125,7 @@ body {
 
 .join-btn {
     font-family: var(--primary-font);
-    font-size: 1;
+    font-size: 1.2rem;
     padding: 10px 20px;
     background-color: rgba(83, 58, 113, 1);
     color: whitesmoke;
@@ -163,7 +164,7 @@ body {
 h1 {
 
     font-family: var(--primary-font);
-    color: var(--secondary-color);
+    color: #fff;
     text-align: center;
     font-size: 3.5rem;
 
@@ -417,6 +418,48 @@ h2 {
     font-size: 1.2rem;
 }
 
+.hero {
+    margin: 0;
+    padding: 0;
+}
+
+.hero-img {
+
+    background-size: cover;
+    background-repeat: no-repeat;
+    width: 100%;
+    height: auto;
+}
+
+.overlay-text {
+
+    position: absolute;
+    top: 40%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 3rem;
+}
+
+
+h1 {
+
+    font-family: var(--primary-font);
+    color: #fff;
+    text-align: center;
+    font-size: 2.5rem;
+
+}
+
+
+
+.front-quote {
+
+    color: var(--accent-color3);
+    font-family: var(--secondary-font);
+    font-size: 2.5rem;
+    margin-top: 50px;
+}
+
 
 main {
 
@@ -431,14 +474,31 @@ main {
 
 }
 
+.greeting {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin: 0 auto;
+    padding: 10px;
+}
+
 fieldset {
     font-family: var(--primary-font);
     text-align: center;
 
 }
 
-main>p {
-    color: var(--secondary-color);
+article {
+    margin: 10px;
+    padding: 10px;
+}
+
+article p {
+    color: var(--primary-color);
+    font-size: 1.5rem;
+    font-family: var(--primary-font);
+    text-align: center;
 }
 
 span#color1 {
@@ -634,6 +694,7 @@ footer {
 @media screen and (max-width: 800px) {
 
     h1 {
+        color: var(--accent-color3);
         font-size: 1.6rem;
     }
 
@@ -648,7 +709,7 @@ footer {
         font-family: var(--default-font);
         padding: .2rem 2vw;
         position: absolute;
-        right: 30px;
+        right: 20px;
         top: 8px;
         /* width: 100%; */
         text-align: right;
@@ -709,15 +770,19 @@ footer {
         align-items: center;
         text-align: center;
         justify-content: right;
+        margin: 0 auto;
 
     }
 
+    .join-btn {
+        font-size: 1rem;
+    }
 
     .page-wrap {
         display: flex;
         flex-direction: column;
         width: 100vw;
-        background-color: var(--accent-color1);
+        background-color: var(--accent-color2);
         align-content: center;
         justify-content: center;
         max-width: 100%;
@@ -765,8 +830,48 @@ footer {
     }
 
     main {
-        width: 100vw;
+
         max-width: 100%;
+        width: 100vw;
+
+    }
+
+    article p {
+        color: var(--primary-color);
+    }
+
+    .hero-img {
+
+        background-size: cover;
+        background-repeat: no-repeat;
+        width: 100%;
+        height: auto;
+    }
+
+    .overlay-text {
+
+        position: absolute;
+        top: 40%;
+        left: 75%;
+        transform: translate(-50%, -50%);
+        font-size: 3rem;
+    }
+
+    h1 {
+
+        font-family: var(--primary-font);
+        color: var(--accent-color3);
+        text-align: center;
+        font-size: 2.5rem;
+
+    }
+
+    h2 {
+        font-family: var(--primary-font);
+        color: var(--accent-color3);
+        text-align: center;
+        font-size: 2rem;
+
     }
 
     fieldset,
@@ -778,6 +883,15 @@ footer {
 
 @media (max-width: 360px) {
 
+    h1 {
+
+        font-family: var(--primary-font);
+        color: var(--accent-color3);
+        text-align: center;
+        font-size: 2rem;
+
+    }
+
     fieldset,
     join-form {
         max-width: 90vw;
@@ -787,6 +901,11 @@ footer {
     input {
         max-width: 100vw;
         width: 100%;
+    }
+
+    #menu {
+        padding: 0.2rem 1vw;
+        right: 20px;
     }
 
 
