@@ -666,7 +666,7 @@ input[type="submit"] {
 footer {
 
 
-    background-color: whitesmoke;
+    background-color: rgba(0, 0, 0, 0.5);
     padding-top: 50px;
     padding: 20px;
     text-align: center;
@@ -683,8 +683,8 @@ footer {
 }
 
 .footer-text {
-    color: #464444;
-    font-size: medium;
+    color: white;
+    font-size: 1rem;
 }
 
 
@@ -697,6 +697,15 @@ footer {
         color: var(--accent-color3);
         font-size: 1.6rem;
     }
+
+    .front-quote {
+
+        color: var(--accent-color3);
+        font-family: var(--secondary-font);
+        font-size: 2rem;
+        margin-top: 50px;
+    }
+
 
     #menu {
 
@@ -807,6 +816,7 @@ footer {
 
 
     .social-links img {
+
         width: 25px;
         height: 25px;
     }
@@ -817,7 +827,7 @@ footer {
     }
 
     .footer-text {
-        font-size: 0.7rem;
+        font-size: 0.9rem;
     }
 
     /* .join-btn {
@@ -851,9 +861,9 @@ footer {
     .overlay-text {
 
         position: absolute;
-        top: 40%;
+        top: 35%;
         left: 75%;
-        transform: translate(-50%, -50%);
+        transform: translate(-40%, -75%);
         font-size: 3rem;
     }
 
@@ -881,6 +891,18 @@ footer {
     }
 }
 
+@media (max-width: 480px) {
+
+
+    .footer-wrapper {
+        display: flex;
+        flex-direction: column;
+        gap: 20px;
+
+
+    }
+}
+
 @media (max-width: 360px) {
 
     h1 {
@@ -891,6 +913,15 @@ footer {
         font-size: 2rem;
 
     }
+
+    .front-quote {
+
+        color: var(--accent-color3);
+        font-family: var(--secondary-font);
+        font-size: 1.5rem;
+        margin-top: 50px;
+    }
+
 
     fieldset,
     join-form {
