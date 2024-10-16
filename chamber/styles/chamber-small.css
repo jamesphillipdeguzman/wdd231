@@ -551,8 +551,16 @@
     }
 
     .img-desc {
+        display: flex;
+        flex-direction: column;
         font-size: 3rem;
         width: 100%;
+        /* justify-content: left; */
+        justify-self: flex-start;
+        align-items: flex-start;
+        align-self: flex-start;
+        align-content: flex-start;
+
     }
 
 
