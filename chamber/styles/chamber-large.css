@@ -470,6 +470,46 @@ input[type="radio"] {
 
 }
 
+/* ================= DISCOVER ================= */
+
+.discover-details {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+}
+
+figure {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    gap: 10px;
+    margin: 30px;
+}
+
+figcaption {
+    text-align: center;
+    font-size: small;
+    width: 70%;
+}
+
+
+figure img {
+    justify-content: center;
+    align-items: center;
+    align-content: center;
+    width: 100%;
+    height: auto;
+}
+
+.img-desc {
+    font-size: 3rem;
+    width: 80%;
+}
+
 
 /* ================= MAIN ================= */
 .join-wrapper {
