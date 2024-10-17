@@ -492,8 +492,8 @@ figure {
 
 figcaption {
     text-align: center;
-    font-size: small;
-    width: 70%;
+    font-size: 2rem;
+    width: 100%;
 }
 
 
@@ -505,10 +505,18 @@ figure img {
     height: auto;
 }
 
-.img-desc {
-    font-size: 3rem;
-    width: 80%;
+figure p {
+    font-size: 2rem;
+    font-weight: bold;
+    line-height: 1.5;
 }
+
+/* .img-desc {
+    font-size: 44px;
+    width: 100%;
+    text-align: left;
+} */
+
 
 
 /* ================= MAIN ================= */

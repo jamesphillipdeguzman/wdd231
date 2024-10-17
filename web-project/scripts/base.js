@@ -69,9 +69,11 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Get date and time format for timestamp
 
+
     const now = new Date();
     now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
-    document.querySelector('#timestamp').value = now.toISOString().slice(0, 16);
+    const timeNow = now.toISOString().slice(0, 16);
+    document.querySelector('#timestamp').value = timeNow;
 
     // Target all modal elements
     const modal = document.getElementById('modal');
@@ -140,10 +142,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-});
 
 
-document.addEventListener('DOMContentLoaded', () => {
+
+
 
 
     // Target image layouts e.g. desktop
@@ -175,9 +177,8 @@ document.addEventListener('DOMContentLoaded', () => {
         modalBackdrop1.style.display = 'none';
     });
 
-});
 
-document.addEventListener('DOMContentLoaded', () => {
+
 
     // Target image layouts e.g. mobile
 
