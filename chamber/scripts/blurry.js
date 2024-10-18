@@ -61,7 +61,7 @@ blurDivs.forEach(div => {
         div.style.backgroundImage = imageMapping[imageName];
     };
 
-    const img = div.querySelector("img");
+    const img = div.querySelector(".img-discover");
 
     // Check if image actually exists
     if (img) {

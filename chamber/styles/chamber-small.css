@@ -17,6 +17,14 @@
         width: 100%;
     }
 
+    .sidebars {
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        max-width: 90vw;
+        width: 100%;
+
+    }
 
     .membership-cards {
         align-content: center;
@@ -148,10 +156,10 @@
 
 
 /* Mobile view*/
-@media (max-width: 900px) {
+@media (max-width: 1060px) {
 
     /* Start image animation here*/
-    img {
+    .img-discover {
         width: 100%;
         aspect-ratio: 1 / 1;
         display: block;
@@ -336,15 +344,14 @@
     div.container {
         align-items: center;
         align-content: center;
+        display: flex;
+        flex-direction: column;
         justify-content: center;
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        justify-content: center;
-        align-content: center;
-        align-items: center;
-        margin: 0 auto;
-        padding: 0.4rem;
-        /* max-width: 100vw; */
+        margin: 0;
+        padding: 0;
+        max-width: 100vw;
+        width: 100%;
+
 
 
     }
@@ -532,6 +539,21 @@
 
     }
 
+
+
+
+    .sidebar1-left,
+    .sidebar2-left,
+    .sidebar3-left,
+    .sidebar4-left,
+    .sidebar5-left,
+    .sidebar6-left {
+        margin: 0 auto;
+        max-width: 90vw;
+        width: 100%;
+        transition: none;
+    }
+
     /* ================= FOOTER ================= */
 
     .left-footer {
@@ -587,6 +609,7 @@
     }
 
 
+
 }
 
 @media (max-width: 616px) {
@@ -605,6 +628,8 @@
         max-width: 100vw;
         width: 90%;
     }
+
+
 
     figure {
         display: flex;
@@ -781,23 +806,7 @@
 
 
 
-    div.container {
-        align-items: center;
-        align-content: center;
-        justify-content: center;
-        display: grid;
-        grid-template-columns: repeat(1, 1fr);
-        justify-content: center;
-        align-content: center;
-        align-items: center;
-        margin: 0 auto;
-        /* padding: 0.4rem; */
-        max-width: 100vw;
 
-        /* width: 90%; */
-
-
-    }
 
     div.container a {
         display: flex;

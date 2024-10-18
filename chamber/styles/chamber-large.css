@@ -37,15 +37,19 @@
 }
 
 /* ================= BODY ================= */
-
-body,
 html {
+    height: 100%;
+    font-size: 16px;
+}
+
+body {
     background-color: rgba(237, 233, 232, 0.1);
     display: flex;
     flex-direction: column;
-    font-size: 1rem;
+
     font-family: var(--primary-font);
-    height: auto;
+    height: 100%;
+    line-height: 1.6;
     max-width: 100vw;
     /* width: 100%; */
     margin: 0;
@@ -63,7 +67,8 @@ html {
 h1 {
     font-family: var(--default-font);
     font-weight: 300;
-    font-size: 3rem;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
     text-align: center;
     color: var(--accent1-color);
 }
@@ -97,6 +102,7 @@ header {
 
 p {
     font-family: var(--paragraph-font);
+    font-size: 1rem;
 }
 
 .cta-btn {
@@ -134,22 +140,24 @@ p {
 /* ================= CONTAINER ================= */
 
 div.container {
-    /* display: grid; */
+    display: grid;
     /* flex-direction: column; */
-    /* grid-template-columns: repeat(3, 1fr); */
+    grid-template-columns: repeat(auto-fill, minmax(400px, 2fr));
+
     /* gap: 5px; */
     align-content: center;
     /* align-items: flex-start; */
+    align-items: center;
+
     justify-content: space-between;
     flex: 1;
     flex-direction: row;
     flex-wrap: wrap;
     /* height: 400px; */
-    margin: 0 auto;
-    max-width: 85vw;
-
-
-    width: 100%;
+    /* margin: 0 auto;
+    /* max-width: 100vw; */
+    max-width: 87vw;
+    width: 87%;
 
 
 
@@ -349,6 +357,39 @@ hero {
     color: #fff;
 }
 
+.img-discover {
+    width: 700px;
+    height: auto;
+    display: block;
+    object-fit: cover;
+    object-position: center;
+    transition: box-shadow 0.2s ease-in;
+}
+
+.img-discover:hover {
+    /* border: 1px solid rgba(0, 0, 0, 1); */
+    box-shadow: 0px 0px 5px #333;
+    border-radius: 5px;
+}
+
+.sidebar1-left,
+.sidebar2-left,
+.sidebar3-left,
+.sidebar4-left,
+.sidebar5-left,
+.sidebar6-left {
+    transition: background-color 0.2s ease-in-out;
+}
+
+.sidebar1-left:hover,
+.sidebar2-left:hover,
+.sidebar3-left:hover,
+.sidebar4-left:hover,
+.sidebar5-left:hover,
+.sidebar6-left:hover {
+    background-color: #1EA896;
+}
+
 
 /* ================= FORM ================= */
 
@@ -474,11 +515,15 @@ input[type="radio"] {
 /* ================= DISCOVER ================= */
 
 .discover-details {
-    display: flex;
-    flex-direction: column;
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
     justify-content: center;
     align-items: center;
-    align-content: center;
+    max-width: 80vw;
+    width: 80%;
+    gap: 50px;
+
+    /* align-content: center; */
 }
 
 figure {
@@ -555,8 +600,8 @@ main {
     margin: 20px;
     padding: 0;
     /* margin: 0 auto; */
-    /* max-width: 90vw; */
-    /* width: 100%; */
+    /* max-width: 90vw;
+    width: 100%; */
 }
 
 
@@ -702,6 +747,10 @@ article {
     margin: 3rem;
 }
 
+article p {
+    font-size: 3rem;
+}
+
 .keyevent {
 
 
@@ -711,7 +760,7 @@ article {
     display: flex;
     flex-direction: column;
     justify-content: flex-start;
-    max-width: 50vw;
+    max-width: 90vw;
     margin: 2rem auto;
 
 
@@ -981,84 +1030,56 @@ ul li {
 
 /* ================= SIDE BARS ================= */
 
-.left-sidebar {
-    display: none;
-    padding: 0;
-    line-height: 1rem;
-    width: 200px;
-    /* Make quick links float */
-    position: fixed;
-    z-index: 10;
 
 
-}
-
-.left-sidebar>h2 {
-    font-size: medium;
-    margin: 40px auto 10px;
-    width: 100%;
-    text-align: center;
-
-}
-
-.left-sidebar a:hover {
-
-    /* background-color: var(--primary-color); */
-    transition: background-color 0.3s ease;
-    text-decoration: underline;
-    height: auto;
-
-}
-
-
-.left-sidebar>ul li {
-
-    margin: 25px auto 2px;
-
-
-}
-
-.left-sidebar>ul {
-    display: flex;
-    flex-direction: column;
-    margin: 0;
-    padding: 0;
-}
-
-/* ================= ASIDE ================= */
-
-aside {
-    background-color: var(--accent1-color);
-    border: 1px solid var(--accent2-color);
+.sidebar1-left,
+.sidebar2-left,
+.sidebar3-left,
+.sidebar4-left,
+.sidebar5-left,
+.sidebar6-left {
+    background-color: #bed;
+    border: 1px solid var(--accent1-color);
     box-shadow: 0px 0px 2px RGBA(0, 0, 0, 0.5);
     margin: 20px;
-    /* grid-column: 1; */
-    /* 
-    flex: 0 0 auto; */
+    padding: 20px;
+    grid-row: 2;
+    height: auto;
+
+    gap: 30px;
+    width: 300px;
+    height: 100vh;
 
 
 
 }
 
+.sidebars {
+    display: flex;
+    flex-direction: column;
+    align-self: flex-start;
+    margin: 0;
+    padding: 0;
+    /* max-width: 30%;
+    width: 30%; */
+}
 
-aside.left-sidebar ul {
-    border-top: 1px solid rgba(255, 255, 255, 0.2);
+.demo,
+.overview {
+    font-size: 0.9rem;
+}
+
+
+/* ================= ASIDE ================= */
+aside {
+    background-color: #bed;
 
 }
 
-aside.left-sidebar ul li {
 
-    list-style-type: none;
-}
 
-aside.left-sidebar ul li a {
-    color: #fff;
-    text-decoration: none;
-}
 
-aside.left-sidebar ul li a:hover {
-    text-decoration: underline;
-}
+
 
 
 /* ================= FOOTER ================= */
