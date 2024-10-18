@@ -74,9 +74,10 @@ h2 {
     color: var(--accent1-color);
     font-family: var(--heading-font);
     font-size: 2.5rem;
-    margin-bottom: 2rem;
+    margin: 2rem auto 2rem;
     text-align: center;
 }
+
 
 h3 {
     text-align: center;
@@ -492,7 +493,7 @@ figure {
 
 figcaption {
     text-align: center;
-    font-size: 2rem;
+    font-size: 1rem;
     width: 100%;
 }
 
@@ -501,21 +502,21 @@ figure img {
     justify-content: center;
     align-items: center;
     align-content: center;
-    width: 100%;
-    height: auto;
+    /* width: 100%; */
+    /* height: auto; */
+    width: 860px;
+    height: 520px;
 }
 
 figure p {
-    font-size: 2rem;
+    font-size: 3rem;
     font-weight: bold;
-    line-height: 1.5;
+    line-height: 1.6;
+    text-align: left;
+    font-style: italic;
 }
 
-/* .img-desc {
-    font-size: 44px;
-    width: 100%;
-    text-align: left;
-} */
+
 
 
 

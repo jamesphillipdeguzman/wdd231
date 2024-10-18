@@ -150,6 +150,89 @@
 /* Mobile view*/
 @media (max-width: 900px) {
 
+    /* Start image animation here*/
+    img {
+        width: 100%;
+        aspect-ratio: 1 / 1;
+        display: block;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    /* Add pulsating effect for image, as if it is loading on slower networks (e.g., 3G, Slow 4G or Fast 4G */
+
+    .blurry::before {
+
+        content: "";
+        position: absolute;
+        inset: 0;
+        /* set all sides to 0 */
+        animation: pulse 2.5s infinite;
+
+
+    }
+
+    /* When image is already loaded, then remove the white pulsating background caused by animation above*/
+
+    .blurry.loaded::before {
+        content: none;
+
+    }
+
+    @keyframes pulse {
+        0% {
+
+            background-color: rgba(255, 255, 255, 0);
+        }
+
+        50% {
+            background-color: rgba(255, 255, 255, 0.1);
+        }
+
+        100% {
+            background-color: rgba(255, 255, 255, 0);
+        }
+
+    }
+
+    .blurry {
+        position: relative;
+        background-size: cover;
+        background-position: center;
+
+    }
+
+    .blurry.loaded>img {
+        opacity: 1;
+    }
+
+    /* Set all images to opacity 0 so it doesn't show the image yet */
+    .blurry>img {
+        opacity: 0;
+
+        transition: opacity 200ms ease-in-out;
+    }
+
+
+    /* End of image animation, a.k.a lazy loading */
+
+    #weather-icon {
+        width: 50px;
+        height: 50px;
+        margin: 0 auto;
+    }
+
+    #city-image {
+        width: 50%;
+        height: auto;
+    }
+
+    .weatherdata-container {
+        margin: 0 auto;
+        max-width: 50vw;
+        height: auto;
+    }
+
     .membership-cards h2 {
         color: var(--accent1-color);
         font-family: var(--default-font);
@@ -498,7 +581,10 @@
     }
 
 
-
+    #city-image {
+        width: 30%;
+        height: auto;
+    }
 
 
 }
@@ -550,21 +636,25 @@
         height: auto;
     }
 
-    .img-desc {
-        display: flex;
-        flex-direction: column;
-        font-size: 3rem;
+    figcaption {
+        text-align: center;
+        font-size: 0.9rem;
         width: 100%;
-        /* justify-content: left; */
-        /* justify-self: flex-end; */
-        /* align-items: flex-end; */
-        /* text-align: left; */
-        /* align-content: flex-end; */
-        text-justify: unset;
-        text-align: left;
-
     }
 
+
+    figure img {
+        justify-content: center;
+        align-items: center;
+        align-content: center;
+        width: 100%;
+        height: auto;
+    }
+
+    article p {
+        font-family: var(--default-font);
+        text-align: left;
+    }
 
     main,
     .container {
