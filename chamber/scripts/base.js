@@ -173,6 +173,9 @@ function localStorageLastVisit() {
 
     // milliseconds to days constant = 1000 ms/s * 60 s/m * 60 m/h * 24 h/day
     const msToDays = 86400000;
+
+
+
     // today's date
     const theDateToday = new Date();
 
@@ -189,26 +192,15 @@ function localStorageLastVisit() {
     const tomorrowMS = tomorrow.getTime();
 
 
-    // Check if the date is already 1 whole day
 
-    const numOfDays = theDateToday.getDay();
-    const numDays = document.querySelector('#numDays');
 
-    if (numOfDays == 1) {
-        // alert("A whole day has elapsed");
-
-        numDays.textContent = `You last visited ${numOfDays} day ago.`;
-
-    } else {
-        numDays.textContent = `You last visited ${numOfDays} days ago.`;
-    }
-    // find difference between epoch times in ms and convert to days
-    let daysleft = (tomorrow.getTime() - Date.now()) / msToDays;
 
 
     todayElement.textContent = today.toLocaleDateString();
     nextDateElement.textContent = `${tomorrow.toLocaleDateString()}`;
-    daysElement.textContent = `${daysleft.toFixed(0)} days`;
+
+
+
 
     // set current date
     const currentDate = Date.now();
@@ -221,7 +213,10 @@ function localStorageLastVisit() {
     const lastVisitValue = localStorage.getItem('lastVisit');
     const nextVisitValue = localStorage.getItem('nextVisit');
 
+    const millesecondsDifference = (nextVisitValue - lastVisitValue);
+    const daysDifference = millesecondsDifference / msToDays;
 
+    alert(daysDifference);
 
     if (lastVisitValue !== null && lastVisitValue !== '') {
 
@@ -236,6 +231,32 @@ function localStorageLastVisit() {
 
         // set the next visit date 
         localStorage.setItem('nextVisit', currentDate);
+
+
+        // find difference between epoch times in ms and convert to days
+        const daysleft = (lastVisitDate.getTime() - Date.now()) / msToDays;
+        daysElement.textContent = `${daysleft.toFixed(0)} days`;
+
+        // alert(daysleft);
+
+        // Check if the date is already 1 whole day
+        const numOfDays = lastVisitDate.getDay();
+        const numDays = document.querySelector('#numDays');
+
+        alert(daysleft);
+        if (daysleft == 0 || daysleft == 1) {
+            // alert("A whole day has elapsed");
+
+
+            numDays.textContent = `You last visited ${numOfDays} day ago`;
+
+        } else if (daysleft > 1) {
+            numDays.textContent = `You last visited ${numOfDays} days ago.`;
+        } else {
+
+            numDays.textContent = `You last visited just today.`;
+            document.getElementById('lastVisit').textContent = `Back so soon?`;
+        }
 
 
     }
@@ -256,8 +277,8 @@ function localStorageLastVisit() {
 
     else {
 
-        // const lastVisit = localStorage.getItem('lastVisit');
-        const millesecondsDifference = (nextVisitValue - lastVisitValue) / msToDays;
+
+
 
         // alert(Number(millesecondsDifference));
 
