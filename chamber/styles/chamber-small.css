@@ -554,10 +554,10 @@
         /* width: 100%; */
     }
 
-    .left-sidebar {
+    /* .left-sidebar {
         width: 100vw;
 
-    }
+    } */
 
 
 
@@ -751,9 +751,9 @@
 
 
 
-    .left-sidebar {
+    /* .left-sidebar {
         display: none;
-    }
+    } */
 
 
     #menu {
@@ -775,9 +775,9 @@
     }
 
 
-    .left-sidebar {
+    /* .left-sidebar {
         display: none;
-    }
+    } */
 
 
     #menu::before {

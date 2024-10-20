@@ -216,7 +216,7 @@ function localStorageLastVisit() {
     const millesecondsDifference = (nextVisitValue - lastVisitValue);
     const daysDifference = millesecondsDifference / msToDays;
 
-    alert(daysDifference);
+    // alert(daysDifference);
 
     if (lastVisitValue !== null && lastVisitValue !== '') {
 
@@ -243,7 +243,7 @@ function localStorageLastVisit() {
         const numOfDays = lastVisitDate.getDay();
         const numDays = document.querySelector('#numDays');
 
-        alert(daysleft);
+        // alert(daysleft);
         if (daysleft == 0 || daysleft == 1) {
             // alert("A whole day has elapsed");
 
