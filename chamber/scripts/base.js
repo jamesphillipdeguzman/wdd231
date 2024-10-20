@@ -159,3 +159,121 @@ smallScreenDetected(mediaQueryList);
 mediaQueryList.addEventListener('change', smallScreenDetected);
 
 
+
+
+
+
+
+
+// Local Storage for visitor interaction
+
+function localStorageLastVisit() {
+
+    // Date manipulation
+
+    // milliseconds to days constant = 1000 ms/s * 60 s/m * 60 m/h * 24 h/day
+    const msToDays = 86400000;
+    // today's date
+    const theDateToday = new Date();
+
+    // initialize display elements
+    const todayElement = document.querySelector("#today");
+    const nextDateElement = document.querySelector("#nextDate");
+    const daysElement = document.querySelector("#daysleft");
+
+    // processing
+    const today = new Date();
+    const tomorrow = new Date(today);
+    tomorrow.setDate(today.getDate() + 1);
+
+    const tomorrowMS = tomorrow.getTime();
+
+
+    // Check if the date is already 1 whole day
+
+    const numOfDays = theDateToday.getDay();
+    const numDays = document.querySelector('#numDays');
+
+    if (numOfDays == 1) {
+        // alert("A whole day has elapsed");
+
+        numDays.textContent = `You last visited ${numOfDays} day ago.`;
+
+    } else {
+        numDays.textContent = `You last visited ${numOfDays} days ago.`;
+    }
+    // find difference between epoch times in ms and convert to days
+    let daysleft = (tomorrow.getTime() - Date.now()) / msToDays;
+
+
+    todayElement.textContent = today.toLocaleDateString();
+    nextDateElement.textContent = `${tomorrow.toLocaleDateString()}`;
+    daysElement.textContent = `${daysleft.toFixed(0)} days`;
+
+    // set current date
+    const currentDate = Date.now();
+
+
+    // localStorage.removeItem('lastVisit');
+    // localStorage.removeItem('lastVisitDate');
+
+
+    const lastVisitValue = localStorage.getItem('lastVisit');
+    const nextVisitValue = localStorage.getItem('nextVisit');
+
+
+
+    if (lastVisitValue !== null && lastVisitValue !== '') {
+
+
+        // Convert lastVisitValue into date
+        const lastVisitDate = new Date();
+
+        localStorage.setItem('lastVisitDate', lastVisitDate.toLocaleDateString());
+
+        // Tell user about his last visit
+        document.getElementById('lastVisit').textContent = `Your last visit was on ${lastVisitDate.toLocaleString()}`;
+
+        // set the next visit date 
+        localStorage.setItem('nextVisit', currentDate);
+
+
+    }
+
+    // If there's no last visit,  tell user it's his first time.
+    // else if (lastVisitValue == null || lastVisitValue == '') {
+
+    else if (lastVisitValue == null || lastVisitValue == '') {
+
+        document.getElementById('lastVisit').textContent = `This is your first visit!`;
+
+        numDays.textContent = `You last visited 0 day ago.`;
+
+        // Set the last visit date as the current date
+        localStorage.setItem('lastVisit', currentDate);
+
+    }
+
+    else {
+
+        // const lastVisit = localStorage.getItem('lastVisit');
+        const millesecondsDifference = (nextVisitValue - lastVisitValue) / msToDays;
+
+        // alert(Number(millesecondsDifference));
+
+        if (millesecondsDifference.toFixed(0) >= 0 || millesecondsDifference.toFixed(0) < daysleft) {
+
+            document.getElementById('lastVisit').textContent = `Back so soon?`;
+        }
+
+
+    }
+
+
+
+}
+
+
+
+
+localStorageLastVisit();
