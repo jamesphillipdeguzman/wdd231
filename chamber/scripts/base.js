@@ -90,3 +90,72 @@ blurDivs.forEach(div => {
 
 });
 
+function collapseAll() {
+    const sidebarContents = document.querySelectorAll('.sidebar-content');
+
+    sidebarContents.forEach(sidebarContent => {
+        sidebarContent.classList.add('collapsed');
+
+    });
+
+}
+
+// collapseAll();
+
+
+function showHideToggle() {
+    const sidebarContents = document.querySelectorAll('.sidebar-content');
+
+    sidebarContents.forEach(sidebarContent => {
+        sidebarContent.classList.toggle('collapsed');
+
+    });
+
+}
+
+function toggleSidebar(index) {
+
+
+    const sidebarContents = document.querySelectorAll('.sidebar-content');
+
+    if (index < 0 || index >= sidebarContents.length) {
+        console.error('Invalid index');
+        return;
+    }
+
+    const sidebarContent = sidebarContents[index];
+
+    // alert(sidebarContents[index]);
+    // alert(index);
+    sidebarContent.classList.toggle('collapsed');
+
+
+    const isCollapsed = sidebarContent.classList.contains('collapsed');
+
+    const downPicker = sidebarContent.previousElementSibling.querySelector('.downpicker');
+
+    downPicker.innerHTML = isCollapsed ? ' ▷' : ' ▽';
+
+
+
+}
+
+
+function smallScreenDetected(e) {
+
+    if (e.matches) {
+        // if specified screen size detected, collapse all the toggle sidebars...
+        collapseAll();
+
+    }
+
+}
+
+
+const mediaQueryList = window.matchMedia('(max-width:900px)');
+
+smallScreenDetected(mediaQueryList);
+
+mediaQueryList.addEventListener('change', smallScreenDetected);
+
+

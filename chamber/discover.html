@@ -34,11 +34,9 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/chamber-large.css">
     <link rel="stylesheet" href="styles/chamber-small.css">
-    <script src="scripts/blurry.js" defer></script>
 
 
-
-
+    <script src="scripts/base.js" defer></script>
 </head>
 
 <body>
@@ -94,9 +92,12 @@
     <div class="container">
 
         <div class="sidebars">
+            <button id="showHideBtn" onclick="showHideToggle()">Show/Hide</button>
 
-            <aside class="sidebar1-left">
-                <h3>Iloilo Demographics</h3>
+            <h3>Iloilo Demographics <span class="downpicker" onclick="toggleSidebar(0)"> ▽</span></h3>
+
+            <aside class="sidebar-content">
+
                 <ul>
 
 
@@ -127,16 +128,19 @@
 
 
             </aside>
-            <aside class="sidebar2-left">
 
-                <h3>Iloilo City Overview</h3>
 
+
+            <h3>Iloilo City Overview<span class="downpicker" onclick="toggleSidebar(1)"> ▽</span></h3>
+            <aside class="sidebar-content">
                 <h4>Location</h4>
+
                 <ul>
                     <li class="overview">Southeastern coast of Panay Island, Philippines.</li>
                     <li class="overview">Classification: 1st class highly urbanized city in the Western Visayas region
                     </li>
                 </ul>
+
 
                 <h4>Population</h4>
                 <ul>
@@ -154,7 +158,8 @@
 
             </aside>
 
-            <aside class="sidebar3-left">
+            <h3>History<span class="downpicker" onclick="toggleSidebar(2)"> ▽</span></h3>
+            <aside class="sidebar-content">
                 <h4>History</h4>
                 <ul>
                     <li class="overview">Historical Significance: Known as "La Muy Leal y Noble Ciudad" (The Most Loyal
@@ -186,11 +191,11 @@
                 </ul>
             </aside>
 
+            <h3>Dinagyang Festival<span class="downpicker" onclick="toggleSidebar(3)"> ▽</span></h3>
+            <aside class="sidebar-content">
 
-            <aside class="sidebar4-left">
-                <h3>Events</h3>
 
-                <h4>1. Dinagyang Festival</h4>
+                <h4> Dinagyang Festival</h4>
                 <ul>
                     <li class="overview">
                         <ul>
@@ -201,8 +206,10 @@
                         </ul>
                     </li>
                 </ul>
-
-                <h4>2. Paraw Regatta</h4>
+            </aside>
+            <h3>Paraw Regatta<span class="downpicker" onclick="toggleSidebar(4)"> ▽</span></h3>
+            <aside class="sidebar-content">
+                <h4> Paraw Regatta</h4>
                 <ul>
                     <li class="overview">
                         <ul>
@@ -215,8 +222,10 @@
                 </ul>
 
             </aside>
-            <aside class="sidebar5-left">
-                <h4>3. Fiesta de la Candelaria</h4>
+
+            <h3>Fiesta de la Candelaria<span class="downpicker" onclick="toggleSidebar(5)"> ▽</span></h3>
+            <aside class="sidebar-content">
+                <h4> Fiesta de la Candelaria</h4>
                 <ul>
                     <li class="overview">
                         <ul>
@@ -227,8 +236,11 @@
                         </ul>
                     </li>
                 </ul>
+            </aside>
 
-                <h4>4. Bayluhay</h4>
+            <h3>Bayluhay<span class="downpicker" onclick="toggleSidebar(6)"> ▽</span></h3>
+            <aside class="sidebar-content">
+                <h4> Bayluhay</h4>
                 <ul>
                     <li class="overview">
                         <ul>
@@ -240,13 +252,19 @@
                     </li>
                 </ul>
 
-                <h4>5. Binanog Festival (January 10-16)</h4>
+            </aside>
+
+            <h3>Binanog Festival<span class="downpicker" onclick="toggleSidebar(7)"> ▽</span></h3>
+            <aside class="sidebar-content">
+                <h4> Binanog Festival </h4>
                 <ul>
                     <li class="overview">
                         <ul>
                             <li>When: January 10-16</li>
-                            <li>Description: Celebrated in Lambunao, this festival showcases the Binanog dance of the
-                                Panay-Bukidnon community, imitating the movements of hawks. It highlights the region’s
+                            <li>Description: Celebrated in Lambunao, this festival showcases the Binanog dance of
+                                the
+                                Panay-Bukidnon community, imitating the movements of hawks. It highlights the
+                                region’s
                                 unique cultural heritage.</li>
                         </ul>
                     </li>
@@ -254,9 +272,10 @@
 
             </aside>
 
-            <aside class="sidebar6-left">
+            <h3>Carabao-Carroza Festival<span class="downpicker" onclick="toggleSidebar(8)"> ▽</span></h3>
+            <aside class="sidebar-content">
 
-                <h4>6. Carabao-Carroza Festival</h4>
+                <h4> Carabao-Carroza Festival</h4>
                 <ul>
                     <li class="overview">
                         <ul>
@@ -267,26 +286,35 @@
                         </ul>
                     </li>
                 </ul>
+            </aside>
 
-                <h4>7. Tinu-om Festival </h4>
+            <h3>Tinu-om Festival<span class="downpicker" onclick="toggleSidebar(9)"> ▽</span></h3>
+            <aside class="sidebar-content">
+                <h4> Tinu-om Festival </h4>
                 <ul>
                     <li class="overview">
                         <ul>
                             <li>When: September 1-5</li>
                             <li>Description: Highlights the local chicken dish, tinu-om. The festival features dance
-                                troupes that celebrate the preparation of this traditional dish, which is steamed with
+                                troupes that celebrate the preparation of this traditional dish, which is steamed
+                                with
                                 aromatic ingredients wrapped in banana leaves.</li>
                         </ul>
                     </li>
                 </ul>
+            </aside>
 
-                <h4> 8. Iloilo Chinese New Year</h4>
+            <h3>Iloilo Chinese New Year<span class="downpicker" onclick="toggleSidebar(10)"> ▽</span></h3>
+            <aside class="sidebar-content">
+                <h4> Iloilo Chinese New Year</h4>
                 <ul>
                     <li class="overview">
                         <ul>
                             <li>When: Various dates</li>
-                            <li>Description: Celebrated by the Chinese-Filipino community, this festival includes
-                                fireworks, cultural displays, and various activities reflecting the contributions of
+                            <li>Description: Celebrated by the Chinese-Filipino community, this festival
+                                includes
+                                fireworks, cultural displays, and various activities reflecting the
+                                contributions of
                                 this community to Iloilo's development.</li>
                         </ul>
                     </li>
