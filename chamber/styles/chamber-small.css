@@ -62,13 +62,7 @@
 
     }
 
-    .membership-cards h2 {
-        color: var(--accent1-color);
-        font-family: var(--default-font);
-        font-size: 2.7rem;
-        /* grid-column: 1 / span 2; */
-        text-align: center;
-    }
+
 
     .membership-cards h3 {
         color: var(--accent1-color);
@@ -254,13 +248,14 @@
     }
 
     #city-image {
-        width: 50%;
+        width: 90%;
         height: auto;
     }
 
     .weatherdata-container {
         margin: 0 auto;
-        max-width: 50vw;
+        max-width: 100vw;
+        width: 100%;
         height: auto;
     }
 
@@ -651,6 +646,14 @@
         height: auto;
     }
 
+    .modal-content h2 {
+        color: var(--accent1-color);
+        font-family: var(--default-font);
+        font-size: 1.2rem;
+        /* grid-column: 1 / span 2; */
+        text-align: center;
+
+    }
 
 
 }
