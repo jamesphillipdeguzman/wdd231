@@ -1080,9 +1080,15 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     z-index: 2;
     width: 400px;
+    visibility: visible;
+    opacity: 1;
 
-    /* visibility: hidden;
-    opacity: 0; */
+}
+
+.modal.hide {
+
+    visibility: hidden;
+    opacity: 0;
     transition: visibility 0s 0.5s, opacity 0.5s linear;
 }
 

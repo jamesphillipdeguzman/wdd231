@@ -75,23 +75,34 @@ document.addEventListener('DOMContentLoaded', () => {
     // modalBackdrop4.style.display = 'none';
 
 
+
+    // submit.style.visibility = 'hidden';
+    // submit.style.opacity = '0';
+
     const modal = document.querySelector('.modal');
     const backdrop = document.querySelector('.backdrop');
 
     function showModal() {
 
-        modal.style.display = 'block';
-        modalBackdrop.style.display = 'block';
-        visibility: visible;
-        opacity: 1;
+        // modal.style.display = 'block';
+        // modalBackdrop.style.display = 'block';
+        // visibility: visible;
+        // opacity: 1;
 
-
+        modal.classList.add('show');
 
     }
 
     function hideModal() {
-        modal.classList.remove('show');
-
+        modal.classList.add('hide');
+        modal1.style.visibility = 'hidden';
+        modal2.style.opacity = '0';
+        modal2.style.visibility = 'hidden';
+        modal2.style.opacity = '0';
+        modal3.style.visibility = 'hidden';
+        modal3.style.opacity = '0';
+        modal4.style.visibility = 'hidden';
+        modal4.style.opacity = '0';
 
     }
 
@@ -100,39 +111,43 @@ document.addEventListener('DOMContentLoaded', () => {
 
     }
 
-    // hideModal();
-    // hideBackDrop();
+    hideModal();
+    hideBackDrop();
 
 
-    document.querySelector('a').forEach(link => {
-        link.addEventListener('click', (event) => {
-            if (link.href.includes('join.html')) {
-                hideModal();
-                hideBackDrop();
-            }
-        })
-    });
+    // document.querySelector('a').forEach(link => {
+    //     link.addEventListener('click', (event) => {
+    //         if (link.href.includes('join.html')) {
+    //             hideModal();
+    //             hideBackDrop();
+    //         } else {
+    //             hideModal();
+    //             hideBackDrop();
 
-    let isReloaded = false;
+    //         }
+    //     })
+    // });
 
-    // Set flag on beforeunload
-    window.addEventListener('beforeunload', () => {
-        isReloaded = true;
-    });
+    // let isReloaded = false;
 
-    // Check the flag on load
-    window.addEventListener('load', () => {
-        if (isReloaded) {
-            console.log('The window was refreshed or closed and reopened.');
-            hideModal();
-            hideBackDrop();
-            // Your custom code here
-        } else {
-            console.log('The window was loaded for the first time.');
-            hideModal();
-            hideBackDrop();
-        }
-    });
+    // // Set flag on beforeunload
+    // window.addEventListener('beforeunload', () => {
+    //     isReloaded = true;
+    // });
+
+    // // Check the flag on load
+    // window.addEventListener('load', () => {
+    //     if (isReloaded) {
+    //         console.log('The window was refreshed or closed and reopened.');
+    //         hideModal();
+    //         hideBackDrop();
+    //         // Your custom code here
+    //     } else {
+    //         console.log('The window was loaded for the first time.');
+    //         hideModal();
+    //         hideBackDrop();
+    //     }
+    // });
 
     // Thank you
 
@@ -202,12 +217,16 @@ document.addEventListener('DOMContentLoaded', () => {
     openModalBtnsNonProfit.addEventListener('click', () => {
         modal1.style.display = 'block';
         modalBackdrop1.style.display = 'block';
+        modal1.style.visibility = 'visible';
+        modal1.style.opacity = '1';
     });
 
     // Close modal
     closeModalBtnsNonProfit.addEventListener('click', () => {
         modal1.style.display = 'none';
         modalBackdrop1.style.display = 'none';
+        modal1.style.visibility = 'hidden';
+        modal1.style.opacity = '0';
     });
 
     // Close modal when clicking on backdrop
@@ -223,18 +242,23 @@ document.addEventListener('DOMContentLoaded', () => {
     openModalBtnsBronze.addEventListener('click', () => {
         modal2.style.display = 'block';
         modalBackdrop2.style.display = 'block';
+        modal2.style.visibility = 'visible';
+        modal2.style.opacity = '1';
     });
 
     // Close modal
     closeModalBtnsBronze.addEventListener('click', () => {
         modal2.style.display = 'none';
         modalBackdrop2.style.display = 'none';
+        modal2.style.visibility = 'hidden';
+        modal2.style.opacity = '0';
     });
 
     // Close modal when clicking on backdrop
     modalBackdrop2.addEventListener('click', () => {
         modal2.style.display = 'none';
         modalBackdrop2.style.display = 'none';
+
     });
 
     // Silver
@@ -243,12 +267,16 @@ document.addEventListener('DOMContentLoaded', () => {
     openModalBtnsSilver.addEventListener('click', () => {
         modal3.style.display = 'block';
         modalBackdrop3.style.display = 'block';
+        modal3.style.visibility = 'visible';
+        modal3.style.opacity = '1';
     });
 
     // Close modal
     closeModalBtnsSilver.addEventListener('click', () => {
         modal3.style.display = 'none';
         modalBackdrop3.style.display = 'none';
+        modal3.style.visibility = 'hidden';
+        modal3.style.opacity = '0';
     });
 
     // Close modal when clicking on backdrop
@@ -263,12 +291,17 @@ document.addEventListener('DOMContentLoaded', () => {
     openModalBtnsGold.addEventListener('click', () => {
         modal4.style.display = 'block';
         modalBackdrop4.style.display = 'block';
+        modal4.style.visibility = 'visible';
+        modal4.style.opacity = '1';
     });
 
     // Close modal
     closeModalBtnsGold.addEventListener('click', () => {
         modal4.style.display = 'none';
         modalBackdrop4.style.display = 'none';
+        modal4.style.visibility = 'hidden';
+        modal4.style.opacity = '0';
+
     });
 
     // Close modal when clicking on backdrop
