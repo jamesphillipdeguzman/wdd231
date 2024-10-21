@@ -167,7 +167,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 numDays.textContent = `You last visited ${numOfDays} days ago.`;
             } else {
                 numDays.textContent = `You last visited just today.`;
-                document.getElementById('lastVisit').textContent = `Back so soon?`;
+                document.getElementById('lastVisit').textContent = `Back so soon? Awesome!`;
             }
         }
         // If there's no last visit,  tell user it's his first time.
