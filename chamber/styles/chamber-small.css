@@ -5,6 +5,20 @@
 
     /* Style */
 
+    .wrapper {
+        background-color: bisque;
+        border: 1px solid black;
+        border-radius: 5px;
+        margin: 20px;
+        /* display: grid;
+       
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
+
+        display: flex;
+        flex-direction: column;
+    }
+
+
     .join-wrapper {
         display: flex;
         flex-direction: column;
@@ -402,7 +416,7 @@
 
     }
 
-    .featured-businesses {
+    /* .featured-businesses {
         display: flex;
         flex-direction: column;
         max-width: 100vw;
@@ -411,7 +425,7 @@
         margin: 0 auto;
 
 
-    }
+    } */
 
 
     main {
@@ -625,6 +639,7 @@
 @media (max-width: 616px) {
 
 
+
     h1 {
         font-size: 1.5rem;
     }
@@ -697,8 +712,8 @@
     }
 
     article {
-        max-width: 100vw;
-        width: 100%;
+        max-width: 90vw;
+        width: 90%;
     }
 
     article p {

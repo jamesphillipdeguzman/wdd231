@@ -15,8 +15,8 @@ const displayFeatured = (members) => {
 
 
 
-            businesses.style.display = 'grid';
-            businesses.style.gridTemplateColumns = 'repeat(auto-fit, minmax(100px, 1fr))';
+            // businesses.style.display = 'grid';
+            // businesses.style.gridTemplateColumns = 'repeat(auto-fit, minmax(100px, 1fr))';
             businesses.style.gap = '0.2rem';
             businesses.style.alignItems = 'center';
             businesses.style.alignContent = 'center';
@@ -30,20 +30,20 @@ const displayFeatured = (members) => {
 
             const wrapper = document.createElement('div'); // create a div 
             wrapper.className = 'wrapper';
-            wrapper.style.display = 'flex';
-            wrapper.style.flexDirection = 'column';
-            wrapper.style.alignContent = 'center';
-            wrapper.style.alignItems = 'left';
-            wrapper.style.justifyContent = 'center';
+            // wrapper.style.display = 'flex';
+            // wrapper.style.flexDirection = 'column';
+            // wrapper.style.alignContent = 'center';
+            // wrapper.style.alignItems = 'left';
+            // wrapper.style.justifyContent = 'center';
 
-            wrapper.style.maxWidth = '100vw';// This ensures the business card is within the frame in mobile view
-            wrapper.style.listStyleType = 'none';
-            wrapper.style.backgroundColor = '#fff';
-            wrapper.style.border = '1px solid #ccc';
-            wrapper.style.color = '#000';
-            wrapper.style.borderRadius = '5px';
-            wrapper.style.boxShadow = '0px 0px 3px #888';
-            wrapper.style.height = '35rem';
+            // wrapper.style.maxWidth = '100vw';// This ensures the business card is within the frame in mobile view
+            // wrapper.style.listStyleType = 'none';
+            // wrapper.style.backgroundColor = '#fff';
+            // wrapper.style.border = '1px solid #ccc';
+            // wrapper.style.color = '#000';
+            // wrapper.style.borderRadius = '5px';
+            // wrapper.style.boxShadow = '0px 0px 3px #888';
+            // wrapper.style.height = '35rem';
             // wrapper.style.width = '15rem';
 
 
