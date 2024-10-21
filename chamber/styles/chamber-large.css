@@ -320,7 +320,7 @@ nav.menuLinks ul {
 
 
 nav.menuLinks ul li a {
-    border: 1px solid rgba(255, 255, 255, 0.5);
+    border: 1px solid rgba(0, 0, 0, 0.6);
     /* background-color: rgba(255, 255, 255, 0.1); */
 
     color: var(--accent1-color);
@@ -355,7 +355,7 @@ nav.menuLinks ul li a {
 
 .overlay-text h1 {
     position: absolute;
-    top: 30%;
+    top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
     color: #fff;
