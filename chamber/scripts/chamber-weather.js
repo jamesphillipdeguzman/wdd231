@@ -47,7 +47,7 @@ async function apiFetch(city, url) {
     }
 }
 
-// apiFetch();
+apiFetch();
 
 function displayResults(data, city) {
     const theCityName = document.querySelector('#city-name');

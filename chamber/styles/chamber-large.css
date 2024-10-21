@@ -285,12 +285,14 @@ div.nav-links-wrapper img {
 
 
 nav.menuLinks {
+
     justify-content: center;
     margin: 0 10px;
 
 }
 
 nav.menuLinks ul li {
+
     display: flex;
     margin: 2px;
     list-style-type: none;
@@ -303,6 +305,7 @@ nav.menuLinks ul li {
 
 
 nav.menuLinks ul {
+
     display: flex;
     justify-content: center;
     list-style-type: none;
@@ -315,12 +318,14 @@ nav.menuLinks ul {
 
 
 nav.menuLinks ul li a {
-    /* border: 1px dashed pink; */
+    border: 1px solid rgba(255, 255, 255, 0.5);
     /* background-color: rgba(255, 255, 255, 0.1); */
+
     color: var(--accent1-color);
     display: block;
     padding: 0.75rem 2vw;
     text-decoration: none;
+    width: 150px;
 
 }
 
@@ -380,8 +385,8 @@ hero {
 .featured-members {
 
     /* grid-template-rows: repeat(3, 1fr); */
-    border: 1px solid #ccc;
-    box-shadow: 0px 0px 2px #ccc;
+    /* border: 1px solid #ccc; */
+    /* box-shadow: 0px 0px 2px #ccc; */
     display: grid;
     /* grid-column: 2; */
     /* margin: 50px 0 30px; */
@@ -784,8 +789,8 @@ div.layout button:hover {
 
 .weather-data {
     /* background-color: #bed; */
-    border-radius: 5px;
-    box-shadow: 0px 0px 4px #888;
+    /* border-radius: 5px; */
+    /* box-shadow: 0px 0px 4px #888; */
     text-align: center;
 }
 
