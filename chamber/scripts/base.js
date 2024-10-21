@@ -186,10 +186,10 @@ function localStorageLastVisit() {
 
     // processing
     const today = new Date();
-    const tomorrow = new Date(today);
-    tomorrow.setDate(today.getDate() + 1);
+    // const tomorrow = new Date(today);
+    // tomorrow.setDate(today.getDate() + 1);
 
-    const tomorrowMS = tomorrow.getTime();
+    // const tomorrowMS = tomorrow.getTime();
 
 
 
@@ -197,7 +197,7 @@ function localStorageLastVisit() {
 
 
     todayElement.textContent = today.toLocaleDateString();
-    nextDateElement.textContent = `${tomorrow.toLocaleDateString()}`;
+    // nextDateElement.textContent = `${tomorrow.toLocaleDateString()}`;
 
 
 

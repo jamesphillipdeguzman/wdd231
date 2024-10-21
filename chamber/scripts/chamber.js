@@ -312,7 +312,7 @@ const filterMembers = (members, filter) => {
     businesses.style.alignContent = 'center';
     businesses.style.justifyContent = 'center';
     // businesses.style.fontFamily = 'Montserrat';
-    businesses.style.maxWidth = '80vw';
+    businesses.style.maxWidth = '100vw';
     businesses.style.padding = '5px 0';
     businesses.style.margin = '0 auto';
     // Create a section element and define its class name
@@ -328,7 +328,7 @@ const filterMembers = (members, filter) => {
     card.style.margin = '0 auto';
     card.style.padding = '10px';
     card.style.boxShadow = '0px 0px 4px #888';
-    card.style.width = '300px';
+    card.style.width = '100%';
     card.style.height = 'auto';
 
 

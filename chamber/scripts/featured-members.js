@@ -43,7 +43,7 @@ const displayFeatured = (members) => {
             wrapper.style.color = '#000';
             wrapper.style.borderRadius = '5px';
             wrapper.style.boxShadow = '0px 0px 3px #888';
-            wrapper.style.height = '25rem';
+            wrapper.style.height = '35rem';
             // wrapper.style.width = '15rem';
 
 
