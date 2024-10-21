@@ -196,8 +196,8 @@ div.container-discover p {
 #featured-businesses {
 
     /* transition: transform 0.3s; */
-    display: grid;
-    grid-template-columns: (auto-fit, minmax(300px, 1fr));
+    /* display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(800px, fr)); */
 
     max-width: 100vw;
     width: 100%;
