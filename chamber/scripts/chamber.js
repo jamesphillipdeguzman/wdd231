@@ -42,7 +42,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Target all modal elements
 
-    const modal = document.getElementById('modal');
+
     const modal1 = document.getElementById('modal1');
     const modal2 = document.getElementById('modal2');
     const modal3 = document.getElementById('modal3');
@@ -66,16 +66,40 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Have all modals display as none
 
-    modal.style.display = 'none';
-    modalBackdrop.style.display = 'none';
-    modal1.style.display = 'none';
-    modalBackdrop1.style.display = 'none';
-    modal2.style.display = 'none';
-    modalBackdrop2.style.display = 'none';
-    modal3.style.display = 'none';
-    modalBackdrop3.style.display = 'none';
-    modal4.style.display = 'none';
-    modalBackdrop4.style.display = 'none';
+    // modal.style.display = 'none';
+    // modalBackdrop.style.display = 'none';
+    // modal1.style.display = 'none';
+    // modalBackdrop1.style.display = 'none';
+    // modal2.style.display = 'none';
+    // modalBackdrop2.style.display = 'none';
+    // modal3.style.display = 'none';
+    // modalBackdrop3.style.display = 'none';
+    // modal4.style.display = 'none';
+    // modalBackdrop4.style.display = 'none';
+
+
+    const modal = document.querySelector('.modal');
+    const backdrop = document.querySelector('.backdrop');
+
+    function hideModal() {
+        modal.classList.remove('show');
+
+    }
+
+    function hideBackDrop() {
+        backdrop.classList.remove('show')
+    }
+
+    document.querySelector('a').forEach(link => {
+        link.addEventListener('click', (event) => {
+            if (link.href.includes('join.html')) {
+                hideModal();
+                hideBackDrop();
+            }
+        })
+    });
+
+
 
     // Thank you
 

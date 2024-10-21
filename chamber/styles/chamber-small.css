@@ -19,17 +19,6 @@
     }
 
 
-    .join-wrapper {
-        display: flex;
-        flex-direction: column;
-        /* max-width: 100vw; */
-        /* width: 100%; */
-    }
-
-    .join-form {
-        max-width: 100vw;
-        width: 100%;
-    }
 
 
 
@@ -43,6 +32,15 @@
 
     }
 
+
+
+}
+
+
+/* Mobile view*/
+@media (max-width: 1060px) {
+
+
     .membership-cards {
         align-content: center;
         align-items: center;
@@ -55,13 +53,11 @@
         gap: 10px;
         /* margin: 50px; */
         margin-top: 30px;
-        height: 950px;
-        right: 50px;
+        height: auto;
+        /* right: 50px; */
 
         width: 100%;
-
-
-        /* margin: 0 auto; */
+        max-width: 100vw;
 
 
     }
@@ -168,12 +164,18 @@
         width: 90%;
     }
 
+    .join-wrapper {
+        display: flex;
+        flex-direction: column;
+        max-width: 100vw;
+        width: 100%;
+    }
 
-}
+    .join-form {
+        max-width: 100vw;
+        width: 100%;
+    }
 
-
-/* Mobile view*/
-@media (max-width: 1060px) {
 
     h2 {
         margin-bottom: 0;
@@ -427,16 +429,22 @@
 
     }
 
-    /* .featured-businesses {
+    .join-wrapper {
         display: flex;
         flex-direction: column;
-        max-width: 100vw;
-
-        width: 100%;
+        /* display: grid; */
+        /* grid-template-columns: repeat(auto-fill, minmax(300px, 1fr)); */
         margin: 0 auto;
+        max-width: 100vw;
+        width: 100%;
+    }
 
 
-    } */
+
+    .join-form {
+        max-width: 100vw;
+        width: 100%;
+    }
 
 
     main {
@@ -734,23 +742,38 @@
 
     main,
     .container {
-        display: block;
+        /* display: block; */
         margin: 0;
         padding: 0;
         max-width: 100vw;
         width: 100%;
     }
 
-    .join-form {
-        max-width: 100vw;
-        width: 100%;
-    }
 
     fieldset {
-        max-width: 100vw;
-        width: 100%;
+        display: flex;
+        align-items: self-start;
+        max-width: 80vw;
+        width: 80%;
 
     }
+
+    input[type="text"],
+    input[type="email"],
+    input[type="tel"],
+    textarea {
+        width: 500px;
+        max-width: 80vw;
+        /* margin: 0 auto; */
+    }
+
+    /* 
+    fieldset label {
+        padding-left: 20px;
+    } */
+
+
+
 
 
 
@@ -759,7 +782,6 @@
 /* Mobile view 3 */
 
 @media (max-width: 230px) {
-
 
 
     #dynamic-businesses {
