@@ -35,7 +35,7 @@
     <link rel="stylesheet" href="styles/chamber-large.css">
     <link rel="stylesheet" href="styles/chamber-small.css">
 
-
+    <script src="scripts/base.js" defer></script>
 
 </head>
 
@@ -122,9 +122,9 @@
 
         <div class="sidebars">
 
-            <button id="showHideBtn" onclick="showHideToggle()">Show/Hide</button>
+            <button id="showHideBtn">Show/Hide</button>
 
-            <h3>Iloilo Demographics <span class="downpicker" onclick="toggleSidebar(0)"> ▽</span></h3>
+            <h3>Iloilo Demographics <span class="downpicker" data-index="0"> ▽</span></h3>
 
             <aside class="sidebar-content">
 
@@ -161,7 +161,7 @@
 
 
 
-            <h3>Iloilo City Overview<span class="downpicker" onclick="toggleSidebar(1)"> ▽</span></h3>
+            <h3>Iloilo City Overview<span class="downpicker" data-index="1"> ▽</span></h3>
             <aside class="sidebar-content">
                 <h4>Location</h4>
 
@@ -188,7 +188,7 @@
 
             </aside>
 
-            <h3>History<span class="downpicker" onclick="toggleSidebar(2)"> ▽</span></h3>
+            <h3>History<span class="downpicker" data-index="2"> ▽</span></h3>
             <aside class="sidebar-content">
                 <h4>History</h4>
                 <ul>
@@ -221,7 +221,7 @@
                 </ul>
             </aside>
 
-            <h3>Dinagyang Festival<span class="downpicker" onclick="toggleSidebar(3)"> ▽</span></h3>
+            <h3>Dinagyang Festival<span class="downpicker" data-index="3"> ▽</span></h3>
             <aside class="sidebar-content">
 
 
@@ -237,7 +237,7 @@
                     </li>
                 </ul>
             </aside>
-            <h3>Paraw Regatta<span class="downpicker" onclick="toggleSidebar(4)"> ▽</span></h3>
+            <h3>Paraw Regatta<span class="downpicker" data-index="4"> ▽</span></h3>
             <aside class="sidebar-content">
                 <h4> Paraw Regatta</h4>
                 <ul>
@@ -253,7 +253,7 @@
 
             </aside>
 
-            <h3>Fiesta de la Candelaria<span class="downpicker" onclick="toggleSidebar(5)"> ▽</span></h3>
+            <h3>Fiesta de la Candelaria<span class="downpicker" data-index="5"> ▽</span></h3>
             <aside class="sidebar-content">
                 <h4> Fiesta de la Candelaria</h4>
                 <ul>
@@ -268,7 +268,7 @@
                 </ul>
             </aside>
 
-            <h3>Bayluhay<span class="downpicker" onclick="toggleSidebar(6)"> ▽</span></h3>
+            <h3>Bayluhay<span class="downpicker" data-index="6"> ▽</span></h3>
             <aside class="sidebar-content">
                 <h4> Bayluhay</h4>
                 <ul>
@@ -284,7 +284,7 @@
 
             </aside>
 
-            <h3>Binanog Festival<span class="downpicker" onclick="toggleSidebar(7)"> ▽</span></h3>
+            <h3>Binanog Festival<span class="downpicker" data-index="7"> ▽</span></h3>
             <aside class="sidebar-content">
                 <h4> Binanog Festival </h4>
                 <ul>
@@ -302,7 +302,7 @@
 
             </aside>
 
-            <h3>Carabao-Carroza Festival<span class="downpicker" onclick="toggleSidebar(8)"> ▽</span></h3>
+            <h3>Carabao-Carroza Festival<span class="downpicker" data-index="8"> ▽</span></h3>
             <aside class="sidebar-content">
 
                 <h4> Carabao-Carroza Festival</h4>
@@ -318,7 +318,7 @@
                 </ul>
             </aside>
 
-            <h3>Tinu-om Festival<span class="downpicker" onclick="toggleSidebar(9)"> ▽</span></h3>
+            <h3>Tinu-om Festival<span class="downpicker" data-index="9"> ▽</span></h3>
             <aside class="sidebar-content">
                 <h4> Tinu-om Festival </h4>
                 <ul>
@@ -334,7 +334,7 @@
                 </ul>
             </aside>
 
-            <h3>Iloilo Chinese New Year<span class="downpicker" onclick="toggleSidebar(10)"> ▽</span></h3>
+            <h3>Iloilo Chinese New Year<span class="downpicker" data-index="10"> ▽</span></h3>
             <aside class="sidebar-content">
                 <h4> Iloilo Chinese New Year</h4>
                 <ul>
@@ -706,7 +706,7 @@
 
 
     </footer>
-    <script src="scripts/base.js"></script>
+
 
 </body>
 
