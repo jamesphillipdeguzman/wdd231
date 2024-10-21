@@ -222,7 +222,7 @@ function localStorageLastVisit() {
 
 
         // Convert lastVisitValue into date
-        const lastVisitDate = new Date();
+        const lastVisitDate = new Date(lastVisitValue);
 
         localStorage.setItem('lastVisitDate', lastVisitDate.toLocaleDateString());
 
