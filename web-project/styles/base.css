@@ -12,6 +12,7 @@
 
     --primary-font: "Satisfy", Arial, sans-serif;
     --secondary-font: "Quicksand", sans-serif;
+    --tertiary-font: "Londrina Solid", Helvetica;
     --default-font: Arial, sans-serif;
 
 }
@@ -193,7 +194,7 @@ header {
 
     text-align: center;
     color: var(--secondary-color);
-    font-family: var(--primary-font);
+    font-family: var(--tertiary-font);
 
 }
 
@@ -430,7 +431,7 @@ ul li {
 h2 {
     margin: 10px;
     font-size: 1.5rem;
-    font-family: var(--primary-font);
+    font-family: var(--tertiary-font);
 }
 
 .hero {
