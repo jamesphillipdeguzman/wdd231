@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     showHideHamburger();
     getDateTimeInfo();
     windowScroll();
-    updateText();
+    // updateText();
 
 
     // Get date and time format for timestamp

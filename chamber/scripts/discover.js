@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     showHideHamburger();
     getDateTimeInfo();
     windowScroll();
-    updateText();
+    // updateText();
 
     // JS code for lazy loading
     // Create your image mapping here...

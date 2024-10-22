@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     showHideHamburger();
     getDateTimeInfo();
     windowScroll();
-    updateText();
+    // updateText();
     fetchMembers();
 
 

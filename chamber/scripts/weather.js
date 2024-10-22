@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     getDateTimeInfo();
     getURL();
-    updateText();
+    // updateText();
     fetchFeaturedMembers();
 
 });
