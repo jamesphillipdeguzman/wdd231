@@ -25,7 +25,7 @@ getURL();
 async function apiFetch(city, url) {
     try {
 
-        const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+        // const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
         const response = await fetch(url);
 
         if (!response.ok) {
