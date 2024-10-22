@@ -1,5 +1,6 @@
 import { getDateTimeInfo, showHideHamburger } from "./base.js";
-import { updateText } from "./windowsize.js";
+// import { updateText } from "./windowsize.js";
+import { fetchFeaturedMembers } from "./featured-members.js";
 
 
 // // showHideHamburger
@@ -89,5 +90,7 @@ document.addEventListener('DOMContentLoaded', () => {
     getDateTimeInfo();
     getURL();
     updateText();
+    fetchFeaturedMembers();
+
 });
 

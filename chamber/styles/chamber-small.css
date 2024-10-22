@@ -10,15 +10,18 @@
         border: 1px solid black;
         border-radius: 5px;
         margin: 20px;
-        /* display: grid;
-       
-        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); */
-
         display: flex;
         flex-direction: column;
     }
 
-
+    main,
+    .container {
+        /* display: block; */
+        margin: 0;
+        padding: 0;
+        max-width: 100vw;
+        width: 100%;
+    }
 
 
 
@@ -51,11 +54,8 @@
         flex-direction: column;
         align-self: self-start;
         gap: 10px;
-        /* margin: 50px; */
         margin-top: 30px;
         height: auto;
-        /* right: 50px; */
-
         width: 100%;
         max-width: 100vw;
 
@@ -321,6 +321,22 @@
 
     /* ================= CONTAINER ================= */
 
+    div.container {
+        align-self: center;
+        margin-left: 50px;
+        display: flex;
+        flex-direction: column;
+        flex: 1;
+        flex-wrap: nowrap;
+        max-width: 100vw;
+        width: 100%;
+    }
+
+    main {
+        max-width: 100vw;
+        width: 100%;
+    }
+
     div.container-discover {
         align-items: center;
         align-content: center;
@@ -406,33 +422,33 @@
         align-content: center;
         align-items: center;
         background-color: var(--base-color);
-        /* display: flex;
-        flex-direction: column;
-        flex: 1; */
-        /* grid-column: 1 /span 2; */
         justify-content: center;
-        /* margin: 20px; */
         padding: 0;
-        /* margin: 0 auto; */
-        max-width: 80vw;
+        max-width: 100vw;
         width: 100%;
     }
 
     .keyevent {
 
-        /* keep keyevent width wide enough in mobile view */
-        background-color: #1EA896;
         border-radius: 5px;
         display: flex;
         flex-direction: column;
-        justify-content: flex-start;
         max-width: 100vw;
-        margin: 2rem auto;
+        width: 100%;
+        gap: 10px;
 
     }
 
+    .keyevent p {
+
+        font-size: 2.5rem;
+        max-width: 70vw;
+        width: 70%;
+        padding: 10px;
+        text-align: left;
 
 
+    }
 
 
     .cta-btn.open {
@@ -440,14 +456,11 @@
     }
 
     #business-img {
-        display: flex;
+        align-content: center;
         align-items: center;
+        display: flex;
         margin: 0 auto;
         padding: 5px;
-
-        /* background-color: #1EA896; */
-        align-content: center;
-
 
     }
 
@@ -476,16 +489,11 @@
     }
 
 
-
-
-
-
     .nav-links-wrapper {
         align-content: center;
         align-items: center;
         flex-direction: column;
         justify-content: center;
-
         max-width: 100vw;
         width: 100%;
 
@@ -503,12 +511,6 @@
         flex-direction: column;
     }
 
-
-    /* nav.menuLinks {
-        display: grid;
-        grid-template-rows: 0fr;
-        transition: grid-template-rows 0.5s ease-in-out;
-    } */
 
     nav.menuLinks ul {
         overflow: hidden;
@@ -536,7 +538,7 @@
         align-items: center;
         margin: 0;
         max-width: 100vw;
-        /* width: 100%; */
+
     }
 
 
@@ -544,13 +546,10 @@
         display: flex;
         flex-direction: column;
         max-width: 100vw;
-        /* width: 100%; */
+
     }
 
-    /* .left-sidebar {
-        width: 100vw;
 
-    } */
 
 
 
@@ -583,8 +582,6 @@
         position: relative;
         gap: 2rem;
     }
-
-
 
 
     .horizontal {
@@ -623,8 +620,6 @@
         text-align: center;
 
     }
-
-
 
 
 
@@ -678,9 +673,6 @@
 
     .menuLinks.scroll a {
         background-color: white;
-        /* background-color: rgba(200, 1, 255, 1); */
-
-        /* transition: background-color 0.5s ease-out; */
         animation: changeBackground 3s alternate;
 
     }
@@ -842,8 +834,6 @@
 
 
 
-
-
 }
 
 /* Mobile view 3 */
@@ -881,8 +871,6 @@
 
 
 
-
-
     .hero {
         padding-top: 1.2rem;
     }
@@ -897,9 +885,6 @@
         max-width: 100vw;
 
     }
-
-
-
 
 
     div.container a {
@@ -940,17 +925,6 @@
         grid-template-rows: 1fr;
     }
 
-
-    /* aside.left-sidebar {
-        display: none;
-        padding-bottom: 30px;
-    } */
-
-    /* input[type="text"] {
-        height: 35px;
-        width: 150px;
-        align-self: center;
-    } */
 
 
     footer.bottom-details p,

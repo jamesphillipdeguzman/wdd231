@@ -1,4 +1,4 @@
-
+export { fetchFeaturedMembers };
 const displayFeatured = (members) => {
 
     members.forEach((member) => {
@@ -95,10 +95,6 @@ async function fetchFeaturedMembers() {
         console.error(error);
     }
 }
-
-
-fetchFeaturedMembers();
-
 
 
 
