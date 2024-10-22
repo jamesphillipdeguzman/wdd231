@@ -64,6 +64,11 @@ body {
 
 /* ================= HEADER ================= */
 
+#data {
+    color: white;
+    font-size: 1rem;
+    font-weight: bold;
+}
 
 h1 {
     font-family: var(--default-font);
@@ -241,6 +246,11 @@ nav {
     display: none;
 }
 
+.menuLinks.scroll a {
+    background-color: white;
+    transition: background-color 0.5s ease-in;
+}
+
 div.nav-links-wrapper {
     align-content: center;
     background-color: var(--light-silver);
@@ -320,7 +330,7 @@ nav.menuLinks ul {
 
 
 nav.menuLinks ul li a {
-    border: 1px solid rgba(0, 0, 0, 0.6);
+    border: 1px solid rgba(0, 0, 0, 0.1);
     /* background-color: rgba(255, 255, 255, 0.1); */
 
     color: var(--accent1-color);
@@ -836,8 +846,11 @@ article p {
 }
 
 .keyevent p {
+    align-self: center;
     font-size: 2.5rem;
 
+    max-width: 50vw;
+    width: 50%;
     padding: 10px;
     text-align: left;
 

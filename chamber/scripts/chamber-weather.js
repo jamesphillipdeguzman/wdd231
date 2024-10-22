@@ -1,3 +1,20 @@
+import { getDateTimeInfo, showHideHamburger } from "./base.js";
+import { updateText } from "./windowsize.js";
+
+
+// // showHideHamburger
+// const hamburgerBtn = document.querySelector('#menu');
+// const navigationBtn = document.querySelector('.menuLinks');
+
+
+// hamburgerBtn.addEventListener('click', () => {
+//     hamburgerBtn.classList.toggle('open');
+//     navigationBtn.classList.toggle('open');
+// });
+
+showHideHamburger();
+
+// Show current temp and weather data for the city
 const currentTemp = document.querySelector('#current-temp');
 const weatherIcon = document.querySelector('#weather-icon');
 const captionDesc = document.querySelector('figcaption');
@@ -18,8 +35,6 @@ function getURL() {
     // return url;
 }
 
-
-getURL();
 
 
 async function apiFetch(city, url) {
@@ -47,7 +62,6 @@ async function apiFetch(city, url) {
     }
 }
 
-// apiFetch();
 
 function displayResults(data, city) {
     const theCityName = document.querySelector('#city-name');
@@ -64,14 +78,16 @@ function displayResults(data, city) {
 
     const tempInfo = document.createElement('span');
 
-    const tempBox = document.querySelector('.temp-box');
-
-
     tempInfo.textContent = `${data.main.temp}&deg`;
-
-    tempBox.append(tempInfo);
 
 
 }
 
-// export { getURL, apiFetch, displayResults };
+// Ensure DOM is loaded before activating the functions
+document.addEventListener('DOMContentLoaded', () => {
+
+    getDateTimeInfo();
+    getURL();
+    updateText();
+});
+

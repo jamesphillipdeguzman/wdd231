@@ -1,53 +1,16 @@
 
-// Use ES Modules to import fetchMembers and dropdownMembers from fetch-members.js
-import { fetchMembers, dropdownMembers } from "./fetch-members.js";
-
+import { fetchMembers } from "./fetch-members.js";
+import { getDateTimeInfo, showHideHamburger, windowScroll } from "./base.js";
+import { updateText } from "./windowsize.js";
 
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    const hamburgerBtn = document.querySelector('#menu');
-    const navigationBtn = document.querySelector('.menuLinks');
 
-
-    hamburgerBtn.addEventListener('click', () => {
-        hamburgerBtn.classList.toggle('open');
-        navigationBtn.classList.toggle('open');
-    });
-
-
-
-    // Get the year
-    const todaysDate = new Date();
-    const dateFormat = { year: 'numeric', month: 'short', day: 'numeric' };
-    const timeFormat = todaysDate.toLocaleTimeString();
-    const formattedDate = todaysDate.toLocaleDateString('en-US', dateFormat);
-    const formattedDateTime = formattedDate + " " + timeFormat;
-
-    // const timestamp = document.querySelector('#timestamp');
-
-
-
-    const year = document.querySelector('#currentyear');
-    year.innerHTML = `<span class="highlight">${todaysDate.getFullYear()}</span>`;
-
-
-    const lastModified = document.querySelector('#lastModified');
-    lastModified.innerHTML = `<span class="highlight">${formattedDateTime}</span>`;
-
-
-    // Get date and time format for timestamp
-
-    // const now = new Date();
-    // now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
-    // document.querySelector('#timestamp').value = now.toISOString().slice(0, 16);
-
-    // Target all modal elements
-
-
-
-
-
+    showHideHamburger();
+    getDateTimeInfo();
+    windowScroll();
+    updateText();
 
 
     const grid = document.querySelector('#grid');
@@ -71,27 +34,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     });
 
-
-
-
-    // async function fetchMembers() {
-    //     try {
-    //         const response = await fetch('data/members.json'); // fetch the json file from a relative path
-
-
-    //         if (!response.ok) { // Check if no response 
-    //             throw new Error('Could not fetch resource');
-    //         }
-
-    //         const members = await response.json();  // await for Promise to resolve or be rejected and parse the result as json object
-    //         dropdownMembers(members);
-    //         return members;
-
-
-    //     } catch (error) {
-    //         console.error(error);
-    //     }
-    // }
 
 
     const dynamicBusinesses = document.querySelector('#dynamic-businesses');
@@ -130,7 +72,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
     fetchMembers();
 
-    // fetchMembers();
 
     // ============== FILTER A MEMBER ====================
 
@@ -473,8 +414,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
     }
-
-
 
 
 });

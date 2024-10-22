@@ -36,14 +36,17 @@
     <link rel="stylesheet" href="styles/chamber-small.css">
     <!-- <link rel="stylesheet" href="../styles/course.css"> -->
     <!-- defer is not needed when the type of script is 'module'. -->
-    <script src="scripts/basedate.js" defer></script>
+    <!-- <script src="scripts/base.js" defer></script> -->
     <!-- ** 1) Run script to populate the dropdown for the cities ** -->
     <!-- <script src="scripts/chamber.js" type="module"></script> -->
     <!-- ** 2) Then, run script to get weather info for Iloilo ** -->
-    <script src="scripts/chamber-weather.js" defer></script>
+
     <!-- ** 3) Finally, load default script to show chamber commerce ** -->
 
     <script src="scripts/featured-members.js" defer></script>
+    <script src="scripts/chamber-weather.js" type="module"></script>
+
+
 
 
 </head>
@@ -67,7 +70,8 @@
 
 
             <nav class="menuLinks">
-
+                <!-- Show data on window width and device ratio -->
+                <span id="data"></span>
                 <ul>
                     <li><a href="https://jamesphillipdeguzman.github.io/wdd231/chamber/index.html"
                             class="current-menu-item">Home</a></li>
@@ -77,6 +81,7 @@
                     <li><a href="https://jamesphillipdeguzman.github.io/wdd231/chamber/discover.html">Discover</a></li>
                 </ul>
             </nav>
+
             <button id="menu" aria-label="menu"></button>
 
 
@@ -85,10 +90,12 @@
         <div class="hero-container">
             <div class="hero">
                 <picture>
-                    <source srcset="images/hero3.webp" media="(max-width: 774px)" class="hero-img">
+                    <source media="(max-width: 774px)" srcset="images/hero3.webp" class="hero-img">
                     <img src="images/hero4.webp" width="1200" height="250"
                         alt="Emperador Building: Hero image of Iloilo Chamber of Commerce" class="hero-img">
                 </picture>
+
+
 
                 <div class="overlay-text">
                     <h1>Welcome to Iloilo Chamber of Commerce</h1>
@@ -96,6 +103,8 @@
 
             </div>
         </div>
+
+
 
 
     </header>
@@ -115,7 +124,7 @@
 
         </aside> -->
 
-            <hr>
+
 
             <article>
                 <h2>Join us!</h2>

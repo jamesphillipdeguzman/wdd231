@@ -1,3 +1,5 @@
+export { fetchMembers, dropdownMembers };
+
 async function fetchMembers() {
     try {
         const response = await fetch('data/members.json'); // fetch the json file from a relative path
@@ -49,4 +51,3 @@ const dropdownMembers = (members) => {
 
 }
 
-export { fetchMembers, dropdownMembers };

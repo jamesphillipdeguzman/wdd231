@@ -1,5 +1,3 @@
-export { getDateTimeInfo, showHideHamburger, windowScroll };
-
 function getDateTimeInfo() {
     // Get the year
     const todaysDate = new Date();
@@ -79,7 +77,7 @@ function showHideHamburger() {
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    // showHideHamburger();  This one needs to be commented out or else hamburger menu won't be exportable
+    showHideHamburger();  // If this is from a non-exporting js file, it is okay to activate this function 
     windowScroll();
     getDateTimeInfo();
 });
