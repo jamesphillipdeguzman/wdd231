@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1.0">
+    <title>Search Page | Quote Vitamins</title>
+    <meta name="description" content="Search page for: quotevitamins.com">
+    <meta name="author" content="James Phillip K. De Guzman">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Satisfy&display=swap" rel="stylesheet">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Londrina+Sketch&family=Londrina+Solid:wght@100;300;400;900&family=Satisfy&display=swap"
+        rel="stylesheet">
+
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/base.css">
+
+    <link rel="icon" href="images/vitamins_1925902.png" type="image/x-icon">
+    <meta property="og:title" content="My Personal Quotes Generator Website">
+    <meta property="og:description" content="Quote Vitamins: A daily inspirational quotes web app.">
+    <meta property="og:image"
+        content="https://jamesphillipdeguzman.github.io/wdd231/web-project/images/quote-vitamins-logo.png">
+    <meta property="og:url" content="https://jamesphillipdeguzman.github.io/wdd231/web-project/siteplan.html">
+    <meta property="og:type" content="website">
+    <meta property="og:site-name" content="https://jamesphillipdeguzman.github.io/wdd231/web-project/index.html">
+    <!-- <script src="scripts/base.js" defer></script> -->
+    <script src="scripts/quotes.js" type="module"></script>
+</head>
+
+<body>
+
+
+    <div class="page-wrap">
+
+        <header>
+
+            <nav class="navigation">
+                <!-- Show data on window width and device ratio -->
+                <span id="data"></span>
+                <div class="logo"><img src="images/quote-vitamins-logo.png" alt="company logo" width="100" height="100">
+                </div>
+                <ul>
+                    <li><a href="index.html" id="home">Home</a></li>
+                    <li><a href="contact.html" id="about">Contact</a></li>
+                    <li><a href="search.html" id="search">Search</a></li>
+                    <li><a href="quotes.html" id="quotes">My Daily Quotes</a></li>
+
+                </ul>
+                <button id="menu" aria-label="menu"></button>
+                <button class="join-btn">Join</button>
+            </nav>
+
+
+        </header>
+        <main>
+
+            <div class="container">
+
+
+                <h3>Find an author</h3>
+                <label for="dynamic-authors" aria-label="dynamic-authors"></label>
+                <select name="dynamic-authors" id="dynamic-authors" aria-label="dynamic-authors">
+                    <option value="" id="select">Select</option>
+
+                </select>
+                <div class="layout">
+
+                    <button id="grid"><img src="images/grid.svg" alt="grid button for grid layout" width="30"
+                            height="30"></button>
+                    <button id="list"><img src="images/list.svg" alt="list button for list layout" width="30"
+                            height="30"></button>
+                </div>
+
+                <!-- Populate authors here dynamically through your javascript code -->
+                <div id="quotes"></div>
+
+
+            </div>
+
+
+
+        </main>
+        <footer>
+            <div class="footer-wrapper">
+                <div class="footer-links">
+                    <a href="siteplan.html">
+                        <img src="images/siteplan2.png" alt="site plan logo" width="50" height="50">
+                        <!-- <a href="https://www.freepik.com/search">Icon by Ghozi Muhtarom</a> -->
+                    </a>
+                </div>
+
+                <div class="footer-text">
+                    &copy;<span id="currentyear"></span> Quote Vitamins by James <p class="lastmodified">Last Modified:
+                        <span id="lastModified"></span>
+                    </p>
+                </div>
+
+                <div class="social-links">
+                    <a href="https://www.facebook.com/" target="_blank"><img src="images/icons8-facebook-50.png"
+                            alt="Facebook icon 512 x 512" width="30" height="30"></a>
+
+                    <a href="https://www.youtube.com/@jamesphillipdeguzman6495" target="_blank"><img
+                            src="images/icons8-youtube-logo-50.png" alt="Youtube icon 512 x 512" width="30"
+                            height="30"></a>
+
+                    <a href="https://www.linkedin.com/in/jamesphillipdeguzman/" target="_blank"><img
+                            src="images/icons8-linkedin-50.png" alt="LinkedIn icon 512 x 512" width="30"
+                            height="30"></a>
+
+                </div>
+
+            </div>
+        </footer>
+
+</body>
+
+</html>

@@ -161,6 +161,11 @@ body {
 
 
 /* ================== HEADER ====================== */
+#data {
+    color: black;
+    font-size: 1rem;
+    font-weight: bold;
+}
 
 #welcome {
 
@@ -501,9 +506,12 @@ main {
     margin-bottom: 10px;
     border-bottom-left-radius: 5px;
     border-bottom-right-radius: 5px;
-
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 
 }
+
 
 .greeting {
 
@@ -608,6 +616,34 @@ span#font2 {
 
 }
 
+.subcontainer {
+    display: flex;
+    flex-direction: column;
+    max-width: 100vw;
+    width: 100%;
+}
+
+.subcontainer img {
+    align-content: center;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+}
+
+.container a {
+    height: 30px;
+}
+
+div.container {
+    align-content: center;
+    align-items: center;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+    flex-wrap: nowrap;
+    justify-content: space-between;
+
+}
 
 .title {
     color: var(--primary-color);
@@ -663,6 +699,33 @@ input[type="submit"] {
     color: #fff;
 }
 
+div.layout {
+    align-content: center;
+    display: flex;
+    justify-content: center;
+    padding-bottom: 30px;
+    margin: 0;
+}
+
+div.layout button {
+    align-content: center;
+    align-items: center;
+    border: 1px solid #ccc;
+    box-shadow: 0px 0px 1px #ccc;
+    border-radius: 3px;
+    justify-content: center;
+    margin: 15px 15px;
+    max-width: 60%;
+    padding: 10px;
+    width: 70px;
+    height: 55px;
+}
+
+div.layout button:hover {
+    background-color: rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s ease-in-out;
+
+}
 
 
 .wireframe {
