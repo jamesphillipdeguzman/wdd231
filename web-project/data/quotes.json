@@ -1,0 +1,222 @@
+[
+    {
+        "id": 1,
+        "quote": "The only way to do great work is to love what you do.",
+        "author": "Steve Jobs",
+        "characters": 47,
+        "html": "<blockquote>&ldquo;The only way to do great work is to love what you do.&rdquo; &mdash; <footer>Steve Jobs</footer></blockquote>",
+        "imageBig": "images/authors/steve-jobs_500x500.png",
+        "imageSmall": "images/authors/steve-jobs_200x200.png",
+        "category": "success",
+        "imageAlt": "A photo of Steve Jobs"
+    },
+    {
+        "id": 2,
+        "quote": "It does not matter how slowly you go as long as you do not stop.",
+        "author": "Confucius",
+        "characters": 66,
+        "html": "<blockquote>&ldquo;It does not matter how slowly you go as long as you do not stop.&rdquo; &mdash; <footer>Confucius</footer></blockquote>",
+        "imageBig": "images/authors/confucius_500x500.png",
+        "imageSmall": "images/authors/confucius_200x200.png",
+        "category": "perseverance",
+        "imageAlt": "A photo of Confucius"
+    },
+    {
+        "id": 3,
+        "quote": "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+        "author": "Winston Churchill",
+        "characters": 92,
+        "html": "<blockquote>&ldquo;Success is not final, failure is not fatal: It is the courage to continue that counts.&rdquo; &mdash; <footer>Winston Churchill</footer></blockquote>",
+        "imageBig": "images/authors/winston-churchill_500x500.png",
+        "imageSmall": "images/authors/winston-churchill_200x200.png",
+        "category": "success",
+        "imageAlt": "A photo of Winston Churchill"
+    },
+    {
+        "id": 4,
+        "quote": "What lies behind us and what lies before us are tiny matters compared to what lies within us.",
+        "author": "Ralph Waldo Emerson",
+        "characters": 104,
+        "html": "<blockquote>&ldquo;What lies behind us and what lies before us are tiny matters compared to what lies within us.&rdquo; &mdash; <footer>Ralph Waldo Emerson</footer></blockquote>",
+        "imageBig": "images/authors/ralph-waldo-emerson_500x500.png",
+        "imageSmall": "images/authors/ralph-waldo-emerson_200x200.png",
+        "category": "self-reflection",
+        "imageAlt": "A photo of Ralph Waldo Emerson"
+    },
+    {
+        "id": 5,
+        "quote": "You miss 100% of the shots you don’t take.",
+        "author": "Wayne Gretzky",
+        "characters": 44,
+        "html": "<blockquote>&ldquo;You miss 100% of the shots you don’t take.&rdquo; &mdash; <footer>Wayne Gretzky</footer></blockquote>",
+        "imageBig": "images/authors/wayne-gretzky_500x500.png",
+        "imageSmall": "images/authors/wayne-gretzky_200x200.png",
+        "category": "opportunity",
+        "imageAlt": "A photo of Wayne Gretzky"
+    },
+    {
+        "id": 6,
+        "quote": "The future belongs to those who believe in the beauty of their dreams.",
+        "author": "Eleanor Roosevelt",
+        "characters": 76,
+        "html": "<blockquote>&ldquo;The future belongs to those who believe in the beauty of their dreams.&rdquo; &mdash; <footer>Eleanor Roosevelt</footer></blockquote>",
+        "imageBig": "images/authors/eleanor-roosevelt_500x500.png",
+        "imageSmall": "images/authors/eleanor-roosevelt_200x200.png",
+        "category": "dreams",
+        "imageAlt": "A photo of Eleanor Roosevelt"
+    },
+    {
+        "id": 7,
+        "quote": "Believe you can and you’re halfway there.",
+        "author": "Theodore Roosevelt",
+        "characters": 41,
+        "html": "<blockquote>&ldquo;Believe you can and you’re halfway there.&rdquo; &mdash; <footer>Theodore Roosevelt</footer></blockquote>",
+        "imageBig": "images/authors/theodore-roosevelt_500x500.png",
+        "imageSmall": "images/authors/theodore-roosevelt_200x200.png",
+        "category": "success",
+        "imageAlt": "A photo of Theodore Roosevelt"
+    },
+    {
+        "id": 8,
+        "quote": "In the middle of every difficulty lies opportunity.",
+        "author": "Albert Einstein",
+        "characters": 52,
+        "html": "<blockquote>&ldquo;In the middle of every difficulty lies opportunity.&rdquo; &mdash; <footer>Albert Einstein</footer></blockquote>",
+        "imageBig": "images/authors/albert-einstein_500x500.png",
+        "imageSmall": "images/authors/albert-einstein_200x200.png",
+        "category": "opportunity",
+        "imageAlt": "A photo of Albert Einstein"
+    },
+    {
+        "id": 9,
+        "quote": "Act as if what you do makes a difference. It does.",
+        "author": "William James",
+        "characters": 61,
+        "html": "<blockquote>&ldquo;Act as if what you do makes a difference. It does.&rdquo; &mdash; <footer>William James</footer></blockquote>",
+        "imageBig": "images/authors/william-james_500x500.png",
+        "imageSmall": "images/authors/william-james_200x200.png",
+        "category": "impact",
+        "imageAlt": "A photo of William James"
+    },
+    {
+        "id": 10,
+        "quote": "Success usually comes to those who are too busy to be looking for it.",
+        "author": "Henry David Thoreau",
+        "characters": 83,
+        "html": "<blockquote>&ldquo;Success usually comes to those who are too busy to be looking for it.&rdquo; &mdash; <footer>Henry David Thoreau</footer></blockquote>",
+        "imageBig": "images/authors/henry-david-thoreau_500x500.png",
+        "imageSmall": "images/authors/henry-david-thoreau_200x200.png",
+        "category": "success",
+        "imageAlt": "A photo of Henry David Thoreau"
+    },
+    {
+        "id": 11,
+        "quote": "You will face many defeats in life, but never let yourself be defeated.",
+        "author": "Maya Angelou",
+        "characters": 77,
+        "html": "<blockquote>&ldquo;You will face many defeats in life, but never let yourself be defeated.&rdquo; &mdash; <footer>Maya Angelou</footer></blockquote>",
+        "imageBig": "images/authors/maya-angelou_500x500.png",
+        "imageSmall": "images/authors/maya-angelou_200x200.png",
+        "category": "resilience",
+        "imageAlt": "A photo of Maya Angelou"
+    },
+    {
+        "id": 12,
+        "quote": "Your time is limited, don’t waste it living someone else’s life.",
+        "author": "Steve Jobs",
+        "characters": 73,
+        "html": "<blockquote>&ldquo;Your time is limited, don’t waste it living someone else’s life.&rdquo; &mdash; <footer>Steve Jobs</footer></blockquote>",
+        "imageBig": "images/authors/steve-jobs_500x500.png",
+        "imageSmall": "images/authors/steve-jobs_200x200.png",
+        "category": "life",
+        "imageAlt": "A photo of Steve Jobs"
+    },
+    {
+        "id": 13,
+        "quote": "If you can dream it, you can achieve it.",
+        "author": "Zig Ziglar",
+        "characters": 43,
+        "html": "<blockquote>&ldquo;If you can dream it, you can achieve it.&rdquo; &mdash; <footer>Zig Ziglar</footer></blockquote>",
+        "imageBig": "images/authors/zig-ziglar_500x500.png",
+        "imageSmall": "images/authors/zig-ziglar_200x200.png",
+        "category": "dreams",
+        "imageAlt": "A photo of Zig Ziglar"
+    },
+    {
+        "id": 14,
+        "quote": "The best way to predict the future is to create it.",
+        "author": "Peter Drucker",
+        "characters": 60,
+        "html": "<blockquote>&ldquo;The best way to predict the future is to create it.&rdquo; &mdash; <footer>Peter Drucker</footer></blockquote>",
+        "imageBig": "images/authors/peter-drucker_500x500.png",
+        "imageSmall": "images/authors/peter-drucker_200x200.png",
+        "category": "success",
+        "imageAlt": "A photo of Peter Drucker"
+    },
+    {
+        "id": 15,
+        "quote": "Keep your face always toward the sunshine—and shadows will fall behind you.",
+        "author": "Walt Whitman",
+        "characters": 83,
+        "html": "<blockquote>&ldquo;Keep your face always toward the sunshine—and shadows will fall behind you.&rdquo; &mdash; <footer>Walt Whitman</footer></blockquote>",
+        "imageBig": "images/authors/walt-whitman_500x500.png",
+        "imageSmall": "images/authors/walt-whitman_200x200.png",
+        "category": "positivity",
+        "imageAlt": "A photo of Walt Whitman"
+    },
+    {
+        "id": 16,
+        "quote": "The only limit to our realization of tomorrow will be our doubts of today.",
+        "author": "Franklin D. Roosevelt",
+        "characters": 75,
+        "html": "<blockquote>&ldquo;The only limit to our realization of tomorrow will be our doubts of today.&rdquo; &mdash; <footer>Franklin D. Roosevelt</footer></blockquote>",
+        "imageBig": "images/authors/franklin-roosevelt_500x500.png",
+        "imageSmall": "images/authors/franklin-roosevelt_200x200.png",
+        "category": "motivational",
+        "imageAlt": "A photo of Franklin D. Roosevelt"
+    },
+    {
+        "id": 17,
+        "quote": "What you get by achieving your goals is not as important as what you become by achieving your goals.",
+        "author": "Zig Ziglar",
+        "characters": 91,
+        "html": "<blockquote>&ldquo;What you get by achieving your goals is not as important as what you become by achieving your goals.&rdquo; &mdash; <footer>Zig Ziglar</footer></blockquote>",
+        "imageBig": "images/authors/zig-ziglar_500x500.png",
+        "imageSmall": "images/authors/zig-ziglar_200x200.png",
+        "category": "goals",
+        "imageAlt": "A photo of Zig Ziglar"
+    },
+    {
+        "id": 18,
+        "quote": "Success is walking from failure to failure with no loss of enthusiasm.",
+        "author": "Winston Churchill",
+        "characters": 70,
+        "html": "<blockquote>&ldquo;Success is walking from failure to failure with no loss of enthusiasm.&rdquo; &mdash; <footer>Winston Churchill</footer></blockquote>",
+        "imageBig": "images/authors/winston-churchill_500x500.png",
+        "imageSmall": "images/authors/winston-churchill_200x200.png",
+        "category": "success",
+        "imageAlt": "A photo of Winston Churchill"
+    },
+    {
+        "id": 19,
+        "quote": "Your life is your story, and the adventure ahead of you is the journey to fulfill your own purpose and potential.",
+        "author": "Kerry Washington",
+        "characters": 113,
+        "html": "<blockquote>&ldquo;Your life is your story, and the adventure ahead of you is the journey to fulfill your own purpose and potential.&rdquo; &mdash; <footer>Kerry Washington</footer></blockquote>",
+        "imageBig": "images/authors/kerry-washington_500x500.png",
+        "imageSmall": "images/authors/kerry-washington_200x200.png",
+        "category": "life",
+        "imageAlt": "A photo of Kerry Washington"
+    },
+    {
+        "id": 20,
+        "quote": "The way to get started is to quit talking and begin doing.",
+        "author": "Walt Disney",
+        "characters": 65,
+        "html": "<blockquote>&ldquo;The way to get started is to quit talking and begin doing.&rdquo; &mdash; <footer>Walt Disney</footer></blockquote>",
+        "imageBig": "images/authors/walt-disney_500x500.png",
+        "imageSmall": "images/authors/walt-disney_200x200.png",
+        "category": "action",
+        "imageAlt": "A photo of Walt Disney"
+    }
+]
