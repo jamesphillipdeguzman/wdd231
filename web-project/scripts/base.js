@@ -51,7 +51,7 @@ function showHideHamburger() {
     // Hamburger menu click event
 
     const hamburgerBtn = document.querySelector('#menu');
-    const navigationBtn = document.querySelector('.menuLinks');
+    const navigationBtn = document.querySelector('.navigation ul');
 
 
     hamburgerBtn.addEventListener('click', () => {
@@ -77,11 +77,22 @@ function showHideHamburger() {
 }
 
 
+function joinUs() {
+    const joinBtn = document.querySelector('.join-btn');
+    joinBtn.addEventListener('click', () => {
+        window.location.href = 'join.html';
+    });
+}
+
+
+
 document.addEventListener('DOMContentLoaded', () => {
 
-    // showHideHamburger();  This one needs to be commented out or else hamburger menu won't be exportable
+    //showHideHamburger();  //This one needs to be commented out or else hamburger menu won't be exportable
     windowScroll();
     getDateTimeInfo();
-});
+    joinUs();
 
+
+});
 
