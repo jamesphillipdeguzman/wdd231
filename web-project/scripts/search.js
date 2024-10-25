@@ -263,7 +263,9 @@ async function fetchAuthorsList() {
 
         const quotes = document.getElementById('quotes'); // target the businesses div by id
 
-        quotes.innerHTML = ''; // reset display; avoid duplicating the card display.
+        // reset display; avoid duplicating the card display.
+        selectedCategory.innerHTML = ``;
+        quotes.innerHTML = '';
 
         // Iterate through each business item from your parsed json data...
         authors.forEach(author => {
