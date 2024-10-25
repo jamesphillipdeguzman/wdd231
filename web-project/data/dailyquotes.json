@@ -5,7 +5,7 @@
         "name": "Steve Jobs",
         "characters": 64,
         "html": "<blockquote>&ldquo;The only way to do great work is to love what you do.&rdquo; &mdash; <footer>Steve Jobs</footer></blockquote>",
-        "category": "work"
+        "category": "Work"
     },
     {
         "id": 2,
@@ -13,7 +13,7 @@
         "name": "Albert Einstein",
         "characters": 64,
         "html": "<blockquote>&ldquo;In the middle of every difficulty lies opportunity.&rdquo; &mdash; <footer>Albert Einstein</footer></blockquote>",
-        "category": "opportunity"
+        "category": "Opportunity"
     },
     {
         "id": 3,
@@ -21,7 +21,7 @@
         "name": "Theodore Roosevelt",
         "characters": 45,
         "html": "<blockquote>&ldquo;Believe you can and you're halfway there.&rdquo; &mdash; <footer>Theodore Roosevelt</footer></blockquote>",
-        "category": "belief"
+        "category": "Belief"
     },
     {
         "id": 4,
@@ -29,7 +29,7 @@
         "name": "Steve Jobs",
         "characters": 77,
         "html": "<blockquote>&ldquo;Your time is limited, don’t waste it living someone else’s life.&rdquo; &mdash; <footer>Steve Jobs</footer></blockquote>",
-        "category": "life"
+        "category": "Life"
     },
     {
         "id": 5,
@@ -37,7 +37,7 @@
         "name": "Winston S. Churchill",
         "characters": 93,
         "html": "<blockquote>&ldquo;Success is not final, failure is not fatal: It is the courage to continue that counts.&rdquo; &mdash; <footer>Winston S. Churchill</footer></blockquote>",
-        "category": "courage"
+        "category": "Courage"
     },
     {
         "id": 6,
@@ -45,7 +45,7 @@
         "name": "Ralph Waldo Emerson",
         "characters": 98,
         "html": "<blockquote>&ldquo;What lies behind us and what lies before us are tiny matters compared to what lies within us.&rdquo; &mdash; <footer>Ralph Waldo Emerson</footer></blockquote>",
-        "category": "inner strength"
+        "category": "Inner Strength"
     },
     {
         "id": 7,
@@ -53,7 +53,7 @@
         "name": "Eleanor Roosevelt",
         "characters": 75,
         "html": "<blockquote>&ldquo;The future belongs to those who believe in the beauty of their dreams.&rdquo; &mdash; <footer>Eleanor Roosevelt</footer></blockquote>",
-        "category": "dreams"
+        "category": "Dreams"
     },
     {
         "id": 8,
@@ -61,7 +61,7 @@
         "name": "Wayne Gretzky",
         "characters": 49,
         "html": "<blockquote>&ldquo;You miss 100% of the shots you don’t take.&rdquo; &mdash; <footer>Wayne Gretzky</footer></blockquote>",
-        "category": "opportunity"
+        "category": "Opportunity"
     },
     {
         "id": 9,
@@ -69,7 +69,7 @@
         "name": "Charles R. Swindoll",
         "characters": 66,
         "html": "<blockquote>&ldquo;Life is 10% what happens to us and 90% how we react to it.&rdquo; &mdash; <footer>Charles R. Swindoll</footer></blockquote>",
-        "category": "perspective"
+        "category": "Perspective"
     },
     {
         "id": 10,
@@ -77,7 +77,7 @@
         "name": "Henry David Thoreau",
         "characters": 76,
         "html": "<blockquote>&ldquo;Success usually comes to those who are too busy to be looking for it.&rdquo; &mdash; <footer>Henry David Thoreau</footer></blockquote>",
-        "category": "success"
+        "category": "Success"
     },
     {
         "id": 11,
@@ -85,7 +85,7 @@
         "name": "Theodore Roosevelt",
         "characters": 53,
         "html": "<blockquote>&ldquo;Do what you can, with what you have, where you are.&rdquo; &mdash; <footer>Theodore Roosevelt</footer></blockquote>",
-        "category": "action"
+        "category": "Action"
     },
     {
         "id": 12,
@@ -93,7 +93,7 @@
         "name": "Booker T. Washington",
         "characters": 66,
         "html": "<blockquote>&ldquo;If you want to lift yourself up, lift up someone else.&rdquo; &mdash; <footer>Booker T. Washington</footer></blockquote>",
-        "category": "kindness"
+        "category": "Kindness"
     },
     {
         "id": 13,
@@ -101,7 +101,7 @@
         "name": "William James",
         "characters": 61,
         "html": "<blockquote>&ldquo;Act as if what you do makes a difference. It does.&rdquo; &mdash; <footer>William James</footer></blockquote>",
-        "category": "impact"
+        "category": "Impact"
     },
     {
         "id": 14,
@@ -109,7 +109,7 @@
         "name": "Confucius",
         "characters": 66,
         "html": "<blockquote>&ldquo;It does not matter how slowly you go as long as you do not stop.&rdquo; &mdash; <footer>Confucius</footer></blockquote>",
-        "category": "perseverance"
+        "category": "Perseverance"
     },
     {
         "id": 15,
@@ -117,7 +117,7 @@
         "name": "Franklin D. Roosevelt",
         "characters": 83,
         "html": "<blockquote>&ldquo;The only limit to our realization of tomorrow will be our doubts of today.&rdquo; &mdash; <footer>Franklin D. Roosevelt</footer></blockquote>",
-        "category": "motivation"
+        "category": "Motivation"
     },
     {
         "id": 16,
@@ -125,7 +125,7 @@
         "name": "C.S. Lewis",
         "characters": 75,
         "html": "<blockquote>&ldquo;Hardships often prepare ordinary people for an extraordinary destiny.&rdquo; &mdash; <footer>C.S. Lewis</footer></blockquote>",
-        "category": "resilience"
+        "category": "Resilience"
     },
     {
         "id": 17,
@@ -133,7 +133,7 @@
         "name": "Norman Vaughan",
         "characters": 36,
         "html": "<blockquote>&ldquo;Dream big and dare to fail.&rdquo; &mdash; <footer>Norman Vaughan</footer></blockquote>",
-        "category": "dreams"
+        "category": "Dreams"
     },
     {
         "id": 18,
@@ -141,7 +141,7 @@
         "name": "Roy T. Bennett",
         "characters": 96,
         "html": "<blockquote>&ldquo;Success is not how high you have climbed, but how you make a positive difference to the world.&rdquo; &mdash; <footer>Roy T. Bennett</footer></blockquote>",
-        "category": "success"
+        "category": "Success"
     },
     {
         "id": 19,
@@ -149,7 +149,7 @@
         "name": "Walter Elliot",
         "characters": 82,
         "html": "<blockquote>&ldquo;Perseverance is not a long race; it is many short races one after the other.&rdquo; &mdash; <footer>Walter Elliot</footer></blockquote>",
-        "category": "perseverance"
+        "category": "Perseverance"
     },
     {
         "id": 20,
@@ -157,7 +157,7 @@
         "name": "Tim Ferriss",
         "characters": 71,
         "html": "<blockquote>&ldquo;What we fear doing most is usually what we most need to do.&rdquo; &mdash; <footer>Tim Ferriss</footer></blockquote>",
-        "category": "courage"
+        "category": "Courage"
     },
     {
         "id": 21,
@@ -165,7 +165,7 @@
         "name": "Muhammad Ali",
         "characters": 51,
         "html": "<blockquote>&ldquo;Don't count the days; make the days count.&rdquo; &mdash; <footer>Muhammad Ali</footer></blockquote>",
-        "category": "time"
+        "category": "Time"
     },
     {
         "id": 22,
@@ -173,7 +173,7 @@
         "name": "Walt Whitman",
         "characters": 83,
         "html": "<blockquote>&ldquo;Keep your face always toward the sunshine—and shadows will fall behind you.&rdquo; &mdash; <footer>Walt Whitman</footer></blockquote>",
-        "category": "positivity"
+        "category": "Positivity"
     },
     {
         "id": 23,
@@ -181,7 +181,7 @@
         "name": "C.S. Lewis",
         "characters": 84,
         "html": "<blockquote>&ldquo;You are never too old to set another goal or to dream a new dream.&rdquo; &mdash; <footer>C.S. Lewis</footer></blockquote>",
-        "category": "dreams"
+        "category": "Dreams"
     },
     {
         "id": 24,
@@ -189,7 +189,7 @@
         "name": "Abraham Lincoln",
         "characters": 66,
         "html": "<blockquote>&ldquo;The best way to predict your future is to create it.&rdquo; &mdash; <footer>Abraham Lincoln</footer></blockquote>",
-        "category": "future"
+        "category": "Future"
     },
     {
         "id": 25,
@@ -197,7 +197,7 @@
         "name": "Tony Robbins",
         "characters": 68,
         "html": "<blockquote>&ldquo;The only impossible journey is the one you never begin.&rdquo; &mdash; <footer>Tony Robbins</footer></blockquote>",
-        "category": "motivation"
+        "category": "Motivation"
     },
     {
         "id": 26,
@@ -205,7 +205,7 @@
         "name": "Albert Schweitzer",
         "characters": 81,
         "html": "<blockquote>&ldquo;Success is not the key to happiness. Happiness is the key to success.&rdquo; &mdash; <footer>Albert Schweitzer</footer></blockquote>",
-        "category": "happiness"
+        "category": "Happiness"
     },
     {
         "id": 27,
@@ -213,7 +213,7 @@
         "name": "Norman Vincent Peale",
         "characters": 46,
         "html": "<blockquote>&ldquo;Change your thoughts and you change your world.&rdquo; &mdash; <footer>Norman Vincent Peale</footer></blockquote>",
-        "category": "mindset"
+        "category": "Mindset"
     },
     {
         "id": 28,
@@ -221,7 +221,7 @@
         "name": "George Addair",
         "characters": 75,
         "html": "<blockquote>&ldquo;Everything you’ve ever wanted is on the other side of fear.&rdquo; &mdash; <footer>George Addair</footer></blockquote>",
-        "category": "courage"
+        "category": "Courage"
     },
     {
         "id": 29,
@@ -229,7 +229,7 @@
         "name": "Sam Levenson",
         "characters": 68,
         "html": "<blockquote>&ldquo;Don't watch the clock; do what it does. Keep going.&rdquo; &mdash; <footer>Sam Levenson</footer></blockquote>",
-        "category": "perseverance"
+        "category": "Perseverance"
     },
     {
         "id": 30,
@@ -237,7 +237,7 @@
         "name": "Walt Disney",
         "characters": 38,
         "html": "<blockquote>&ldquo;If you can dream it, you can do it.&rdquo; &mdash; <footer>Walt Disney</footer></blockquote>",
-        "category": "dreams"
+        "category": "Dreams"
     },
     {
         "id": 31,
@@ -245,6 +245,6 @@
         "name": "Winston S. Churchill",
         "characters": 78,
         "html": "<blockquote>&ldquo;Success is walking from failure to failure with no loss of enthusiasm.&rdquo; &mdash; <footer>Winston S. Churchill</footer></blockquote>",
-        "category": "success"
+        "category": "Success"
     }
 ]

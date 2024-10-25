@@ -15,7 +15,6 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
-
 });
 
 const grid = document.querySelector('#grid');
@@ -46,132 +45,107 @@ dynamicAuthors.addEventListener('change', () => {
     if (dynamicAuthors) {
 
         // Check user selection
-
         const choice = document.querySelector('#dynamic-authors').value;
-        const id = choice.split(' ');
-        // get the id or order of prophet
-        const filter = parseInt(id[0]);
 
-        // alert(filter);
+        filterAuthorsGrid(choice)
 
-        main(filter)
 
 
     }
 });
 
-// This main function is the middleman for fetchAuthors and filterAuthors
-// It passes the filter number to locate the chamber author...
 
-async function main(filter) {
+// ============== FILTER A MEMBER ====================
+
+async function filterAuthorsGrid(choice) {
+
+
     try {
-        const authors = await fetchAuthors();
-        filterAuthors(authors, filter);
-    } catch (error) {
+
+        const response = await fetch('data/quotes.json'); // fetch the json file from a relative path
+
+
+        if (!response.ok) { // Check if no response 
+            throw new Error('Could not fetch resource');
+        }
+
+        const data = await response.json();  // await for Promise to resolve or be rejected and parse the result as json object
+
+        const authors = data;
+        // log result to console
+        // console.table(authors);
+
+        console.log('Length is: ', authors.length); // get the length of the data
+
+        console.log('name: ', authors[0].name);
+
+        // reset display; avoid duplicating the card display.
+        selectedCategory.innerHTML = ``;
+        quotes.innerHTML = '';
+
+        // load the authors and the user choice for category
+        loadQuotes(authors, choice);
+
+
+    }
+
+    catch (error) {
         console.error(error);
     }
 
 
-}
+};
+const selectedCategory = document.getElementById('selected-category'); // target the quotes div by id
+
+function loadQuotes(authors, choice) {
 
 
+    const filteredAuthors = authors.filter(author => author.category === choice);
+    // alert(filteredAuthors[0].quote);
+    // alert(choice);
+    selectedCategory.innerHTML = ``;
+
+    filteredAuthors.forEach(filteredAuthor => {
 
 
+        if (filteredAuthors.length > 0) {
+
+            const img = document.createElement('img');
+            img.src = filteredAuthor.imageSmall;
+            img.alt = filteredAuthor.imageAlt;
+            img.loading = 'lazy';
+            img.classList.add('profile');
+
+            const card = document.createElement('section');
+            card.className = 'quote-card';
+
+            const li = document.createElement('li');
+
+            li.style.listStyleType = 'none';
 
 
-// ============== FILTER A MEMBER ====================
-
-const filterAuthors = (authors, filter) => {
-
-    // Target card-wrapper class or element
-    const quotes = document.querySelector('#quotes');
+            li.innerHTML = `${filteredAuthor.html}`;
 
 
-
-    // Clear the previous result
-    quotes.innerHTML = '';
-
-
-    const name = document.createElement('h4');
-    name.style.color = '#000';
-    name.style.fontFamily = 'var(--default-font)';
-    name.style.textAlign = 'center';
-
-    const characters = document.createElement('p');
-    const category = document.createElement('p');
-    const imageAlt = document.createElement('p');
-
-    // Create an anchor tag element
-    const url = document.createElement('a');
+            card.append(img);
+            card.append(li);
+            selectedCategory.append(card);
 
 
+        }
 
-    id.innerHTML = `<span class="label">ID:</span> ${authors[filter - 1].id}`;
-
-    name.innerHTML = `<span class="label">Name</span> ${authors[filter - 1].name}`;
-    characters.innerHTML = `<span class="label">Characters:</span> ${authors[filter - 1].characters}`;
-    category.innerHTML = `<span class="label">Category:</span> ${authors[filter - 1].category}`;
-    imageAlt.innerHTML = `<span class="label">About:</span> ${authors[filter - 1].imageAlt}`;
-
-
-    // url.setAttribute('href', authors[filter - 1].url);
-    // url.innerHTML = `<span class="label">Visit:</span>link`;
-    // alert(`${authors[filter - 1].url}`);
-
-    // Create a span element
-    const stats = document.createElement('div');
-    stats.className = 'label';
-    stats.style.fontSize = '0.8rem';
-    stats.style.margin = '0 auto';
-    stats.style.maxWidth = '100%';
-
-
-    // Create an img element and define its class name
-    const logo = document.createElement('img');
-    logo.className = 'grid';
-    logo.style.margin = '20px auto';
-
-    // Set properties for your image element here...
-    logo.setAttribute('src', `${authors[filter - 1].imageSmall}`);
-    logo.setAttribute('alt', `Logo of ${authors[filter - 1].imageAlt}`);
-    logo.setAttribute('loading', 'lazy');
-    logo.setAttribute('width', '100');
-    logo.setAttribute('height', '100');
-    logo.style.border = '1px solid #ccc';
-    logo.style.boxShadow = '0px 0px 4px #888';
-
-    // Create a logo link
-    const logolink = document.createElement('a');
-    logolink.setAttribute('href', authors[filter - 1].url);
-    logolink.append(logo);
-
-
-    // Build the card here one element at a time. Finally, append to the quotes class element.
-
-    // stats.append(id);
-    stats.append(name);
-    stats.append(characters);
-    stats.append(category);
-
-    // stats.append(url);
-
-    card.append(stats);
-    // card.append(logolink);
-
-    quotes.append(card);
-
+        else {
+            selectedCategory.innerHTML = 'Sorry, quote not found.';
+        }
+    });
 
 }
-
 
 
 // ============== GRID VIEW ====================
 
 async function fetchAuthorsGrid() {
 
-    // const leftSideBar = document.querySelector('.left-sidebar');
-
-    // leftSideBar.style.display = 'none';
 
     // Clear the dropdown values to avoid duplicating the list again.
     document.querySelector('#dynamic-authors').value = '';
@@ -210,19 +184,11 @@ async function fetchAuthorsGrid() {
             quotes.style.alignItems = 'center';
             quotes.style.alignContent = 'center';
             quotes.style.justifyContent = 'center';
-            // quotes.style.fontFamily = 'Montserrat';
-            // quotes.style.maxWidth = '80vw';
             quotes.style.padding = '10px 0';
             quotes.style.margin = '0 auto';
 
-            // dynamicAuthors.style.gridColumn = '2/3';
-
             const container = document.createElement('div'); // create a div 
             container.className = 'quote-grid';
-
-
-            // container.style.margin = '0 2rem';
-            // container.style.maxWidth = '100vw';
 
             const picprofile = document.createElement('div');
 
@@ -253,13 +219,6 @@ async function fetchAuthorsGrid() {
             container.innerHTML = `             
             <img  src=${author.imageSmall} alt=${author.imageAlt} loading='lazy' width='150px' height='auto'><p class="blockquote"> ${author.html}</p>                                                                        
                                     `;
-            // <span class='authors-labels'> Category: </span> <p>${author.category}</p>
-
-            // container.appendChild(a);
-            // container.appendChild(li);
-            // container.appendChild(ul);
-            // container.appendChild(p);
-            // container.appendChild(img);
             picprofile.appendChild(container);
 
             quotes.appendChild(picprofile);
@@ -282,10 +241,6 @@ async function fetchAuthorsGrid() {
 
 
 async function fetchAuthorsList() {
-
-    // const leftSideBar = document.querySelector('.left-sidebar');
-
-    // leftSideBar.style.display = 'block';
 
     // Clear the dropdown values to avoid duplicating the list again.
     document.querySelector('#dynamic-authors').value = '';
@@ -314,7 +269,6 @@ async function fetchAuthorsList() {
         authors.forEach(author => {
 
 
-
             quotes.style.display = 'flex';
             quotes.style.flexDirection = 'column';
             quotes.style.gap = '0.5rem';
@@ -333,16 +287,14 @@ async function fetchAuthorsList() {
 
             container.style.listStyleType = 'none';
             container.style.backgroundColor = '#fff';
+
             container.style.border = '1px solid #ccc';
-            // container.style.padding = '0';
-            // container.style.marginLeft = '5px';
+
             container.style.color = '#000';
-            // container.style.borderRadius = '5px';
             container.style.boxShadow = '0px 0px 3px #888';
             container.style.height = '25rem';
             container.style.width = '100%';
-            // container.style.margin = '0 1rem';
-            // container.style.maxWidth = '100vw';
+
             container.style.fontSize = 'small';
 
 
@@ -359,28 +311,14 @@ async function fetchAuthorsList() {
             const li = document.createElement('li');
             li.id = 'authors-li';
 
-            // const a = document.createElement('a');
-            // a.id = 'authors-links';
-
-
-
-            container.innerHTML = ` <span class='authors-labels'> Name: </span> <p>${author.name}</p>  
-                                    <span class='authors-labels'> Quote: </span> <p> ${author.quote}</p>
-                                    <span class='authors-labels'> Category: </span> <p>${author.category}</p> 
-                                    `;
-
-            // container.appendChild(a);
-
-            container.appendChild(li);
-
-            container.appendChild(ul);
+            container.innerHTML = ` <ul><span class='authors-labels'> Name: </span> <li>${author.name}</li>  
+                                    <span class='authors-labels'> Quote: </span> <li> ${author.quote}</li>
+                                    <span class='authors-labels'> Category: </span> <li>${author.category}</li> 
+                                    </ul>`;
 
             quotes.appendChild(container);
 
-
-
         });
-
 
     }
 
@@ -391,6 +329,3 @@ async function fetchAuthorsList() {
 
 
 }
-
-
-
