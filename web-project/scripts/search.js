@@ -163,7 +163,7 @@ const filterAuthors = (authors, filter) => {
 
 }
 
-const quotes = document.getElementById('quotes'); // target the quotes div by id
+
 
 // ============== GRID VIEW ====================
 
@@ -191,7 +191,7 @@ async function fetchAuthorsGrid() {
         // log result to console
         // console.table(authors);
 
-
+        const quotes = document.getElementById('quotes'); // target the quotes div by id
 
         console.log('Length is: ', authors.length); // get the length of the data
 
@@ -280,6 +280,7 @@ async function fetchAuthorsGrid() {
 
 // ============== LIST VIEW ====================
 
+
 async function fetchAuthorsList() {
 
     // const leftSideBar = document.querySelector('.left-sidebar');
@@ -288,8 +289,6 @@ async function fetchAuthorsList() {
 
     // Clear the dropdown values to avoid duplicating the list again.
     document.querySelector('#dynamic-authors').value = '';
-
-
 
     try {
 
@@ -305,74 +304,79 @@ async function fetchAuthorsList() {
 
         console.log(authors); // log result to console
 
-        const container = document.createElement('container'); // target the quotes div by id
-
         console.log(data.length); // get the length of the data
 
-        container.innerHTML = ''; // reset display; avoid duplicating the card display.
+        const quotes = document.getElementById('quotes'); // target the businesses div by id
 
-        quotes.innerHTML = ``;
-        // iterate each author
+        quotes.innerHTML = ''; // reset display; avoid duplicating the card display.
+
+        // Iterate through each business item from your parsed json data...
         authors.forEach(author => {
 
 
 
-            // dynamicAuthors.style.gridColumn = '2/3';
+            quotes.style.display = 'flex';
+            quotes.style.flexDirection = 'column';
+            quotes.style.gap = '0.5rem';
+            quotes.style.alignItems = 'flex-start';
+            quotes.style.alignContent = 'flex-start';
+            quotes.style.justifyContent = 'center';
+            quotes.style.margin = '0 auto';
+            // businesses.style.fontFamily = 'Montserrat';
 
-            const container2 = document.createElement('div'); // create a div 
-            container2.className = 'quote-flexbox';
+            const container = document.createElement('div'); // create a div 
+            container.className = 'container';
+            container.style.display = 'flex';
+            // container.style.flexDirection = 'row';
+            container.style.alignContent = 'left';
+            container.style.alignItems = 'left';
 
-
-            // container.style.margin = '0 2rem';
+            container.style.listStyleType = 'none';
+            container.style.backgroundColor = '#fff';
+            container.style.border = '1px solid #ccc';
+            // container.style.padding = '0';
+            // container.style.marginLeft = '5px';
+            container.style.color = '#000';
+            // container.style.borderRadius = '5px';
+            container.style.boxShadow = '0px 0px 3px #888';
+            container.style.height = '25rem';
+            container.style.width = '100%';
+            // container.style.margin = '0 1rem';
             // container.style.maxWidth = '100vw';
-
-            // const picprofile = document.createElement('div');
-
-            // picprofile.className = 'picprofile';
+            container.style.fontSize = 'small';
 
 
             const p = document.createElement('p');
             p.className = 'authors-labels';
 
             const img = document.createElement('img');
-            // img.id = 'authors-img';
+            img.id = 'authors-img';
+            img.loading = 'lazy';
 
             const ul = document.createElement('ul');
             ul.id = 'authors-ul';
 
-
             const li = document.createElement('li');
             li.id = 'authors-li';
 
-            const a = document.createElement('a');
-            a.id = 'authors-links';
+            // const a = document.createElement('a');
+            // a.id = 'authors-links';
 
-            const blockQuote = document.querySelector('.blockquote');
 
-            // blockQuote.style.backgroundColor = 'firebrick';
 
-            // container2.innerHTML = `             
+            container.innerHTML = ` <span class='authors-labels'> Name: </span> <p>${author.name}</p>  
+                                    <span class='authors-labels'> Quote: </span> <p> ${author.quote}</p>
+                                    <span class='authors-labels'> Category: </span> <p>${author.category}</p> 
+                                    `;
 
-            // <span class='authors-labels'> ID: </span> <p>${author.id}</p>
-            // <span class='authors-labels'> Name: </span> <p>${author.name}</p>
-            // <span class='authors-labels'> Category: </span> <p>${author.category}</p>
-            // `;
+            // container.appendChild(a);
 
-            container2.innerHTML = `             
-            
-             <p>${author.html}</p>
-            
-            
-            `;
+            container.appendChild(li);
 
-            container2.appendChild(a);
-            container2.appendChild(li);
-            container2.appendChild(ul);
-            container2.appendChild(p);
-            // container.appendChild(img);
-            // picprofile.appendChild(container);
+            container.appendChild(ul);
 
-            quotes.appendChild(container2);
+            quotes.appendChild(container);
+
 
 
         });
@@ -387,5 +391,6 @@ async function fetchAuthorsList() {
 
 
 }
+
 
 
