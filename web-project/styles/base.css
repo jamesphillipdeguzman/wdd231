@@ -189,9 +189,9 @@ body {
 
 
 
-#welcome:hover {
+/* #welcome:hover {
     transform: translateY(50%);
-}
+} */
 
 .thankyou {
     display: flex;
