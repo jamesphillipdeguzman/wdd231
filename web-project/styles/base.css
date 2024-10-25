@@ -545,6 +545,29 @@ h2 {
 
 }
 
+.attributions-list {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    color: #fff;
+}
+
+.attributions-list a {
+    color: #fff;
+}
+
+.attributions-list a:hover {
+    color: hotpink;
+}
+
+.attributions-list a:visited {
+    color: #6184D8;
+}
+
+.attributions-list a:active {
+    color: #50C5B7;
+}
 
 h1 {
 
