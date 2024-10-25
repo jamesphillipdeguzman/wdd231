@@ -26,37 +26,6 @@ async function fetchAuthors(api_url) {
 fetchAuthors(api_url);
 
 
-// Populate your dropdown with the chamber's  member's names.
-
-// const dropdownAuthors = (authors) => {
-
-//     const selector = document.querySelector('#dynamic-authors');
-
-//     authors.forEach((author) => {
-
-
-//         // populate the dropdown with the member's names
-//         const categoryName = `${author.category}`;
-
-//         // Check if the option already exists...
-//         const existingOption = Array.from(selector.options).some(option => option.value === `${categoryName.id} ${categoryName.name}`);
-//         // Create the dropdown list only if empty initially...
-//         if (!existingOption) {
-
-//             const option = document.createElement('option');
-
-//             option.value = categoryName;
-//             option.textContent = categoryName;
-
-//             selector.append(option);
-
-
-//         }
-
-
-//     });
-
-// }
 
 function dropdownCategories() {
     // const categories = ["Action", "Belief", "Courage", "Dreams", "Future", "Happiness", "Inner Strength", "Impact", "Kindness", "Life", "Motivation", "Opportunity", "Perseverance", "Positivity", "Perspective", "Resilience", "Success", "Time", "Work"]
