@@ -219,9 +219,9 @@ async function fetchAuthorsGrid() {
 
                 // ============== IMAGE QUOTE MODAL ====================
 
-
+                // Target the classes from search.html
                 const myImageModal = document.querySelector('.myImageModal');
-                const myBackdrop = document.querySelector('.myBackdrop');
+                const myBackDrop = document.querySelector('.myBackDrop');
                 const close = document.querySelector('.close');
                 // const myCloseModal = document.querySelector('.myCloseModal');
 
@@ -231,20 +231,21 @@ async function fetchAuthorsGrid() {
                     myImageModal.classList.remove('hideImage');
                     close.classList.remove('.hideClose');
                     myImageModal.classList.add('showImage');
-                    // alert('showed image');
+                    myBackDrop.classList.add('showSearchBackdrop');
 
                 }
 
                 function hideModal() {
 
                     myImageModal.classList.remove('showImage');
+                    myBackDrop.classList.remove('showSearchBackdrop');
                     hideModal();
                     // alert('hid image');
 
                 }
 
                 function hideBackDrop() {
-                    myBackdrop.classList.remove('showImage');
+                    myBackDrop.classList.add('hideSearchBackdrop');
 
                 }
 
