@@ -5,8 +5,8 @@ import { getDateTimeInfo, showHideHamburger, windowScroll } from "./base.js";
 
 document.addEventListener('DOMContentLoaded', () => {
 
-
-    showHideHamburger();
+    // comment out showHideHamburger here because it won't work if otherwise...
+    // showHideHamburger();
     getDateTimeInfo();
     windowScroll();
     // updateText();
@@ -58,10 +58,10 @@ const dailyQuote = document.querySelector('.daily-quote');
 function generateDailyQuote(authors) {
 
     window.addEventListener('load', () => {
+        // Hid the number generated
+        // const dayNumber = getTodaysDate();
 
-        const dayNumber = getTodaysDate();
-
-        dailyQuote.textContent = `${dayNumber}`;
+        // dailyQuote.textContent = `${dayNumber}`;
 
     });
 }

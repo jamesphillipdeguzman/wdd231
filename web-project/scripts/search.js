@@ -1,16 +1,16 @@
 
 import { fetchAuthors } from "./fetch-authors.js";
 import { getDateTimeInfo, showHideHamburger, windowScroll } from "./base.js";
-import { updateText } from "./windowsize.js";
+// import { updateText } from "./windowsize.js";
 
 
 document.addEventListener('DOMContentLoaded', () => {
 
 
-    showHideHamburger();
+    // showHideHamburger();
     getDateTimeInfo();
     windowScroll();
-    updateText();
+    // updateText();
     fetchAuthors();
 
 

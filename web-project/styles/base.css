@@ -53,6 +53,18 @@ body {
 
 /* ================== NAVIGATION ====================== */
 
+#qv-logo {
+    cursor: pointer;
+    box-shadow: none;
+    border: none;
+}
+
+#qv-logolink {
+    box-shadow: none;
+    border: none;
+}
+
+
 
 
 .navigation {
@@ -148,25 +160,35 @@ body {
 }
 
 #refresh-btn {
+    background-color: var(--accent-color1);
+    border-radius: 5px;
+    color: var(--accent-color3);
+    cursor: pointer;
     font-family: var(--tertiary-font);
     font-size: 1.2rem;
-    padding: 10px 20px;
-    background-color: var(--accent-color1);
-    color: var(--accent-color3);
-    border-radius: 5px;
-    margin: 25px auto;
-
     height: auto;
+    margin: 25px auto;
     max-width: 10vw;
+    padding: 10px 20px;
     width: 100%;
+
+}
+
+#refresh-btn:hover {
+    background-color: var(--accent-color2);
+    color: white;
+    transition: background-color 0.2s ease;
 }
 
 .join-btn:hover {
     background-color: rgba(83, 58, 113, 0.5);
     color: #000;
+    cursor: pointer;
 }
 
-
+#submit {
+    cursor: pointer;
+}
 
 
 .open a {
@@ -234,6 +256,8 @@ body {
 h3 {
     border-bottom: 1px solid #ddd;
     padding: 10px 0;
+    padding-bottom: 2rem;
+
 }
 
 header {
@@ -1523,6 +1547,16 @@ footer {
 }
 
 @media (max-width: 480px) {
+
+    #highlight.contact-us h1 {
+        font-size: 1.8rem;
+    }
+
+    #highlight.contact-us li {
+        font-size: 1.5rem;
+    }
+
+
 
     #author-name {
         font-size: 1.1rem;

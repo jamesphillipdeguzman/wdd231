@@ -5,14 +5,12 @@ import { getDateTimeInfo, showHideHamburger, windowScroll } from "./base.js";
 document.addEventListener('DOMContentLoaded', () => {
 
 
-    showHideHamburger();
+    // showHideHamburger();
     getDateTimeInfo();
     windowScroll();
     // updateText();
     // fetchAuthors();
     generateRandomQuote();
-
-
 
 
 
@@ -54,10 +52,10 @@ document.addEventListener('DOMContentLoaded', () => {
     function generateRandomQuote(authors) {
 
         window.addEventListener('load', () => {
+            // Hid the number generated
+            // const randNumber = getRandomInt(1, 20);
 
-            const randNumber = getRandomInt(1, 20);
-
-            randomQuotes.textContent = `${randNumber}`;
+            // randomQuotes.textContent = `${randNumber}`;
 
         });
     }

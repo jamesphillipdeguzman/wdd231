@@ -88,7 +88,7 @@ function joinUs() {
 
 document.addEventListener('DOMContentLoaded', () => {
 
-    //showHideHamburger();  //This one needs to be commented out or else hamburger menu won't be exportable
+    showHideHamburger();  //Uncommented this showHideHamburger here so it can be used by all pages, but it needs to be commented out if imported by the js file...
     windowScroll();
     getDateTimeInfo();
     joinUs();

@@ -4,7 +4,7 @@ import { getDateTimeInfo, showHideHamburger, windowScroll } from "./base.js";
 document.addEventListener('DOMContentLoaded', () => {
 
 
-    showHideHamburger();
+    // showHideHamburger();
     getDateTimeInfo();
     windowScroll();
     // updateText();

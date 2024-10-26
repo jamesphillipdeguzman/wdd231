@@ -24,7 +24,7 @@
     <meta property="og:url" content="https://jamesphillipdeguzman.github.io/wdd231/web-project/siteplan.html">
     <meta property="og:type" content="website">
     <meta property="og:site-name" content="https://jamesphillipdeguzman.github.io/wdd231/web-project/index.html">
-    <!-- <script src="scripts/base.js" defer></script> -->
+
     <script src="scripts/search.js" type="module"></script>
 </head>
 
@@ -38,8 +38,9 @@
             <nav class="navigation">
                 <!-- Show data on window width and device ratio -->
                 <span id="data"></span>
-                <div class="logolink">
-                    <img src="images/quote-vitamins-logo.png" alt="company logo" width="100" height="100">
+                <div class="logo">
+                    <a id="qv-logolink" href="index.html"><img id="qv-logo" src="images/quote-vitamins-logo.png"
+                            alt="Quote vitamins logo" width="100" height="100"></a>
                 </div>
 
                 <ul>
@@ -47,6 +48,7 @@
                     <li><a href="contact.html" id="about">Contact</a></li>
                     <li><a href="search.html" id="search">Search</a></li>
                     <li><a href="quotes.html" id="myquotes">Quotes</a></li>
+                    <li><a href="attributions.html" id="attributions">Attributions</a></li>
 
                 </ul>
                 <button id="menu" aria-label="menu"></button>
@@ -74,10 +76,15 @@
                             height="30"></button>
                 </div>
 
-                <!-- Populate authors here dynamically through your javascript code -->
-                <div id="quotes"></div>
-                <!-- Various quote categories -->
-                <div id="selected-category"></div>
+
+                <div id="quotes">
+                    <!-- Populate authors and quotes here dynamically through your js code -->
+                </div>
+
+
+                <div id="selected-category">
+                    <!-- Various quote categories go here -->
+                </div>
 
                 <!-- Image Modal goes here -->
 
