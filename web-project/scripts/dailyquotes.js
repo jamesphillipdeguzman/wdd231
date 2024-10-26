@@ -1,3 +1,4 @@
+import { getURL, apiFetch } from "./weather.js";
 import { getDateTimeInfo, showHideHamburger, windowScroll } from "./base.js";
 import { updateText } from "./windowsize.js";
 
@@ -9,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     getDateTimeInfo();
     windowScroll();
     updateText();
-
+    getURL();
     generateDailyQuote();
 
 

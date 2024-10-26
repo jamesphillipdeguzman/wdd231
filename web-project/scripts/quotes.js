@@ -98,8 +98,18 @@ document.addEventListener('DOMContentLoaded', () => {
             randomQuotes.innerHTML = 'Sorry, quote not found.';
         }
 
+    }
+
+    const refreshBtn = document.querySelector('#refresh-btn');
+
+    refreshBtn.addEventListener('click', () => {
+        randomQuoteRefresh();
+    });
+
+    function randomQuoteRefresh(event) {
 
 
+        location.reload();
 
     }
 

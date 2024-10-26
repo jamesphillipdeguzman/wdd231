@@ -140,10 +140,25 @@ body {
     margin: 25px auto;
 
     height: auto;
-    max-width: 90px;
+    max-width: 10vw;
+    width: 100%;
     /* flex: 1 0 10%; */
 
 
+}
+
+#refresh-btn {
+    font-family: var(--tertiary-font);
+    font-size: 1.2rem;
+    padding: 10px 20px;
+    background-color: var(--accent-color1);
+    color: var(--accent-color3);
+    border-radius: 5px;
+    margin: 25px auto;
+
+    height: auto;
+    max-width: 10vw;
+    width: 100%;
 }
 
 .join-btn:hover {
@@ -263,7 +278,7 @@ form.join-form {
 
     align-content: center;
     align-items: center;
-
+    margin: 2.2rem auto;
     max-width: 100vw;
     width: 100%;
 
@@ -555,6 +570,7 @@ h2 {
     justify-content: center;
     align-items: center;
     color: #fff;
+    margin: 4rem auto 5rem;
 }
 
 .attributions-list a {
@@ -604,7 +620,9 @@ h1 {
 
 }
 
-
+.quote-card {
+    margin: 3rem auto;
+}
 
 main {
 
@@ -749,7 +767,7 @@ span#font2 {
     justify-content: space-between;
     align-items: center;
     align-content: center;
-    margin: 0 auto;
+    margin: 11rem auto;
     align-self: center;
     max-width: 100vw;
     width: 100%;
@@ -866,19 +884,7 @@ blockquote footer {
     font-weight: bold;
 }
 
-/* .subcontainer {
-    display: flex;
-    flex-direction: column;
-    max-width: 100vw;
-    width: 100%;
-}
 
-.subcontainer img {
-    align-content: center;
-    justify-content: center;
-    align-items: center;
-    width: 100%;
-} */
 
 .container a {
     height: 30px;
@@ -1044,6 +1050,36 @@ div.layout button:hover {
     align-self: center;
 }
 
+.weather-data {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--accent-color3);
+    border: 1px solid #fff;
+    width: 50%;
+    border-radius: 5px;
+    margin: 0 auto;
+    padding: 10px;
+    gap: 5px;
+    max-width: 50vw;
+    width: 40%;
+}
+
+.weather-data p {
+    margin: 10px;
+}
+
+.weatherdata-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 10px auto;
+    padding: 5px;
+}
+
+
 /* ================== FOOTER ====================== */
 
 
@@ -1134,11 +1170,13 @@ footer {
         margin-bottom: 10px;
     }
 
+
+
+
     .quote-card img {
         width: 140px;
         height: 140px;
-        margin: 0 auto;
-        margin-bottom: 10px;
+
     }
 
 
@@ -1232,8 +1270,11 @@ footer {
 
     }
 
-    .join-btn {
+    .join-btn,
+    #refresh-btn {
         font-size: 1rem;
+        max-width: 20vw;
+        width: 50%;
 
     }
 
@@ -1349,7 +1390,7 @@ footer {
     }
 
     h2 {
-        font-family: var(--primary-font);
+        /* font-family: var(--primary-font); */
         color: var(--accent-color3);
         text-align: center;
         font-size: 1.2rem;
@@ -1440,6 +1481,20 @@ footer {
 
     }
 
+    .weather-data {
+        max-width: 100vw;
+        width: 90%;
+    }
+
+    .weather-data p {
+        font-size: 0.9rem;
+    }
+
+    .weatherdata-container {
+        max-width: 100vw;
+        width: 90%;
+    }
+
     .daily-quote {
 
         color: var(--accent-color3);
@@ -1448,6 +1503,13 @@ footer {
         margin: 50px;
     }
 
+    .join-btn,
+    #refresh-btn {
+        font-size: 1rem;
+        max-width: 50vw;
+        width: 100%;
+
+    }
 
     .show,
     .hide {
@@ -1472,4 +1534,26 @@ footer {
     }
 
 
+}
+
+@media (max-width: 545px) {
+
+    .join-btn,
+    #refresh-btn {
+        font-size: 1rem;
+        max-width: 30vw;
+        width: 60%;
+
+    }
+}
+
+@media (max-width: 290px) {
+
+    .join-btn,
+    #refresh-btn {
+        font-size: 1rem;
+        max-width: 50vw;
+        width: 100%;
+
+    }
 }
