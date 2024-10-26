@@ -12,43 +12,24 @@ document.addEventListener('DOMContentLoaded', () => {
     hideBackDrop();
 
 
-
-
 });
 
 
     // Get date and time format for timestamp
 
-    // const now = new Date();
-    // now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
-    // document.querySelector('#timestamp').value = now.toISOString().slice(0, 16);
+    const now = new Date();
+    now.setMinutes(now.getMinutes() - now.getTimezoneOffset());
+    document.querySelector('#timestamp').value = now.toISOString().slice(0, 16);
 
 
     
 
-    // Have all modals display as none
-
-    // modal.style.display = 'none';
-    // modalBackdrop.style.display = 'none';
-    // modal1.style.display = 'none';
-    // modalBackdrop1.style.display = 'none';
-    // modal2.style.display = 'none';
-    // modalBackdrop2.style.display = 'none';
-    // modal3.style.display = 'none';
-    // modalBackdrop3.style.display = 'none';
-    // modal4.style.display = 'none';
-    // modalBackdrop4.style.display = 'none';
-
-    // submit.style.visibility = 'hidden';
-    // submit.style.opacity = '0';
-
-
-    // window.addEventListener('click', (e) => {
-    //     if(e.target) {
-    //         hideModal();
-    //     }
+    window.addEventListener('click', (e) => {
+        if(e.target == myModal) {
+            hideModal();
+        }
         
-    // });
+    });
 
     const myModal = document.querySelector('.myModal');
     const myBackdrop = document.querySelector('.myBackdrop');
@@ -56,10 +37,13 @@ document.addEventListener('DOMContentLoaded', () => {
 
     close.addEventListener('click', () => {
         myModal.classList.remove('show');
-        if (email.value !== '' && mobile.value !== '') {
-
+        if (fname && lname && email) {
+            // Navigate to the thanks.html page
             window.location = 'thanks.html';
 
+        } 
+        else {
+            window.location = 'join.html';
         }
     });
 
@@ -93,38 +77,44 @@ document.addEventListener('DOMContentLoaded', () => {
     // Open modal
     submit.addEventListener('click', () => {
 
+        
+        const subscriberBox = document.querySelector('.subscriber-box');
+
         // Target the form elements to display on Thank You modal
 
-        const firstname = document.querySelector('#firstname');
-        const lastname = document.querySelector('#lastname');
+        const firstname = document.querySelector('#firstname').value;
+        const lastname = document.querySelector('#lastname').value;
+        const email = document.querySelector('#email').value;
+        const questions = document.querySelector('#questions').value;
+        const dateTimeStamp = document.querySelector('#timestamp').value;
 
-        const email = document.querySelector('#email');
-        const mobile = document.querySelector('#mobile');
-
-        // const organizationName = document.querySelector('#business');
-        // const timeStamp = document.querySelector('#timestamp');
-
-        // Target the li elements 
+        // Target the span and li elements in join.html
+        const message = document.querySelector('#message');
+        
         const fname = document.querySelector('#fname');
         const lname = document.querySelector('#lname');
-        const emailAdd = document.querySelector('#email-add');
-        const phone = document.querySelector('#phone');
-        // const orgName = document.querySelector('#organization-name');
-        // const dateTimeStamp = document.querySelector('#date-timestamp');
+        const emailAdd= document.querySelector('#email-add');
+        const queries =  document.querySelector('#queries');
+        const timeStamp = document.querySelector('#date-timestamp');
 
-        fname.textContent = `First Name: ${firstname.value}`;
-        lname.textContent = `Last Name: ${lastname.value}`;
-        emailAdd.textContent = `Email Address: ${email.value}`;
-        phone.textContent = `Contact Number: ${mobile.value}`;
-        // orgName.textContent = `Organization: ${organizationName.value}`;
-        // dateTimeStamp.textContent = `Submitted: ${timeStamp.value}`;
-        if (email.value !== '' && mobile.value !== '') {
+        // Output to the modal
+        message.textContent = `Thanks for subscribing!`;
+        fname.textContent = `First Name: ${firstname}`;
+        lname.textContent = `Last Name: ${lastname}`;
+        emailAdd.textContent = `Email Address: ${email}`;
+        queries.textContent = `Questions: ${questions}`;
+        timeStamp.textContent = `Date/Time: ${dateTimeStamp}`;
+            
+        
+        if (fname && lname && email) {
 
-           
             showModal();
+                      
+        }
 
-
-
+        else {
+            hideModal();
+            
         }
 
     });

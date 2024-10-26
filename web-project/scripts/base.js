@@ -80,7 +80,7 @@ function showHideHamburger() {
 function joinUs() {
     const joinBtn = document.querySelector('.join-btn');
     joinBtn.addEventListener('click', () => {
-        window.location.href = 'join.html';
+        window.location = 'join.html';
     });
 }
 
