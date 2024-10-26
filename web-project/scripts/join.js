@@ -33,9 +33,11 @@ window.addEventListener('click', (e) => {
 
 const myModal = document.querySelector('.myModal');
 const myBackdrop = document.querySelector('.myBackdrop');
+const myModalContent = document.querySelector('.modal-content');
 const close = document.querySelector('.close');
 
 close.addEventListener('click', () => {
+
     myModal.classList.remove('show');
     if (fname && lname && email) {
         // Navigate to the thanks.html page
@@ -43,6 +45,7 @@ close.addEventListener('click', () => {
 
     }
     else {
+
         window.location = 'join.html';
     }
 });
@@ -51,22 +54,25 @@ function showModal() {
 
 
     myModal.classList.add('show');
-
+    myBackdrop.classList.remove('hideJoinBackdrop');
+    myBackdrop.classList.add('showJoinBackdrop');
+    myModalContent.classList.remove('hideModalContent');
 
 }
 
 function hideModal() {
 
-    // It's better to add hide class here rather than remove show class.
-    // Doing so, will show the thank you for subsribing at the bottom of the form. That's a mess!
-    myModal.classList.add('hide');
 
+    myModal.classList.remove('hide');
+    myBackdrop.classList.remove('showJoinBackdrop');
+    myBackdrop.classList.add('hideJoinBackdrop');
+    myModalContent.classList.add('hideModalContent');
 
 
 }
 
 function hideBackDrop() {
-    myBackdrop.classList.remove('show');
+    myBackdrop.classList.remove('showJoinBackdrop');
 
 }
 
@@ -77,6 +83,7 @@ const submit = document.getElementById('submit');
 // Open Thank you modal after clicking submit
 
 submit.addEventListener('click', () => {
+
 
     // Target the form elements to display on Thank You modal
 
@@ -106,12 +113,14 @@ submit.addEventListener('click', () => {
 
     if (fname && lname && email) {
 
+
         showModal();
 
     }
 
     else {
         hideModal();
+
 
     }
 

@@ -146,6 +146,34 @@ function loadQuotes(authors, choice) {
 
 }
 
+// Target the classes from search.html
+const myImageModal = document.querySelector('.myImageModal');
+const myBackDrop = document.querySelector('.myBackDrop');
+const close = document.querySelector('.close');
+const myModalContent = document.querySelector('.modal-content');
+
+
+function showModal() {
+
+    myImageModal.classList.remove('hideImage');
+    close.classList.remove('.hideClose');
+    myImageModal.classList.add('showImage');
+    myBackDrop.classList.add('showSearchBackdrop');
+    myModalContent.classList.remove('hideModalContent');
+
+}
+
+function hideModal() {
+
+    myImageModal.classList.remove('showImage');
+    myBackDrop.classList.remove('showSearchBackdrop');
+    myModalContent.classList.add('hideModalContent');
+
+
+}
+
+// Hide the pesky 'X' or close when search.html loads
+hideModal();
 
 // ============== GRID VIEW ====================
 
@@ -219,35 +247,6 @@ async function fetchAuthorsGrid() {
 
                 // ============== IMAGE QUOTE MODAL ====================
 
-                // Target the classes from search.html
-                const myImageModal = document.querySelector('.myImageModal');
-                const myBackDrop = document.querySelector('.myBackDrop');
-                const close = document.querySelector('.close');
-                // const myCloseModal = document.querySelector('.myCloseModal');
-
-
-                function showModal() {
-
-                    myImageModal.classList.remove('hideImage');
-                    close.classList.remove('.hideClose');
-                    myImageModal.classList.add('showImage');
-                    myBackDrop.classList.add('showSearchBackdrop');
-
-                }
-
-                function hideModal() {
-
-                    myImageModal.classList.remove('showImage');
-                    myBackDrop.classList.remove('showSearchBackdrop');
-                    hideModal();
-                    // alert('hid image');
-
-                }
-
-                function hideBackDrop() {
-                    myBackDrop.classList.add('hideSearchBackdrop');
-
-                }
 
 
 
