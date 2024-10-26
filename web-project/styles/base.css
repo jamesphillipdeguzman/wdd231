@@ -406,6 +406,39 @@ body {
 
 }
 
+.showImage {
+    /* Show my Image modal */
+    visibility: visible;
+    opacity: 1;
+    transition-delay: 0s;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+    width: 400px;
+
+}
+
+.hideImage {
+    /* Show my Image modal */
+    visibility: hidden;
+    opacity: 0;
+    transition-delay: 0s;
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    z-index: 2;
+    width: 400px;
+
+}
 
 .show {
     /* Show my modal */
@@ -424,24 +457,34 @@ body {
 
 }
 
-.backdrop {
+/* .backdrop {
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s 0.5s, opacity 0.5s linear;
-}
+} */
 
 
-
-/* .modal-content {
+.showClose {
+    cursor: pointer;
+    font-size: 3rem;
+    float: right;
     visibility: hidden;
     opacity: 0;
-    padding: 20px;
-} */
+}
+
+.hideClose {
+    cursor: pointer;
+    font-size: 3rem;
+    float: right;
+    visibility: visible;
+    opacity: 1;
+}
 
 .close {
     cursor: pointer;
     font-size: 3rem;
     float: right;
+    color: var(--secondary-color);
     /* padding-right: 20px; */
     /* display: none; */
 }
@@ -481,6 +524,7 @@ body {
 
 .modal-content {
     padding: 20px;
+
 }
 
 .modal-content1 img {
@@ -1144,6 +1188,22 @@ footer {
     }
 }
 
+@media screen and (max-width: 900px) {
+    #quotes {
+
+
+        max-width: 80vw;
+        width: 80%;
+
+    }
+
+    .quote-grid {
+        gap: 2.5rem;
+        align-self: center;
+    }
+}
+
+
 @media screen and (max-width: 800px) {
 
     #welcome {
@@ -1173,11 +1233,11 @@ footer {
 
 
 
-    .quote-card img {
+    /* .quote-card img {
         width: 140px;
         height: 140px;
 
-    }
+    } */
 
 
     h1 {
@@ -1407,14 +1467,20 @@ footer {
 
 @media (max-width: 480px) {
 
+    #author-name {
+        font-size: 1.1rem;
+    }
+
+    #quote-count,
+    #quote-category {
+        font-size: 0.9rem;
+    }
+
 
     #todays-quote {
         font-size: 1rem;
     }
 
-    #author-name {
-        font-size: 0.9rem;
-    }
 
     .footer-wrapper {
         display: flex;
@@ -1471,6 +1537,8 @@ footer {
 }
 
 @media (max-width: 360px) {
+
+
 
     h1 {
 

@@ -1,7 +1,7 @@
 
 import { fetchAuthors } from "./fetch-authors.js";
 import { getDateTimeInfo, showHideHamburger, windowScroll } from "./base.js";
-// import { updateText } from "./windowsize.js";
+import { updateText } from "./windowsize.js";
 
 
 document.addEventListener('DOMContentLoaded', () => {
@@ -10,7 +10,7 @@ document.addEventListener('DOMContentLoaded', () => {
     showHideHamburger();
     getDateTimeInfo();
     windowScroll();
-    // updateText();
+    updateText();
     fetchAuthors();
 
 
@@ -141,6 +141,9 @@ function loadQuotes(authors, choice) {
         }
     });
 
+
+
+
 }
 
 
@@ -210,9 +213,76 @@ async function fetchAuthorsGrid() {
             img.height = 'auto';
 
 
+            // Open Image modal after clicking the author image
             img.addEventListener('click', () => {
-                console.log('hello there');
-                alert('hello');
+
+
+                // ============== IMAGE QUOTE MODAL ====================
+
+
+                const myImageModal = document.querySelector('.myImageModal');
+                const myBackdrop = document.querySelector('.myBackdrop');
+                const close = document.querySelector('.close');
+                // const myCloseModal = document.querySelector('.myCloseModal');
+
+
+                function showModal() {
+
+                    myImageModal.classList.remove('hideImage');
+                    close.classList.remove('.hideClose');
+                    myImageModal.classList.add('showImage');
+                    // alert('showed image');
+
+                }
+
+                function hideModal() {
+
+                    myImageModal.classList.remove('showImage');
+                    hideModal();
+                    // alert('hid image');
+
+                }
+
+                function hideBackDrop() {
+                    myBackdrop.classList.remove('showImage');
+
+                }
+
+
+
+                // Target the span and li elements in search.html
+
+
+                const authorId = document.querySelector('#author-id');
+                const authorName = document.querySelector('#author-name');
+                const authorQuote = document.querySelector('#author-quote');
+                const quoteCount = document.querySelector('#quote-count');
+                const quoteCategory = document.querySelector('#quote-category');
+
+                // Output to the modal
+                // message.textContent = `Thanks for subscribing!`;
+                authorId.textContent = `ID: ${author.id}`;
+                authorName.innerHTML = `<a href='https://en.wikipedia.org/w/index.php?search=${encodeURIComponent(author.name)}' target='_blank'>${author.name}</a>`;
+                authorQuote.textContent = `Quote: ${author.quote}`;
+                quoteCount.textContent = `Characters Count: ${author.characters}`;
+                quoteCategory.textContent = `Category: ${author.category}`;
+
+                showModal();
+
+                close.addEventListener('click', () => {
+                    myImageModal.classList.add('hideImage');
+                    close.classList.add('.hideClose');
+                    hideModal();
+                    // alert('completed image');
+                    // const modalContent = document.querySelector('.modal-content');
+                    // modalContent.style.visibility = 'hidden';
+                    // modalContent.style.opacity = '0';
+
+
+                });
+
+
+
             });
 
 
@@ -324,6 +394,7 @@ async function fetchAuthorsList() {
 
             container.innerHTML = ` <ul><span class='authors-labels'> Name: </span> <li>${author.name}</li>  
                                     <span class='authors-labels'> Quote: </span> <li> ${author.quote}</li>
+                                    <span class='authors-labels'> Characters: </span> <li>${author.characters}</li> 
                                     <span class='authors-labels'> Category: </span> <li>${author.category}</li> 
                                     </ul>`;
 
@@ -340,3 +411,7 @@ async function fetchAuthorsList() {
 
 
 }
+
+
+
+
