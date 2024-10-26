@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
 
 
+
 });
 
 const grid = document.querySelector('#grid');
@@ -104,6 +105,7 @@ function loadQuotes(authors, choice) {
     // alert(filteredAuthors[0].quote);
     // alert(choice);
     selectedCategory.innerHTML = ``;
+    quotes.innerHTML = ``;
 
     filteredAuthors.forEach(filteredAuthor => {
 
@@ -169,9 +171,10 @@ async function fetchAuthorsGrid() {
 
         console.log('Length is: ', authors.length); // get the length of the data
 
-        console.log('name: ', authors[0].name);
+        // console.log('name: ', authors[0].name);
 
         quotes.innerHTML = ''; // reset display; avoid duplicating the card display.
+        selectedCategory.innerHTML = '';
 
         // iterate each author
         authors.forEach(author => {
@@ -195,34 +198,34 @@ async function fetchAuthorsGrid() {
             picprofile.className = 'picprofile';
 
 
-            const p = document.createElement('p');
-            p.className = 'authors-labels';
+            // const p = document.createElement('p');
+            // p.className = 'authors-labels';
 
             const img = document.createElement('img');
             img.id = 'authors-img';
+            img.src = `${author.imageSmall}`;
+            img.alt = `${author.imageAlt}`;
+            img.loading = 'lazy';
+            img.width = '150px';
+            img.height = 'auto';
 
 
-            const ul = document.createElement('ul');
-            ul.id = 'authors-ul';
+            img.addEventListener('click', () => {
+                console.log('hello there');
+                alert('hello');
+            });
 
 
-            const li = document.createElement('li');
-            li.id = 'authors-li';
+            const blockQuote = document.createElement('blockquote');
+            blockQuote.id = 'blockquote';
+            blockQuote.innerHTML = `${author.html}`;
 
-            const a = document.createElement('a');
-            a.id = 'authors-links';
 
-            const blockQuote = document.querySelector('.blockquote');
 
-            // blockQuote.style.backgroundColor = 'firebrick';
-
-            container.innerHTML = `             
-            <img  src=${author.imageSmall} alt=${author.imageAlt} loading='lazy' width='150px' height='auto'><p class="blockquote"> ${author.html}</p>                                                                        
-                                    `;
+            container.append(img);
+            container.append(blockQuote);
             picprofile.appendChild(container);
-
             quotes.appendChild(picprofile);
-
 
         });
 
@@ -235,6 +238,12 @@ async function fetchAuthorsGrid() {
 
 
 };
+
+
+
+
+
+
 
 
 // ============== LIST VIEW ====================
@@ -278,7 +287,7 @@ async function fetchAuthorsList() {
             quotes.style.alignContent = 'flex-start';
             quotes.style.justifyContent = 'center';
             quotes.style.margin = '0 auto';
-            // businesses.style.fontFamily = 'Montserrat';
+            // quotes.style.fontFamily = 'Montserrat';
 
             const container = document.createElement('div'); // create a div 
             container.className = 'container';
@@ -300,18 +309,18 @@ async function fetchAuthorsList() {
             container.style.fontSize = 'small';
 
 
-            const p = document.createElement('p');
-            p.className = 'authors-labels';
+            // const p = document.createElement('p');
+            // p.className = 'authors-labels';
 
             const img = document.createElement('img');
             img.id = 'authors-img';
             img.loading = 'lazy';
 
-            const ul = document.createElement('ul');
-            ul.id = 'authors-ul';
+            // const ul = document.createElement('ul');
+            // ul.id = 'authors-ul';
 
-            const li = document.createElement('li');
-            li.id = 'authors-li';
+            // const li = document.createElement('li');
+            // li.id = 'authors-li';
 
             container.innerHTML = ` <ul><span class='authors-labels'> Name: </span> <li>${author.name}</li>  
                                     <span class='authors-labels'> Quote: </span> <li> ${author.quote}</li>

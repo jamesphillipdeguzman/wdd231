@@ -1,5 +1,5 @@
 import { getDateTimeInfo, showHideHamburger, windowScroll } from "./base.js";
-// import { updateText } from "./windowsize.js";
+import { updateText } from "./windowsize.js";
 
 document.addEventListener('DOMContentLoaded', () => {
 
@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', () => {
     showHideHamburger();
     getDateTimeInfo();
     windowScroll();
-    // updateText();
+    updateText();
     hideModal();
     hideBackDrop();
 
@@ -39,35 +39,48 @@ document.addEventListener('DOMContentLoaded', () => {
     // modal4.style.display = 'none';
     // modalBackdrop4.style.display = 'none';
 
-
-
     // submit.style.visibility = 'hidden';
     // submit.style.opacity = '0';
 
-    const modal = document.querySelector('.modal');
-    const backdrop = document.querySelector('.backdrop');
+
+    // window.addEventListener('click', (e) => {
+    //     if(e.target) {
+    //         hideModal();
+    //     }
+        
+    // });
+
+    const myModal = document.querySelector('.myModal');
+    const myBackdrop = document.querySelector('.myBackdrop');
+    const close = document.querySelector('.close');
+
+    close.addEventListener('click', () => {
+        myModal.classList.remove('show');
+        if (email.value !== '' && mobile.value !== '') {
+
+            window.location = 'thanks.html';
+
+        }
+    });
 
     function showModal() {
 
-        // modal.style.display = 'block';
-        // modalBackdrop.style.display = 'block';
-        // visibility: visible;
-        // opacity: 1;
-
-        modal.classList.add('show');
+        
+        myModal.classList.add('show');
+        
 
     }
 
     function hideModal() {
-        modal.classList.add('hide');
-        modal.style.visibility = 'hidden';
-        modal.style.opacity = '0';
+
+        myModal.classList.add('hide');
+
 
 
     }
 
     function hideBackDrop() {
-        backdrop.classList.remove('show');
+        myBackdrop.classList.remove('show');
 
     }
 
@@ -107,7 +120,9 @@ document.addEventListener('DOMContentLoaded', () => {
         // dateTimeStamp.textContent = `Submitted: ${timeStamp.value}`;
         if (email.value !== '' && mobile.value !== '') {
 
+           
             showModal();
+
 
 
         }
@@ -119,12 +134,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
     //     modal.style.display = 'none';
     //     modalBackdrop.style.display = 'none';
-    //     if (email.value !== '' && mobile.value !== '') {
-
-
-    //         window.location = 'https://jamesphillipdeguzman.github.io/web-project/thanks.html';
-
-    //     }
+    
 
 
 
@@ -262,9 +272,3 @@ document.addEventListener('DOMContentLoaded', () => {
     //         console.error(error);
     //     }
     // }
-
-
-
-
-
-
