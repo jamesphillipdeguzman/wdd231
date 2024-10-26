@@ -538,12 +538,6 @@ body {
     z-index: 1;
 }
 
-/* .backdrop {
-    visibility: hidden;
-    opacity: 0;
-    transition: visibility 0s 0.5s, opacity 0.5s linear;
-} */
-
 
 .showClose {
     cursor: pointer;
@@ -571,7 +565,7 @@ body {
 }
 
 
-.modal-desktop {
+.showModalDesktop {
     position: fixed;
     top: 50%;
     left: 50%;
@@ -583,9 +577,28 @@ body {
     height: auto;
     z-index: 2;
     text-align: center;
-
+    visibility: visible;
+    opacity: 1;
     width: 100%;
 }
+
+.hideModalDesktop {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: white;
+    border-radius: 8px;
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+    font-family: var(--primary-font);
+    height: auto;
+    z-index: 2;
+    text-align: center;
+    visibility: hidden;
+    opacity: 0;
+    width: 100%;
+}
+
 
 .modal-mobile {
     position: fixed;
@@ -619,6 +632,8 @@ body {
     width: 40%;
     height: auto;
 }
+
+
 
 
 #authors-img {
@@ -1468,17 +1483,7 @@ footer {
         font-size: 0.9rem;
     }
 
-    .modal-content1 img {
-        align-self: center;
-        width: 60%;
-        height: auto;
-    }
 
-    .modal-content2 img {
-        align-self: center;
-        width: 70%;
-        height: auto;
-    }
 
 
     body {
