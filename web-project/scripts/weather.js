@@ -4,76 +4,80 @@ export { getURL, apiFetch };
 const currentTemp = document.querySelector('#current-temp');
 const weatherIcon = document.querySelector('#weather-icon');
 const captionDesc = document.querySelector('figcaption');
-// const lat = 0;
-// const lon = 0;
+// const lat = 0; // Not needed anymore since we get coordinates from Geolocation
+// const lon = 0; // Not needed anymore since we get coordinates from Geolocation
 const apiKey = `0778f1befc62393b4badae75707b09a5`;
-const city = `Iloilo City`;
 
-function getURL() {
-    // API key: 0778f1befc62393b4badae75707b09a5
-    // Iloilo City coordinates
-    // const lat = 10.6918;
-    // const lon = 122.5621;
-    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
-
-    // alert(`City: ${city} url: ${url}`);
-    apiFetch(city, url);
-    // return url;
+// Get URL using latitude and longitude
+function getURL(lat, lon) {
+    // Construct API URL for fetching weather data based on coordinates
+    const url = `https://api.openweathermap.org/data/2.5/weather?lat=${lat}&lon=${lon}&units=metric&appid=${apiKey}`;
+    apiFetch(url);
 }
 
-
-
-async function apiFetch(city, url) {
+// Fetch weather data from the API
+async function apiFetch(url) {
     try {
-
-        // const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
         const response = await fetch(url);
 
         if (!response.ok) {
-            throw new Error('The network could not be reached', await response.text());
-        }
-        else {
-
+            throw new Error('The network could not be reached');
+        } else {
             const data = await response.json();
-            // console.table(data);
-            // alert('hi there');
-            displayResults(data, city);
-
+            displayResults(data); // Display the results using the response data
         }
-
-
-    }
-    catch (error) {
+    } catch (error) {
         console.error('The error was: ', error);
     }
 }
 
-
-function displayResults(data, city) {
+// Display the weather results on the webpage
+function displayResults(data) {
     const theCityName = document.querySelector('#city-name');
+    const city = data.name; // Get the city name from the API response
 
-    theCityName.innerHTML = `${city}`;
+    theCityName.innerHTML = `${city}`; // Display the city name
 
     const iconsrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
-    let desc = `${data.weather[0].description}`;
+    const desc = `${data.weather[0].description}`;
     weatherIcon.setAttribute('src', iconsrc);
-    weatherIcon.setAttribute('alt', `${data.weather[0].description}`);
-    captionDesc.textContent = `${desc}`;
-    currentTemp.innerHTML = `${data.main.temp}&deg`;
-
+    weatherIcon.setAttribute('alt', desc);
+    captionDesc.textContent = desc;
+    currentTemp.innerHTML = `${data.main.temp}&deg`; // Display the current temperature
 
     const tempInfo = document.createElement('span');
+    tempInfo.textContent = `${data.main.temp}&deg`; // Create a span element for the temperature
+}
 
-    tempInfo.textContent = `${data.main.temp}&deg`;
+// Get user's location and fetch weather data
+function getLocation() {
+    if (navigator.geolocation) {
+        // Check if the Geolocation API is supported
+        navigator.geolocation.getCurrentPosition(position => {
+            const lat = position.coords.latitude;
+            const lon = position.coords.longitude;
+            getURL(lat, lon); // Fetch weather data using coordinates
+        }, () => {
+            console.error('Geolocation is not supported or permission denied.');
+            // Fallback or default city if geolocation fails
+            const defaultCity = 'Iloilo City';
+            getURLByCityName(defaultCity); // Fetch weather for default city
+        });
+    } else {
+        console.error('Geolocation is not supported by this browser.');
+        // Fallback or default city if Geolocation API is not supported
+        const defaultCity = 'Iloilo City';
+        getURLByCityName(defaultCity); // Fetch weather for default city
+    }
+}
 
-
+// Fetch weather data by city name
+function getURLByCityName(city) {
+    const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+    apiFetch(url);
 }
 
 // Ensure DOM is loaded before activating the functions
 document.addEventListener('DOMContentLoaded', () => {
-
-
-    getURL();
-
-
+    getLocation(); // Start the process to get user's location
 });
