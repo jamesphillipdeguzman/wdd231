@@ -63,9 +63,9 @@ function generateDailyQuote(authors) {
 
     window.addEventListener('load', () => {
         // Hid the number generated
-        const dayNumber = getTodaysDate();
+        //const dayNumber = getTodaysDate();
 
-        dailyQuote.textContent = `${dayNumber}`;
+        //dailyQuote.textContent = `${dayNumber}`;
 
     });
 }
