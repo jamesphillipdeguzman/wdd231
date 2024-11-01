@@ -89,7 +89,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (myRandomNum > authors.length) {
             randomQuotes.innerHTML = `<p id="randomQuotes">Sorry, quote not found.</p>`;
         } else if (filteredAuthors.length > 0 && filteredAuthors[0].imageSmall) {
-            randomQuotes.innerHTML = `<img src="${filteredAuthors[0].imageSmall}" alt="No photo available" loading="lazy" width="150px" height="auto"> <p id="randomQuotes">${filteredAuthors[0].html}</p>`;
+            randomQuotes.innerHTML = `<img src="${filteredAuthors[0].imageSmall}" alt=" " loading="lazy" width="150px" height="auto"> <p id="randomQuotes">${filteredAuthors[0].html}</p>`;
         } else {
             // Return an empty picture or placeholder image
             randomQuotes.innerHTML = `<img src="path/to/empty-image.png" alt="No image available" loading="lazy" width="150px" height="auto"> <p id="randomQuotes">No image available for this quote.</p>`;
