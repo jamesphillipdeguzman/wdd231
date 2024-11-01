@@ -29,7 +29,34 @@ fetchAuthors(api_url);
 
 function dropdownCategories() {
     // const categories = ["Action", "Belief", "Courage", "Dreams", "Future", "Happiness", "Inner Strength", "Impact", "Kindness", "Life", "Motivation", "Opportunity", "Perseverance", "Positivity", "Perspective", "Resilience", "Success", "Time", "Work"]
-    const categories = ["Action", "Dreams", "Impact", "Life", "Motivational", "Opportunity", "Perseverance", "Positivity", "Resilience", "Self-Reflection", "Success", "Goals"];
+    const categories = [
+        "Action",
+        "Change",
+        "Charity",
+        "Courage",
+        "Determination",
+        "Divine Guidance",
+        "Dreams",
+        "Faith",
+        "Growth",
+        "Happiness",
+        "Hope",
+        "Impact",
+        "Inspiration",
+        "Leadership",
+        "Life",
+        "Motivational",
+        "Opportunity",
+        "Perseverance",
+        "Positivity",
+        "Resilience",
+        "Self-Reflection",
+        "Service",
+        "Success",
+        "Wisdom"
+    ];
+
+
 
     const selector = document.getElementById('dynamic-authors');
 

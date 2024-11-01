@@ -118,12 +118,14 @@ function loadQuotes(authors, choice) {
             img.loading = 'lazy';
             img.classList.add('profile');
 
+
             const card = document.createElement('section');
             card.className = 'quote-card';
 
             const li = document.createElement('li');
 
             li.style.listStyleType = 'none';
+
 
 
             li.innerHTML = `${filteredAuthor.html}`;
@@ -392,7 +394,9 @@ async function fetchAuthorsList() {
             // const li = document.createElement('li');
             // li.id = 'authors-li';
 
-            container.innerHTML = ` <ul><span class='authors-labels'> Name: </span> <li>${author.name}</li>  
+            container.innerHTML = ` <ul>
+                                    <span class='authors-labels'> ID: </span> <li>${author.id}</li>
+                                    <span class='authors-labels'> Name: </span> <li>${author.name}</li>  
                                     <span class='authors-labels'> Quote: </span> <li> ${author.quote}</li>
                                     <span class='authors-labels'> Characters: </span> <li>${author.characters}</li> 
                                     <span class='authors-labels'> Category: </span> <li>${author.category}</li> 

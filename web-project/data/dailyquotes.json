@@ -1,250 +1,2914 @@
 [
     {
         "id": 1,
-        "quote": "The only way to do great work is to love what you do.",
-        "name": "Steve Jobs",
-        "characters": 64,
-        "html": "<blockquote>&ldquo;The only way to do great work is to love what you do.&rdquo; &mdash; <footer>Steve Jobs</footer></blockquote>",
-        "category": "Work"
+        "quote": "You will face many defeats in life, but never let yourself be defeated.",
+        "name": "Maya Angelou",
+        "characters": 75,
+        "html": "<blockquote>&ldquo;You will face many defeats in life, but never let yourself be defeated.&rdquo; &mdash; <footer>Maya Angelou</footer></blockquote>",
+        "category": "Inspirational"
     },
     {
         "id": 2,
-        "quote": "In the middle of every difficulty lies opportunity.",
-        "name": "Albert Einstein",
-        "characters": 64,
-        "html": "<blockquote>&ldquo;In the middle of every difficulty lies opportunity.&rdquo; &mdash; <footer>Albert Einstein</footer></blockquote>",
-        "category": "Opportunity"
+        "quote": "It always seems impossible until it’s done.",
+        "name": "Nelson Mandela",
+        "characters": 44,
+        "html": "<blockquote>&ldquo;It always seems impossible until it’s done.&rdquo; &mdash; <footer>Nelson Mandela</footer></blockquote>",
+        "category": "Inspirational"
     },
     {
         "id": 3,
-        "quote": "Believe you can and you're halfway there.",
-        "name": "Theodore Roosevelt",
-        "characters": 45,
-        "html": "<blockquote>&ldquo;Believe you can and you're halfway there.&rdquo; &mdash; <footer>Theodore Roosevelt</footer></blockquote>",
-        "category": "Belief"
+        "quote": "The future belongs to those who believe in the beauty of their dreams.",
+        "name": "Eleanor Roosevelt",
+        "characters": 83,
+        "html": "<blockquote>&ldquo;The future belongs to those who believe in the beauty of their dreams.&rdquo; &mdash; <footer>Eleanor Roosevelt</footer></blockquote>",
+        "category": "Inspirational"
     },
     {
         "id": 4,
-        "quote": "Your time is limited, don’t waste it living someone else’s life.",
-        "name": "Steve Jobs",
-        "characters": 77,
-        "html": "<blockquote>&ldquo;Your time is limited, don’t waste it living someone else’s life.&rdquo; &mdash; <footer>Steve Jobs</footer></blockquote>",
-        "category": "Life"
+        "quote": "If you can dream it, you can do it.",
+        "name": "Walt Disney",
+        "characters": 36,
+        "html": "<blockquote>&ldquo;If you can dream it, you can do it.&rdquo; &mdash; <footer>Walt Disney</footer></blockquote>",
+        "category": "Inspirational"
     },
     {
         "id": 5,
-        "quote": "Success is not final, failure is not fatal: It is the courage to continue that counts.",
-        "name": "Winston S. Churchill",
-        "characters": 93,
-        "html": "<blockquote>&ldquo;Success is not final, failure is not fatal: It is the courage to continue that counts.&rdquo; &mdash; <footer>Winston S. Churchill</footer></blockquote>",
-        "category": "Courage"
+        "quote": "To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.",
+        "name": "Ralph Waldo Emerson",
+        "characters": 129,
+        "html": "<blockquote>&ldquo;To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.&rdquo; &mdash; <footer>Ralph Waldo Emerson</footer></blockquote>",
+        "category": "Inspirational"
     },
     {
         "id": 6,
-        "quote": "What lies behind us and what lies before us are tiny matters compared to what lies within us.",
-        "name": "Ralph Waldo Emerson",
-        "characters": 98,
-        "html": "<blockquote>&ldquo;What lies behind us and what lies before us are tiny matters compared to what lies within us.&rdquo; &mdash; <footer>Ralph Waldo Emerson</footer></blockquote>",
-        "category": "Inner Strength"
+        "quote": "Life is either a daring adventure or nothing at all.",
+        "name": "Helen Keller",
+        "characters": 46,
+        "html": "<blockquote>&ldquo;Life is either a daring adventure or nothing at all.&rdquo; &mdash; <footer>Helen Keller</footer></blockquote>",
+        "category": "Motivational"
     },
     {
         "id": 7,
-        "quote": "The future belongs to those who believe in the beauty of their dreams.",
-        "name": "Eleanor Roosevelt",
-        "characters": 75,
-        "html": "<blockquote>&ldquo;The future belongs to those who believe in the beauty of their dreams.&rdquo; &mdash; <footer>Eleanor Roosevelt</footer></blockquote>",
-        "category": "Dreams"
+        "quote": "Success is walking from failure to failure with no loss of enthusiasm.",
+        "name": "Winston Churchill",
+        "characters": 77,
+        "html": "<blockquote>&ldquo;Success is walking from failure to failure with no loss of enthusiasm.&rdquo; &mdash; <footer>Winston Churchill</footer></blockquote>",
+        "category": "Motivational"
     },
     {
         "id": 8,
-        "quote": "You miss 100% of the shots you don’t take.",
-        "name": "Wayne Gretzky",
-        "characters": 49,
-        "html": "<blockquote>&ldquo;You miss 100% of the shots you don’t take.&rdquo; &mdash; <footer>Wayne Gretzky</footer></blockquote>",
-        "category": "Opportunity"
+        "quote": "The only way to do great work is to love what you do.",
+        "name": "Steve Jobs",
+        "characters": 63,
+        "html": "<blockquote>&ldquo;The only way to do great work is to love what you do.&rdquo; &mdash; <footer>Steve Jobs</footer></blockquote>",
+        "category": "Motivational"
     },
     {
         "id": 9,
+        "quote": "It is our choices, that show what we truly are, far more than our abilities.",
+        "name": "J.K. Rowling",
+        "characters": 88,
+        "html": "<blockquote>&ldquo;It is our choices, that show what we truly are, far more than our abilities.&rdquo; &mdash; <footer>J.K. Rowling</footer></blockquote>",
+        "category": "Motivational"
+    },
+    {
+        "id": 10,
         "quote": "Life is 10% what happens to us and 90% how we react to it.",
         "name": "Charles R. Swindoll",
         "characters": 66,
         "html": "<blockquote>&ldquo;Life is 10% what happens to us and 90% how we react to it.&rdquo; &mdash; <footer>Charles R. Swindoll</footer></blockquote>",
-        "category": "Perspective"
-    },
-    {
-        "id": 10,
-        "quote": "Success usually comes to those who are too busy to be looking for it.",
-        "name": "Henry David Thoreau",
-        "characters": 76,
-        "html": "<blockquote>&ldquo;Success usually comes to those who are too busy to be looking for it.&rdquo; &mdash; <footer>Henry David Thoreau</footer></blockquote>",
-        "category": "Success"
+        "category": "Motivational"
     },
     {
         "id": 11,
-        "quote": "Do what you can, with what you have, where you are.",
-        "name": "Theodore Roosevelt",
-        "characters": 53,
-        "html": "<blockquote>&ldquo;Do what you can, with what you have, where you are.&rdquo; &mdash; <footer>Theodore Roosevelt</footer></blockquote>",
-        "category": "Action"
+        "quote": "For behold, this life is the time for men to prepare to meet God.",
+        "name": "Alma 34:32",
+        "characters": 77,
+        "html": "<blockquote>&ldquo;For behold, this life is the time for men to prepare to meet God.&rdquo; &mdash; <footer>Alma 34:32</footer></blockquote>",
+        "category": "Scriptural"
     },
     {
         "id": 12,
-        "quote": "If you want to lift yourself up, lift up someone else.",
-        "name": "Booker T. Washington",
-        "characters": 66,
-        "html": "<blockquote>&ldquo;If you want to lift yourself up, lift up someone else.&rdquo; &mdash; <footer>Booker T. Washington</footer></blockquote>",
-        "category": "Kindness"
+        "quote": "If ye are prepared ye shall not fear.",
+        "name": "D&C 38:30",
+        "characters": 34,
+        "html": "<blockquote>&ldquo;If ye are prepared ye shall not fear.&rdquo; &mdash; <footer>D&C 38:30</footer></blockquote>",
+        "category": "Scriptural"
     },
     {
         "id": 13,
-        "quote": "Act as if what you do makes a difference. It does.",
-        "name": "William James",
-        "characters": 61,
-        "html": "<blockquote>&ldquo;Act as if what you do makes a difference. It does.&rdquo; &mdash; <footer>William James</footer></blockquote>",
-        "category": "Impact"
+        "quote": "I can do all things through Christ which strengtheneth me.",
+        "name": "Philippians 4:13",
+        "characters": 48,
+        "html": "<blockquote>&ldquo;I can do all things through Christ which strengtheneth me.&rdquo; &mdash; <footer>Philippians 4:13</footer></blockquote>",
+        "category": "Scriptural"
     },
     {
         "id": 14,
-        "quote": "It does not matter how slowly you go as long as you do not stop.",
-        "name": "Confucius",
-        "characters": 66,
-        "html": "<blockquote>&ldquo;It does not matter how slowly you go as long as you do not stop.&rdquo; &mdash; <footer>Confucius</footer></blockquote>",
-        "category": "Perseverance"
+        "quote": "And charity is love.",
+        "name": "Moroni 7:47",
+        "characters": 21,
+        "html": "<blockquote>&ldquo;And charity is love.&rdquo; &mdash; <footer>Moroni 7:47</footer></blockquote>",
+        "category": "Scriptural"
     },
     {
         "id": 15,
+        "quote": "And now, my beloved brethren, if this be the desire of your hearts, what have ye to fear?",
+        "name": "D&C 68:11",
+        "characters": 95,
+        "html": "<blockquote>&ldquo;And now, my beloved brethren, if this be the desire of your hearts, what have ye to fear?&rdquo; &mdash; <footer>D&C 68:11</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 16,
+        "quote": "You must be the change you wish to see in the world.",
+        "name": "Mahatma Gandhi",
+        "characters": 60,
+        "html": "<blockquote>&ldquo;You must be the change you wish to see in the world.&rdquo; &mdash; <footer>Mahatma Gandhi</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 17,
         "quote": "The only limit to our realization of tomorrow will be our doubts of today.",
         "name": "Franklin D. Roosevelt",
         "characters": 83,
         "html": "<blockquote>&ldquo;The only limit to our realization of tomorrow will be our doubts of today.&rdquo; &mdash; <footer>Franklin D. Roosevelt</footer></blockquote>",
-        "category": "Motivation"
-    },
-    {
-        "id": 16,
-        "quote": "Hardships often prepare ordinary people for an extraordinary destiny.",
-        "name": "C.S. Lewis",
-        "characters": 75,
-        "html": "<blockquote>&ldquo;Hardships often prepare ordinary people for an extraordinary destiny.&rdquo; &mdash; <footer>C.S. Lewis</footer></blockquote>",
-        "category": "Resilience"
-    },
-    {
-        "id": 17,
-        "quote": "Dream big and dare to fail.",
-        "name": "Norman Vaughan",
-        "characters": 36,
-        "html": "<blockquote>&ldquo;Dream big and dare to fail.&rdquo; &mdash; <footer>Norman Vaughan</footer></blockquote>",
-        "category": "Dreams"
+        "category": "Motivational"
     },
     {
         "id": 18,
-        "quote": "Success is not how high you have climbed, but how you make a positive difference to the world.",
-        "name": "Roy T. Bennett",
-        "characters": 96,
-        "html": "<blockquote>&ldquo;Success is not how high you have climbed, but how you make a positive difference to the world.&rdquo; &mdash; <footer>Roy T. Bennett</footer></blockquote>",
-        "category": "Success"
+        "quote": "Happiness is not something ready made. It comes from your own actions.",
+        "name": "Dalai Lama",
+        "characters": 73,
+        "html": "<blockquote>&ldquo;Happiness is not something ready made. It comes from your own actions.&rdquo; &mdash; <footer>Dalai Lama</footer></blockquote>",
+        "category": "Motivational"
     },
     {
         "id": 19,
-        "quote": "Perseverance is not a long race; it is many short races one after the other.",
-        "name": "Walter Elliot",
-        "characters": 82,
-        "html": "<blockquote>&ldquo;Perseverance is not a long race; it is many short races one after the other.&rdquo; &mdash; <footer>Walter Elliot</footer></blockquote>",
-        "category": "Perseverance"
+        "quote": "Your future is as bright as your faith.",
+        "name": "Thomas S. Monson",
+        "characters": 42,
+        "html": "<blockquote>&ldquo;Your future is as bright as your faith.&rdquo; &mdash; <footer>Thomas S. Monson</footer></blockquote>",
+        "category": "Motivational"
     },
     {
         "id": 20,
-        "quote": "What we fear doing most is usually what we most need to do.",
-        "name": "Tim Ferriss",
-        "characters": 71,
-        "html": "<blockquote>&ldquo;What we fear doing most is usually what we most need to do.&rdquo; &mdash; <footer>Tim Ferriss</footer></blockquote>",
-        "category": "Courage"
+        "quote": "The Lord is my light and my salvation; whom shall I fear?",
+        "name": "Psalm 27:1",
+        "characters": 63,
+        "html": "<blockquote>&ldquo;The Lord is my light and my salvation; whom shall I fear?&rdquo; &mdash; <footer>Psalm 27:1</footer></blockquote>",
+        "category": "Scriptural"
     },
     {
         "id": 21,
-        "quote": "Don't count the days; make the days count.",
-        "name": "Muhammad Ali",
-        "characters": 51,
-        "html": "<blockquote>&ldquo;Don't count the days; make the days count.&rdquo; &mdash; <footer>Muhammad Ali</footer></blockquote>",
-        "category": "Time"
+        "quote": "Do not let your hearts be troubled. You believe in God; believe also in me.",
+        "name": "John 14:1",
+        "characters": 92,
+        "html": "<blockquote>&ldquo;Do not let your hearts be troubled. You believe in God; believe also in me.&rdquo; &mdash; <footer>John 14:1</footer></blockquote>",
+        "category": "Scriptural"
     },
     {
         "id": 22,
-        "quote": "Keep your face always toward the sunshine—and shadows will fall behind you.",
-        "name": "Walt Whitman",
+        "quote": "Trust in the Lord with all thine heart; and lean not unto thine own understanding.",
+        "name": "Proverbs 3:5",
         "characters": 83,
-        "html": "<blockquote>&ldquo;Keep your face always toward the sunshine—and shadows will fall behind you.&rdquo; &mdash; <footer>Walt Whitman</footer></blockquote>",
-        "category": "Positivity"
+        "html": "<blockquote>&ldquo;Trust in the Lord with all thine heart; and lean not unto thine own understanding.&rdquo; &mdash; <footer>Proverbs 3:5</footer></blockquote>",
+        "category": "Scriptural"
     },
     {
         "id": 23,
-        "quote": "You are never too old to set another goal or to dream a new dream.",
-        "name": "C.S. Lewis",
-        "characters": 84,
-        "html": "<blockquote>&ldquo;You are never too old to set another goal or to dream a new dream.&rdquo; &mdash; <footer>C.S. Lewis</footer></blockquote>",
-        "category": "Dreams"
+        "quote": "Be thou humble; and the Lord thy God shall lead thee by the hand.",
+        "name": "Doctrine and Covenants 112:10",
+        "characters": 77,
+        "html": "<blockquote>&ldquo;Be thou humble; and the Lord thy God shall lead thee by the hand.&rdquo; &mdash; <footer>D&C 112:10</footer></blockquote>",
+        "category": "Scriptural"
     },
     {
         "id": 24,
+        "quote": "What doth it profit a man if he shall gain the whole world, and lose his own soul?",
+        "name": "Mark 8:36",
+        "characters": 76,
+        "html": "<blockquote>&ldquo;What doth it profit a man if he shall gain the whole world, and lose his own soul?&rdquo; &mdash; <footer>Mark 8:36</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 25,
+        "quote": "Wherefore, be not weary in well-doing, for ye are laying the foundation of a great work.",
+        "name": "Doctrine and Covenants 64:33",
+        "characters": 97,
+        "html": "<blockquote>&ldquo;Wherefore, be not weary in well-doing, for ye are laying the foundation of a great work.&rdquo; &mdash; <footer>D&C 64:33</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 26,
+        "quote": "And now abideth faith, hope, charity, these three; but the greatest of these is charity.",
+        "name": "1 Corinthians 13:13",
+        "characters": 95,
+        "html": "<blockquote>&ldquo;And now abideth faith, hope, charity, these three; but the greatest of these is charity.&rdquo; &mdash; <footer>1 Corinthians 13:13</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 27,
+        "quote": "I will go and do the things which the Lord hath commanded.",
+        "name": "1 Nephi 3:7",
+        "characters": 48,
+        "html": "<blockquote>&ldquo;I will go and do the things which the Lord hath commanded.&rdquo; &mdash; <footer>1 Nephi 3:7</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 28,
+        "quote": "The worth of souls is great in the sight of God.",
+        "name": "Doctrine and Covenants 18:10",
+        "characters": 46,
+        "html": "<blockquote>&ldquo;The worth of souls is great in the sight of God.&rdquo; &mdash; <footer>D&C 18:10</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 29,
+        "quote": "Let your light so shine before this people, that they may see your good works.",
+        "name": "3 Nephi 12:16",
+        "characters": 88,
+        "html": "<blockquote>&ldquo;Let your light so shine before this people, that they may see your good works.&rdquo; &mdash; <footer>3 Nephi 12:16</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 30,
+        "quote": "I say unto you, that ye must repent, and be born again.",
+        "name": "Mosiah 27:25",
+        "characters": 60,
+        "html": "<blockquote>&ldquo;I say unto you, that ye must repent, and be born again.&rdquo; &mdash; <footer>Mosiah 27:25</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 31,
+        "quote": "Fear thou not; for I am with thee: be not dismayed; for I am thy God.",
+        "name": "Isaiah 41:10",
+        "characters": 83,
+        "html": "<blockquote>&ldquo;Fear thou not; for I am with thee: be not dismayed; for I am thy God.&rdquo; &mdash; <footer>Isaiah 41:10</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 32,
+        "quote": "For I know the plans I have for you, declares the Lord, plans to prosper you and not to harm you.",
+        "name": "Jeremiah 29:11",
+        "characters": 93,
+        "html": "<blockquote>&ldquo;For I know the plans I have for you, declares the Lord, plans to prosper you and not to harm you.&rdquo; &mdash; <footer>Jeremiah 29:11</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 33,
+        "quote": "He that hath the spirit of contention is not of me, but is of the devil.",
+        "name": "3 Nephi 11:29",
+        "characters": 81,
+        "html": "<blockquote>&ldquo;He that hath the spirit of contention is not of me, but is of the devil.&rdquo; &mdash; <footer>3 Nephi 11:29</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 34,
+        "quote": "This is my beloved Son, in whom I am well pleased; hear ye him.",
+        "name": "Matthew 17:5",
+        "characters": 75,
+        "html": "<blockquote>&ldquo;This is my beloved Son, in whom I am well pleased; hear ye him.&rdquo; &mdash; <footer>Matthew 17:5</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 35,
+        "quote": "With God all things are possible.",
+        "name": "Matthew 19:26",
+        "characters": 32,
+        "html": "<blockquote>&ldquo;With God all things are possible.&rdquo; &mdash; <footer>Matthew 19:26</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 36,
+        "quote": "Let all thy things be done with charity.",
+        "name": "1 Corinthians 16:14",
+        "characters": 40,
+        "html": "<blockquote>&ldquo;Let all thy things be done with charity.&rdquo; &mdash; <footer>1 Corinthians 16:14</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 37,
+        "quote": "Come unto me, all ye that labour and are heavy laden, and I will give you rest.",
+        "name": "Matthew 11:28",
+        "characters": 83,
+        "html": "<blockquote>&ldquo;Come unto me, all ye that labour and are heavy laden, and I will give you rest.&rdquo; &mdash; <footer>Matthew 11:28</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 38,
+        "quote": "Be not afraid, only believe.",
+        "name": "Mark 5:36",
+        "characters": 30,
+        "html": "<blockquote>&ldquo;Be not afraid, only believe.&rdquo; &mdash; <footer>Mark 5:36</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 39,
+        "quote": "I will put my trust in thee.",
+        "name": "2 Nephi 4:34",
+        "characters": 26,
+        "html": "<blockquote>&ldquo;I will put my trust in thee.&rdquo; &mdash; <footer>2 Nephi 4:34</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 40,
+        "quote": "And now, behold, I say unto you, that ye must repent.",
+        "name": "Alma 42:30",
+        "characters": 54,
+        "html": "<blockquote>&ldquo;And now, behold, I say unto you, that ye must repent.&rdquo; &mdash; <footer>Alma 42:30</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 41,
+        "quote": "Ask, and it shall be given you; seek, and ye shall find; knock, and it shall be opened unto you.",
+        "name": "Matthew 7:7",
+        "characters": 83,
+        "html": "<blockquote>&ldquo;Ask, and it shall be given you; seek, and ye shall find; knock, and it shall be opened unto you.&rdquo; &mdash; <footer>Matthew 7:7</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 42,
+        "quote": "All things work together for good to them that love God.",
+        "name": "Romans 8:28",
+        "characters": 66,
+        "html": "<blockquote>&ldquo;All things work together for good to them that love God.&rdquo; &mdash; <footer>Romans 8:28</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 43,
+        "quote": "Behold, I am the light of the world: he that followeth me shall not walk in darkness.",
+        "name": "John 8:12",
+        "characters": 91,
+        "html": "<blockquote>&ldquo;Behold, I am the light of the world: he that followeth me shall not walk in darkness.&rdquo; &mdash; <footer>John 8:12</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 44,
+        "quote": "But the fruit of the Spirit is love, joy, peace, longsuffering, gentleness, goodness, faith.",
+        "name": "Galatians 5:22",
+        "characters": 93,
+        "html": "<blockquote>&ldquo;But the fruit of the Spirit is love, joy, peace, longsuffering, gentleness, goodness, faith.&rdquo; &mdash; <footer>Galatians 5:22</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 45,
+        "quote": "God is love; and he that dwelleth in love dwelleth in God, and God in him.",
+        "name": "1 John 4:16",
+        "characters": 87,
+        "html": "<blockquote>&ldquo;God is love; and he that dwelleth in love dwelleth in God, and God in him.&rdquo; &mdash; <footer>1 John 4:16</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 46,
+        "quote": "And this is the commandment, that we should believe on the name of his Son Jesus Christ.",
+        "name": "1 John 3:23",
+        "characters": 83,
+        "html": "<blockquote>&ldquo;And this is the commandment, that we should believe on the name of his Son Jesus Christ.&rdquo; &mdash; <footer>1 John 3:23</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 47,
+        "quote": "Lay not up for yourselves treasures upon earth, where moth and rust doth corrupt.",
+        "name": "Matthew 6:19",
+        "characters": 85,
+        "html": "<blockquote>&ldquo;Lay not up for yourselves treasures upon earth, where moth and rust doth corrupt.&rdquo; &mdash; <footer>Matthew 6:19</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 48,
+        "quote": "Peace I leave with you, my peace I give unto you: not as the world giveth, give I unto you.",
+        "name": "John 14:27",
+        "characters": 107,
+        "html": "<blockquote>&ldquo;Peace I leave with you, my peace I give unto you: not as the world giveth, give I unto you.&rdquo; &mdash; <footer>John 14:27</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 49,
+        "quote": "And I will be with thy mouth, and teach thee what thou shalt say.",
+        "name": "Exodus 4:12",
+        "characters": 63,
+        "html": "<blockquote>&ldquo;And I will be with thy mouth, and teach thee what thou shalt say.&rdquo; &mdash; <footer>Exodus 4:12</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 50,
+        "quote": "Every good gift and every perfect gift is from above.",
+        "name": "James 1:17",
+        "characters": 56,
+        "html": "<blockquote>&ldquo;Every good gift and every perfect gift is from above.&rdquo; &mdash; <footer>James 1:17</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 51,
+        "quote": "But they that wait upon the Lord shall renew their strength.",
+        "name": "Isaiah 40:31",
+        "characters": 72,
+        "html": "<blockquote>&ldquo;But they that wait upon the Lord shall renew their strength.&rdquo; &mdash; <footer>Isaiah 40:31</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 52,
+        "quote": "The Lord shall fight for you, and ye shall hold your peace.",
+        "name": "Exodus 14:14",
+        "characters": 63,
+        "html": "<blockquote>&ldquo;The Lord shall fight for you, and ye shall hold your peace.&rdquo; &mdash; <footer>Exodus 14:14</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 53,
+        "quote": "And now, my son, I perceive there is somewhat more which doth worry your mind.",
+        "name": "Alma 37:1",
+        "characters": 82,
+        "html": "<blockquote>&ldquo;And now, my son, I perceive there is somewhat more which doth worry your mind.&rdquo; &mdash; <footer>Alma 37:1</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 54,
+        "quote": "And he shall be like a tree planted by the rivers of water.",
+        "name": "Psalm 1:3",
+        "characters": 66,
+        "html": "<blockquote>&ldquo;And he shall be like a tree planted by the rivers of water.&rdquo; &mdash; <footer>Psalm 1:3</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 55,
+        "quote": "This is the day which the Lord hath made; we will rejoice and be glad in it.",
+        "name": "Psalm 118:24",
+        "characters": 87,
+        "html": "<blockquote>&ldquo;This is the day which the Lord hath made; we will rejoice and be glad in it.&rdquo; &mdash; <footer>Psalm 118:24</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 56,
+        "quote": "The Lord is good, a strong hold in the day of trouble.",
+        "name": "Nahum 1:7",
+        "characters": 55,
+        "html": "<blockquote>&ldquo;The Lord is good, a strong hold in the day of trouble.&rdquo; &mdash; <footer>Nahum 1:7</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 57,
+        "quote": "Let us not love in word, neither in tongue; but in deed and in truth.",
+        "name": "1 John 3:18",
+        "characters": 78,
+        "html": "<blockquote>&ldquo;Let us not love in word, neither in tongue; but in deed and in truth.&rdquo; &mdash; <footer>1 John 3:18</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 58,
+        "quote": "Be ye kind one to another, tenderhearted, forgiving one another.",
+        "name": "Ephesians 4:32",
+        "characters": 77,
+        "html": "<blockquote>&ldquo;Be ye kind one to another, tenderhearted, forgiving one another.&rdquo; &mdash; <footer>Ephesians 4:32</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 59,
+        "quote": "But the God of all grace, who hath called us unto his eternal glory by Christ Jesus.",
+        "name": "1 Peter 5:10",
+        "characters": 90,
+        "html": "<blockquote>&ldquo;But the God of all grace, who hath called us unto his eternal glory by Christ Jesus.&rdquo; &mdash; <footer>1 Peter 5:10</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 60,
+        "quote": "And I will give unto them eternal life, and they shall never perish.",
+        "name": "John 10:28",
+        "characters": 75,
+        "html": "<blockquote>&ldquo;And I will give unto them eternal life, and they shall never perish.&rdquo; &mdash; <footer>John 10:28</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 62,
+        "quote": "Let not your heart be troubled, neither let it be afraid.",
+        "name": "John 14:27",
+        "characters": 61,
+        "html": "<blockquote>&ldquo;Let not your heart be troubled, neither let it be afraid.&rdquo; &mdash; <footer>John 14:27</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 63,
+        "quote": "The only way to do great work is to love what you do.",
+        "name": "Steve Jobs",
+        "characters": 62,
+        "html": "<blockquote>&ldquo;The only way to do great work is to love what you do.&rdquo; &mdash; <footer>Steve Jobs</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 64,
+        "quote": "For with God nothing shall be impossible.",
+        "name": "Luke 1:37",
+        "characters": 43,
+        "html": "<blockquote>&ldquo;For with God nothing shall be impossible.&rdquo; &mdash; <footer>Luke 1:37</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 65,
+        "quote": "Success is not the key to happiness. Happiness is the key to success.",
+        "name": "Albert Schweitzer",
+        "characters": 84,
+        "html": "<blockquote>&ldquo;Success is not the key to happiness. Happiness is the key to success.&rdquo; &mdash; <footer>Albert Schweitzer</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 66,
+        "quote": "I can do all things through Christ which strengtheneth me.",
+        "name": "Philippians 4:13",
+        "characters": 49,
+        "html": "<blockquote>&ldquo;I can do all things through Christ which strengtheneth me.&rdquo; &mdash; <footer>Philippians 4:13</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 67,
+        "quote": "The future belongs to those who believe in the beauty of their dreams.",
+        "name": "Eleanor Roosevelt",
+        "characters": 76,
+        "html": "<blockquote>&ldquo;The future belongs to those who believe in the beauty of their dreams.&rdquo; &mdash; <footer>Eleanor Roosevelt</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 68,
+        "quote": "A friend loveth at all times, and a brother is born for adversity.",
+        "name": "Proverbs 17:17",
+        "characters": 67,
+        "html": "<blockquote>&ldquo;A friend loveth at all times, and a brother is born for adversity.&rdquo; &mdash; <footer>Proverbs 17:17</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 69,
+        "quote": "You miss 100% of the shots you don't take.",
+        "name": "Wayne Gretzky",
+        "characters": 45,
+        "html": "<blockquote>&ldquo;You miss 100% of the shots you don't take.&rdquo; &mdash; <footer>Wayne Gretzky</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 70,
+        "quote": "And now abideth faith, hope, charity, these three; but the greatest of these is charity.",
+        "name": "1 Corinthians 13:13",
+        "characters": 95,
+        "html": "<blockquote>&ldquo;And now abideth faith, hope, charity, these three; but the greatest of these is charity.&rdquo; &mdash; <footer>1 Corinthians 13:13</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 71,
+        "quote": "Believe you can and you're halfway there.",
+        "name": "Theodore Roosevelt",
+        "characters": 46,
+        "html": "<blockquote>&ldquo;Believe you can and you're halfway there.&rdquo; &mdash; <footer>Theodore Roosevelt</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 72,
+        "quote": "Cast all your care upon him; for he careth for you.",
+        "name": "1 Peter 5:7",
+        "characters": 65,
+        "html": "<blockquote>&ldquo;Cast all your care upon him; for he careth for you.&rdquo; &mdash; <footer>1 Peter 5:7</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 73,
+        "quote": "It does not matter how slowly you go as long as you do not stop.",
+        "name": "Confucius",
+        "characters": 69,
+        "html": "<blockquote>&ldquo;It does not matter how slowly you go as long as you do not stop.&rdquo; &mdash; <footer>Confucius</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 74,
+        "quote": "Where there is no vision, the people perish.",
+        "name": "Proverbs 29:18",
+        "characters": 48,
+        "html": "<blockquote>&ldquo;Where there is no vision, the people perish.&rdquo; &mdash; <footer>Proverbs 29:18</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 75,
+        "quote": "The best way to predict the future is to create it.",
+        "name": "Peter Drucker",
+        "characters": 66,
+        "html": "<blockquote>&ldquo;The best way to predict the future is to create it.&rdquo; &mdash; <footer>Peter Drucker</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 76,
+        "quote": "The Lord is my shepherd; I shall not want.",
+        "name": "Psalm 23:1",
+        "characters": 33,
+        "html": "<blockquote>&ldquo;The Lord is my shepherd; I shall not want.&rdquo; &mdash; <footer>Psalm 23:1</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 77,
+        "quote": "Dream big and dare to fail.",
+        "name": "Norman Vaughan",
+        "characters": 35,
+        "html": "<blockquote>&ldquo;Dream big and dare to fail.&rdquo; &mdash; <footer>Norman Vaughan</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 78,
+        "quote": "Thou shalt love thy neighbour as thyself.",
+        "name": "Matthew 22:39",
+        "characters": 36,
+        "html": "<blockquote>&ldquo;Thou shalt love thy neighbour as thyself.&rdquo; &mdash; <footer>Matthew 22:39</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 79,
+        "quote": "Success is not how high you have climbed, but how you make a positive difference to the world.",
+        "name": "Roy T. Bennett",
+        "characters": 99,
+        "html": "<blockquote>&ldquo;Success is not how high you have climbed, but how you make a positive difference to the world.&rdquo; &mdash; <footer>Roy T. Bennett</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 80,
+        "quote": "Be still, and know that I am God.",
+        "name": "Psalm 46:10",
+        "characters": 34,
+        "html": "<blockquote>&ldquo;Be still, and know that I am God.&rdquo; &mdash; <footer>Psalm 46:10</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 81,
+        "quote": "Act as if what you do makes a difference. It does.",
+        "name": "William James",
+        "characters": 70,
+        "html": "<blockquote>&ldquo;Act as if what you do makes a difference. It does.&rdquo; &mdash; <footer>William James</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 82,
+        "quote": "In everything give thanks: for this is the will of God in Christ Jesus concerning you.",
+        "name": "1 Thessalonians 5:18",
+        "characters": 83,
+        "html": "<blockquote>&ldquo;In everything give thanks: for this is the will of God in Christ Jesus concerning you.&rdquo; &mdash; <footer>1 Thessalonians 5:18</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 83,
+        "quote": "What we think, we become.",
+        "name": "Buddha",
+        "characters": 28,
+        "html": "<blockquote>&ldquo;What we think, we become.&rdquo; &mdash; <footer>Buddha</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 84,
+        "quote": "For I know the plans I have for you, saith the Lord.",
+        "name": "Jeremiah 29:11",
+        "characters": 50,
+        "html": "<blockquote>&ldquo;For I know the plans I have for you, saith the Lord.&rdquo; &mdash; <footer>Jeremiah 29:11</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 85,
+        "quote": "Happiness is not something ready made. It comes from your own actions.",
+        "name": "Dalai Lama",
+        "characters": 75,
+        "html": "<blockquote>&ldquo;Happiness is not something ready made. It comes from your own actions.&rdquo; &mdash; <footer>Dalai Lama</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 86,
+        "quote": "And we know that all things work together for good to them that love God.",
+        "name": "Romans 8:28",
+        "characters": 66,
+        "html": "<blockquote>&ldquo;And we know that all things work together for good to them that love God.&rdquo; &mdash; <footer>Romans 8:28</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 87,
+        "quote": "The greatest glory in living lies not in never falling, but in rising every time we fall.",
+        "name": "Nelson Mandela",
+        "characters": 91,
+        "html": "<blockquote>&ldquo;The greatest glory in living lies not in never falling, but in rising every time we fall.&rdquo; &mdash; <footer>Nelson Mandela</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 88,
+        "quote": "Let all your things be done with charity.",
+        "name": "1 Corinthians 16:14",
+        "characters": 38,
+        "html": "<blockquote>&ldquo;Let all your things be done with charity.&rdquo; &mdash; <footer>1 Corinthians 16:14</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 89,
+        "quote": "To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.",
+        "name": "Ralph Waldo Emerson",
+        "characters": 123,
+        "html": "<blockquote>&ldquo;To be yourself in a world that is constantly trying to make you something else is the greatest accomplishment.&rdquo; &mdash; <footer>Ralph Waldo Emerson</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 90,
+        "quote": "The peace of God, which passeth all understanding, shall keep your hearts and minds through Christ Jesus.",
+        "name": "Philippians 4:7",
+        "characters": 103,
+        "html": "<blockquote>&ldquo;The peace of God, which passeth all understanding, shall keep your hearts and minds through Christ Jesus.&rdquo; &mdash; <footer>Philippians 4:7</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 91,
+        "quote": "Life is what happens when you're busy making other plans.",
+        "name": "John Lennon",
+        "characters": 55,
+        "html": "<blockquote>&ldquo;Life is what happens when you're busy making other plans.&rdquo; &mdash; <footer>John Lennon</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 92,
+        "quote": "Trust in the Lord with all thine heart; and lean not unto thine own understanding.",
+        "name": "Proverbs 3:5",
+        "characters": 84,
+        "html": "<blockquote>&ldquo;Trust in the Lord with all thine heart; and lean not unto thine own understanding.&rdquo; &mdash; <footer>Proverbs 3:5</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 93,
+        "quote": "You must be the change you wish to see in the world.",
+        "name": "Mahatma Gandhi",
+        "characters": 55,
+        "html": "<blockquote>&ldquo;You must be the change you wish to see in the world.&rdquo; &mdash; <footer>Mahatma Gandhi</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 94,
+        "quote": "Seek ye first the kingdom of God, and his righteousness; and all these things shall be added unto you.",
+        "name": "Matthew 6:33",
+        "characters": 102,
+        "html": "<blockquote>&ldquo;Seek ye first the kingdom of God, and his righteousness; and all these things shall be added unto you.&rdquo; &mdash; <footer>Matthew 6:33</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 95,
+        "quote": "Don't watch the clock; do what it does. Keep going.",
+        "name": "Sam Levenson",
+        "characters": 56,
+        "html": "<blockquote>&ldquo;Don't watch the clock; do what it does. Keep going.&rdquo; &mdash; <footer>Sam Levenson</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 96,
+        "quote": "Thou wilt keep him in perfect peace, whose mind is stayed on thee.",
+        "name": "Isaiah 26:3",
+        "characters": 72,
+        "html": "<blockquote>&ldquo;Thou wilt keep him in perfect peace, whose mind is stayed on thee.&rdquo; &mdash; <footer>Isaiah 26:3</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 97,
+        "quote": "The only limit to our realization of tomorrow will be our doubts of today.",
+        "name": "Franklin D. Roosevelt",
+        "characters": 83,
+        "html": "<blockquote>&ldquo;The only limit to our realization of tomorrow will be our doubts of today.&rdquo; &mdash; <footer>Franklin D. Roosevelt</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 98,
+        "quote": "Therefore, if any man be in Christ, he is a new creature: old things are passed away; behold, all things are become new.",
+        "name": "2 Corinthians 5:17",
+        "characters": 134,
+        "html": "<blockquote>&ldquo;Therefore, if any man be in Christ, he is a new creature: old things are passed away; behold, all things are become new.&rdquo; &mdash; <footer>2 Corinthians 5:17</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 99,
+        "quote": "The best way to find yourself is to lose yourself in the service of others.",
+        "name": "Mahatma Gandhi",
+        "characters": 83,
+        "html": "<blockquote>&ldquo;The best way to find yourself is to lose yourself in the service of others.&rdquo; &mdash; <footer>Mahatma Gandhi</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 100,
+        "quote": "This too shall pass.",
+        "name": "Persian Proverb",
+        "characters": 24,
+        "html": "<blockquote>&ldquo;This too shall pass.&rdquo; &mdash; <footer>Persian Proverb</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 101,
+        "quote": "If God is for us, who can be against us?",
+        "name": "Romans 8:31",
+        "characters": 43,
+        "html": "<blockquote>&ldquo;If God is for us, who can be against us?&rdquo; &mdash; <footer>Romans 8:31</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 102,
+        "quote": "The only way to have a friend is to be one.",
+        "name": "Ralph Waldo Emerson",
+        "characters": 54,
+        "html": "<blockquote>&ldquo;The only way to have a friend is to be one.&rdquo; &mdash; <footer>Ralph Waldo Emerson</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 103,
+        "quote": "But the fruit of the Spirit is love, joy, peace, longsuffering, gentleness, goodness, faith.",
+        "name": "Galatians 5:22",
+        "characters": 116,
+        "html": "<blockquote>&ldquo;But the fruit of the Spirit is love, joy, peace, longsuffering, gentleness, goodness, faith.&rdquo; &mdash; <footer>Galatians 5:22</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 104,
+        "quote": "Success usually comes to those who are too busy to be looking for it.",
+        "name": "Henry David Thoreau",
+        "characters": 76,
+        "html": "<blockquote>&ldquo;Success usually comes to those who are too busy to be looking for it.&rdquo; &mdash; <footer>Henry David Thoreau</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 105,
+        "quote": "For I am persuaded, that neither death, nor life, nor angels, nor principalities, nor powers, nor things present, nor things to come, shall be able to separate us from the love of God.",
+        "name": "Romans 8:38-39",
+        "characters": 210,
+        "html": "<blockquote>&ldquo;For I am persuaded, that neither death, nor life, nor angels, nor principalities, nor powers, nor things present, nor things to come, shall be able to separate us from the love of God.&rdquo; &mdash; <footer>Romans 8:38-39</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 106,
+        "quote": "What lies behind us and what lies before us are tiny matters compared to what lies within us.",
+        "name": "Ralph Waldo Emerson",
+        "characters": 100,
+        "html": "<blockquote>&ldquo;What lies behind us and what lies before us are tiny matters compared to what lies within us.&rdquo; &mdash; <footer>Ralph Waldo Emerson</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 107,
+        "quote": "Thou shalt not covet thy neighbour's house; thou shalt not covet thy neighbour's wife.",
+        "name": "Exodus 20:17",
+        "characters": 77,
+        "html": "<blockquote>&ldquo;Thou shalt not covet thy neighbour's house; thou shalt not covet thy neighbour's wife.&rdquo; &mdash; <footer>Exodus 20:17</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 108,
+        "quote": "Keep your face always toward the sunshine—and shadows will fall behind you.",
+        "name": "Walt Whitman",
+        "characters": 73,
+        "html": "<blockquote>&ldquo;Keep your face always toward the sunshine—and shadows will fall behind you.&rdquo; &mdash; <footer>Walt Whitman</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 109,
+        "quote": "He that is in you is greater than he that is in the world.",
+        "name": "1 John 4:4",
+        "characters": 56,
+        "html": "<blockquote>&ldquo;He that is in you is greater than he that is in the world.&rdquo; &mdash; <footer>1 John 4:4</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 110,
+        "quote": "You only live once, but if you do it right, once is enough.",
+        "name": "Mae West",
+        "characters": 71,
+        "html": "<blockquote>&ldquo;You only live once, but if you do it right, once is enough.&rdquo; &mdash; <footer>Mae West</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 111,
+        "quote": "Thou shalt have no other gods before me.",
+        "name": "Exodus 20:3",
+        "characters": 38,
+        "html": "<blockquote>&ldquo;Thou shalt have no other gods before me.&rdquo; &mdash; <footer>Exodus 20:3</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 112,
+        "quote": "The best revenge is massive success.",
+        "name": "Frank Sinatra",
+        "characters": 40,
+        "html": "<blockquote>&ldquo;The best revenge is massive success.&rdquo; &mdash; <footer>Frank Sinatra</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 113,
+        "quote": "But seek ye first the kingdom of God, and his righteousness; and all these things shall be added unto you.",
+        "name": "Matthew 6:33",
+        "characters": 102,
+        "html": "<blockquote>&ldquo;But seek ye first the kingdom of God, and his righteousness; and all these things shall be added unto you.&rdquo; &mdash; <footer>Matthew 6:33</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 114,
+        "quote": "Everything you’ve ever wanted is on the other side of fear.",
+        "name": "George Addair",
+        "characters": 67,
+        "html": "<blockquote>&ldquo;Everything you’ve ever wanted is on the other side of fear.&rdquo; &mdash; <footer>George Addair</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 115,
+        "quote": "Rejoice in the Lord always: and again I say, Rejoice.",
+        "name": "Philippians 4:4",
+        "characters": 55,
+        "html": "<blockquote>&ldquo;Rejoice in the Lord always: and again I say, Rejoice.&rdquo; &mdash; <footer>Philippians 4:4</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 116,
+        "quote": "What you get by achieving your goals is not as important as what you become by achieving your goals.",
+        "name": "Zig Ziglar",
+        "characters": 112,
+        "html": "<blockquote>&ldquo;What you get by achieving your goals is not as important as what you become by achieving your goals.&rdquo; &mdash; <footer>Zig Ziglar</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 117,
+        "quote": "The Lord is my light and my salvation; whom shall I fear?",
+        "name": "Psalm 27:1",
+        "characters": 62,
+        "html": "<blockquote>&ldquo;The Lord is my light and my salvation; whom shall I fear?&rdquo; &mdash; <footer>Psalm 27:1</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 118,
+        "quote": "You are never too old to set another goal or to dream a new dream.",
+        "name": "C.S. Lewis",
+        "characters": 69,
+        "html": "<blockquote>&ldquo;You are never too old to set another goal or to dream a new dream.&rdquo; &mdash; <footer>C.S. Lewis</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 119,
+        "quote": "For we walk by faith, not by sight.",
+        "name": "2 Corinthians 5:7",
+        "characters": 36,
+        "html": "<blockquote>&ldquo;For we walk by faith, not by sight.&rdquo; &mdash; <footer>2 Corinthians 5:7</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 120,
+        "quote": "Believe you can and you're halfway there.",
+        "name": "Theodore Roosevelt",
+        "characters": 46,
+        "html": "<blockquote>&ldquo;Believe you can and you're halfway there.&rdquo; &mdash; <footer>Theodore Roosevelt</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 121,
+        "quote": "Cast all your care upon him; for he careth for you.",
+        "name": "1 Peter 5:7",
+        "characters": 50,
+        "html": "<blockquote>&ldquo;Cast all your care upon him; for he careth for you.&rdquo; &mdash; <footer>1 Peter 5:7</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 122,
+        "quote": "Don’t count the days, make the days count.",
+        "name": "Muhammad Ali",
+        "characters": 45,
+        "html": "<blockquote>&ldquo;Don’t count the days, make the days count.&rdquo; &mdash; <footer>Muhammad Ali</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 123,
+        "quote": "I can do all things through Christ which strengtheneth me.",
+        "name": "Philippians 4:13",
+        "characters": 51,
+        "html": "<blockquote>&ldquo;I can do all things through Christ which strengtheneth me.&rdquo; &mdash; <footer>Philippians 4:13</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 124,
+        "quote": "Success is not how high you have climbed, but how you make a positive difference to the world.",
+        "name": "Roy T. Bennett",
+        "characters": 100,
+        "html": "<blockquote>&ldquo;Success is not how high you have climbed, but how you make a positive difference to the world.&rdquo; &mdash; <footer>Roy T. Bennett</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 125,
+        "quote": "And whatsoever ye do, do it heartily, as to the Lord, and not unto men.",
+        "name": "Colossians 3:23",
+        "characters": 85,
+        "html": "<blockquote>&ldquo;And whatsoever ye do, do it heartily, as to the Lord, and not unto men.&rdquo; &mdash; <footer>Colossians 3:23</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 126,
+        "quote": "In the middle of every difficulty lies opportunity.",
+        "name": "Albert Einstein",
+        "characters": 45,
+        "html": "<blockquote>&ldquo;In the middle of every difficulty lies opportunity.&rdquo; &mdash; <footer>Albert Einstein</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 127,
+        "quote": "A soft answer turneth away wrath: but grievous words stir up anger.",
+        "name": "Proverbs 15:1",
+        "characters": 83,
+        "html": "<blockquote>&ldquo;A soft answer turneth away wrath: but grievous words stir up anger.&rdquo; &mdash; <footer>Proverbs 15:1</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 128,
+        "quote": "Act as if what you do makes a difference. It does.",
+        "name": "William James",
+        "characters": 59,
+        "html": "<blockquote>&ldquo;Act as if what you do makes a difference. It does.&rdquo; &mdash; <footer>William James</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 129,
+        "quote": "The Lord is my shepherd; I shall not want.",
+        "name": "Psalm 23:1",
+        "characters": 34,
+        "html": "<blockquote>&ldquo;The Lord is my shepherd; I shall not want.&rdquo; &mdash; <footer>Psalm 23:1</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 130,
+        "quote": "You miss 100% of the shots you don't take.",
+        "name": "Wayne Gretzky",
+        "characters": 43,
+        "html": "<blockquote>&ldquo;You miss 100% of the shots you don't take.&rdquo; &mdash; <footer>Wayne Gretzky</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 131,
+        "quote": "In everything give thanks: for this is the will of God in Christ Jesus concerning you.",
+        "name": "1 Thessalonians 5:18",
+        "characters": 87,
+        "html": "<blockquote>&ldquo;In everything give thanks: for this is the will of God in Christ Jesus concerning you.&rdquo; &mdash; <footer>1 Thessalonians 5:18</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 132,
+        "quote": "What we fear doing most is usually what we most need to do.",
+        "name": "Tim Ferriss",
+        "characters": 66,
+        "html": "<blockquote>&ldquo;What we fear doing most is usually what we most need to do.&rdquo; &mdash; <footer>Tim Ferriss</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 133,
+        "quote": "And ye shall know the truth, and the truth shall make you free.",
+        "name": "John 8:32",
+        "characters": 64,
+        "html": "<blockquote>&ldquo;And ye shall know the truth, and the truth shall make you free.&rdquo; &mdash; <footer>John 8:32</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 134,
+        "quote": "What we think, we become.",
+        "name": "Buddha",
+        "characters": 28,
+        "html": "<blockquote>&ldquo;What we think, we become.&rdquo; &mdash; <footer>Buddha</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 135,
+        "quote": "Come unto me, all ye that labour and are heavy laden, and I will give you rest.",
+        "name": "Matthew 11:28",
+        "characters": 92,
+        "html": "<blockquote>&ldquo;Come unto me, all ye that labour and are heavy laden, and I will give you rest.&rdquo; &mdash; <footer>Matthew 11:28</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 136,
+        "quote": "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+        "name": "Winston S. Churchill",
+        "characters": 81,
+        "html": "<blockquote>&ldquo;Success is not final, failure is not fatal: It is the courage to continue that counts.&rdquo; &mdash; <footer>Winston S. Churchill</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 137,
+        "quote": "The heart knoweth his own bitterness; and a stranger doth not intermeddle with his joy.",
+        "name": "Proverbs 14:10",
+        "characters": 84,
+        "html": "<blockquote>&ldquo;The heart knoweth his own bitterness; and a stranger doth not intermeddle with his joy.&rdquo; &mdash; <footer>Proverbs 14:10</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 138,
+        "quote": "The mind is everything. What you think you become.",
+        "name": "Buddha",
+        "characters": 53,
+        "html": "<blockquote>&ldquo;The mind is everything. What you think you become.&rdquo; &mdash; <footer>Buddha</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 139,
+        "quote": "Thou shalt love thy neighbour as thyself.",
+        "name": "Matthew 22:39",
+        "characters": 40,
+        "html": "<blockquote>&ldquo;Thou shalt love thy neighbour as thyself.&rdquo; &mdash; <footer>Matthew 22:39</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 140,
+        "quote": "The future belongs to those who believe in the beauty of their dreams.",
+        "name": "Eleanor Roosevelt",
+        "characters": 77,
+        "html": "<blockquote>&ldquo;The future belongs to those who believe in the beauty of their dreams.&rdquo; &mdash; <footer>Eleanor Roosevelt</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 141,
+        "quote": "Thy word is a lamp unto my feet, and a light unto my path.",
+        "name": "Psalm 119:105",
+        "characters": 63,
+        "html": "<blockquote>&ldquo;Thy word is a lamp unto my feet, and a light unto my path.&rdquo; &mdash; <footer>Psalm 119:105</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 142,
+        "quote": "Success is how high you bounce when you hit bottom.",
+        "name": "George S. Patton",
+        "characters": 62,
+        "html": "<blockquote>&ldquo;Success is how high you bounce when you hit bottom.&rdquo; &mdash; <footer>George S. Patton</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 143,
+        "quote": "Be still, and know that I am God.",
+        "name": "Psalm 46:10",
+        "characters": 35,
+        "html": "<blockquote>&ldquo;Be still, and know that I am God.&rdquo; &mdash; <footer>Psalm 46:10</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 144,
+        "quote": "The only limit to our realization of tomorrow will be our doubts of today.",
+        "name": "Franklin D. Roosevelt",
+        "characters": 85,
+        "html": "<blockquote>&ldquo;The only limit to our realization of tomorrow will be our doubts of today.&rdquo; &mdash; <footer>Franklin D. Roosevelt</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 145,
+        "quote": "It is better to trust in the Lord than to put confidence in man.",
+        "name": "Psalm 118:8",
+        "characters": 66,
+        "html": "<blockquote>&ldquo;It is better to trust in the Lord than to put confidence in man.&rdquo; &mdash; <footer>Psalm 118:8</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 146,
+        "quote": "Keep your eyes on the stars, and your feet on the ground.",
+        "name": "Theodore Roosevelt",
+        "characters": 58,
+        "html": "<blockquote>&ldquo;Keep your eyes on the stars, and your feet on the ground.&rdquo; &mdash; <footer>Theodore Roosevelt</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 147,
+        "quote": "For God hath not given us the spirit of fear; but of power, and of love, and of a sound mind.",
+        "name": "2 Timothy 1:7",
+        "characters": 91,
+        "html": "<blockquote>&ldquo;For God hath not given us the spirit of fear; but of power, and of love, and of a sound mind.&rdquo; &mdash; <footer>2 Timothy 1:7</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 148,
+        "quote": "Strive not to be a success, but rather to be of value.",
+        "name": "Albert Einstein",
+        "characters": 63,
+        "html": "<blockquote>&ldquo;Strive not to be a success, but rather to be of value.&rdquo; &mdash; <footer>Albert Einstein</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 149,
+        "quote": "The Lord is good, a strong hold in the day of trouble; and he knoweth them that trust in him.",
+        "name": "Nahum 1:7",
+        "characters": 111,
+        "html": "<blockquote>&ldquo;The Lord is good, a strong hold in the day of trouble; and he knoweth them that trust in him.&rdquo; &mdash; <footer>Nahum 1:7</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 150,
+        "quote": "You have to expect things of yourself before you can do them.",
+        "name": "John Steinbeck",
+        "characters": 62,
+        "html": "<blockquote>&ldquo;You have to expect things of yourself before you can do them.&rdquo; &mdash; <footer>John Steinbeck</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 151,
+        "quote": "Trust in the Lord with all thine heart; and lean not unto thine own understanding.",
+        "name": "Proverbs 3:5",
+        "characters": 84,
+        "html": "<blockquote>&ldquo;Trust in the Lord with all thine heart; and lean not unto thine own understanding.&rdquo; &mdash; <footer>Proverbs 3:5</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 152,
+        "quote": "You must be the change you wish to see in the world.",
+        "name": "Mahatma Gandhi",
+        "characters": 57,
+        "html": "<blockquote>&ldquo;You must be the change you wish to see in the world.&rdquo; &mdash; <footer>Mahatma Gandhi</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 153,
+        "quote": "For I know the plans I have for you, saith the Lord, plans to prosper you and not to harm you.",
+        "name": "Jeremiah 29:11",
+        "characters": 97,
+        "html": "<blockquote>&ldquo;For I know the plans I have for you, saith the Lord, plans to prosper you and not to harm you.&rdquo; &mdash; <footer>Jeremiah 29:11</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 154,
+        "quote": "What lies behind us and what lies before us are tiny matters compared to what lies within us.",
+        "name": "Ralph Waldo Emerson",
+        "characters": 96,
+        "html": "<blockquote>&ldquo;What lies behind us and what lies before us are tiny matters compared to what lies within us.&rdquo; &mdash; <footer>Ralph Waldo Emerson</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 155,
+        "quote": "If God is for us, who can be against us?",
+        "name": "Romans 8:31",
+        "characters": 40,
+        "html": "<blockquote>&ldquo;If God is for us, who can be against us?&rdquo; &mdash; <footer>Romans 8:31</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 156,
+        "quote": "Believe you can and you're halfway there.",
+        "name": "Theodore Roosevelt",
+        "characters": 53,
+        "html": "<blockquote>&ldquo;Believe you can and you're halfway there.&rdquo; &mdash; <footer>Theodore Roosevelt</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 157,
+        "quote": "I will never leave thee, nor forsake thee.",
+        "name": "Hebrews 13:5",
+        "characters": 40,
+        "html": "<blockquote>&ldquo;I will never leave thee, nor forsake thee.&rdquo; &mdash; <footer>Hebrews 13:5</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 158,
+        "quote": "Keep your face always toward the sunshine—and shadows will fall behind you.",
+        "name": "Walt Whitman",
+        "characters": 77,
+        "html": "<blockquote>&ldquo;Keep your face always toward the sunshine—and shadows will fall behind you.&rdquo; &mdash; <footer>Walt Whitman</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 159,
+        "quote": "The Lord is my light and my salvation; whom shall I fear?",
+        "name": "Psalm 27:1",
+        "characters": 65,
+        "html": "<blockquote>&ldquo;The Lord is my light and my salvation; whom shall I fear?&rdquo; &mdash; <footer>Psalm 27:1</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 160,
+        "quote": "Success usually comes to those who are too busy to be looking for it.",
+        "name": "Henry David Thoreau",
+        "characters": 70,
+        "html": "<blockquote>&ldquo;Success usually comes to those who are too busy to be looking for it.&rdquo; &mdash; <footer>Henry David Thoreau</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 161,
+        "quote": "And the peace of God, which passeth all understanding, shall keep your hearts and minds through Christ Jesus.",
+        "name": "Philippians 4:7",
+        "characters": 111,
+        "html": "<blockquote>&ldquo;And the peace of God, which passeth all understanding, shall keep your hearts and minds through Christ Jesus.&rdquo; &mdash; <footer>Philippians 4:7</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 162,
+        "quote": "Happiness is not something ready made. It comes from your own actions.",
+        "name": "Dalai Lama",
+        "characters": 73,
+        "html": "<blockquote>&ldquo;Happiness is not something ready made. It comes from your own actions.&rdquo; &mdash; <footer>Dalai Lama</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 163,
+        "quote": "He that dwelleth in the secret place of the most High shall abide under the shadow of the Almighty.",
+        "name": "Psalm 91:1",
+        "characters": 85,
+        "html": "<blockquote>&ldquo;He that dwelleth in the secret place of the most High shall abide under the shadow of the Almighty.&rdquo; &mdash; <footer>Psalm 91:1</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 164,
+        "quote": "You are never too old to set another goal or to dream a new dream.",
+        "name": "C.S. Lewis",
+        "characters": 74,
+        "html": "<blockquote>&ldquo;You are never too old to set another goal or to dream a new dream.&rdquo; &mdash; <footer>C.S. Lewis</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 165,
+        "quote": "But the fruit of the Spirit is love, joy, peace, longsuffering, gentleness, goodness, faith.",
+        "name": "Galatians 5:22",
+        "characters": 110,
+        "html": "<blockquote>&ldquo;But the fruit of the Spirit is love, joy, peace, longsuffering, gentleness, goodness, faith.&rdquo; &mdash; <footer>Galatians 5:22</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 166,
+        "quote": "The greatest glory in living lies not in never falling, but in rising every time we fall.",
+        "name": "Nelson Mandela",
+        "characters": 93,
+        "html": "<blockquote>&ldquo;The greatest glory in living lies not in never falling, but in rising every time we fall.&rdquo; &mdash; <footer>Nelson Mandela</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 167,
+        "quote": "Thou wilt keep him in perfect peace, whose mind is stayed on thee: because he trusteth in thee.",
+        "name": "Isaiah 26:3",
+        "characters": 107,
+        "html": "<blockquote>&ldquo;Thou wilt keep him in perfect peace, whose mind is stayed on thee: because he trusteth in thee.&rdquo; &mdash; <footer>Isaiah 26:3</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 168,
+        "quote": "Success is walking from failure to failure with no loss of enthusiasm.",
+        "name": "Winston S. Churchill",
+        "characters": 72,
+        "html": "<blockquote>&ldquo;Success is walking from failure to failure with no loss of enthusiasm.&rdquo; &mdash; <footer>Winston S. Churchill</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 169,
+        "quote": "The Lord is my strength and my shield; my heart trusted in him, and I am helped.",
+        "name": "Psalm 28:7",
+        "characters": 80,
+        "html": "<blockquote>&ldquo;The Lord is my strength and my shield; my heart trusted in him, and I am helped.&rdquo; &mdash; <footer>Psalm 28:7</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 170,
+        "quote": "It does not matter how slowly you go as long as you do not stop.",
+        "name": "Confucius",
+        "characters": 65,
+        "html": "<blockquote>&ldquo;It does not matter how slowly you go as long as you do not stop.&rdquo; &mdash; <footer>Confucius</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 171,
+        "quote": "The future is as bright as your faith.",
+        "name": "Thomas S. Monson",
+        "characters": 37,
+        "html": "<blockquote>&ldquo;The future is as bright as your faith.&rdquo; &mdash; <footer>Thomas S. Monson</footer></blockquote>",
+        "category": "LDS"
+    },
+    {
+        "id": 172,
+        "quote": "I can do all things through Christ which strengtheneth me.",
+        "name": "Philippians 4:13",
+        "characters": 51,
+        "html": "<blockquote>&ldquo;I can do all things through Christ which strengtheneth me.&rdquo; &mdash; <footer>Philippians 4:13</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 173,
+        "quote": "We are not human beings having a spiritual experience. We are spiritual beings having a human experience.",
+        "name": "Pierre Teilhard de Chardin",
+        "characters": 87,
+        "html": "<blockquote>&ldquo;We are not human beings having a spiritual experience. We are spiritual beings having a human experience.&rdquo; &mdash; <footer>Pierre Teilhard de Chardin</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 174,
+        "quote": "We have a responsibility to take care of one another.",
+        "name": "Dieter F. Uchtdorf",
+        "characters": 54,
+        "html": "<blockquote>&ldquo;We have a responsibility to take care of one another.&rdquo; &mdash; <footer>Dieter F. Uchtdorf</footer></blockquote>",
+        "category": "LDS"
+    },
+    {
+        "id": 175,
+        "quote": "With God, all things are possible.",
+        "name": "Matthew 19:26",
+        "characters": 33,
+        "html": "<blockquote>&ldquo;With God, all things are possible.&rdquo; &mdash; <footer>Matthew 19:26</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 176,
+        "quote": "The greatest gift you can give someone is your time.",
+        "name": "Anonymous",
+        "characters": 60,
+        "html": "<blockquote>&ldquo;The greatest gift you can give someone is your time.&rdquo; &mdash; <footer>Anonymous</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 177,
+        "quote": "Kindness is the essence of greatness.",
+        "name": "Joseph B. Wirthlin",
+        "characters": 42,
+        "html": "<blockquote>&ldquo;Kindness is the essence of greatness.&rdquo; &mdash; <footer>Joseph B. Wirthlin</footer></blockquote>",
+        "category": "LDS"
+    },
+    {
+        "id": 178,
+        "quote": "Be thou humble; and the Lord thy God shall lead thee by the hand.",
+        "name": "D&C 112:10",
+        "characters": 73,
+        "html": "<blockquote>&ldquo;Be thou humble; and the Lord thy God shall lead thee by the hand.&rdquo; &mdash; <footer>D&C 112:10</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 179,
+        "quote": "Life is 10% what happens to us and 90% how we react to it.",
+        "name": "Charles R. Swindoll",
+        "characters": 66,
+        "html": "<blockquote>&ldquo;Life is 10% what happens to us and 90% how we react to it.&rdquo; &mdash; <footer>Charles R. Swindoll</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 180,
+        "quote": "To be of good cheer and to be filled with love is the greatest gift of all.",
+        "name": "Jeffrey R. Holland",
+        "characters": 82,
+        "html": "<blockquote>&ldquo;To be of good cheer and to be filled with love is the greatest gift of all.&rdquo; &mdash; <footer>Jeffrey R. Holland</footer></blockquote>",
+        "category": "LDS"
+    },
+    {
+        "id": 181,
+        "quote": "For we walk by faith, not by sight.",
+        "name": "2 Corinthians 5:7",
+        "characters": 33,
+        "html": "<blockquote>&ldquo;For we walk by faith, not by sight.&rdquo; &mdash; <footer>2 Corinthians 5:7</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 182,
+        "quote": "You are never too old to set another goal or to dream a new dream.",
+        "name": "C.S. Lewis",
+        "characters": 74,
+        "html": "<blockquote>&ldquo;You are never too old to set another goal or to dream a new dream.&rdquo; &mdash; <footer>C.S. Lewis</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 183,
+        "quote": "The Lord will guide you continually, and satisfy your soul in drought.",
+        "name": "Isaiah 58:11",
+        "characters": 82,
+        "html": "<blockquote>&ldquo;The Lord will guide you continually, and satisfy your soul in drought.&rdquo; &mdash; <footer>Isaiah 58:11</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 184,
         "quote": "The best way to predict your future is to create it.",
         "name": "Abraham Lincoln",
         "characters": 66,
         "html": "<blockquote>&ldquo;The best way to predict your future is to create it.&rdquo; &mdash; <footer>Abraham Lincoln</footer></blockquote>",
-        "category": "Future"
+        "category": "Inspirational"
     },
     {
-        "id": 25,
-        "quote": "The only impossible journey is the one you never begin.",
-        "name": "Tony Robbins",
-        "characters": 68,
-        "html": "<blockquote>&ldquo;The only impossible journey is the one you never begin.&rdquo; &mdash; <footer>Tony Robbins</footer></blockquote>",
-        "category": "Motivation"
+        "id": 185,
+        "quote": "The Lord is my shepherd; I shall not want.",
+        "name": "Psalm 23:1",
+        "characters": 37,
+        "html": "<blockquote>&ldquo;The Lord is my shepherd; I shall not want.&rdquo; &mdash; <footer>Psalm 23:1</footer></blockquote>",
+        "category": "Scriptural"
     },
     {
-        "id": 26,
-        "quote": "Success is not the key to happiness. Happiness is the key to success.",
-        "name": "Albert Schweitzer",
-        "characters": 81,
-        "html": "<blockquote>&ldquo;Success is not the key to happiness. Happiness is the key to success.&rdquo; &mdash; <footer>Albert Schweitzer</footer></blockquote>",
-        "category": "Happiness"
+        "id": 186,
+        "quote": "You have not lived today until you have done something for someone who can never repay you.",
+        "name": "John Bunyan",
+        "characters": 92,
+        "html": "<blockquote>&ldquo;You have not lived today until you have done something for someone who can never repay you.&rdquo; &mdash; <footer>John Bunyan</footer></blockquote>",
+        "category": "Inspirational"
     },
     {
-        "id": 27,
-        "quote": "Change your thoughts and you change your world.",
-        "name": "Norman Vincent Peale",
+        "id": 187,
+        "quote": "Let us cheerfully do all things that lie in our power; and then may we stand still, with the utmost assurance, to see the salvation of God.",
+        "name": "D&C 123:17",
+        "characters": 152,
+        "html": "<blockquote>&ldquo;Let us cheerfully do all things that lie in our power; and then may we stand still, with the utmost assurance, to see the salvation of God.&rdquo; &mdash; <footer>D&C 123:17</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 188,
+        "quote": "Faith is taking the first step even when you don't see the whole staircase.",
+        "name": "Martin Luther King Jr.",
+        "characters": 84,
+        "html": "<blockquote>&ldquo;Faith is taking the first step even when you don't see the whole staircase.&rdquo; &mdash; <footer>Martin Luther King Jr.</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 189,
+        "quote": "God does not see as man sees; for man looks at the outward appearance, but the Lord looks at the heart.",
+        "name": "1 Samuel 16:7",
+        "characters": 119,
+        "html": "<blockquote>&ldquo;God does not see as man sees; for man looks at the outward appearance, but the Lord looks at the heart.&rdquo; &mdash; <footer>1 Samuel 16:7</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 190,
+        "quote": "In the end, it's not the years in your life that count. It's the life in your years.",
+        "name": "Abraham Lincoln",
+        "characters": 76,
+        "html": "<blockquote>&ldquo;In the end, it's not the years in your life that count. It's the life in your years.&rdquo; &mdash; <footer>Abraham Lincoln</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 191,
+        "quote": "A man is known by the company he keeps.",
+        "name": "Aesop",
+        "characters": 42,
+        "html": "<blockquote>&ldquo;A man is known by the company he keeps.&rdquo; &mdash; <footer>Aesop</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 192,
+        "quote": "If ye are prepared ye shall not fear.",
+        "name": "D&C 38:30",
+        "characters": 35,
+        "html": "<blockquote>&ldquo;If ye are prepared ye shall not fear.&rdquo; &mdash; <footer>D&C 38:30</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 193,
+        "quote": "Service to others is the rent you pay for your room here on earth.",
+        "name": "Muhammad Ali",
+        "characters": 74,
+        "html": "<blockquote>&ldquo;Service to others is the rent you pay for your room here on earth.&rdquo; &mdash; <footer>Muhammad Ali</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 194,
+        "quote": "What we hope ever to do with ease, we must first learn to do with diligence.",
+        "name": "Samuel Johnson",
+        "characters": 84,
+        "html": "<blockquote>&ldquo;What we hope ever to do with ease, we must first learn to do with diligence.&rdquo; &mdash; <footer>Samuel Johnson</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 195,
+        "quote": "Behold, I am the Lord of the harvest; and it is my privilege to gather the fruits of my vineyard.",
+        "name": "D&C 76:3",
+        "characters": 90,
+        "html": "<blockquote>&ldquo;Behold, I am the Lord of the harvest; and it is my privilege to gather the fruits of my vineyard.&rdquo; &mdash; <footer>D&C 76:3</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 196,
+        "quote": "Our greatest glory is not in never falling, but in rising every time we fall.",
+        "name": "Confucius",
+        "characters": 74,
+        "html": "<blockquote>&ldquo;Our greatest glory is not in never falling, but in rising every time we fall.&rdquo; &mdash; <footer>Confucius</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 197,
+        "quote": "The Spirit of the Lord doth not dwell in unholy temples.",
+        "name": "D&C 93:35",
         "characters": 46,
-        "html": "<blockquote>&ldquo;Change your thoughts and you change your world.&rdquo; &mdash; <footer>Norman Vincent Peale</footer></blockquote>",
-        "category": "Mindset"
+        "html": "<blockquote>&ldquo;The Spirit of the Lord doth not dwell in unholy temples.&rdquo; &mdash; <footer>D&C 93:35</footer></blockquote>",
+        "category": "Scriptural"
     },
     {
-        "id": 28,
-        "quote": "Everything you’ve ever wanted is on the other side of fear.",
-        "name": "George Addair",
+        "id": 198,
+        "quote": "He who is not courageous enough to take risks will accomplish nothing in life.",
+        "name": "Muhammad Ali",
+        "characters": 84,
+        "html": "<blockquote>&ldquo;He who is not courageous enough to take risks will accomplish nothing in life.&rdquo; &mdash; <footer>Muhammad Ali</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 199,
+        "quote": "The Lord is my strength and my shield; my heart trusted in him, and I am helped.",
+        "name": "Psalm 28:7",
+        "characters": 88,
+        "html": "<blockquote>&ldquo;The Lord is my strength and my shield; my heart trusted in him, and I am helped.&rdquo; &mdash; <footer>Psalm 28:7</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 200,
+        "quote": "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+        "name": "Winston S. Churchill",
+        "characters": 85,
+        "html": "<blockquote>&ldquo;Success is not final, failure is not fatal: It is the courage to continue that counts.&rdquo; &mdash; <footer>Winston S. Churchill</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 201,
+        "quote": "Wherefore, ye must press forward with a steadfastness in Christ.",
+        "name": "2 Nephi 31:20",
+        "characters": 67,
+        "html": "<blockquote>&ldquo;Wherefore, ye must press forward with a steadfastness in Christ.&rdquo; &mdash; <footer>2 Nephi 31:20</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 202,
+        "quote": "In every situation, you have a choice.",
+        "name": "Anonymous",
+        "characters": 45,
+        "html": "<blockquote>&ldquo;In every situation, you have a choice.&rdquo; &mdash; <footer>Anonymous</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 203,
+        "quote": "You miss 100% of the shots you don’t take.",
+        "name": "Wayne Gretzky",
+        "characters": 44,
+        "html": "<blockquote>&ldquo;You miss 100% of the shots you don’t take.&rdquo; &mdash; <footer>Wayne Gretzky</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 204,
+        "quote": "I will go before your face. I will be on your right hand and on your left.",
+        "name": "D&C 84:88",
+        "characters": 88,
+        "html": "<blockquote>&ldquo;I will go before your face. I will be on your right hand and on your left.&rdquo; &mdash; <footer>D&C 84:88</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 205,
+        "quote": "We cannot change our past. We can not change the fact that people act in a certain way.",
+        "name": "Stefanie Schneider",
+        "characters": 129,
+        "html": "<blockquote>&ldquo;We cannot change our past. We can not change the fact that people act in a certain way.&rdquo; &mdash; <footer>Stefanie Schneider</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 206,
+        "quote": "The Lord is my light and my salvation; whom shall I fear?",
+        "name": "Psalm 27:1",
+        "characters": 72,
+        "html": "<blockquote>&ldquo;The Lord is my light and my salvation; whom shall I fear?&rdquo; &mdash; <footer>Psalm 27:1</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 207,
+        "quote": "The only way to do great work is to love what you do.",
+        "name": "Steve Jobs",
+        "characters": 71,
+        "html": "<blockquote>&ldquo;The only way to do great work is to love what you do.&rdquo; &mdash; <footer>Steve Jobs</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 208,
+        "quote": "If we are prepared, we shall not fear.",
+        "name": "D&C 38:30",
+        "characters": 33,
+        "html": "<blockquote>&ldquo;If we are prepared, we shall not fear.&rdquo; &mdash; <footer>D&C 38:30</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 209,
+        "quote": "Dream big and dare to fail.",
+        "name": "Norman Vaughan",
+        "characters": 28,
+        "html": "<blockquote>&ldquo;Dream big and dare to fail.&rdquo; &mdash; <footer>Norman Vaughan</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 210,
+        "quote": "Behold, I am with you alway, even unto the end of the world.",
+        "name": "Matthew 28:20",
+        "characters": 70,
+        "html": "<blockquote>&ldquo;Behold, I am with you alway, even unto the end of the world.&rdquo; &mdash; <footer>Matthew 28:20</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 211,
+        "quote": "Success is the sum of small efforts, repeated day in and day out.",
+        "name": "Robert Collier",
+        "characters": 72,
+        "html": "<blockquote>&ldquo;Success is the sum of small efforts, repeated day in and day out.&rdquo; &mdash; <footer>Robert Collier</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 212,
+        "quote": "Faith is not to have a perfect knowledge of things; therefore if ye have faith ye hope for things which are not seen.",
+        "name": "Alma 32:21",
+        "characters": 130,
+        "html": "<blockquote>&ldquo;Faith is not to have a perfect knowledge of things; therefore if ye have faith ye hope for things which are not seen.&rdquo; &mdash; <footer>Alma 32:21</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 213,
+        "quote": "Believe you can and you’re halfway there.",
+        "name": "Theodore Roosevelt",
+        "characters": 41,
+        "html": "<blockquote>&ldquo;Believe you can and you’re halfway there.&rdquo; &mdash; <footer>Theodore Roosevelt</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 214,
+        "quote": "Let us run with patience the race that is set before us.",
+        "name": "Hebrews 12:1",
+        "characters": 63,
+        "html": "<blockquote>&ldquo;Let us run with patience the race that is set before us.&rdquo; &mdash; <footer>Hebrews 12:1</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 215,
+        "quote": "Success is not how high you have climbed, but how you make a positive difference to the world.",
+        "name": "Roy T. Bennett",
+        "characters": 108,
+        "html": "<blockquote>&ldquo;Success is not how high you have climbed, but how you make a positive difference to the world.&rdquo; &mdash; <footer>Roy T. Bennett</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 216,
+        "quote": "The peace of God, which passeth all understanding, shall keep your hearts and minds through Christ Jesus.",
+        "name": "Philippians 4:7",
+        "characters": 103,
+        "html": "<blockquote>&ldquo;The peace of God, which passeth all understanding, shall keep your hearts and minds through Christ Jesus.&rdquo; &mdash; <footer>Philippians 4:7</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 217,
+        "quote": "You cannot swim for new horizons until you have courage to lose sight of the shore.",
+        "name": "William Faulkner",
+        "characters": 85,
+        "html": "<blockquote>&ldquo;You cannot swim for new horizons until you have courage to lose sight of the shore.&rdquo; &mdash; <footer>William Faulkner</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 218,
+        "quote": "For God hath not given us the spirit of fear; but of power, and of love, and of a sound mind.",
+        "name": "2 Timothy 1:7",
+        "characters": 86,
+        "html": "<blockquote>&ldquo;For God hath not given us the spirit of fear; but of power, and of love, and of a sound mind.&rdquo; &mdash; <footer>2 Timothy 1:7</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 219,
+        "quote": "You are braver than you believe, stronger than you seem, and smarter than you think.",
+        "name": "A.A. Milne",
+        "characters": 84,
+        "html": "<blockquote>&ldquo;You are braver than you believe, stronger than you seem, and smarter than you think.&rdquo; &mdash; <footer>A.A. Milne</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 220,
+        "quote": "The Lord is good, a strong hold in the day of trouble; and he knoweth them that trust in him.",
+        "name": "Nahum 1:7",
+        "characters": 97,
+        "html": "<blockquote>&ldquo;The Lord is good, a strong hold in the day of trouble; and he knoweth them that trust in him.&rdquo; &mdash; <footer>Nahum 1:7</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 221,
+        "quote": "Act as if what you do makes a difference. It does.",
+        "name": "William James",
+        "characters": 64,
+        "html": "<blockquote>&ldquo;Act as if what you do makes a difference. It does.&rdquo; &mdash; <footer>William James</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 222,
+        "quote": "The fruit of the Spirit is love, joy, peace, longsuffering, gentleness, goodness, faith.",
+        "name": "Galatians 5:22",
+        "characters": 89,
+        "html": "<blockquote>&ldquo;The fruit of the Spirit is love, joy, peace, longsuffering, gentleness, goodness, faith.&rdquo; &mdash; <footer>Galatians 5:22</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 223,
+        "quote": "It does not matter how slowly you go as long as you do not stop.",
+        "name": "Confucius",
+        "characters": 65,
+        "html": "<blockquote>&ldquo;It does not matter how slowly you go as long as you do not stop.&rdquo; &mdash; <footer>Confucius</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 224,
+        "quote": "For I know the plans I have for you, declares the Lord.",
+        "name": "Jeremiah 29:11",
+        "characters": 70,
+        "html": "<blockquote>&ldquo;For I know the plans I have for you, declares the Lord.&rdquo; &mdash; <footer>Jeremiah 29:11</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 225,
+        "quote": "Happiness is not something ready made. It comes from your own actions.",
+        "name": "Dalai Lama",
+        "characters": 82,
+        "html": "<blockquote>&ldquo;Happiness is not something ready made. It comes from your own actions.&rdquo; &mdash; <footer>Dalai Lama</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 226,
+        "quote": "Be ye doers of the word, and not hearers only.",
+        "name": "James 1:22",
+        "characters": 48,
+        "html": "<blockquote>&ldquo;Be ye doers of the word, and not hearers only.&rdquo; &mdash; <footer>James 1:22</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 227,
+        "quote": "The only limit to our realization of tomorrow will be our doubts of today.",
+        "name": "Franklin D. Roosevelt",
+        "characters": 86,
+        "html": "<blockquote>&ldquo;The only limit to our realization of tomorrow will be our doubts of today.&rdquo; &mdash; <footer>Franklin D. Roosevelt</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 228,
+        "quote": "With God all things are possible.",
+        "name": "Matthew 19:26",
+        "characters": 32,
+        "html": "<blockquote>&ldquo;With God all things are possible.&rdquo; &mdash; <footer>Matthew 19:26</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 229,
+        "quote": "Success usually comes to those who are too busy to be looking for it.",
+        "name": "Henry David Thoreau",
+        "characters": 78,
+        "html": "<blockquote>&ldquo;Success usually comes to those who are too busy to be looking for it.&rdquo; &mdash; <footer>Henry David Thoreau</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 230,
+        "quote": "A time to weep, and a time to laugh; a time to mourn, and a time to dance.",
+        "name": "Ecclesiastes 3:4",
         "characters": 75,
-        "html": "<blockquote>&ldquo;Everything you’ve ever wanted is on the other side of fear.&rdquo; &mdash; <footer>George Addair</footer></blockquote>",
-        "category": "Courage"
+        "html": "<blockquote>&ldquo;A time to weep, and a time to laugh; a time to mourn, and a time to dance.&rdquo; &mdash; <footer>Ecclesiastes 3:4</footer></blockquote>",
+        "category": "Scriptural"
     },
     {
-        "id": 29,
+        "id": 231,
+        "quote": "In the middle of every difficulty lies opportunity.",
+        "name": "Albert Einstein",
+        "characters": 52,
+        "html": "<blockquote>&ldquo;In the middle of every difficulty lies opportunity.&rdquo; &mdash; <footer>Albert Einstein</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 232,
+        "quote": "The Lord is merciful and gracious, slow to anger, and plenteous in mercy.",
+        "name": "Psalm 103:8",
+        "characters": 88,
+        "html": "<blockquote>&ldquo;The Lord is merciful and gracious, slow to anger, and plenteous in mercy.&rdquo; &mdash; <footer>Psalm 103:8</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 233,
+        "quote": "Success is how high you bounce when you hit bottom.",
+        "name": "George S. Patton",
+        "characters": 65,
+        "html": "<blockquote>&ldquo;Success is how high you bounce when you hit bottom.&rdquo; &mdash; <footer>George S. Patton</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 234,
+        "quote": "Be strong and of a good courage; be not afraid, neither be thou dismayed.",
+        "name": "Joshua 1:9",
+        "characters": 80,
+        "html": "<blockquote>&ldquo;Be strong and of a good courage; be not afraid, neither be thou dismayed.&rdquo; &mdash; <footer>Joshua 1:9</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 235,
+        "quote": "Believe you can and you’re halfway there.",
+        "name": "Theodore Roosevelt",
+        "characters": 41,
+        "html": "<blockquote>&ldquo;Believe you can and you’re halfway there.&rdquo; &mdash; <footer>Theodore Roosevelt</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 236,
+        "quote": "The Lord is my shepherd; I shall not want.",
+        "name": "Psalm 23:1",
+        "characters": 37,
+        "html": "<blockquote>&ldquo;The Lord is my shepherd; I shall not want.&rdquo; &mdash; <footer>Psalm 23:1</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 237,
+        "quote": "Keep your face always toward the sunshine—and shadows will fall behind you.",
+        "name": "Walt Whitman",
+        "characters": 81,
+        "html": "<blockquote>&ldquo;Keep your face always toward the sunshine—and shadows will fall behind you.&rdquo; &mdash; <footer>Walt Whitman</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 238,
+        "quote": "Seek ye first the kingdom of God, and his righteousness; and all these things shall be added unto you.",
+        "name": "Matthew 6:33",
+        "characters": 97,
+        "html": "<blockquote>&ldquo;Seek ye first the kingdom of God, and his righteousness; and all these things shall be added unto you.&rdquo; &mdash; <footer>Matthew 6:33</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 239,
+        "quote": "The future belongs to those who believe in the beauty of their dreams.",
+        "name": "Eleanor Roosevelt",
+        "characters": 70,
+        "html": "<blockquote>&ldquo;The future belongs to those who believe in the beauty of their dreams.&rdquo; &mdash; <footer>Eleanor Roosevelt</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 240,
+        "quote": "Behold, the Lord’s hand is not shortened, that it cannot save.",
+        "name": "Isaiah 59:1",
+        "characters": 69,
+        "html": "<blockquote>&ldquo;Behold, the Lord’s hand is not shortened, that it cannot save.&rdquo; &mdash; <footer>Isaiah 59:1</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 241,
+        "quote": "You cannot change your future, but you can change your habits, and surely your habits will change your future.",
+        "name": "John C. Maxwell",
+        "characters": 107,
+        "html": "<blockquote>&ldquo;You cannot change your future, but you can change your habits, and surely your habits will change your future.&rdquo; &mdash; <footer>John C. Maxwell</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 242,
+        "quote": "Trust in the Lord with all thine heart; and lean not unto thine own understanding.",
+        "name": "Proverbs 3:5",
+        "characters": 86,
+        "html": "<blockquote>&ldquo;Trust in the Lord with all thine heart; and lean not unto thine own understanding.&rdquo; &mdash; <footer>Proverbs 3:5</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 243,
+        "quote": "It’s not whether you get knocked down, it’s whether you get up.",
+        "name": "Vince Lombardi",
+        "characters": 61,
+        "html": "<blockquote>&ldquo;It’s not whether you get knocked down, it’s whether you get up.&rdquo; &mdash; <footer>Vince Lombardi</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 244,
+        "quote": "And we know that all things work together for good to them that love God.",
+        "name": "Romans 8:28",
+        "characters": 80,
+        "html": "<blockquote>&ldquo;And we know that all things work together for good to them that love God.&rdquo; &mdash; <footer>Romans 8:28</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 245,
+        "quote": "Success is not final, failure is not fatal: It is the courage to continue that counts.",
+        "name": "Winston S. Churchill",
+        "characters": 85,
+        "html": "<blockquote>&ldquo;Success is not final, failure is not fatal: It is the courage to continue that counts.&rdquo; &mdash; <footer>Winston S. Churchill</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 246,
+        "quote": "For I am not ashamed of the gospel of Christ: for it is the power of God unto salvation to every one that believeth.",
+        "name": "Romans 1:16",
+        "characters": 133,
+        "html": "<blockquote>&ldquo;For I am not ashamed of the gospel of Christ: for it is the power of God unto salvation to every one that believeth.&rdquo; &mdash; <footer>Romans 1:16</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 247,
+        "quote": "Keep your eyes on the stars, and your feet on the ground.",
+        "name": "Theodore Roosevelt",
+        "characters": 66,
+        "html": "<blockquote>&ldquo;Keep your eyes on the stars, and your feet on the ground.&rdquo; &mdash; <footer>Theodore Roosevelt</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 248,
+        "quote": "And now, O Lord, thou art our father; we are the clay, and thou our potter.",
+        "name": "Isaiah 64:8",
+        "characters": 82,
+        "html": "<blockquote>&ldquo;And now, O Lord, thou art our father; we are the clay, and thou our potter.&rdquo; &mdash; <footer>Isaiah 64:8</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 249,
+        "quote": "The future depends on what you do today.",
+        "name": "Mahatma Gandhi",
+        "characters": 42,
+        "html": "<blockquote>&ldquo;The future depends on what you do today.&rdquo; &mdash; <footer>Mahatma Gandhi</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 250,
+        "quote": "I can do all things through Christ which strengtheneth me.",
+        "name": "Philippians 4:13",
+        "characters": 46,
+        "html": "<blockquote>&ldquo;I can do all things through Christ which strengtheneth me.&rdquo; &mdash; <footer>Philippians 4:13</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 251,
+        "quote": "You are never too old to set another goal or to dream a new dream.",
+        "name": "C.S. Lewis",
+        "characters": 79,
+        "html": "<blockquote>&ldquo;You are never too old to set another goal or to dream a new dream.&rdquo; &mdash; <footer>C.S. Lewis</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 252,
+        "quote": "And let us not be weary in well doing: for in due season we shall reap, if we faint not.",
+        "name": "Galatians 6:9",
+        "characters": 105,
+        "html": "<blockquote>&ldquo;And let us not be weary in well doing: for in due season we shall reap, if we faint not.&rdquo; &mdash; <footer>Galatians 6:9</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 253,
+        "quote": "It always seems impossible until it is done.",
+        "name": "Nelson Mandela",
+        "characters": 44,
+        "html": "<blockquote>&ldquo;It always seems impossible until it is done.&rdquo; &mdash; <footer>Nelson Mandela</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 254,
+        "quote": "The Lord is my strength and my shield; my heart trusted in him, and I am helped.",
+        "name": "Psalm 28:7",
+        "characters": 91,
+        "html": "<blockquote>&ldquo;The Lord is my strength and my shield; my heart trusted in him, and I am helped.&rdquo; &mdash; <footer>Psalm 28:7</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 255,
+        "quote": "The way to get started is to quit talking and begin doing.",
+        "name": "Walt Disney",
+        "characters": 61,
+        "html": "<blockquote>&ldquo;The way to get started is to quit talking and begin doing.&rdquo; &mdash; <footer>Walt Disney</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 256,
+        "quote": "And we will be saved, even as they were saved, by the grace of God.",
+        "name": "Mormon 9:21",
+        "characters": 82,
+        "html": "<blockquote>&ldquo;And we will be saved, even as they were saved, by the grace of God.&rdquo; &mdash; <footer>Mormon 9:21</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 257,
+        "quote": "Do not wait to strike till the iron is hot, but make it hot by striking.",
+        "name": "William Butler Yeats",
+        "characters": 82,
+        "html": "<blockquote>&ldquo;Do not wait to strike till the iron is hot, but make it hot by striking.&rdquo; &mdash; <footer>William Butler Yeats</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 258,
+        "quote": "God is our refuge and strength, a very present help in trouble.",
+        "name": "Psalm 46:1",
+        "characters": 70,
+        "html": "<blockquote>&ldquo;God is our refuge and strength, a very present help in trouble.&rdquo; &mdash; <footer>Psalm 46:1</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 259,
+        "quote": "The best way to predict the future is to create it.",
+        "name": "Peter Drucker",
+        "characters": 57,
+        "html": "<blockquote>&ldquo;The best way to predict the future is to create it.&rdquo; &mdash; <footer>Peter Drucker</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 260,
+        "quote": "A faithful man shall abound with blessings.",
+        "name": "Proverbs 28:20",
+        "characters": 41,
+        "html": "<blockquote>&ldquo;A faithful man shall abound with blessings.&rdquo; &mdash; <footer>Proverbs 28:20</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 261,
+        "quote": "What lies behind us and what lies before us are tiny matters compared to what lies within us.",
+        "name": "Ralph Waldo Emerson",
+        "characters": 104,
+        "html": "<blockquote>&ldquo;What lies behind us and what lies before us are tiny matters compared to what lies within us.&rdquo; &mdash; <footer>Ralph Waldo Emerson</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 262,
+        "quote": "There is no fear in love; but perfect love casteth out fear.",
+        "name": "1 John 4:18",
+        "characters": 63,
+        "html": "<blockquote>&ldquo;There is no fear in love; but perfect love casteth out fear.&rdquo; &mdash; <footer>1 John 4:18</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 263,
+        "quote": "You miss 100% of the shots you don’t take.",
+        "name": "Wayne Gretzky",
+        "characters": 43,
+        "html": "<blockquote>&ldquo;You miss 100% of the shots you don’t take.&rdquo; &mdash; <footer>Wayne Gretzky</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 264,
+        "quote": "The Lord shall fight for you, and ye shall hold your peace.",
+        "name": "Exodus 14:14",
+        "characters": 65,
+        "html": "<blockquote>&ldquo;The Lord shall fight for you, and ye shall hold your peace.&rdquo; &mdash; <footer>Exodus 14:14</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 265,
+        "quote": "The greatest glory in living lies not in never falling, but in rising every time we fall.",
+        "name": "Nelson Mandela",
+        "characters": 94,
+        "html": "<blockquote>&ldquo;The greatest glory in living lies not in never falling, but in rising every time we fall.&rdquo; &mdash; <footer>Nelson Mandela</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 266,
+        "quote": "For we walk by faith, not by sight.",
+        "name": "2 Corinthians 5:7",
+        "characters": 37,
+        "html": "<blockquote>&ldquo;For we walk by faith, not by sight.&rdquo; &mdash; <footer>2 Corinthians 5:7</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 267,
+        "quote": "What we think, we become.",
+        "name": "Buddha",
+        "characters": 25,
+        "html": "<blockquote>&ldquo;What we think, we become.&rdquo; &mdash; <footer>Buddha</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 268,
+        "quote": "The Lord is good, a stronghold in the day of trouble; and he knoweth them that trust in him.",
+        "name": "Nahum 1:7",
+        "characters": 104,
+        "html": "<blockquote>&ldquo;The Lord is good, a stronghold in the day of trouble; and he knoweth them that trust in him.&rdquo; &mdash; <footer>Nahum 1:7</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 269,
+        "quote": "Believe in yourself and all that you are. Know that there is something inside you that is greater than any obstacle.",
+        "name": "Christian D. Larson",
+        "characters": 131,
+        "html": "<blockquote>&ldquo;Believe in yourself and all that you are. Know that there is something inside you that is greater than any obstacle.&rdquo; &mdash; <footer>Christian D. Larson</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 270,
+        "quote": "I will lift up mine eyes unto the hills, from whence cometh my help.",
+        "name": "Psalm 121:1",
+        "characters": 67,
+        "html": "<blockquote>&ldquo;I will lift up mine eyes unto the hills, from whence cometh my help.&rdquo; &mdash; <footer>Psalm 121:1</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 271,
         "quote": "Don't watch the clock; do what it does. Keep going.",
         "name": "Sam Levenson",
-        "characters": 68,
+        "characters": 57,
         "html": "<blockquote>&ldquo;Don't watch the clock; do what it does. Keep going.&rdquo; &mdash; <footer>Sam Levenson</footer></blockquote>",
-        "category": "Perseverance"
+        "category": "Inspirational"
     },
     {
-        "id": 30,
-        "quote": "If you can dream it, you can do it.",
-        "name": "Walt Disney",
-        "characters": 38,
-        "html": "<blockquote>&ldquo;If you can dream it, you can do it.&rdquo; &mdash; <footer>Walt Disney</footer></blockquote>",
-        "category": "Dreams"
+        "id": 272,
+        "quote": "A man’s heart deviseth his way: but the Lord directeth his steps.",
+        "name": "Proverbs 16:9",
+        "characters": 74,
+        "html": "<blockquote>&ldquo;A man’s heart deviseth his way: but the Lord directeth his steps.&rdquo; &mdash; <footer>Proverbs 16:9</footer></blockquote>",
+        "category": "Scriptural"
     },
     {
-        "id": 31,
-        "quote": "Success is walking from failure to failure with no loss of enthusiasm.",
-        "name": "Winston S. Churchill",
+        "id": 273,
+        "quote": "The only way to do great work is to love what you do.",
+        "name": "Steve Jobs",
+        "characters": 61,
+        "html": "<blockquote>&ldquo;The only way to do great work is to love what you do.&rdquo; &mdash; <footer>Steve Jobs</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 274,
+        "quote": "Fear thou not; for I am with thee: be not dismayed; for I am thy God.",
+        "name": "Isaiah 41:10",
+        "characters": 85,
+        "html": "<blockquote>&ldquo;Fear thou not; for I am with thee: be not dismayed; for I am thy God.&rdquo; &mdash; <footer>Isaiah 41:10</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 275,
+        "quote": "In the middle of every difficulty lies opportunity.",
+        "name": "Albert Einstein",
+        "characters": 52,
+        "html": "<blockquote>&ldquo;In the middle of every difficulty lies opportunity.&rdquo; &mdash; <footer>Albert Einstein</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 276,
+        "quote": "The Lord is my light and my salvation; whom shall I fear?",
+        "name": "Psalm 27:1",
+        "characters": 74,
+        "html": "<blockquote>&ldquo;The Lord is my light and my salvation; whom shall I fear?&rdquo; &mdash; <footer>Psalm 27:1</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 277,
+        "quote": "What you get by achieving your goals is not as important as what you become by achieving your goals.",
+        "name": "Zig Ziglar",
+        "characters": 118,
+        "html": "<blockquote>&ldquo;What you get by achieving your goals is not as important as what you become by achieving your goals.&rdquo; &mdash; <footer>Zig Ziglar</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 278,
+        "quote": "For with God nothing shall be impossible.",
+        "name": "Luke 1:37",
+        "characters": 39,
+        "html": "<blockquote>&ldquo;For with God nothing shall be impossible.&rdquo; &mdash; <footer>Luke 1:37</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 279,
+        "quote": "You only live once, but if you do it right, once is enough.",
+        "name": "Mae West",
+        "characters": 68,
+        "html": "<blockquote>&ldquo;You only live once, but if you do it right, once is enough.&rdquo; &mdash; <footer>Mae West</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 280,
+        "quote": "With God all things are possible.",
+        "name": "Matthew 19:26",
+        "characters": 32,
+        "html": "<blockquote>&ldquo;With God all things are possible.&rdquo; &mdash; <footer>Matthew 19:26</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 281,
+        "quote": "Strive not to be a success, but rather to be of value.",
+        "name": "Albert Einstein",
+        "characters": 61,
+        "html": "<blockquote>&ldquo;Strive not to be a success, but rather to be of value.&rdquo; &mdash; <footer>Albert Einstein</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 282,
+        "quote": "I will never leave thee, nor forsake thee.",
+        "name": "Hebrews 13:5",
+        "characters": 45,
+        "html": "<blockquote>&ldquo;I will never leave thee, nor forsake thee.&rdquo; &mdash; <footer>Hebrews 13:5</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 283,
+        "quote": "Success usually comes to those who are too busy to be looking for it.",
+        "name": "Henry David Thoreau",
+        "characters": 74,
+        "html": "<blockquote>&ldquo;Success usually comes to those who are too busy to be looking for it.&rdquo; &mdash; <footer>Henry David Thoreau</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 284,
+        "quote": "Thou shalt love thy neighbour as thyself.",
+        "name": "Matthew 22:39",
+        "characters": 37,
+        "html": "<blockquote>&ldquo;Thou shalt love thy neighbour as thyself.&rdquo; &mdash; <footer>Matthew 22:39</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 285,
+        "quote": "Act as if what you do makes a difference. It does.",
+        "name": "William James",
+        "characters": 68,
+        "html": "<blockquote>&ldquo;Act as if what you do makes a difference. It does.&rdquo; &mdash; <footer>William James</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 286,
+        "quote": "I am the way, the truth, and the life: no man cometh unto the Father, but by me.",
+        "name": "John 14:6",
+        "characters": 83,
+        "html": "<blockquote>&ldquo;I am the way, the truth, and the life: no man cometh unto the Father, but by me.&rdquo; &mdash; <footer>John 14:6</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 287,
+        "quote": "Life is either a daring adventure or nothing at all.",
+        "name": "Helen Keller",
+        "characters": 61,
+        "html": "<blockquote>&ldquo;Life is either a daring adventure or nothing at all.&rdquo; &mdash; <footer>Helen Keller</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 288,
+        "quote": "Be of good courage, and he shall strengthen your heart, all ye that hope in the Lord.",
+        "name": "Psalm 31:24",
+        "characters": 90,
+        "html": "<blockquote>&ldquo;Be of good courage, and he shall strengthen your heart, all ye that hope in the Lord.&rdquo; &mdash; <footer>Psalm 31:24</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 289,
+        "quote": "Don’t limit your challenges. Challenge your limits.",
+        "name": "Anonymous",
+        "characters": 59,
+        "html": "<blockquote>&ldquo;Don’t limit your challenges. Challenge your limits.&rdquo; &mdash; <footer>Anonymous</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 290,
+        "quote": "He that hath clean hands and a pure heart; who hath not lifted up his soul unto vanity.",
+        "name": "Psalm 24:4",
+        "characters": 90,
+        "html": "<blockquote>&ldquo;He that hath clean hands and a pure heart; who hath not lifted up his soul unto vanity.&rdquo; &mdash; <footer>Psalm 24:4</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 291,
+        "quote": "Success is how high you bounce when you hit bottom.",
+        "name": "George S. Patton",
+        "characters": 63,
+        "html": "<blockquote>&ldquo;Success is how high you bounce when you hit bottom.&rdquo; &mdash; <footer>George S. Patton</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 292,
+        "quote": "If ye love me, keep my commandments.",
+        "name": "John 14:15",
+        "characters": 39,
+        "html": "<blockquote>&ldquo;If ye love me, keep my commandments.&rdquo; &mdash; <footer>John 14:15</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 293,
+        "quote": "The best revenge is massive success.",
+        "name": "Frank Sinatra",
+        "characters": 43,
+        "html": "<blockquote>&ldquo;The best revenge is massive success.&rdquo; &mdash; <footer>Frank Sinatra</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 294,
+        "quote": "I will sing unto the Lord, for he hath dealt bountifully with me.",
+        "name": "Psalm 13:6",
+        "characters": 60,
+        "html": "<blockquote>&ldquo;I will sing unto the Lord, for he hath dealt bountifully with me.&rdquo; &mdash; <footer>Psalm 13:6</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 295,
+        "quote": "What you do makes a difference, and you have to decide what kind of difference you want to make.",
+        "name": "Jane Goodall",
+        "characters": 117,
+        "html": "<blockquote>&ldquo;What you do makes a difference, and you have to decide what kind of difference you want to make.&rdquo; &mdash; <footer>Jane Goodall</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 296,
+        "quote": "I can be with you, even unto the end of the world.",
+        "name": "Matthew 28:20",
+        "characters": 55,
+        "html": "<blockquote>&ldquo;I can be with you, even unto the end of the world.&rdquo; &mdash; <footer>Matthew 28:20</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 297,
+        "quote": "You are braver than you believe, stronger than you seem, and smarter than you think.",
+        "name": "A.A. Milne",
+        "characters": 90,
+        "html": "<blockquote>&ldquo;You are braver than you believe, stronger than you seem, and smarter than you think.&rdquo; &mdash; <footer>A.A. Milne</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 298,
+        "quote": "The Lord shall be thy confidence, and shall keep thy foot from being taken.",
+        "name": "Proverbs 3:26",
+        "characters": 87,
+        "html": "<blockquote>&ldquo;The Lord shall be thy confidence, and shall keep thy foot from being taken.&rdquo; &mdash; <footer>Proverbs 3:26</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 299,
+        "quote": "Life is 10% what happens to us and 90% how we react to it.",
+        "name": "Charles R. Swindoll",
+        "characters": 66,
+        "html": "<blockquote>&ldquo;Life is 10% what happens to us and 90% how we react to it.&rdquo; &mdash; <footer>Charles R. Swindoll</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 300,
+        "quote": "And we know that we have passed from death unto life, because we love the brethren.",
+        "name": "1 John 3:14",
+        "characters": 96,
+        "html": "<blockquote>&ldquo;And we know that we have passed from death unto life, because we love the brethren.&rdquo; &mdash; <footer>1 John 3:14</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 301,
+        "quote": "The future belongs to those who believe in the beauty of their dreams.",
+        "name": "Eleanor Roosevelt",
+        "characters": 74,
+        "html": "<blockquote>&ldquo;The future belongs to those who believe in the beauty of their dreams.&rdquo; &mdash; <footer>Eleanor Roosevelt</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 302,
+        "quote": "For I know the plans I have for you, saith the Lord, plans to prosper you and not to harm you, plans to give you hope and a future.",
+        "name": "Jeremiah 29:11",
+        "characters": 143,
+        "html": "<blockquote>&ldquo;For I know the plans I have for you, saith the Lord, plans to prosper you and not to harm you, plans to give you hope and a future.&rdquo; &mdash; <footer>Jeremiah 29:11</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 303,
+        "quote": "You are never too old to set another goal or to dream a new dream.",
+        "name": "C.S. Lewis",
+        "characters": 66,
+        "html": "<blockquote>&ldquo;You are never too old to set another goal or to dream a new dream.&rdquo; &mdash; <footer>C.S. Lewis</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 304,
+        "quote": "Draw near unto me and I will draw near unto you.",
+        "name": "Doctrine and Covenants 88:63",
+        "characters": 50,
+        "html": "<blockquote>&ldquo;Draw near unto me and I will draw near unto you.&rdquo; &mdash; <footer>Doctrine and Covenants 88:63</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 305,
+        "quote": "Success is not the key to happiness. Happiness is the key to success.",
+        "name": "Albert Schweitzer",
+        "characters": 83,
+        "html": "<blockquote>&ldquo;Success is not the key to happiness. Happiness is the key to success.&rdquo; &mdash; <footer>Albert Schweitzer</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 306,
+        "quote": "And he said unto me, My grace is sufficient for thee: for my strength is made perfect in weakness.",
+        "name": "2 Corinthians 12:9",
+        "characters": 95,
+        "html": "<blockquote>&ldquo;And he said unto me, My grace is sufficient for thee: for my strength is made perfect in weakness.&rdquo; &mdash; <footer>2 Corinthians 12:9</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 307,
+        "quote": "In three words I can sum up everything I've learned about life: it goes on.",
+        "name": "Robert Frost",
+        "characters": 72,
+        "html": "<blockquote>&ldquo;In three words I can sum up everything I've learned about life: it goes on.&rdquo; &mdash; <footer>Robert Frost</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 308,
+        "quote": "For God hath not given us the spirit of fear; but of power, and of love, and of a sound mind.",
+        "name": "2 Timothy 1:7",
+        "characters": 94,
+        "html": "<blockquote>&ldquo;For God hath not given us the spirit of fear; but of power, and of love, and of a sound mind.&rdquo; &mdash; <footer>2 Timothy 1:7</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 309,
+        "quote": "You can’t use up creativity. The more you use, the more you have.",
+        "name": "Maya Angelou",
+        "characters": 69,
+        "html": "<blockquote>&ldquo;You can’t use up creativity. The more you use, the more you have.&rdquo; &mdash; <footer>Maya Angelou</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 310,
+        "quote": "But they that wait upon the Lord shall renew their strength; they shall mount up with wings as eagles.",
+        "name": "Isaiah 40:31",
+        "characters": 117,
+        "html": "<blockquote>&ldquo;But they that wait upon the Lord shall renew their strength; they shall mount up with wings as eagles.&rdquo; &mdash; <footer>Isaiah 40:31</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 311,
+        "quote": "The only limit to our realization of tomorrow will be our doubts of today.",
+        "name": "Franklin D. Roosevelt",
         "characters": 78,
-        "html": "<blockquote>&ldquo;Success is walking from failure to failure with no loss of enthusiasm.&rdquo; &mdash; <footer>Winston S. Churchill</footer></blockquote>",
-        "category": "Success"
+        "html": "<blockquote>&ldquo;The only limit to our realization of tomorrow will be our doubts of today.&rdquo; &mdash; <footer>Franklin D. Roosevelt</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 312,
+        "quote": "Trust in the Lord with all thine heart; and lean not unto thine own understanding.",
+        "name": "Proverbs 3:5",
+        "characters": 78,
+        "html": "<blockquote>&ldquo;Trust in the Lord with all thine heart; and lean not unto thine own understanding.&rdquo; &mdash; <footer>Proverbs 3:5</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 313,
+        "quote": "The greatest discovery of my generation is that a human being can alter his life by altering his attitude.",
+        "name": "William James",
+        "characters": 119,
+        "html": "<blockquote>&ldquo;The greatest discovery of my generation is that a human being can alter his life by altering his attitude.&rdquo; &mdash; <footer>William James</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 314,
+        "quote": "He will not suffer thy foot to be moved: he that keepeth thee will not slumber.",
+        "name": "Psalm 121:3",
+        "characters": 83,
+        "html": "<blockquote>&ldquo;He will not suffer thy foot to be moved: he that keepeth thee will not slumber.&rdquo; &mdash; <footer>Psalm 121:3</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 315,
+        "quote": "Everything you’ve ever wanted is on the other side of fear.",
+        "name": "George Addair",
+        "characters": 71,
+        "html": "<blockquote>&ldquo;Everything you’ve ever wanted is on the other side of fear.&rdquo; &mdash; <footer>George Addair</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 316,
+        "quote": "My grace is sufficient for thee: for my strength is made perfect in weakness.",
+        "name": "2 Corinthians 12:9",
+        "characters": 91,
+        "html": "<blockquote>&ldquo;My grace is sufficient for thee: for my strength is made perfect in weakness.&rdquo; &mdash; <footer>2 Corinthians 12:9</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 317,
+        "quote": "Life is either a daring adventure or nothing at all.",
+        "name": "Helen Keller",
+        "characters": 61,
+        "html": "<blockquote>&ldquo;Life is either a daring adventure or nothing at all.&rdquo; &mdash; <footer>Helen Keller</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 318,
+        "quote": "Let all your things be done with charity.",
+        "name": "1 Corinthians 16:14",
+        "characters": 39,
+        "html": "<blockquote>&ldquo;Let all your things be done with charity.&rdquo; &mdash; <footer>1 Corinthians 16:14</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 319,
+        "quote": "Don’t be pushed around by the fears in your mind. Be led by the dreams in your heart.",
+        "name": "Roy T. Bennett",
+        "characters": 95,
+        "html": "<blockquote>&ldquo;Don’t be pushed around by the fears in your mind. Be led by the dreams in your heart.&rdquo; &mdash; <footer>Roy T. Bennett</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 320,
+        "quote": "Thou shalt have no other gods before me.",
+        "name": "Exodus 20:3",
+        "characters": 35,
+        "html": "<blockquote>&ldquo;Thou shalt have no other gods before me.&rdquo; &mdash; <footer>Exodus 20:3</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 321,
+        "quote": "This holiday season, may you be filled with peace and joy.",
+        "name": "Unknown",
+        "characters": 61,
+        "html": "<blockquote>&ldquo;This holiday season, may you be filled with peace and joy.&rdquo; &mdash; <footer>Unknown</footer></blockquote>",
+        "category": "Holiday"
+    },
+    {
+        "id": 322,
+        "quote": "The more you praise and celebrate your life, the more there is in life to celebrate.",
+        "name": "Oprah Winfrey",
+        "characters": 82,
+        "html": "<blockquote>&ldquo;The more you praise and celebrate your life, the more there is in life to celebrate.&rdquo; &mdash; <footer>Oprah Winfrey</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 323,
+        "quote": "And now abideth faith, hope, charity, these three; but the greatest of these is charity.",
+        "name": "1 Corinthians 13:13",
+        "characters": 92,
+        "html": "<blockquote>&ldquo;And now abideth faith, hope, charity, these three; but the greatest of these is charity.&rdquo; &mdash; <footer>1 Corinthians 13:13</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 324,
+        "quote": "The magic of Christmas never ends, and its greatest gifts are family and friends.",
+        "name": "Unknown",
+        "characters": 82,
+        "html": "<blockquote>&ldquo;The magic of Christmas never ends, and its greatest gifts are family and friends.&rdquo; &mdash; <footer>Unknown</footer></blockquote>",
+        "category": "Holiday"
+    },
+    {
+        "id": 325,
+        "quote": "The best way to find yourself is to lose yourself in the service of others.",
+        "name": "Mahatma Gandhi",
+        "characters": 82,
+        "html": "<blockquote>&ldquo;The best way to find yourself is to lose yourself in the service of others.&rdquo; &mdash; <footer>Mahatma Gandhi</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 326,
+        "quote": "Rejoice in the Lord always: and again I say, Rejoice.",
+        "name": "Philippians 4:4",
+        "characters": 63,
+        "html": "<blockquote>&ldquo;Rejoice in the Lord always: and again I say, Rejoice.&rdquo; &mdash; <footer>Philippians 4:4</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 327,
+        "quote": "Count your blessings, not your problems.",
+        "name": "Unknown",
+        "characters": 39,
+        "html": "<blockquote>&ldquo;Count your blessings, not your problems.&rdquo; &mdash; <footer>Unknown</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 328,
+        "quote": "Joy to the world! The Lord is come.",
+        "name": "Isaiah 9:2",
+        "characters": 41,
+        "html": "<blockquote>&ldquo;Joy to the world! The Lord is come.&rdquo; &mdash; <footer>Isaiah 9:2</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 329,
+        "quote": "Let it snow! Let it snow! Let it snow!",
+        "name": "Sammy Cahn",
+        "characters": 35,
+        "html": "<blockquote>&ldquo;Let it snow! Let it snow! Let it snow!&rdquo; &mdash; <footer>Sammy Cahn</footer></blockquote>",
+        "category": "Holiday"
+    },
+    {
+        "id": 330,
+        "quote": "When you focus on the good, the good gets better.",
+        "name": "Unknown",
+        "characters": 55,
+        "html": "<blockquote>&ldquo;When you focus on the good, the good gets better.&rdquo; &mdash; <footer>Unknown</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 331,
+        "quote": "With God all things are possible.",
+        "name": "Matthew 19:26",
+        "characters": 37,
+        "html": "<blockquote>&ldquo;With God all things are possible.&rdquo; &mdash; <footer>Matthew 19:26</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 332,
+        "quote": "The heart of Christmas is the spirit of giving.",
+        "name": "Unknown",
+        "characters": 55,
+        "html": "<blockquote>&ldquo;The heart of Christmas is the spirit of giving.&rdquo; &mdash; <footer>Unknown</footer></blockquote>",
+        "category": "Holiday"
+    },
+    {
+        "id": 333,
+        "quote": "The best time to plant a tree was twenty years ago. The second best time is now.",
+        "name": "Chinese Proverb",
+        "characters": 93,
+        "html": "<blockquote>&ldquo;The best time to plant a tree was twenty years ago. The second best time is now.&rdquo; &mdash; <footer>Chinese Proverb</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 334,
+        "quote": "And if it seem evil unto you to serve the Lord, choose you this day whom ye will serve.",
+        "name": "Joshua 24:15",
+        "characters": 105,
+        "html": "<blockquote>&ldquo;And if it seem evil unto you to serve the Lord, choose you this day whom ye will serve.&rdquo; &mdash; <footer>Joshua 24:15</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 335,
+        "quote": "There is nothing cozier than a warm fire on a cold winter's night.",
+        "name": "Unknown",
+        "characters": 70,
+        "html": "<blockquote>&ldquo;There is nothing cozier than a warm fire on a cold winter's night.&rdquo; &mdash; <footer>Unknown</footer></blockquote>",
+        "category": "Holiday"
+    },
+    {
+        "id": 336,
+        "quote": "Act as if what you do makes a difference. It does.",
+        "name": "William James",
+        "characters": 67,
+        "html": "<blockquote>&ldquo;Act as if what you do makes a difference. It does.&rdquo; &mdash; <footer>William James</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 337,
+        "quote": "Give thanks unto the Lord; for he is good; for his mercy endureth forever.",
+        "name": "1 Chronicles 16:34",
+        "characters": 79,
+        "html": "<blockquote>&ldquo;Give thanks unto the Lord; for he is good; for his mercy endureth forever.&rdquo; &mdash; <footer>1 Chronicles 16:34</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 338,
+        "quote": "The best gifts come from the heart.",
+        "name": "Unknown",
+        "characters": 41,
+        "html": "<blockquote>&ldquo;The best gifts come from the heart.&rdquo; &mdash; <footer>Unknown</footer></blockquote>",
+        "category": "Holiday"
+    },
+    {
+        "id": 339,
+        "quote": "Keep your face always toward the sunshine—and shadows will fall behind you.",
+        "name": "Walt Whitman",
+        "characters": 80,
+        "html": "<blockquote>&ldquo;Keep your face always toward the sunshine—and shadows will fall behind you.&rdquo; &mdash; <footer>Walt Whitman</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 340,
+        "quote": "For the Lord God is a sun and shield: the Lord will give grace and glory: no good thing will he withhold from them that walk uprightly.",
+        "name": "Psalm 84:11",
+        "characters": 148,
+        "html": "<blockquote>&ldquo;For the Lord God is a sun and shield: the Lord will give grace and glory: no good thing will he withhold from them that walk uprightly.&rdquo; &mdash; <footer>Psalm 84:11</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 341,
+        "quote": "Christmas is not as much about opening our presents as opening our hearts.",
+        "name": "J. C. Penney",
+        "characters": 83,
+        "html": "<blockquote>&ldquo;Christmas is not as much about opening our presents as opening our hearts.&rdquo; &mdash; <footer>J. C. Penney</footer></blockquote>",
+        "category": "Holiday"
+    },
+    {
+        "id": 342,
+        "quote": "The future belongs to those who believe in the beauty of their dreams.",
+        "name": "Eleanor Roosevelt",
+        "characters": 83,
+        "html": "<blockquote>&ldquo;The future belongs to those who believe in the beauty of their dreams.&rdquo; &mdash; <footer>Eleanor Roosevelt</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 343,
+        "quote": "Rejoice always, pray continually, give thanks in all circumstances; for this is God’s will for you in Christ Jesus.",
+        "name": "1 Thessalonians 5:16-18",
+        "characters": 141,
+        "html": "<blockquote>&ldquo;Rejoice always, pray continually, give thanks in all circumstances; for this is God’s will for you in Christ Jesus.&rdquo; &mdash; <footer>1 Thessalonians 5:16-18</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 344,
+        "quote": "May your heart be light, your days be merry, and may all your Christmases be white.",
+        "name": "Irving Berlin",
+        "characters": 81,
+        "html": "<blockquote>&ldquo;May your heart be light, your days be merry, and may all your Christmases be white.&rdquo; &mdash; <footer>Irving Berlin</footer></blockquote>",
+        "category": "Holiday"
+    },
+    {
+        "id": 345,
+        "quote": "Your present circumstances don’t determine where you can go; they merely determine where you start.",
+        "name": "Nido Qubein",
+        "characters": 109,
+        "html": "<blockquote>&ldquo;Your present circumstances don’t determine where you can go; they merely determine where you start.&rdquo; &mdash; <footer>Nido Qubein</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 346,
+        "quote": "And we know that all things work together for good to them that love God.",
+        "name": "Romans 8:28",
+        "characters": 79,
+        "html": "<blockquote>&ldquo;And we know that all things work together for good to them that love God.&rdquo; &mdash; <footer>Romans 8:28</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 347,
+        "quote": "Celebrate every tiny victory.",
+        "name": "Unknown",
+        "characters": 30,
+        "html": "<blockquote>&ldquo;Celebrate every tiny victory.&rdquo; &mdash; <footer>Unknown</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 348,
+        "quote": "Christmas isn't just a day, it's a frame of mind.",
+        "name": "Valerie S. O. Smith",
+        "characters": 62,
+        "html": "<blockquote>&ldquo;Christmas isn't just a day, it's a frame of mind.&rdquo; &mdash; <footer>Valerie S. O. Smith</footer></blockquote>",
+        "category": "Holiday"
+    },
+    {
+        "id": 349,
+        "quote": "You have brains in your head. You have feet in your shoes. You can steer yourself any direction you choose.",
+        "name": "Dr. Seuss",
+        "characters": 116,
+        "html": "<blockquote>&ldquo;You have brains in your head. You have feet in your shoes. You can steer yourself any direction you choose.&rdquo; &mdash; <footer>Dr. Seuss</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 350,
+        "quote": "God is our refuge and strength, a very present help in trouble.",
+        "name": "Psalm 46:1",
+        "characters": 70,
+        "html": "<blockquote>&ldquo;God is our refuge and strength, a very present help in trouble.&rdquo; &mdash; <footer>Psalm 46:1</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 351,
+        "quote": "The best way to spread Christmas cheer is singing loud for all to hear.",
+        "name": "Elf (Movie)",
+        "characters": 66,
+        "html": "<blockquote>&ldquo;The best way to spread Christmas cheer is singing loud for all to hear.&rdquo; &mdash; <footer>Elf (Movie)</footer></blockquote>",
+        "category": "Holiday"
+    },
+    {
+        "id": 352,
+        "quote": "In the middle of every difficulty lies opportunity.",
+        "name": "Albert Einstein",
+        "characters": 66,
+        "html": "<blockquote>&ldquo;In the middle of every difficulty lies opportunity.&rdquo; &mdash; <footer>Albert Einstein</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 353,
+        "quote": "The Lord is my shepherd; I shall not want.",
+        "name": "Psalm 23:1",
+        "characters": 36,
+        "html": "<blockquote>&ldquo;The Lord is my shepherd; I shall not want.&rdquo; &mdash; <footer>Psalm 23:1</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 354,
+        "quote": "It’s the most wonderful time of the year!",
+        "name": "Edward Pola & George Wyle",
+        "characters": 44,
+        "html": "<blockquote>&ldquo;It’s the most wonderful time of the year!&rdquo; &mdash; <footer>Edward Pola & George Wyle</footer></blockquote>",
+        "category": "Holiday"
+    },
+    {
+        "id": 355,
+        "quote": "Success is not the key to happiness. Happiness is the key to success.",
+        "name": "Albert Schweitzer",
+        "characters": 91,
+        "html": "<blockquote>&ldquo;Success is not the key to happiness. Happiness is the key to success.&rdquo; &mdash; <footer>Albert Schweitzer</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 356,
+        "quote": "For I know the plans I have for you, declares the Lord, plans to prosper you and not to harm you.",
+        "name": "Jeremiah 29:11",
+        "characters": 119,
+        "html": "<blockquote>&ldquo;For I know the plans I have for you, declares the Lord, plans to prosper you and not to harm you.&rdquo; &mdash; <footer>Jeremiah 29:11</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 357,
+        "quote": "May your days be merry and bright.",
+        "name": "Irving Berlin",
+        "characters": 38,
+        "html": "<blockquote>&ldquo;May your days be merry and bright.&rdquo; &mdash; <footer>Irving Berlin</footer></blockquote>",
+        "category": "Holiday"
+    },
+    {
+        "id": 358,
+        "quote": "Success usually comes to those who are too busy to be looking for it.",
+        "name": "Henry David Thoreau",
+        "characters": 74,
+        "html": "<blockquote>&ldquo;Success usually comes to those who are too busy to be looking for it.&rdquo; &mdash; <footer>Henry David Thoreau</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 359,
+        "quote": "He is not here: for he is risen, as he said.",
+        "name": "Matthew 28:6",
+        "characters": 46,
+        "html": "<blockquote>&ldquo;He is not here: for he is risen, as he said.&rdquo; &mdash; <footer>Matthew 28:6</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 360,
+        "quote": "Every time a bell rings, an angel gets his wings.",
+        "name": "It’s a Wonderful Life (Movie)",
+        "characters": 63,
+        "html": "<blockquote>&ldquo;Every time a bell rings, an angel gets his wings.&rdquo; &mdash; <footer>It’s a Wonderful Life (Movie)</footer></blockquote>",
+        "category": "Holiday"
+    },
+    {
+        "id": 361,
+        "quote": "Believe you can and you’re halfway there.",
+        "name": "Theodore Roosevelt",
+        "characters": 52,
+        "html": "<blockquote>&ldquo;Believe you can and you’re halfway there.&rdquo; &mdash; <footer>Theodore Roosevelt</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 362,
+        "quote": "I can do all things through Christ which strengtheneth me.",
+        "name": "Philippians 4:13",
+        "characters": 53,
+        "html": "<blockquote>&ldquo;I can do all things through Christ which strengtheneth me.&rdquo; &mdash; <footer>Philippians 4:13</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 363,
+        "quote": "Happiness is not something ready-made. It comes from your own actions.",
+        "name": "Dalai Lama",
+        "characters": 75,
+        "html": "<blockquote>&ldquo;Happiness is not something ready-made. It comes from your own actions.&rdquo; &mdash; <footer>Dalai Lama</footer></blockquote>",
+        "category": "Inspirational"
+    },
+    {
+        "id": 364,
+        "quote": "This is the day which the Lord hath made; we will rejoice and be glad in it.",
+        "name": "Psalm 118:24",
+        "characters": 77,
+        "html": "<blockquote>&ldquo;This is the day which the Lord hath made; we will rejoice and be glad in it.&rdquo; &mdash; <footer>Psalm 118:24</footer></blockquote>",
+        "category": "Scriptural"
+    },
+    {
+        "id": 365,
+        "quote": "Love one another; as I have loved you.",
+        "name": "John 13:34",
+        "characters": 45,
+        "html": "<blockquote>&ldquo;Love one another; as I have loved you.&rdquo; &mdash; <footer>John 13:34</footer></blockquote>",
+        "category": "Scriptural"
     }
 ]

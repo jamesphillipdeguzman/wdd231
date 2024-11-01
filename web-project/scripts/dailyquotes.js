@@ -46,10 +46,14 @@ fetchDailyQuote(api_url);
 
 // return day today
 function getTodaysDate() {
-    const today = new Date();
-    const day = today.getDate();
-
-    return day;
+    const now = new Date();
+    const start = new Date(now.getFullYear(), 0, 0);
+    const diff = now - start;
+    const oneDay = 1000 * 60 * 60 * 24;
+    const dayOfYear = Math.floor(diff / oneDay);
+    console.log(dayOfYear);
+    // Ensure dayOfYear is between 1 and 365
+    return dayOfYear > 365 ? 365 : dayOfYear;
 }
 
 
@@ -59,9 +63,9 @@ function generateDailyQuote(authors) {
 
     window.addEventListener('load', () => {
         // Hid the number generated
-        // const dayNumber = getTodaysDate();
+        const dayNumber = getTodaysDate();
 
-        // dailyQuote.textContent = `${dayNumber}`;
+        dailyQuote.textContent = `${dayNumber}`;
 
     });
 }
@@ -86,7 +90,7 @@ async function main() {
 
 
 
-// ============== FILTER A MEMBER ====================
+// ============== FILTER BY AUTHOR FOR DAILY QUOTES ====================
 
 const filterAuthors = (authors) => {
 

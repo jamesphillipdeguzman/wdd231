@@ -54,23 +54,38 @@ body {
 /* ================== NAVIGATION ====================== */
 
 #qv-logo {
+
     cursor: pointer;
     box-shadow: none;
     border: none;
+    outline: none;
+    padding-right: 1.2rem;
+    /* Remove outline */
 }
 
 #qv-logolink {
     box-shadow: none;
     border: none;
+    outline: none;
+    /* Remove outline */
 }
+
+/* Additionally, if you want to ensure that there's no outline on focus */
+#qv-logo:focus,
+#qv-logolink:focus {
+    outline: none;
+    /* Remove outline on focus */
+}
+
 
 
 
 
 .navigation {
     display: flex;
-    justify-content: space-around;
+    justify-content: space-between;
     align-items: center;
+    align-content: center;
 
     background-color: var(--primary-color);
     height: auto;
@@ -1414,6 +1429,7 @@ footer {
 
     .navigation .logo {
         display: flex;
+
     }
 
 
@@ -1560,6 +1576,8 @@ footer {
     #highlight.contact-us li {
         font-size: 1.5rem;
     }
+
+
 
 
 
