@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 const numDays = document.querySelector('#numDays');
 
                 if (daysDifference === 0) {
-                    numDays.textContent = `You last visited just today.`;
+                    numDays.textContent = `You last visited today.`;
                     document.getElementById('lastVisit').textContent = `Back so soon? Awesome!`;
                 } else if (daysDifference === 1) {
                     numDays.textContent = `You last visited 1 day ago.`;
