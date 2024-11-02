@@ -1280,6 +1280,10 @@ footer {
 
 }
 
+.weather-data h3 {
+    text-align: center;
+}
+
 
 /* ================== MOBILE VIEW ====================== */
 
