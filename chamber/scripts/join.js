@@ -5,6 +5,7 @@ document.addEventListener('DOMContentLoaded', () => {
     showHideHamburger();
     getDateTimeInfo();
     windowScroll();
+
     // updateText();
 
     // Get date and time format for timestamp
@@ -35,10 +36,15 @@ document.addEventListener('DOMContentLoaded', () => {
 
     // Have all modals display as none
     const hideModal = (modal) => {
+
         modal.classList.remove('show');
+        modal.classList.add('hide');
+
     };
 
     const hideBackDrop = (backdrop) => {
+
+        backdrop.classList.add('hide');
         backdrop.classList.remove('show');
     };
 
@@ -46,8 +52,11 @@ document.addEventListener('DOMContentLoaded', () => {
     [modal1, modal2, modal3, modal4].forEach(modal => hideModal(modal));
     [modalBackdrop1, modalBackdrop2, modalBackdrop3, modalBackdrop4].forEach(backdrop => hideBackDrop(backdrop));
 
+
+
     // Open modal function
     const openModal = (modal, backdrop) => {
+        modal.classList.remove('hide');
         modal.classList.add('show');
         backdrop.classList.add('show');
     };
@@ -56,6 +65,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const closeModal = (modal, backdrop) => {
         hideModal(modal);
         hideBackDrop(backdrop);
+
     };
 
     // Thank you
@@ -96,7 +106,7 @@ document.addEventListener('DOMContentLoaded', () => {
     });
 
     // Close modal when clicking on backdrop
-    modalBackdrop.addEventListener('click', () => closeModal(modal, modalBackdrop));
+    // modalBackdrop.addEventListener('click', () => closeModal(modal, modalBackdrop));
 
     // Non-Profit
     openModalBtnsNonProfit.addEventListener('click', () => openModal(modal1, modalBackdrop1));

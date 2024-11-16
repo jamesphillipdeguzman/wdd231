@@ -981,6 +981,8 @@ body {
     bottom: 0;
     background: rgba(0, 0, 0, 0.5);
     z-index: 1;
+    visibility: hidden;
+    opacity: 0;
 }
 
 .modal {
@@ -993,19 +995,20 @@ body {
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
     z-index: 2;
     width: 400px;
-    visibility: visible;
-    opacity: 1;
+    visibility: hidden;
+    opacity: 0;
 
 }
 
-.modal.hide {
+
+.hide {
 
     visibility: hidden;
     opacity: 0;
     transition: visibility 0s 0.5s, opacity 0.5s linear;
 }
 
-.modal.show {
+.show {
     visibility: visible;
     opacity: 1;
     transition-delay: 0s;
