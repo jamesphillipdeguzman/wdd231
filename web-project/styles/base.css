@@ -1282,7 +1282,9 @@ footer {
 
 }
 
-.social-links img {
+
+.social-links img,
+.footer-links img {
 
     width: 25px;
     height: 25px;
