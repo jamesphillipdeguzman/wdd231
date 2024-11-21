@@ -832,7 +832,7 @@
         "html": "<blockquote>&ldquo;Let us strive to be the best versions of ourselves.&rdquo; &mdash; <footer>Elder Dieter F. Uchtdorf</footer></blockquote>",
         "imageBig": "images/authors/dieter-f-uchtdorf_500x500.png",
         "imageSmall": "images/authors/dieter-f-uchtdorf_200x200.png",
-        "category": "Self-improvement",
+        "category": "Self-Improvement",
         "imageAlt": "A photo of Elder Dieter F. Uchtdorf"
     },
     {
@@ -914,14 +914,14 @@
     },
     {
         "id": 84,
-        "quote": "Trust in the Lord with all your heart.",
-        "name": "Proverbs 3:5",
-        "characters": 39,
-        "html": "<blockquote>&ldquo;Trust in the Lord with all your heart.&rdquo; &mdash; <footer>Proverbs 3:5</footer></blockquote>",
-        "imageBig": "images/authors/proverbs_500x500.png",
-        "imageSmall": "images/authors/proverbs_200x200.png",
+        "quote": "When trust is broken, it’s hard to regain, but trust in God is always well placed, for He will never fail or forsake us.",
+        "name": "Elder Jeffrey R. Holland",
+        "characters": 120,
+        "html": "<blockquote>&ldquo;When trust is broken, it’s hard to regain, but trust in God is always well placed, for He will never fail or forsake us.&rdquo; &mdash; <footer>Elder Jeffrey R. Holland</footer></blockquote>",
+        "imageBig": "images/authors/jeffrey-r-holland_500x500.png",
+        "imageSmall": "images/authors/jeffrey-r-holland_200x200.png",
         "category": "Trust",
-        "imageAlt": "An illustration of Proverbs"
+        "imageAlt": "A photo of Elder Jeffrey R. Holland"
     },
     {
         "id": 85,
@@ -1003,9 +1003,9 @@
     {
         "id": 92,
         "quote": "Charity is the pure love of Christ.",
-        "name": "Elder Moroni",
+        "name": "Moroni",
         "characters": 41,
-        "html": "<blockquote>&ldquo;Charity is the pure love of Christ.&rdquo; &mdash; <footer>Elder Moroni</footer></blockquote>",
+        "html": "<blockquote>&ldquo;Charity is the pure love of Christ.&rdquo; &mdash; <footer>Captain Moroni</footer></blockquote>",
         "imageBig": "images/authors/moroni_500x500.png",
         "imageSmall": "images/authors/moroni_200x200.png",
         "category": "Love",
