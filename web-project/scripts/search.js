@@ -349,7 +349,7 @@ async function fetchAuthorsList() {
         quotes.innerHTML = '';
 
         // Iterate through each business item from your parsed json data...
-        authors.forEach(author => {
+        authors.forEach((author, index) => {
 
 
             quotes.style.display = 'flex';
@@ -380,6 +380,12 @@ async function fetchAuthorsList() {
 
             container.style.fontSize = 'small';
 
+            // Apply light yellow background on even nth-child
+            if (index % 2 === 1) {
+                container.style.backgroundColor = 'lightyellow';
+
+            }
+
 
             // const p = document.createElement('p');
             // p.className = 'authors-labels';
@@ -396,7 +402,7 @@ async function fetchAuthorsList() {
 
             container.innerHTML = ` <ul>
                                     <span class='authors-labels'> ID: </span> <li>${author.id}</li>
-                                    <span class='authors-labels'> Name: </span> <li>${author.name}</li>  
+                                    <span class='authors-labels'> Name: </span> <li><a href='https://en.wikipedia.org/w/index.php?search=${encodeURIComponent(author.name)}' target='_blank'>${author.name}</a></li>  
                                     <span class='authors-labels'> Quote: </span> <li> ${author.quote}</li>
                                     <span class='authors-labels'> Characters: </span> <li>${author.characters}</li> 
                                     <span class='authors-labels'> Category: </span> <li>${author.category}</li> 

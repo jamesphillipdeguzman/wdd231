@@ -51,6 +51,14 @@ body {
     max-width: 100%;
 }
 
+.author-list {
+
+    column-count: 2;
+    gap: 5rem;
+
+
+}
+
 /* ================== NAVIGATION ====================== */
 
 #qv-logo {
@@ -1582,7 +1590,36 @@ footer {
     }
 }
 
+@media (max-width: 628px) {
+
+    .author-list {
+        column-count: 1;
+
+    }
+
+    .author-list li {
+        font-size: 0.9rem;
+
+
+    }
+}
+
 @media (max-width: 480px) {
+
+    blockquote {
+        font-size: 0.8rem;
+    }
+
+    .author-list {
+        column-count: 1;
+
+    }
+
+    .author-list li {
+        font-size: 0.9rem;
+
+
+    }
 
     #highlight.contact-us h1 {
         font-size: 1.8rem;
