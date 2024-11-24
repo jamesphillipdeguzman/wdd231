@@ -426,7 +426,7 @@ footer img {
 
 /* ================= MOBILE VIEW ================= */
 
-@media (max-width: 1300px) {
+@media (max-width: 970px) {
 
     .active::after {
 
