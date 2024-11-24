@@ -358,3 +358,43 @@ function populateCourse() {
 
 // Call function above...
 populateCourse();
+
+
+// Select all course links
+const courseLinks = document.querySelectorAll('.course-link');
+const iframe = document.querySelector('#course-iframe');
+const courseTitle = document.querySelector('#current-course-title');
+
+// Create a dropdown for course selection
+const dropdownCourseList = document.createElement('select');
+dropdownCourseList.id = 'course-dropdown';
+dropdownCourseList.innerHTML = `<option value="">Select a course</option>`;
+
+// Loop through the course links to populate the dropdown
+courseLinks.forEach(link => {
+    const courseName = link.getAttribute('data-course');
+    const courseUrl = link.getAttribute('data-url');
+
+    // Create an option for each course
+    const option = document.createElement('option');
+    option.value = courseUrl;
+    option.textContent = courseName;
+
+    dropdownCourseList.appendChild(option);
+});
+
+// Append the dropdown to a container in the HTML (for example, below the course title)
+document.querySelector('.course-work').insertBefore(dropdownCourseList, courseTitle.nextElementSibling);
+
+// Add event listener to the dropdown to update iframe when a course is selected
+dropdownCourseList.addEventListener('change', (e) => {
+    const selectedUrl = e.target.value;
+
+    // If a valid URL is selected, update iframe and course title
+    if (selectedUrl) {
+        iframe.src = selectedUrl;
+        const selectedOption = e.target.options[e.target.selectedIndex];
+        courseTitle.textContent = `Current Course: ${selectedOption.textContent}`;
+    }
+});
+

@@ -66,13 +66,17 @@
     <div class="page-wrapper">
         <main class="container">
             <section class="course-work">
-                <h3><a href="https://byui-cse.github.io/wdd231-ww-course/week01/" target="_blank">Course Work - WDD
-                        231</a></h3>
-                <ul>
-                    <li>Week 1: Course Home Page</li>
-                    <li>Week 2: Chamber Course Directory Page</li>
-                    <li>Week 3: Chamber Home Page</li>
-                </ul>
+                <h3>Courses</h3>
+                <!-- Course Links -->
+                <h4 id="current-course-title">Select a course to view</h4>
+
+
+
+                <!-- Dynamic iFrame for the selected course -->
+
+                <iframe id="course-iframe" src="" width="100%" height="20rem">
+                    Your browser does not support iframes.
+                </iframe>
 
             </section>
 
@@ -85,6 +89,44 @@
                         <li><a href="#" id="all">All</a></li>
                         <li><a href="#" id="cse">CSE</a></li>
                         <li><a href="#" id="wdd">WDD</a></li>
+                    </ul>
+                    <ul class="mycourses">
+                        <li><a href="https://byui-cse.github.io/cse110-ww-course/" class="course-link"
+                                data-url="https://byui-cse.github.io/cse110-ww-course/" data-course="CSE
+                            110 - Introduction to
+                            Programming">CSE
+                                110 - Introduction to
+                                Programming</a></li>
+                        <li><a href="https://byui-cse.github.io/wdd130-ww-course/" class="course-link"
+                                data-url="https://byui-cse.github.io/wdd130-ww-course/" data-course="WDD
+                            130 - Web
+                            Fundamentals">WDD
+                                130 - Web
+                                Fundamentals</a></li>
+                        <li><a href="https://byui-cse.github.io/cse111-ww-course/" class="course-link"
+                                data-url="https://byui-cse.github.io/cse111-ww-course/" data-course="CSE
+                            111 - Programming
+                            with Functions">CSE
+                                111 - Programming
+                                with Functions</a></li>
+                        <li><a href="https://byui-cse.github.io/cse210-ww-course/" class="course-link"
+                                data-url="https://byui-cse.github.io/cse210-ww-course/" data-course="CSE
+                            210 - Programming
+                            with Classes">CSE
+                                210 - Programming
+                                with Classes</a></li>
+                        <li><a href="https://byui-cse.github.io/wdd131-ww-course/" class="course-link"
+                                data-url="https://byui-cse.github.io/wdd131-ww-course/" data-course="WDD
+                            131 - Dynamic Web
+                            Fundamentals">WDD
+                                131 - Dynamic Web
+                                Fundamentals</a></li>
+                        <li><a href="https://byui-cse.github.io/wdd231-ww-course/" class="course-link"
+                                data-url="https://byui-cse.github.io/wdd231-ww-course/" data-course="WDD
+                            231 - Frontend Web
+                            Development I">WDD
+                                231 - Frontend Web
+                                Development I</a></li>
                     </ul>
                 </nav>
                 <span class="courses"></span>

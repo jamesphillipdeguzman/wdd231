@@ -10,7 +10,8 @@
             "technology": [
                 "Python"
             ],
-            "completed": true
+            "completed": true,
+            "courselink": "https://byui-cse.github.io/cse110-ww-course/"
         },
         {
             "subject": "WDD",
@@ -23,7 +24,8 @@
                 "HTML",
                 "CSS"
             ],
-            "completed": true
+            "completed": true,
+            "courselink": "https://byui-cse.github.io/wdd130-ww-course/"
         },
         {
             "subject": "CSE",
@@ -35,7 +37,8 @@
             "technology": [
                 "Python"
             ],
-            "completed": true
+            "completed": true,
+            "courselink": "https://byui-cse.github.io/cse111-ww-course/"
         },
         {
             "subject": "CSE",
@@ -47,7 +50,8 @@
             "technology": [
                 "C#"
             ],
-            "completed": true
+            "completed": true,
+            "courselink": "https://byui-cse.github.io/cse210-ww-course/"
         },
         {
             "subject": "WDD",
@@ -61,7 +65,8 @@
                 "CSS",
                 "JavaScript"
             ],
-            "completed": true
+            "completed": true,
+            "courselink": "https://byui-cse.github.io/wdd131-ww-course/"
         },
         {
             "subject": "WDD",
@@ -75,7 +80,8 @@
                 "CSS",
                 "JavaScript"
             ],
-            "completed": false
+            "completed": false,
+            "courselink": "https://byui-cse.github.io/wdd231-ww-course/"
         }
     ]
 }
