@@ -85,6 +85,17 @@ header h1 {
 
 }
 
+
+/* ================= NAVIGATION ================= */
+
+
+a {
+    color: white;
+
+}
+
+a:hover {}
+
 nav.top-navlinks {
     align-content: center;
     /* background-color: #bed; */
@@ -415,7 +426,89 @@ footer img {
 
 /* ================= MOBILE VIEW ================= */
 
-@media (max-width: 950px) {
+@media (max-width: 1300px) {
+
+    .active::after {
+
+        content: '📌';
+        /* wayfinder: marks home tab as active */
+        display: block;
+        /* margin-top: -50px;
+        margin-left: -60px; */
+        margin: 0;
+        margin-top: -18px;
+        margin-left: -80px;
+
+    }
+
+    nav.top-navlinks {
+
+        display: block;
+        /* hide the menu by default in mobile view */
+        text-align: center;
+
+
+    }
+
+    nav.top-navlinks ul {
+
+        flex-direction: column;
+        margin: 20px;
+    }
+
+
+    nav.top-navlinks ul li {
+        border-top-left-radius: 0px;
+        border-top-right-radius: 0px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        margin: 10px;
+
+    }
+
+    nav.top-navlinks ul li {
+        display: flex;
+        align-content: center;
+        justify-content: space-around;
+        padding: 0 50px;
+        border: 1px solid #000;
+        /* border: 1px solid #777; */
+        border-top-left-radius: 0px;
+        border-top-right-radius: 15px;
+        border-bottom-left-radius: 0px;
+        border-bottom-right-radius: 0px;
+        background-color: #006eb6;
+        margin: 10px;
+
+        flex: 1;
+    }
+
+    nav.top-navlinks ul li:hover,
+    nav.top-navlinks ul li a:hover {
+        background-color: #931621ff;
+        transition-timing-function: ease-in;
+        transition-delay: 0.1s;
+
+    }
+
+    nav.course-navlinks ul li:hover {
+        background-color: rgba(0, 0, 0, 0.5);
+        color: #fff;
+        transition-timing-function: ease-in;
+        transition-delay: 0.1s;
+        font-weight: 600;
+
+    }
+
+    nav.top-navlinks ul li a {
+        font-size: 0.9rem;
+        background-color: #006eb6;
+        margin: 10px;
+    }
+
+}
+
+@media (max-width: 600px) {
 
     #menu {
 
@@ -429,6 +522,7 @@ footer img {
         position: absolute;
         right: 15px;
         top: 8px;
+
 
     }
 
@@ -457,13 +551,7 @@ footer img {
         display block only activates when top-navlinks have the open class*/
     }
 
-    nav.top-navlinks ul li:hover,
-    nav.top-navlinks ul li a:hover {
-        background-color: #931621ff;
-        transition-timing-function: ease-in;
-        transition-delay: 0.1s;
 
-    }
 
 
     .active::after {
@@ -540,6 +628,14 @@ footer img {
         flex: 1;
     }
 
+    nav.top-navlinks ul li:hover,
+    nav.top-navlinks ul li a:hover {
+        background-color: #931621ff;
+        transition-timing-function: ease-in;
+        transition-delay: 0.1s;
+
+    }
+
     nav.course-navlinks ul li:hover {
         background-color: rgba(0, 0, 0, 0.5);
         color: #fff;
@@ -605,10 +701,6 @@ footer img {
     footer {
         font-size: 0.8rem;
     }
-
-}
-
-@media (max-width: 600px) {
 
     #ilo-img {
         width: 150px;
