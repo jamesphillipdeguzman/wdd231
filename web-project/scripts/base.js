@@ -13,7 +13,7 @@ function getDateTimeInfo() {
 
 
     const lastModified = document.querySelector('#lastModified');
-    lastModified.innerHTML = `<span class="highlight">${formattedDateTime}</span>`;
+    lastModified.innerHTML = document.lastModified;
 
 }
 
