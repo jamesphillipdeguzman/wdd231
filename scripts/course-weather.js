@@ -1,76 +1,52 @@
-const currentTemp = document.querySelector('#current-temp');
-const weatherIcon = document.querySelector('#weather-icon');
-const captionDesc = document.querySelector('figcaption');
-// const lat = 0;
-// const lon = 0;
+const currentTemp = document.querySelector("#current-temp");
+const weatherIcon = document.querySelector("#weather-icon");
+const captionDesc = document.querySelector("figcaption");
+const theCityName = document.querySelector("#city-name");
+
 const apiKey = `0778f1befc62393b4badae75707b09a5`;
 
-function getURL(city) {
-    // API key: 0778f1befc62393b4badae75707b09a5
-    // Iloilo City coordinates
-    // const lat = 10.6918;
-    // const lon = 122.5621;
+// Fetch weather for a given city
+function getURL(city = "Iloilo") {
+  apiFetch(city);
+}
+
+// API call
+async function apiFetch(city) {
+  try {
     const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
+    const response = await fetch(url);
+    if (!response.ok) throw new Error("Failed to fetch weather");
 
-    // alert(`City: ${city} url: ${url}`);
-    apiFetch(city, url);
-    // return url;
+    const data = await response.json();
+    console.table(data);
+    displayResults(data, city);
+  } catch (error) {
+    console.error("Weather API error:", error);
+  }
 }
 
-
-// getURL();
-
-
-async function apiFetch(city, url) {
-    try {
-
-        const url = `https://api.openweathermap.org/data/2.5/weather?q=${city}&units=metric&appid=${apiKey}`;
-        const response = await fetch(url);
-
-        if (!response.ok) {
-            throw new Error('The network could not be reached', await response.text());
-        }
-        else {
-
-            const data = await response.json();
-            console.table(data);
-            // alert('hi there');
-            displayResults(data, city);
-
-        }
-
-
-    }
-    catch (error) {
-        console.error('The error was: ', error);
-    }
-}
-
-// apiFetch();
-
+// Display weather results
 function displayResults(data, city) {
-    const theCityName = document.querySelector('#city-name');
+  theCityName.textContent = city;
 
-    theCityName.innerHTML = `${city}`;
+  const iconsrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
+  const desc = data.weather[0].description;
 
-    const iconsrc = `https://openweathermap.org/img/w/${data.weather[0].icon}.png`;
-    let desc = `${data.weather[0].description}`;
-    weatherIcon.setAttribute('src', iconsrc);
-    weatherIcon.setAttribute('alt', `${data.weather[0].description}`);
-    captionDesc.textContent = `${desc}`;
-    currentTemp.innerHTML = `${data.main.temp}&deg`;
+  weatherIcon.setAttribute("src", iconsrc);
+  weatherIcon.setAttribute("alt", desc);
+  captionDesc.textContent = desc;
 
-
-    const tempInfo = document.createElement('span');
-
-    const tempBox = document.querySelector('.temp-box');
-
-
-    tempInfo.textContent = `${data.main.temp}&deg`;
-
-    tempBox.append(tempInfo);
-
-
+  currentTemp.textContent = `${data.main.temp.toFixed(1)}°C`;
 }
+
+// Connect city dropdown to weather updates
+const citySelect = document.querySelector("#dynamic-cities");
+citySelect?.addEventListener("change", (e) => {
+  const city = e.target.value;
+  if (city) getURL(city);
+});
+
+// Optional: show default city on page load
+getURL(); // Iloilo by default
 
 export { getURL, apiFetch, displayResults };

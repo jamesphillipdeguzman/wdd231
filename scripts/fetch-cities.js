@@ -1,5 +1,6 @@
-// course-cities.js
 import { getURL } from "./course-weather.js";
+
+let allCities = []; // store all cities
 
 async function fetchCities() {
   try {
@@ -7,14 +8,13 @@ async function fetchCities() {
     if (!response.ok) throw new Error("Failed to fetch cities data");
 
     const data = await response.json();
-    const cities = data.cities;
+    allCities = data.cities; // save all cities
 
-    console.table(cities);
-    buildCityDropdown(cities);
-    buildCityGallery(cities);
+    buildCityDropdown(allCities);
+    buildCityGallery(allCities); // show all by default
 
-    // Optionally, load weather for first city by default
-    if (cities.length) getURL(cities[0].name);
+    // Load weather for the first city by default
+    if (allCities.length) getURL(allCities[0].name);
   } catch (error) {
     console.error("Error fetching cities:", error);
   }
@@ -24,7 +24,6 @@ function buildCityDropdown(cities) {
   const selector = document.querySelector("#dynamic-cities");
   if (!selector) return;
 
-  // Clear existing options
   selector.innerHTML = `<option value="">Select a city</option>`;
 
   cities.forEach((city) => {
@@ -36,36 +35,47 @@ function buildCityDropdown(cities) {
 
   selector.addEventListener("change", () => {
     const selectedCity = selector.value;
-    if (selectedCity) getURL(selectedCity);
+    if (selectedCity) {
+      getURL(selectedCity); // update weather
+      filterCityGallery(selectedCity); // filter gallery
+    } else {
+      buildCityGallery(allCities); // show all if none selected
+    }
   });
 }
 
-function buildCityGallery(cities) {
-  const gallery = document.querySelector(".cities-gallery");
-  if (!gallery) return;
+function filterCityGallery(cityName) {
+  const filtered = allCities.filter((city) => city.name === cityName);
+  buildCityGallery(filtered);
+}
 
-  gallery.innerHTML = ""; // Clear existing cards
+function buildCityGallery(cities) {
+  const galleryContainer = document.querySelector(
+    ".cities-gallery .city-cards",
+  );
+  if (!galleryContainer) return;
+
+  galleryContainer.innerHTML = ""; // clear previous cards
 
   cities.forEach((city) => {
     const section = document.createElement("section");
     section.className = "city-section";
 
-    // City Image
+    const wikiLink = document.createElement("a");
+    wikiLink.href = `https://en.wikipedia.org/wiki/${city.name.replace(/ /g, "_")}`;
+    wikiLink.target = "_blank";
+    wikiLink.rel = "noopener noreferrer";
+
     const img = document.createElement("img");
-    img.className = "city-img";
     img.src = city.image;
     img.alt = `The city of ${city.name}`;
-    img.loading = "lazy";
     img.width = 200;
     img.height = 200;
-    img.style.border = "1px solid #ccc";
-    img.style.boxShadow = "0 0 4px #888";
 
-    // City Info
+    wikiLink.appendChild(img);
+
     const infoBox = document.createElement("div");
     infoBox.className = "city-dataBox";
-    infoBox.style.color = "#fff";
-    infoBox.style.fontSize = "0.75rem";
     infoBox.innerHTML = `
       <p><strong>Name:</strong> ${city.name}</p>
       <p><strong>Rank:</strong> ${city.rank}</p>
@@ -75,10 +85,9 @@ function buildCityGallery(cities) {
       <p><strong>Tourist spot:</strong> ${city.tourist_destinations.tourist1}</p>
     `;
 
-    section.append(img, infoBox);
-    gallery.append(section);
+    section.append(wikiLink, infoBox);
+    galleryContainer.appendChild(section);
   });
 }
 
-// Kick off fetching cities
 fetchCities();

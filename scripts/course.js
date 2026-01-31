@@ -18,54 +18,103 @@ async function loadCourses() {
   }
 }
 
-loadCourses();
-
 /* ===============================
    NAVIGATION MENU
 ================================ */
-const hamburgerBtn = document.querySelector("#menu");
-const navigationBtn = document.querySelector(".top-navlinks");
+function setupHamburgerMenu() {
+  const hamburgerBtn = document.querySelector("#menu");
+  const navigationBtn = document.querySelector(".top-navlinks");
 
-if (hamburgerBtn && navigationBtn) {
-  hamburgerBtn.addEventListener("click", () => {
-    hamburgerBtn.classList.toggle("open");
-    navigationBtn.classList.toggle("open");
-  });
+  if (hamburgerBtn && navigationBtn) {
+    hamburgerBtn.addEventListener("click", () => {
+      hamburgerBtn.classList.toggle("open");
+      navigationBtn.classList.toggle("open");
+    });
+  }
 }
 
 /* ===============================
    FOOTER DATES
 ================================ */
-const today = new Date();
-const yearEl = document.querySelector("#currentyear");
-const lastModifiedEl = document.querySelector("#lastModified");
+function setupFooterDates() {
+  const yearEl = document.querySelector("#currentyear");
+  const lastModifiedEl = document.querySelector("#lastModified");
 
-if (yearEl) yearEl.textContent = today.getFullYear();
-if (lastModifiedEl)
-  lastModifiedEl.textContent =
-    today.toLocaleDateString("en-US", {
-      year: "numeric",
-      month: "short",
-      day: "numeric",
-    }) +
-    " " +
-    today.toLocaleTimeString();
+  if (yearEl) yearEl.textContent = new Date().getFullYear();
+
+  if (lastModifiedEl) {
+    const modified = new Date(document.lastModified);
+    lastModifiedEl.textContent =
+      modified.toLocaleDateString("en-US", {
+        year: "numeric",
+        month: "short",
+        day: "numeric",
+      }) +
+      " " +
+      modified.toLocaleTimeString();
+  }
+}
 
 /* ===============================
-   COURSE FILTER BUTTONS
+   COURSE FILTERS + ACTIVE TABS
 ================================ */
-document.querySelector("#all")?.addEventListener("click", (e) => {
-  e.preventDefault();
-  renderAllCourses();
-});
+function setupCourseFilters() {
+  const filterButtons = document.querySelectorAll(".course-navlinks ul li a");
 
-document.querySelector("#cse")?.addEventListener("click", () => {
-  renderFilteredCourses("CSE");
-});
+  filterButtons.forEach((button) => {
+    button.addEventListener("click", (e) => {
+      e.preventDefault();
 
-document.querySelector("#wdd")?.addEventListener("click", () => {
-  renderFilteredCourses("WDD");
-});
+      // Remove active from all filters
+      filterButtons.forEach((btn) => btn.classList.remove("active"));
+
+      // Add active to clicked filter
+      button.classList.add("active");
+
+      // Render courses
+      const id = button.id;
+      switch (id) {
+        case "all":
+          renderAllCourses();
+          break;
+        case "cse":
+          renderFilteredCourses("CSE");
+          break;
+        case "wdd":
+          renderFilteredCourses("WDD");
+          break;
+      }
+    });
+  });
+}
+
+/* ----------------------------
+   ACTIVE TAB FOR NAV MENUS
+----------------------------- */
+function setupActiveMenu(selector) {
+  const links = document.querySelectorAll(selector);
+
+  links.forEach((link) => {
+    link.addEventListener("click", (e) => {
+      // Skip external links
+      if (link.hostname !== window.location.hostname) return;
+
+      e.preventDefault();
+
+      // Remove active from all links
+      links.forEach((l) => l.classList.remove("active"));
+
+      // Add active to clicked link
+      link.classList.add("active");
+
+      // Navigate if internal link
+      const href = link.getAttribute("href");
+      if (!href.startsWith("#")) {
+        window.location.href = href;
+      }
+    });
+  });
+}
 
 /* ===============================
    COURSE RENDERING
@@ -89,35 +138,56 @@ function renderCourses(courseList, showCompletedTotal) {
   let totalCredits = 0;
   let completedCredits = 0;
 
+  // Group courses by certificate
+  const coursesByCertificate = {};
   courseList.forEach((course) => {
-    const li = document.createElement("li");
-    li.classList.add("course");
-
-    // Determine class based on status
-    let statusClass = "";
-    switch (course.status) {
-      case "Complete":
-        statusClass = "complete"; // green
-        completedCredits += course.credits;
-        break;
-      case "In Progress":
-        statusClass = "in-progress"; // yellow
-        break;
-      case "Not Started":
-      default:
-        statusClass = "not-started"; // gray/orange
+    if (!coursesByCertificate[course.certificate]) {
+      coursesByCertificate[course.certificate] = [];
     }
-
-    li.classList.add(statusClass);
-
-    li.innerHTML = `
-      <span>${course.certificate} - ${course.subject} ${course.number} - (${course.title}) - ${course.credits} credits</span>
-      <span class="status-badge">${course.status}</span>
-    `;
-
-    container.appendChild(li);
-    totalCredits += course.credits;
+    coursesByCertificate[course.certificate].push(course);
   });
+
+  // Render courses grouped by certificate
+  for (const [certificate, courses] of Object.entries(coursesByCertificate)) {
+    // Certificate subheader
+    const certHeader = document.createElement("li");
+    certHeader.classList.add("course", "certificate-header");
+    certHeader.textContent = certificate;
+    container.appendChild(certHeader);
+
+    // Render each course under this certificate
+    courses.forEach((course) => {
+      const li = document.createElement("li");
+      li.classList.add("course");
+
+      let statusClass = "";
+      switch (course.status) {
+        case "Complete":
+          statusClass = "complete"; // green
+          completedCredits += course.credits;
+          break;
+        case "In Progress":
+          statusClass = "in-progress"; // yellow
+          break;
+        case "Not Started":
+        default:
+          statusClass = "not-started"; // gray/orange
+      }
+      li.classList.add(statusClass);
+
+      li.innerHTML = `
+        <span>
+          <strong><a href="${course.courselink}" target="_blank" rel="noopener noreferrer">
+            ${course.subject} ${course.number}
+          </a></strong> - (${course.title}) - ${course.credits} credits
+        </span>
+        <span class="status-badge">${course.status}</span>
+      `;
+
+      container.appendChild(li);
+      totalCredits += course.credits;
+    });
+  }
 
   // Add summary
   const summary = document.createElement("li");
@@ -153,10 +223,21 @@ function buildCourseDropdown() {
 
   select.addEventListener("change", (e) => {
     if (!e.target.value) return;
-
     iframe.src = e.target.value;
     title.textContent = `Current Course: ${
       e.target.options[e.target.selectedIndex].text
     }`;
   });
 }
+
+/* ===============================
+   INITIALIZE EVERYTHING
+================================ */
+document.addEventListener("DOMContentLoaded", () => {
+  setupHamburgerMenu();
+  setupFooterDates();
+  setupCourseFilters();
+  setupActiveMenu(".course-navlinks ul li a");
+  setupActiveMenu("nav.top-navlinks ul li a");
+  loadCourses();
+});

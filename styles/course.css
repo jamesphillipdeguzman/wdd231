@@ -12,7 +12,7 @@ body {
   background-color: #f4f6f8;
   color: #333;
   line-height: 1.5;
-  margin-top: 10px;
+  min-height: 100vh;
 }
 
 a {
@@ -22,35 +22,39 @@ a {
 
 /* ================= HEADER ================= */
 header {
+  position: sticky;
+  top: 0;
+  z-index: 999;
+  background-color: #f4f6f8;
+  padding: 10px 0;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 100%;
 }
 
 .hero {
   display: flex;
   flex-direction: column;
   align-items: center;
-  margin-bottom: 15px;
+  gap: 10px;
 }
 
 .hero img {
   border-radius: 50%;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
-  height: 120px;
   width: 120px;
+  height: 120px;
   object-fit: cover;
-  margin-bottom: 10px;
 }
 
 .hero h1 {
   font-size: 2rem;
   text-align: center;
   color: #1a1a1a;
-  margin-bottom: 10px;
 }
 
+/* Hamburger menu */
 #menu {
   display: none;
 }
@@ -59,11 +63,10 @@ header {
 nav.top-navlinks ul {
   display: flex;
   list-style: none;
-  padding: 10px 0;
-  margin-bottom: 20px;
   gap: 10px;
   flex-wrap: wrap;
   justify-content: center;
+  padding: 10px 0;
 }
 
 nav.top-navlinks ul li {
@@ -72,8 +75,8 @@ nav.top-navlinks ul li {
   border-radius: 8px;
   background-color: #006eb6;
   transition:
-    background-color 0.3s ease,
-    transform 0.2s ease;
+    background-color 0.3s,
+    transform 0.2s;
 }
 
 nav.top-navlinks ul li:hover {
@@ -103,7 +106,7 @@ nav.top-navlinks ul li a {
   gap: 20px;
   max-width: 1200px;
   margin: 0 auto;
-  padding: 0 10px;
+  padding: 0 10px 20px;
 }
 
 main.container {
@@ -120,11 +123,94 @@ aside {
   gap: 15px;
 }
 
-/* ================= COURSES ================= */
+/* ------------------------------
+   TOP SECTION: Weather + Course Dropdown
+--------------------------------*/
+.top-section {
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+  width: 100%;
+  padding: 10px 0;
+}
+
+/* Weather Widget Styling */
+.weather-widget {
+  background-color: #fff;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.weather-widget h3 {
+  margin-bottom: 8px;
+}
+
+.weather-widget figure {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.weather-widget figcaption {
+  font-size: 0.85rem;
+  color: #555;
+}
+
+.weather-widget .temp-box p {
+  font-weight: 500;
+}
+
+/* ---------------- COURSES ---------------- */
+.course-work {
+  background-color: #f9f9f9;
+  border-radius: 8px;
+  padding: 15px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+}
+
+#course-iframe {
+  border: none;
+  width: 100%;
+  height: 60vh;
+  min-height: 500px;
+}
+
+.courses-taken .course-navlinks ul {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  padding: 0;
+  list-style: none;
+  margin-bottom: 15px;
+}
+
+.courses-taken .course-navlinks ul li a {
+  display: block;
+  padding: 8px 16px;
+  background-color: #006eb6;
+  color: #fff;
+  font-weight: 600;
+  border-radius: 5px;
+  text-align: center;
+  transition:
+    background-color 0.3s,
+    transform 0.2s;
+}
+
+.courses-taken .course-navlinks ul li a:hover,
+.courses-taken .course-navlinks ul li a.active {
+  background-color: #004a80;
+  transform: translateY(-2px);
+  cursor: pointer;
+}
+
+/* Individual course cards */
 .course {
   list-style: none;
   padding: 10px 15px;
-  margin: 10px;
+  margin: 10px 0;
   border-radius: 8px;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   background-color: #fff;
@@ -145,7 +231,6 @@ aside {
 .complete {
   border-left: 5px solid #4caf50;
 }
-
 .complete .status-badge {
   background-color: #4caf50;
 }
@@ -153,139 +238,127 @@ aside {
 .in-progress {
   border-left: 5px solid #ffc107;
 }
-
 .in-progress .status-badge {
   background-color: #ffc107;
   color: #000;
 }
 
 .not-started {
-  border-left: 5px solid #9e9e9e; /* gray left border */
+  border-left: 5px solid #9e9e9e;
 }
-
 .not-started .status-badge {
-  background-color: #9e9e9e; /* gray badge */
+  background-color: #9e9e9e;
   color: #fff;
 }
 
-/* example for total summary */
-.summary {
-  text-align: center;
-  font-weight: bold;
-  background-color: #eee;
-  border-radius: 5px;
-  padding: 10px;
+/* ---------------- CERTIFICATES ---------------- */
+.certificates {
+  background-color: #e3f2fd;
+  padding: 15px;
+  border-radius: 8px;
+  margin-bottom: 20px;
 }
 
-#course-iframe {
-  border: none;
-  width: 100%;
-  height: 60vh; /* Use viewport height for more space */
-  min-height: 500px; /* Ensure minimum height */
+.certificate-list li {
+  margin-bottom: 15px;
+  font-size: 0.95rem;
 }
 
-/* ================= COURSE DROPDOWN ================= */
-#course-dropdown {
-  display: block;
-  width: 100%;
-  padding: 8px 12px;
-  margin: 10px 0;
-  border-radius: 5px;
-  border: 1px solid #ccc;
-  font-size: 1rem;
+.certificate-list a {
+  color: #006eb6;
+  text-decoration: underline;
+  font-weight: 500;
 }
 
-/* ================= CITY GALLERY ================= */
-/* Make cities appear below the iframe */
-.cities-section {
-  margin-top: 2rem;
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-  width: 100%;
+.certificate-list a:hover {
+  color: #004a80;
 }
 
+/* ---------------- CITY GALLERY ---------------- */
 .cities-gallery {
   display: flex;
-  flex-wrap: wrap; /* stack nicely */
+  flex-direction: column;
+  gap: 10px;
+}
+
+.city-cards {
+  display: flex;
+  flex-wrap: wrap;
   gap: 1rem;
-  justify-content: flex-start;
+  justify-content: center;
 }
 
 .city-section {
+  background-color: #28464b;
+  color: #fff;
+  width: 200px;
+  border-radius: 8px;
+  overflow: hidden;
   display: flex;
   flex-direction: column;
   align-items: center;
-  background-color: #28464b;
   padding: 10px;
-  border-radius: 5px;
-  width: 200px;
-  color: #fff;
+  transition:
+    transform 0.2s,
+    box-shadow 0.2s;
 }
 
-.city-img {
+.city-section img {
   width: 100%;
   height: auto;
   border-radius: 5px;
-  margin-bottom: 5px;
+  margin-bottom: 8px;
+  object-fit: cover;
+  cursor: pointer;
 }
 
-/* ================= FIGURES ================= */
-figure {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
-figcaption {
-  font-size: 0.85rem;
-  font-style: italic;
+.city-dataBox {
   text-align: center;
-  margin-top: 5px;
+  font-size: 0.8rem;
+  width: 100%;
+  line-height: 1.2;
+  color: #fff;
 }
 
-/* ================= FOOTER ================= */
+/* ---------------- FOOTER ---------------- */
 footer {
   background-color: #1a1a1a;
   color: #fff;
   text-align: center;
-  padding: 15px;
-  margin-top: 20px;
-}
-
-footer img {
-  height: auto;
-  width: 25px;
-  vertical-align: middle;
-  margin-left: 5px;
+  padding: 15px 10px;
+  margin-top: auto;
 }
 
 /* ================= RESPONSIVE ================= */
+/* Medium screens */
 @media (max-width: 1000px) {
   .page-wrapper {
     flex-direction: column;
   }
 
-  nav.top-navlinks ul {
-    flex-direction: column;
-    gap: 5px;
+  .city-section {
+    flex: 1 1 45%;
+    max-width: 300px;
+    color: #000;
+    background-color: #fff;
+  }
+
+  .city-dataBox {
+    color: #000;
   }
 }
 
+/* Small screens */
 @media (max-width: 600px) {
   .hero h1 {
     font-size: 1.5rem;
   }
-
   #menu {
     display: block;
     font-size: 2rem;
     position: absolute;
     right: 15px;
     top: 8px;
-    background: none;
-    border: none;
-    cursor: pointer;
   }
 
   nav.top-navlinks {
@@ -293,7 +366,6 @@ footer img {
     flex-direction: column;
     align-items: center;
   }
-
   nav.top-navlinks.open {
     display: flex;
   }
@@ -303,8 +375,71 @@ footer img {
     font-size: 0.9rem;
   }
 
-  .cities-gallery {
+  /* Stack city cards vertically */
+  .city-cards {
+    flex-direction: column;
+    width: 100%;
+  }
+  .city-section {
+    width: 90%;
+    margin: 0 auto;
+    background-color: #fff;
+    color: #000;
+  }
+  .city-dataBox {
+    color: #000;
+  }
+  .cities-gallery select {
+    width: 100%;
+  }
+}
+
+/* Extra small screens */
+@media (max-width: 320px) {
+  .hero img {
+    width: 70px;
+    height: 70px;
+  }
+  .hero h1 {
+    font-size: 1.1rem;
+  }
+  nav.top-navlinks ul li a {
+    font-size: 0.85rem;
+    padding: 6px 8px;
+  }
+
+  #course-iframe {
+    height: 35vh;
+    min-height: 300px;
+  }
+
+  .city-section {
+    width: 100%;
+    max-width: 100%;
+    text-align: center;
+  }
+  .city-dataBox {
+    font-size: 0.8rem;
+  }
+
+  .weather-widget figure {
     flex-direction: column;
     align-items: center;
+    gap: 5px;
+  }
+  .weather-widget img {
+    max-width: 50px;
+    height: auto;
+  }
+  .weather-widget .temp-box p {
+    font-size: 0.8rem;
+    text-align: center;
+  }
+}
+/* Remove sticky on ultra-small screens */
+@media (max-width: 1000px) {
+  header {
+    position: static; /* no sticky */
+    box-shadow: none; /* optional: remove shadow to reduce clutter */
   }
 }
