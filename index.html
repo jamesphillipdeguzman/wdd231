@@ -2,63 +2,40 @@
 <html lang="en-US">
 
 <head>
-    <title>James De Guzman's Course Page</title>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="WDD231 | James Phillip De Guzman | Web and Computer Programming">
-    <meta name="author"
-        content="James Phillip De Guzman is a BYU-Idaho hero pursuing his first certificate, Web and Computer Programming">
-    <meta property="og:title" content="James De Guzman's Course Page">
-    <meta property="og:description" content="WDD231 | James Phillip De Guzman | Web and Frontend Development I">
-    <meta property="og:image" content="https://jamesdeguzman.com/images/project-images/portfolio-7.webp">
-    <meta property="og:url" content="https://jamesphillipdeguzman.github.io/wdd231/index.html">
-    <meta property="og:type" content="website">
-    <meta property="og:site-name" content="https://jamesdeguzman.com/">
-
-
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+    <title>James De Guzman's Course Page</title>
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/course.css">
-
     <link rel="icon" href="images/favicon.ico" type="image/x-icon">
 
-    <!-- ** 1) Run script to populate the dropdown for the cities ** -->
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Scripts -->
     <script src="scripts/fetch-cities.js" type="module"></script>
-    <!-- ** 2) Then, run script to get weather info for Iloilo ** -->
     <script src="scripts/course-weather.js" defer></script>
-    <!-- ** 3) Finally, load default script to show my courses ** -->
     <script src="scripts/course.js" defer></script>
-
-
-
 </head>
 
 <body>
     <header>
         <div class="hero">
-
             <picture>
-                <source srcset="images/james-close-up.webp" media="(max-width: 950px)">
-                <img src="images/james.webp" alt="A solo picture of James De Guzman wearing a WNS jacket and BYU shirt"
-                    height="100" width="100">
+                <source srcset="images/james-close-up.webp" media="(max-width:950px)">
+                <img src="images/james.webp" alt="James De Guzman" width="100" height="100">
             </picture>
-
-
             <h1>James De Guzman's Course Page</h1>
             <button id="menu" aria-label="menu"></button>
-
         </div>
         <nav class="top-navlinks">
             <ul>
-                <li><a href="index.html" id="home" class="active">Home</a></li>
-                <li><a href="https://jamesphillipdeguzman.github.io/wdd231/chamber/index.html" id="chamber">Chamber</a>
-                </li>
-                <li><a href="https://github.com/jamesphillipdeguzman/wdd231" id="github-profile">GitHub</a></li>
-                <li><a href="https://www.linkedin.com/in/jamesphillipdeguzman/" id="linkedin">LinkedIn</a></li>
+                <li><a href="index.html" class="active">Home</a></li>
+                <li><a href="chamber/index.html">Chamber</a></li>
+                <li><a href="https://github.com/jamesphillipdeguzman/wdd231">GitHub</a></li>
+                <li><a href="https://www.linkedin.com/in/jamesphillipdeguzman/">LinkedIn</a></li>
             </ul>
         </nav>
     </header>
@@ -66,115 +43,45 @@
     <div class="page-wrapper">
         <main class="container">
 
+            <!-- Courses Taken -->
             <section class="courses-taken">
-                <h3>Web and Computer Programming Certificate</h3>
+                <h3>Bachelor of Applied Science in Software Development (BYU-Idaho) </h3>
                 <nav class="course-navlinks">
                     <ul>
                         <li><a href="#" id="all">All</a></li>
                         <li><a href="#" id="cse">CSE</a></li>
                         <li><a href="#" id="wdd">WDD</a></li>
                     </ul>
-                    <ul class="mycourses">
-                        <li><a href="https://byui-cse.github.io/cse110-ww-course/" class="course-link"
-                                data-url="https://byui-cse.github.io/cse110-ww-course/" data-course="CSE
-                            110 - Introduction to
-                            Programming">CSE
-                                110 - Introduction to
-                                Programming</a></li>
-                        <li><a href="https://byui-cse.github.io/wdd130-ww-course/" class="course-link"
-                                data-url="https://byui-cse.github.io/wdd130-ww-course/" data-course="WDD
-                            130 - Web
-                            Fundamentals">WDD
-                                130 - Web
-                                Fundamentals</a></li>
-                        <li><a href="https://byui-cse.github.io/cse111-ww-course/" class="course-link"
-                                data-url="https://byui-cse.github.io/cse111-ww-course/" data-course="CSE
-                            111 - Programming
-                            with Functions">CSE
-                                111 - Programming
-                                with Functions</a></li>
-                        <li><a href="https://byui-cse.github.io/cse210-ww-course/" class="course-link"
-                                data-url="https://byui-cse.github.io/cse210-ww-course/" data-course="CSE
-                            210 - Programming
-                            with Classes">CSE
-                                210 - Programming
-                                with Classes</a></li>
-                        <li><a href="https://byui-cse.github.io/wdd131-ww-course/" class="course-link"
-                                data-url="https://byui-cse.github.io/wdd131-ww-course/" data-course="WDD
-                            131 - Dynamic Web
-                            Fundamentals">WDD
-                                131 - Dynamic Web
-                                Fundamentals</a></li>
-                        <li><a href="https://byui-cse.github.io/wdd231-ww-course/" class="course-link"
-                                data-url="https://byui-cse.github.io/wdd231-ww-course/" data-course="WDD
-                            231 - Frontend Web
-                            Development I">WDD
-                                231 - Frontend Web
-                                Development I</a></li>
-                    </ul>
                 </nav>
-                <span class="courses"></span>
 
-
+                <!-- Course List -->
+                <ul class="courses"></ul>
             </section>
 
+            <!-- Course Work -->
             <section class="course-work">
                 <h3>Courses</h3>
-                <!-- Course Links -->
                 <h4 id="current-course-title">Select a course to view</h4>
 
-
-
                 <!-- Dynamic iFrame for the selected course -->
-
-                <iframe id="course-iframe" src="" width="100%" height="20rem">
+                <iframe id="course-iframe" width="100%" height="20rem">
                     Your browser does not support iframes.
                 </iframe>
-
             </section>
-
-
-
 
         </main>
 
         <aside>
-            <section class="provinces">
-
-                <spans id="city-name"></spans>
-
-
-                <figure>
-                    <img src="images/cities/chamber.webp" alt="city of iloilo" id="city-image" width="150" height="150">
-                    <p>The current temperature <spans id="city-name2"></spans> is <span id="current-temp"></span>
-                    </p>
-
-                    <figcaption></figcaption>
-                </figure>
-                <img src="images/cloudy.png" alt="cloudy weather icon" id="weather-icon" width="50" height="50">
-            </section>
-            <section class="city-title">
-                <h3>Top 10</h3>
-            </section>
-            <h3>City Gallery</h3>
+            <!-- City Gallery -->
             <section class="cities-gallery">
-
-
-                <select name="cities" id="dynamic-cities"></select>
-
-
+                <h3>City Gallery</h3>
+                <select id="dynamic-cities"></select>
             </section>
-
-            <!-- <section class="weather-info"></section> -->
-
-
-
-
         </aside>
     </div>
+
     <footer class="bottom-details">
-        <p>&copy;<span id="currentyear"></span> 🎻 James Phillip De Guzman 🎻 Iloilo, Philippines <img
-                src="images/philippines.png" alt="Philippine  small footer icon" width="30"> </p>
+        <p>&copy;<span id="currentyear"></span> James Phillip De Guzman, Iloilo, Philippines</p>
         <p>Last Update: <span id="lastModified"></span></p>
     </footer>
 </body>

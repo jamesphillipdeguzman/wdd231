@@ -1,0 +1,218 @@
+{
+  "courses": [
+    {
+      "subject": "CSE",
+      "number": 110,
+      "title": "Introduction to Programming",
+      "credits": 2,
+      "certificate": "Web and Computer Programming",
+      "description": "This course will introduce heros to programming. It will introduce the building blocks of programming languages (variables, decisions, calculations, loops, array, and input/output) and use them to solve problems.",
+      "technology": ["Python"],
+      "completed": true,
+      "status": "Complete",
+      "courselink": "https://byui-cse.github.io/cse110-ww-course/"
+    },
+    {
+      "subject": "WDD",
+      "number": 130,
+      "title": "Web Fundamentals",
+      "credits": 2,
+      "certificate": "Web and Computer Programming",
+      "description": "This course introduces heros to the World Wide Web and to careers in web site design and development. The course is hands on with heros actually participating in simple web designs and programming. It is anticipated that heros who complete this course will understand the fields of web design and development and will have a good idea if they want to pursue this degree as a major.",
+      "technology": ["HTML", "CSS"],
+      "completed": true,
+      "status": "Complete",
+      "courselink": "https://byui-cse.github.io/wdd130-ww-course/"
+    },
+    {
+      "subject": "CSE",
+      "number": 111,
+      "title": "Programming with Functions",
+      "credits": 2,
+      "certificate": "Web and Computer Programming",
+      "description": "CSE 111 heros become more organized, efficient, and powerful computer programmers by learning to research and call functions written by others; to write, call, debug, and test their own functions; and to handle errors within functions. CSE 111 heros write programs with functions to solve problems in many disciplines, including business, physical science, human performance, and humanities.",
+      "technology": ["Python"],
+      "completed": true,
+      "status": "Complete",
+      "courselink": "https://byui-cse.github.io/cse111-ww-course/"
+    },
+    {
+      "subject": "CSE",
+      "number": 210,
+      "title": "Programming with Classes",
+      "credits": 2,
+      "certificate": "Web and Computer Programming",
+      "description": "This course will introduce the notion of classes and objects. It will present encapsulation at a conceptual level. It will also work with inheritance and polymorphism.",
+      "technology": ["C#"],
+      "completed": true,
+      "status": "Complete",
+      "courselink": "https://byui-cse.github.io/cse210-ww-course/"
+    },
+    {
+      "subject": "WDD",
+      "number": 131,
+      "title": "Dynamic Web Fundamentals",
+      "credits": 2,
+      "certificate": "Web and Computer Programming",
+      "description": "This course builds on prior experience in Web Fundamentals and programming. heros will learn to create dynamic websites that use JavaScript to respond to events, update content, and create responsive user experiences.",
+      "technology": ["HTML", "CSS", "JavaScript"],
+      "completed": true,
+      "status": "Complete",
+      "courselink": "https://byui-cse.github.io/wdd131-ww-course/"
+    },
+    {
+      "subject": "WDD",
+      "number": 231,
+      "title": "Frontend Web Development I",
+      "credits": 2,
+      "certificate": "Web and Computer Programming",
+      "description": "This course builds on prior experience with Dynamic Web Fundamentals and programming. heros will focus on user experience, accessibility, compliance, performance optimization, and basic API usage.",
+      "technology": ["HTML", "CSS", "JavaScript"],
+      "completed": true,
+      "status": "Complete",
+      "courselink": "https://byui-cse.github.io/wdd231-ww-course/"
+    },
+    {
+      "subject": "GS",
+      "number": 170,
+      "title": "Career Development",
+      "credits": 1,
+      "certificate": "General Studies",
+      "description": "In this course, students develop resources, professional connections, and essential employability skills to obtain or improve employment in a field related to their university certificate. Students will network and apply for job opportunities in their industry, and life‑long skills are gained that will help both active and future job seekers.",
+      "technology": [
+        "Professional Development",
+        "Career Planning",
+        "Networking Skills",
+        "Resume & Interview Skills"
+      ],
+      "completed": true,
+      "status": "Complete",
+      "courselink": "https://catalog.byupathway.edu/courses/GS170"
+    },
+    {
+      "subject": "CIT",
+      "number": 111,
+      "title": "Introduction to Databases",
+      "credits": 3,
+      "certificate": "Web Development",
+      "description": "Introductory course covering basic database concepts and SQL.",
+      "technology": ["SQL"],
+      "completed": true,
+      "status": "Complete",
+      "courselink": "https://byui-cse.github.io/cit111-ww-course/"
+    },
+    {
+      "subject": "WDD",
+      "number": 330,
+      "title": "Web Frontend Development II",
+      "credits": 3,
+      "certificate": "Web Development",
+      "description": "Advanced frontend development with responsive design and JavaScript frameworks.",
+      "technology": ["HTML", "CSS", "JavaScript"],
+      "completed": true,
+      "status": "Complete",
+      "courselink": "https://byui-cse.github.io/wdd330-ww-course/"
+    },
+    {
+      "subject": "CSE",
+      "number": 340,
+      "title": "Web Backend Development",
+      "credits": 3,
+      "certificate": "Web Development",
+      "description": "Server-side programming, APIs, and database integration.",
+      "technology": ["Node.js", "Express", "MongoDB", "REST API"],
+      "completed": true,
+      "status": "Complete",
+      "courselink": "https://byui-cse.github.io/cse340-ww-course/"
+    },
+    {
+      "subject": "CSE",
+      "number": 341,
+      "title": "Web Services",
+      "credits": 3,
+      "certificate": "Web Development",
+      "description": "RESTful web services and integration with frontend applications.",
+      "technology": ["Node.js", "REST API", "JSON", "HTTP"],
+      "completed": true,
+      "status": "Complete",
+      "courselink": "https://byui-cse.github.io/cse341-ww-course/"
+    },
+    {
+      "subject": "WDD",
+      "number": 430,
+      "title": "Web Full-Stack Development",
+      "credits": 3,
+      "certificate": "Web Development",
+      "description": "Combines frontend and backend skills to build full-stack web applications.",
+      "technology": ["HTML", "CSS", "JavaScript", "Node.js"],
+      "completed": true,
+      "status": "Complete",
+      "courselink": "https://byui-cse.github.io/wdd430-ww-course/"
+    },
+    {
+      "subject": "CSE",
+      "number": 212,
+      "title": "Programming with Data Structures",
+      "credits": 2,
+      "certificate": "Software Development",
+      "description": "Introduction to data structures and algorithms.",
+      "technology": ["C#"],
+      "completed": true,
+      "status": "Complete",
+      "courselink": "https://byui-cse.github.io/cse212-ww-course/"
+    },
+    {
+      "subject": "CSE",
+      "number": 270,
+      "title": "Software Testing",
+      "credits": 3,
+      "certificate": "Software Development",
+      "description": "Covers software testing concepts, methodologies, and tools.",
+      "technology": ["Software Testing", "Test Automation", "C# (optional)"],
+      "completed": false,
+      "status": "In Progress",
+      "courselink": "https://byui-cse.github.io/cse270-ww-course/"
+    },
+    {
+      "subject": "CSE",
+      "number": 310,
+      "title": "Applied Programming",
+      "credits": 4,
+      "certificate": "Software Development",
+      "description": "Practical programming projects applying advanced programming techniques.",
+      "technology": ["Applied Programming Projects", "C# (common)"],
+      "completed": false,
+      "status": "Not Started",
+      "courselink": "https://byui-cse.github.io/cse310-ww-course/"
+    },
+    {
+      "subject": "CSE",
+      "number": 325,
+      "title": ".NET Software Development",
+      "credits": 3,
+      "certificate": "Software Development",
+      "description": ".NET framework and software development best practices.",
+      "technology": ["C#", ".NET Ecosystem", "ASP.NET", "Blazor", ".NET MAUI"],
+      "completed": false,
+      "status": "Not Started",
+      "courselink": "https://byui-cse.github.io/cse325-ww-course/"
+    },
+    {
+      "subject": "CSE",
+      "number": 430,
+      "title": "Architectural Design",
+      "credits": 2,
+      "certificate": "Software Development",
+      "description": "Software architecture principles and design patterns.",
+      "technology": [
+        "Software Architecture",
+        "Design Patterns",
+        "UML",
+        "C# (optional)"
+      ],
+      "completed": false,
+      "status": "Not Started",
+      "courselink": "https://catalog.byupathway.edu/courses/CSE430"
+    }
+  ]
+}
