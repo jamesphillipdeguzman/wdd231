@@ -180,7 +180,8 @@ aside {
   font-weight: 500;
 }
 
-#course-dropdown {
+#course-dropdown,
+#dynamic-cities {
   width: 100%;
   padding: 8px;
   border-radius: 5px;
