@@ -88,34 +88,6 @@ function setupCourseFilters() {
   });
 }
 
-/* ----------------------------
-   ACTIVE TAB FOR NAV MENUS
------------------------------ */
-function setupActiveMenu(selector) {
-  const links = document.querySelectorAll(selector);
-
-  links.forEach((link) => {
-    link.addEventListener("click", (e) => {
-      // Skip external links
-      if (link.hostname !== window.location.hostname) return;
-
-      e.preventDefault();
-
-      // Remove active from all links
-      links.forEach((l) => l.classList.remove("active"));
-
-      // Add active to clicked link
-      link.classList.add("active");
-
-      // Navigate if internal link
-      const href = link.getAttribute("href");
-      if (!href.startsWith("#")) {
-        window.location.href = href;
-      }
-    });
-  });
-}
-
 /* ===============================
    COURSE RENDERING
 ================================ */
@@ -237,7 +209,5 @@ document.addEventListener("DOMContentLoaded", () => {
   setupHamburgerMenu();
   setupFooterDates();
   setupCourseFilters();
-  setupActiveMenu(".course-navlinks ul li a");
-  setupActiveMenu("nav.top-navlinks ul li a");
   loadCourses();
 });
