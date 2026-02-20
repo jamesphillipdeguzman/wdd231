@@ -169,8 +169,8 @@
       "certificate": "Software Development",
       "description": "Covers software testing concepts, methodologies, and tools.",
       "technology": ["Software Testing", "Test Automation", "C# (optional)"],
-      "completed": false,
-      "status": "In Progress",
+      "completed": true,
+      "status": "Complete",
       "courselink": "https://byui-cse.github.io/cse270-ww-course/"
     },
     {
