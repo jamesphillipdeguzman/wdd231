@@ -168,7 +168,13 @@
       "credits": 3,
       "certificate": "Software Development",
       "description": "Covers software testing concepts, methodologies, and tools.",
-      "technology": ["Software Testing", "Test Automation", "C# (optional)"],
+      "technology": [
+        "Software Testing",
+        "Test Automation",
+        "Unit Testing",
+        "Integration Testing",
+        "Selenium"
+      ],
       "completed": true,
       "status": "Complete",
       "courselink": "https://byui-cse.github.io/cse270-ww-course/"
@@ -177,12 +183,19 @@
       "subject": "CSE",
       "number": 310,
       "title": "Applied Programming",
-      "credits": 4,
+      "credits": 3,
       "certificate": "Software Development",
       "description": "Practical programming projects applying advanced programming techniques.",
-      "technology": ["Applied Programming Projects", "C# (common)"],
+      "technology": [
+        "Applied Programming Projects",
+        "SQL Relational Databases",
+        "Kotlin",
+        "Python",
+        "SQLite3",
+        "mobile app development"
+      ],
       "completed": false,
-      "status": "Not Started",
+      "status": "In Progress",
       "courselink": "https://byui-cse.github.io/cse310-ww-course/"
     },
     {
