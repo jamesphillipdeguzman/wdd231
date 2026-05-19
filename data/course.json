@@ -207,7 +207,7 @@
       "description": ".NET framework and software development best practices.",
       "technology": ["C#", ".NET Ecosystem", "ASP.NET", "Blazor", ".NET MAUI"],
       "completed": false,
-      "status": "Not Started",
+      "status": "In Progress",
       "courselink": "https://byui-cse.github.io/cse325-ww-course/"
     },
     {
