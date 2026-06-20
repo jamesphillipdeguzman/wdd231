@@ -214,7 +214,7 @@
       "subject": "CSE",
       "number": 300,
       "title": "Professional Readiness",
-      "credits": 3,
+      "credits": 1,
       "certificate": "Software Development",
       "description": "This course will help prepare students to be professionals in their major by completing activities that will provide professional connections, confidence, and employability.",
       "technology": [
@@ -230,7 +230,7 @@
       "subject": "CSE",
       "number": 370,
       "title": "Software Engineering Principles",
-      "credits": 3,
+      "credits": 2,
       "certificate": "Software Development",
       "description": "Students learn to analyze and make decisions in software projects through all phases of the software development lifecycle, including requirements elicitation, design, testing, verification, and maintenance.",
       "technology": [
