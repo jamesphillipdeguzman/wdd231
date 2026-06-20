@@ -207,8 +207,42 @@
       "description": ".NET framework and software development best practices.",
       "technology": ["C#", ".NET Ecosystem", "ASP.NET", "Blazor", ".NET MAUI"],
       "completed": false,
-      "status": "In Progress",
+      "status": "Complete",
       "courselink": "https://byui-cse.github.io/cse325-ww-course/"
+    },
+    {
+      "subject": "CSE",
+      "number": 300,
+      "title": "Professional Readiness",
+      "credits": 3,
+      "certificate": "Software Development",
+      "description": "This course will help prepare students to be professionals in their major by completing activities that will provide professional connections, confidence, and employability.",
+      "technology": [
+        "Professional Networking",
+        "Interview Preparation",
+        "Career Development Tools"
+      ],
+      "completed": false,
+      "status": "Not Started",
+      "courselink": "https://byui-cse.github.io/cse300-ww-course/"
+    },
+    {
+      "subject": "CSE",
+      "number": 370,
+      "title": "Software Engineering Principles",
+      "credits": 3,
+      "certificate": "Software Development",
+      "description": "Students learn to analyze and make decisions in software projects through all phases of the software development lifecycle, including requirements elicitation, design, testing, verification, and maintenance.",
+      "technology": [
+        "SDLC Methodologies",
+        "Requirements Elicitation",
+        "Software Design Patterns",
+        "Testing & Verification",
+        "Project Management"
+      ],
+      "completed": false,
+      "status": "Not Started",
+      "courselink": "https://byui-cse.github.io/cse370-ww-course/"
     },
     {
       "subject": "CSE",
