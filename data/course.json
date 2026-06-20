@@ -243,23 +243,6 @@
       "completed": false,
       "status": "Not Started",
       "courselink": "https://byui-cse.github.io/cse370-ww-course/"
-    },
-    {
-      "subject": "CSE",
-      "number": 430,
-      "title": "Architectural Design",
-      "credits": 2,
-      "certificate": "Software Development",
-      "description": "Software architecture principles and design patterns.",
-      "technology": [
-        "Software Architecture",
-        "Design Patterns",
-        "UML",
-        "C# (optional)"
-      ],
-      "completed": false,
-      "status": "Not Started",
-      "courselink": "https://catalog.byupathway.edu/courses/CSE430"
     }
   ]
 }
