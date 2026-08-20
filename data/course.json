@@ -7,7 +7,9 @@
       "credits": 2,
       "certificate": "Web and Computer Programming",
       "description": "This course will introduce heros to programming. It will introduce the building blocks of programming languages (variables, decisions, calculations, loops, array, and input/output) and use them to solve problems.",
-      "technology": ["Python"],
+      "technology": [
+        "Python"
+      ],
       "completed": true,
       "status": "Complete",
       "courselink": "https://byui-cse.github.io/cse110-ww-course/"
@@ -19,7 +21,10 @@
       "credits": 2,
       "certificate": "Web and Computer Programming",
       "description": "This course introduces heros to the World Wide Web and to careers in web site design and development. The course is hands on with heros actually participating in simple web designs and programming. It is anticipated that heros who complete this course will understand the fields of web design and development and will have a good idea if they want to pursue this degree as a major.",
-      "technology": ["HTML", "CSS"],
+      "technology": [
+        "HTML",
+        "CSS"
+      ],
       "completed": true,
       "status": "Complete",
       "courselink": "https://byui-cse.github.io/wdd130-ww-course/"
@@ -31,7 +36,9 @@
       "credits": 2,
       "certificate": "Web and Computer Programming",
       "description": "CSE 111 heros become more organized, efficient, and powerful computer programmers by learning to research and call functions written by others; to write, call, debug, and test their own functions; and to handle errors within functions. CSE 111 heros write programs with functions to solve problems in many disciplines, including business, physical science, human performance, and humanities.",
-      "technology": ["Python"],
+      "technology": [
+        "Python"
+      ],
       "completed": true,
       "status": "Complete",
       "courselink": "https://byui-cse.github.io/cse111-ww-course/"
@@ -43,7 +50,9 @@
       "credits": 2,
       "certificate": "Web and Computer Programming",
       "description": "This course will introduce the notion of classes and objects. It will present encapsulation at a conceptual level. It will also work with inheritance and polymorphism.",
-      "technology": ["C#"],
+      "technology": [
+        "C#"
+      ],
       "completed": true,
       "status": "Complete",
       "courselink": "https://byui-cse.github.io/cse210-ww-course/"
@@ -55,7 +64,11 @@
       "credits": 2,
       "certificate": "Web and Computer Programming",
       "description": "This course builds on prior experience in Web Fundamentals and programming. heros will learn to create dynamic websites that use JavaScript to respond to events, update content, and create responsive user experiences.",
-      "technology": ["HTML", "CSS", "JavaScript"],
+      "technology": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
       "completed": true,
       "status": "Complete",
       "courselink": "https://byui-cse.github.io/wdd131-ww-course/"
@@ -67,7 +80,11 @@
       "credits": 2,
       "certificate": "Web and Computer Programming",
       "description": "This course builds on prior experience with Dynamic Web Fundamentals and programming. heros will focus on user experience, accessibility, compliance, performance optimization, and basic API usage.",
-      "technology": ["HTML", "CSS", "JavaScript"],
+      "technology": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
       "completed": true,
       "status": "Complete",
       "courselink": "https://byui-cse.github.io/wdd231-ww-course/"
@@ -96,7 +113,9 @@
       "credits": 3,
       "certificate": "Web Development",
       "description": "Introductory course covering basic database concepts and SQL.",
-      "technology": ["SQL"],
+      "technology": [
+        "SQL"
+      ],
       "completed": true,
       "status": "Complete",
       "courselink": "https://byui-cse.github.io/cit111-ww-course/"
@@ -108,7 +127,11 @@
       "credits": 3,
       "certificate": "Web Development",
       "description": "Advanced frontend development with responsive design and JavaScript frameworks.",
-      "technology": ["HTML", "CSS", "JavaScript"],
+      "technology": [
+        "HTML",
+        "CSS",
+        "JavaScript"
+      ],
       "completed": true,
       "status": "Complete",
       "courselink": "https://byui-cse.github.io/wdd330-ww-course/"
@@ -120,7 +143,12 @@
       "credits": 3,
       "certificate": "Web Development",
       "description": "Server-side programming, APIs, and database integration.",
-      "technology": ["Node.js", "Express", "MongoDB", "REST API"],
+      "technology": [
+        "Node.js",
+        "Express",
+        "MongoDB",
+        "REST API"
+      ],
       "completed": true,
       "status": "Complete",
       "courselink": "https://byui-cse.github.io/cse340-ww-course/"
@@ -132,7 +160,12 @@
       "credits": 3,
       "certificate": "Web Development",
       "description": "RESTful web services and integration with frontend applications.",
-      "technology": ["Node.js", "REST API", "JSON", "HTTP"],
+      "technology": [
+        "Node.js",
+        "REST API",
+        "JSON",
+        "HTTP"
+      ],
       "completed": true,
       "status": "Complete",
       "courselink": "https://byui-cse.github.io/cse341-ww-course/"
@@ -144,7 +177,12 @@
       "credits": 3,
       "certificate": "Web Development",
       "description": "Combines frontend and backend skills to build full-stack web applications.",
-      "technology": ["HTML", "CSS", "JavaScript", "Node.js"],
+      "technology": [
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Node.js"
+      ],
       "completed": true,
       "status": "Complete",
       "courselink": "https://byui-cse.github.io/wdd430-ww-course/"
@@ -156,7 +194,9 @@
       "credits": 2,
       "certificate": "Software Development",
       "description": "Introduction to data structures and algorithms.",
-      "technology": ["C#"],
+      "technology": [
+        "C#"
+      ],
       "completed": true,
       "status": "Complete",
       "courselink": "https://byui-cse.github.io/cse212-ww-course/"
@@ -205,8 +245,14 @@
       "credits": 3,
       "certificate": "Software Development",
       "description": ".NET framework and software development best practices.",
-      "technology": ["C#", ".NET Ecosystem", "ASP.NET", "Blazor", ".NET MAUI"],
-      "completed": false,
+      "technology": [
+        "C#",
+        ".NET Ecosystem",
+        "ASP.NET",
+        "Blazor",
+        ".NET MAUI"
+      ],
+      "completed": true,
       "status": "Complete",
       "courselink": "https://byui-cse.github.io/cse325-ww-course/"
     },
@@ -222,8 +268,8 @@
         "Interview Preparation",
         "Career Development Tools"
       ],
-      "completed": false,
-      "status": "In Progress",
+      "completed": true,
+      "status": "Complete",
       "courselink": "https://byui-cse.github.io/cse300-ww-course/"
     },
     {
@@ -239,6 +285,25 @@
         "Software Design Patterns",
         "Testing & Verification",
         "Project Management"
+      ],
+      "completed": true,
+      "status": "Complete",
+      "courselink": "https://byui-cse.github.io/cse370-ww-course/"
+    },
+    {
+      "subject": "CSE",
+      "number": 499,
+      "title": "Senior Project",
+      "credits": 3,
+      "certificate": "Software Development",
+      "description": "In this course, students will gain experience with directed individual or group research and study of a topic in computer science not covered by the curriculum. Students will demonstrate their ability to learn and apply new material by completing a significant project.",
+      "technology": [
+        "C++",
+        "OpenStreetMap Data",
+        "OpenGL / Metal / Vulkan",
+        "Java / Kotlin",
+        "Swift",
+        "GIS & Routing Algorithms"
       ],
       "completed": false,
       "status": "In Progress",
