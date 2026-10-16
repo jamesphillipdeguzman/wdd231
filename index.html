@@ -48,223 +48,201 @@
                         rel="noopener noreferrer">LinkedIn ↗</a></li>
             </ul>
         </nav>
-    </header>Act as a Frontend Developer. Add complete, production-ready Open Graph (`og:`) and Twitter Card
-    (`twitter:`) meta tags to the `
+    </header>
 
-    <head>` section of my `index.html`.
+    <div class="page-wrapper layout-dashboard">
 
-        Project details for reference:
-        - Site Title: James De Guzman's Dev Courses | WDD 231
-        - Description: Web Frontend Development I course portal featuring course tracking, interactive weather, and city
-        directory tools.
-        - Production URL: https://mybyuicourses.vercel.app/
-        - Preview Image Path: images/preview.webp (or images/social-share.jpg)
-        - Author / Creator: James De Guzman
+        <!-- LEFT COLUMN: Primary Academic & Course Progression Content (8 cols) -->
+        <main class="main-content" id="main-content">
 
-        Requirements:
-        1. Include standard Open Graph tags: `og:title`, `og:description`, `og:type` (website), `og:url`, `og:image`,
-        `og:image:alt`, `og:image:width`, and `og:image:height`.
-        2. Include Twitter Card tags: `twitter:card` (summary_large_image), `twitter:title`, `twitter:description`, and
-        `twitter:image`.
-        3. Ensure image and page URLs use absolute HTTPS paths matching the deployed domain.
-        4. Place the tags directly inside the `
+            <!-- 1. Interactive Coursework & Syllabus Preview -->
+            <section class="course-work card-box">
+                <div class="section-header">
+                    <div>
+                        <h3>Course Spotlight & Syllabus Viewer</h3>
+                        <p class="section-subtitle">Select an enrolled course from the catalog to preview
+                            syllabus,
+                            learning outcomes, and repository</p>
+                    </div>
+                </div>
 
-        <head>` section, grouped and commented cleanly after the standard `
-            <meta>` tags and before the CSS links.
+                <div class="course-preview-container">
+                    <div class="preview-meta-bar">
+                        <h4 id="current-course-title">Select a course to view</h4>
+                        <a id="course-external-link" href="degree-tracker.html" class="course-launch-btn"
+                            target="_blank" rel="noopener noreferrer">
+                            Open in Degree Tracker &rarr;
+                        </a>
+                    </div>
 
-            <div class="page-wrapper layout-dashboard">
-
-                <!-- LEFT COLUMN: Primary Academic & Course Progression Content (8 cols) -->
-                <main class="main-content" id="main-content">
-
-                    <!-- 1. Interactive Coursework & Syllabus Preview -->
-                    <section class="course-work card-box">
-                        <div class="section-header">
-                            <div>
-                                <h3>Course Spotlight & Syllabus Viewer</h3>
-                                <p class="section-subtitle">Select an enrolled course from the catalog to preview
-                                    syllabus,
-                                    learning outcomes, and repository</p>
-                            </div>
-                        </div>
-
-                        <div class="course-preview-container">
-                            <div class="preview-meta-bar">
-                                <h4 id="current-course-title">Select a course to view</h4>
-                                <a id="course-external-link" href="degree-tracker.html" class="course-launch-btn"
-                                    target="_blank" rel="noopener noreferrer">
-                                    Open in Degree Tracker &rarr;
+                    <div id="course-frame-wrapper" class="course-frame-wrapper">
+                        <iframe id="course-iframe" title="Course Website Preview" loading="lazy">
+                            Your browser does not support iframes.
+                        </iframe>
+                        <div id="course-iframe-placeholder" class="course-iframe-placeholder">
+                            <div class="placeholder-content">
+                                <span class="placeholder-icon">📚</span>
+                                <h4 class="placeholder-title">Select a Course to Preview Syllabus</h4>
+                                <p class="placeholder-text">Choose any course from the dropdown above to inspect
+                                    live
+                                    assignments, course repos, and schedules.</p>
+                                <a href="degree-tracker.html" class="placeholder-action-btn">
+                                    Launch Full Academic Degree Tracker &rarr;
                                 </a>
                             </div>
-
-                            <div id="course-frame-wrapper" class="course-frame-wrapper">
-                                <iframe id="course-iframe" title="Course Website Preview" loading="lazy">
-                                    Your browser does not support iframes.
-                                </iframe>
-                                <div id="course-iframe-placeholder" class="course-iframe-placeholder">
-                                    <div class="placeholder-content">
-                                        <span class="placeholder-icon">📚</span>
-                                        <h4 class="placeholder-title">Select a Course to Preview Syllabus</h4>
-                                        <p class="placeholder-text">Choose any course from the dropdown above to inspect
-                                            live
-                                            assignments, course repos, and schedules.</p>
-                                        <a href="degree-tracker.html" class="placeholder-action-btn">
-                                            Launch Full Academic Degree Tracker &rarr;
-                                        </a>
-                                    </div>
-                                </div>
-                            </div>
                         </div>
-                    </section>
-
-                    <!-- 2. Courses Taken / Bachelor Track Section -->
-                    <section class="courses-taken card-box">
-                        <div class="section-header">
-                            <div class="title-with-badge">
-                                <h3>Bachelor of Applied Science in Software Development</h3>
-                                <span class="badge-pill">BYU-Idaho Curriculum</span>
-                            </div>
-                            <p class="section-subtitle">Track completed prerequisites, current programming blocks, and
-                                upcoming
-                                terms</p>
-                        </div>
-
-                        <nav class="course-navlinks" aria-label="Course Category Filters">
-                            <ul>
-                                <li><a href="#" id="all" class="active">All Courses</a></li>
-                                <li><a href="#" id="cse">CSE Courses</a></li>
-                                <li><a href="#" id="wdd">WDD Courses</a></li>
-                            </ul>
-                            <div class="credits-tally" id="credits-tally">Loading credits...</div>
-                        </nav>
-
-                        <!-- Responsive Auto-Fit Course Card Grid -->
-                        <ul class="courses" id="courses-container"></ul>
-                    </section>
-
-                    <!-- 3. Certificates Section -->
-                    <section class="certificates card-box">
-                        <div class="section-header">
-                            <div>
-                                <h3>Certificates Prior to Bachelor’s in Software Development</h3>
-                                <p class="section-subtitle">Stackable qualifications awarded by BYU-Pathway Worldwide
-                                    and
-                                    BYU-Idaho</p>
-                            </div>
-                        </div>
-                        <ul class="certificate-list">
-                            <li class="cert-item">
-                                <div class="cert-icon-box">💻</div>
-                                <div class="cert-body">
-                                    <strong>Web & Computer Programming Certificate</strong>
-                                    <p>Provides foundational programming and web skills. Includes courses like Intro to
-                                        Programming, Web Fundamentals, Functions, Classes, Dynamic Web, and Frontend
-                                        Web.</p>
-                                    <a href="https://www.byupathway.edu/certificate/web-computer-programming"
-                                        target="_blank" rel="noopener noreferrer">Learn more &rarr;</a>
-                                </div>
-                            </li>
-                            <li class="cert-item">
-                                <div class="cert-icon-box">🌐</div>
-                                <div class="cert-body">
-                                    <strong>Web Development Certificate</strong>
-                                    <p>Focuses on building web applications including frontend and backend skills.
-                                        Covers
-                                        databases, backend services, frontend frameworks, and full-stack web
-                                        development.</p>
-                                    <a href="https://www.byupathway.edu/certificate/web-backend-development"
-                                        target="_blank" rel="noopener noreferrer">Learn more &rarr;</a>
-                                </div>
-                            </li>
-                            <li class="cert-item">
-                                <div class="cert-icon-box">⚙️</div>
-                                <div class="cert-body">
-                                    <strong>Software Development Certificate</strong>
-                                    <p>Intermediate-level certificate that deepens software engineering and C#/.NET
-                                        skills.
-                                        Includes Data Structures, Software Testing, Applied Programming, .NET Software
-                                        Development, and Software Engineering Principles.</p>
-                                    <a href="https://www.byupathway.edu/certificate/software-development"
-                                        target="_blank" rel="noopener noreferrer">Learn more &rarr;</a>
-                                </div>
-                            </li>
-                        </ul>
-                    </section>
-
-                </main>
-
-                <!-- RIGHT COLUMN: Geographic, Weather & City Widgets (4 cols) -->
-                <aside class="sidebar-widgets">
-
-                    <!-- Weather Widget -->
-                    <section class="weather-widget card-box">
-                        <div class="widget-header">
-                            <div class="widget-title-group">
-                                <span class="widget-badge">LIVE METRICS</span>
-                                <h3>Current Weather</h3>
-                            </div>
-                            <span class="live-pulse" title="Weather active"></span>
-                        </div>
-
-                        <div class="weather-content">
-                            <div class="weather-main-row">
-                                <div class="weather-temp-group">
-                                    <span id="current-temp" class="temp-display">29.5°C</span>
-                                    <p class="weather-location">📍 <span id="city-name">Iloilo City</span></p>
-                                </div>
-                                <figure class="weather-figure">
-                                    <img id="weather-icon" src="images/cloudy.png" alt="Partly cloudy weather icon"
-                                        width="60" height="60" loading="lazy">
-                                    <figcaption id="weather-desc">Partly Cloudy</figcaption>
-                                </figure>
-                            </div>
-
-                            <div class="weather-details-grid">
-                                <div class="weather-detail-item">
-                                    <span class="detail-label">Humidity</span>
-                                    <span id="weather-humidity" class="detail-value">78%</span>
-                                </div>
-                                <div class="weather-detail-item">
-                                    <span class="detail-label">Wind</span>
-                                    <span id="weather-wind" class="detail-value">12 km/h</span>
-                                </div>
-                                <div class="weather-detail-item">
-                                    <span class="detail-label">Feels Like</span>
-                                    <span id="weather-feels" class="detail-value">33°C</span>
-                                </div>
-                            </div>
-                        </div>
-                    </section>
-
-                    <!-- City Gallery -->
-                    <section class="cities-gallery card-box">
-                        <div class="widget-header">
-                            <div class="widget-title-group">
-                                <span class="widget-badge">PHILIPPINES EXPLORER</span>
-                                <h3>City Gallery</h3>
-                            </div>
-                        </div>
-
-                        <div class="city-controls">
-                            <label for="dynamic-cities" class="city-select-label">Select City to Inspect
-                                Profile:</label>
-                            <select id="dynamic-cities" aria-label="Select City to view details"></select>
-                        </div>
-
-                        <div class="city-cards" id="city-cards"></div>
-                    </section>
-
-                </aside>
-
-            </div>
-
-            <footer class="bottom-details">
-                <div class="footer-inner">
-                    <p>&copy;<span id="currentyear"></span> James Phillip De Guzman &bull; Iloilo, Philippines</p>
-                    <p>BYU-Idaho & BYU-Pathway Worldwide &bull; WDD 231</p>
-                    <p class="footer-modified">Last Update: <span id="lastModified"></span></p>
+                    </div>
                 </div>
-            </footer>
+            </section>
+
+            <!-- 2. Courses Taken / Bachelor Track Section -->
+            <section class="courses-taken card-box">
+                <div class="section-header">
+                    <div class="title-with-badge">
+                        <h3>Bachelor of Applied Science in Software Development</h3>
+                        <span class="badge-pill">BYU-Idaho Curriculum</span>
+                    </div>
+                    <p class="section-subtitle">Track completed prerequisites, current programming blocks, and
+                        upcoming
+                        terms</p>
+                </div>
+
+                <nav class="course-navlinks" aria-label="Course Category Filters">
+                    <ul>
+                        <li><a href="#" id="all" class="active">All Courses</a></li>
+                        <li><a href="#" id="cse">CSE Courses</a></li>
+                        <li><a href="#" id="wdd">WDD Courses</a></li>
+                    </ul>
+                    <div class="credits-tally" id="credits-tally">Loading credits...</div>
+                </nav>
+
+                <!-- Responsive Auto-Fit Course Card Grid -->
+                <ul class="courses" id="courses-container"></ul>
+            </section>
+
+            <!-- 3. Certificates Section -->
+            <section class="certificates card-box">
+                <div class="section-header">
+                    <div>
+                        <h3>Certificates Prior to Bachelor’s in Software Development</h3>
+                        <p class="section-subtitle">Stackable qualifications awarded by BYU-Pathway Worldwide
+                            and
+                            BYU-Idaho</p>
+                    </div>
+                </div>
+                <ul class="certificate-list">
+                    <li class="cert-item">
+                        <div class="cert-icon-box">💻</div>
+                        <div class="cert-body">
+                            <strong>Web & Computer Programming Certificate</strong>
+                            <p>Provides foundational programming and web skills. Includes courses like Intro to
+                                Programming, Web Fundamentals, Functions, Classes, Dynamic Web, and Frontend
+                                Web.</p>
+                            <a href="https://www.byupathway.edu/certificate/web-computer-programming" target="_blank"
+                                rel="noopener noreferrer">Learn more &rarr;</a>
+                        </div>
+                    </li>
+                    <li class="cert-item">
+                        <div class="cert-icon-box">🌐</div>
+                        <div class="cert-body">
+                            <strong>Web Development Certificate</strong>
+                            <p>Focuses on building web applications including frontend and backend skills.
+                                Covers
+                                databases, backend services, frontend frameworks, and full-stack web
+                                development.</p>
+                            <a href="https://www.byupathway.edu/certificate/web-backend-development" target="_blank"
+                                rel="noopener noreferrer">Learn more &rarr;</a>
+                        </div>
+                    </li>
+                    <li class="cert-item">
+                        <div class="cert-icon-box">⚙️</div>
+                        <div class="cert-body">
+                            <strong>Software Development Certificate</strong>
+                            <p>Intermediate-level certificate that deepens software engineering and C#/.NET
+                                skills.
+                                Includes Data Structures, Software Testing, Applied Programming, .NET Software
+                                Development, and Software Engineering Principles.</p>
+                            <a href="https://www.byupathway.edu/certificate/software-development" target="_blank"
+                                rel="noopener noreferrer">Learn more &rarr;</a>
+                        </div>
+                    </li>
+                </ul>
+            </section>
+
+        </main>
+
+        <!-- RIGHT COLUMN: Geographic, Weather & City Widgets (4 cols) -->
+        <aside class="sidebar-widgets">
+
+            <!-- Weather Widget -->
+            <section class="weather-widget card-box">
+                <div class="widget-header">
+                    <div class="widget-title-group">
+                        <span class="widget-badge">LIVE METRICS</span>
+                        <h3>Current Weather</h3>
+                    </div>
+                    <span class="live-pulse" title="Weather active"></span>
+                </div>
+
+                <div class="weather-content">
+                    <div class="weather-main-row">
+                        <div class="weather-temp-group">
+                            <span id="current-temp" class="temp-display">29.5°C</span>
+                            <p class="weather-location">📍 <span id="city-name">Iloilo City</span></p>
+                        </div>
+                        <figure class="weather-figure">
+                            <img id="weather-icon" src="images/cloudy.png" alt="Partly cloudy weather icon" width="60"
+                                height="60" loading="lazy">
+                            <figcaption id="weather-desc">Partly Cloudy</figcaption>
+                        </figure>
+                    </div>
+
+                    <div class="weather-details-grid">
+                        <div class="weather-detail-item">
+                            <span class="detail-label">Humidity</span>
+                            <span id="weather-humidity" class="detail-value">78%</span>
+                        </div>
+                        <div class="weather-detail-item">
+                            <span class="detail-label">Wind</span>
+                            <span id="weather-wind" class="detail-value">12 km/h</span>
+                        </div>
+                        <div class="weather-detail-item">
+                            <span class="detail-label">Feels Like</span>
+                            <span id="weather-feels" class="detail-value">33°C</span>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- City Gallery -->
+            <section class="cities-gallery card-box">
+                <div class="widget-header">
+                    <div class="widget-title-group">
+                        <span class="widget-badge">PHILIPPINES EXPLORER</span>
+                        <h3>City Gallery</h3>
+                    </div>
+                </div>
+
+                <div class="city-controls">
+                    <label for="dynamic-cities" class="city-select-label">Select City to Inspect
+                        Profile:</label>
+                    <select id="dynamic-cities" aria-label="Select City to view details"></select>
+                </div>
+
+                <div class="city-cards" id="city-cards"></div>
+            </section>
+
+        </aside>
+
+    </div>
+
+    <footer class="bottom-details">
+        <div class="footer-inner">
+            <p>&copy;<span id="currentyear"></span> James Phillip De Guzman &bull; Iloilo, Philippines</p>
+            <p>BYU-Idaho & BYU-Pathway Worldwide &bull; WDD 231</p>
+            <p class="footer-modified">Last Update: <span id="lastModified"></span></p>
+        </div>
+    </footer>
 
 </body>
 
