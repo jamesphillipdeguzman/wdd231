@@ -1,230 +1,107 @@
-import { fetchMembers } from "./fetch-members.js";
-import { getDateTimeInfo, showHideHamburger, windowScroll } from "./base.js";
+<!DOCTYPE html>
+<html lang="en">
 
-document.addEventListener('DOMContentLoaded', () => {
-showHideHamburger();
-getDateTimeInfo();
-windowScroll();
-fetchMembers();
-fetchMembersGrid(); // Automatically initialize with grid view on page load
-});
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Member Directory | Iloilo Chamber of Commerce</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Montserrat:wght@400;600;700;800&display=swap" rel="stylesheet">
+    <meta name="description" content="Explore verified members and business partners across Iloilo province through the official Chamber directory.">
+    <meta name="author" content="James Phillip K. De Guzman">
+    <link rel="icon" href="images/favicon/favicon.ico" type="image/x-icon">
 
-const grid = document.querySelector('#grid');
-grid.addEventListener('click', () => {
-if (grid) {
-grid.classList.add('active');
-if (list) list.classList.remove('active');
-fetchMembersGrid();
-}
-});
+    <link rel="stylesheet" href="styles/normalize.css">
+    <link rel="stylesheet" href="styles/chamber-large.css">
+    <link rel="stylesheet" href="styles/chamber-small.css">
+    <script src="scripts/directory.js" type="module"></script>
+</head>
 
-const list = document.querySelector('#list');
-list.addEventListener('click', () => {
-if (list) {
-list.classList.add('active');
-if (grid) grid.classList.remove('active');
-fetchMembersList();
-}
-});
+<body>
+    <header>
+        <div class="nav-links-wrapper full-width">
+            <a href="index.html" aria-label="Iloilo Chamber of Commerce Home">
+                <img id="icc" src="images/favicon/android-chrome-192x192.png" alt="ICC Logo" width="42" height="42">
+            </a>
 
-const dynamicBusinesses = document.querySelector('#dynamic-businesses');
-dynamicBusinesses.addEventListener('change', () => {
-if (dynamicBusinesses) {
-const choice = document.querySelector('#dynamic-businesses').value;
-const id = choice.split(' ');
-const filter = parseInt(id[0], 10);
-main(filter);
-}
-});
+            <nav class="menuLinks" id="primary-nav" aria-label="Primary Navigation">
+                <span id="data" aria-hidden="true"></span>
+                <ul>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="directory.html" class="current-menu-item">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li><a href="discover.html">Discover</a></li>
+                </ul>
+            </nav>
 
-async function main(filter) {
-try {
-const members = await fetchMembers();
-filterMembers(members, filter);
-} catch (error) {
-console.error(error);
-}
-}
+            <button id="menu" aria-label="Toggle navigation menu" aria-controls="primary-nav" aria-expanded="false"></button>
+        </div>
 
-// ============== FILTER A SINGLE MEMBER ====================
-const filterMembers = (members, filter) => {
-const businesses = document.querySelector('#businesses');
-businesses.innerHTML = '';
+        <div class="hero-container">
+            <div class="hero">
+                <picture>
+                    <source media="(max-width: 774px)" srcset="images/hero3.webp" class="hero-img">
+                    <img src="images/hero4.webp" width="1200" height="380" alt="Iloilo City business skyline" class="hero-img">
+                </picture>
+                <div class="overlay-text">
+                    <h1>Member Directory</h1>
+                    <p>Connect with reliable local enterprises, services, and innovators.</p>
+                </div>
+            </div>
+        </div>
+    </header>
 
-businesses.style.display = 'grid';
-businesses.style.gridTemplateColumns = 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))';
-businesses.style.gap = '1.25rem';
-businesses.style.alignItems = 'stretch';
-businesses.style.justifyContent = 'center';
-businesses.style.maxWidth = '100%';
-businesses.style.padding = '10px 0';
-businesses.style.margin = '0 auto';
+    <main>
+        <div class="container">
+            <h2>Find a Chamber Member</h2>
 
-const card = document.createElement('section');
-card.style.display = 'flex';
-card.style.flexDirection = 'column';
-card.style.justifyContent = 'space-between';
-card.style.maxWidth = '100%';
-card.style.border = '1px solid #E2E8F0';
-card.style.borderRadius = '10px';
-card.style.margin = '0 auto';
-card.style.padding = '1.5rem';
-card.style.boxShadow = '0 2px 4px rgba(0,0,0,0.06)';
-card.style.width = '100%';
-card.style.height = 'auto';
-card.style.minHeight = '100%';
+            <label for="dynamic-businesses" style="display:none;">Filter Members by Name</label>
+            <select name="dynamic-businesses" id="dynamic-businesses" aria-label="Filter chamber businesses">
+                <option value="" id="select">All Members</option>
+            </select>
 
-const name = document.createElement('h4');
-name.style.color = '#1E293B';
-name.style.fontFamily = 'var(--heading-font)';
-name.style.textAlign = 'center';
-name.style.marginBottom = '0.5rem';
+            <div class="layout" role="toolbar" aria-label="Directory view switcher">
+                <button id="grid" aria-label="Grid view" title="Grid View" class="active">
+                    <img src="images/grid.svg" alt="" width="24" height="24" aria-hidden="true">
+                </button>
+                <button id="list" aria-label="List view" title="List View">
+                    <img src="images/list.svg" alt="" width="20" height="20" aria-hidden="true">
+                </button>
+            </div>
 
-const address = document.createElement('p');
-const contact = document.createElement('p');
+            <div id="businesses" aria-live="polite"></div>
+        </div>
+    </main>
 
-name.innerHTML = `${members[filter - 1].name}`;
-address.innerHTML = `<span class="business-labels">Address:</span> ${members[filter - 1].address}`;
-contact.innerHTML = `<span class="business-labels">Phone:</span> ${members[filter - 1].contact}`;
+    <footer class="bottom-details full-width">
+        <div class="left-footer">
+            <p><strong>Iloilo Chamber of Commerce</strong></p>
+            <p>info@icc.com.ph</p>
+            <p>Mandurriao, Iloilo City, 5000</p>
+        </div>
 
-const stats = document.createElement('div');
-stats.className = 'label';
-stats.style.fontSize = '0.9rem';
-stats.style.width = '100%';
+        <div class="horizontal"></div>
 
-const logo = document.createElement('img');
-logo.className = 'grid';
-logo.setAttribute('src', `${members[filter - 1].image}`);
-logo.setAttribute('alt', `Logo of ${members[filter - 1].name}`);
-logo.setAttribute('loading', 'lazy');
-logo.style.maxHeight = '60px';
-logo.style.maxWidth = '160px';
-logo.style.objectFit = 'contain';
-logo.style.display = 'block';
-logo.style.margin = '0.5rem auto 1rem';
+        <div class="socialLinks">
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <img src="images/icons8-facebook-50.png" alt="Facebook" width="28" height="28">
+            </a>
+            <a href="https://www.youtube.com/@jamesphillipdeguzman6495" target="_blank" rel="noopener noreferrer" aria-label="YouTube">
+                <img src="images/icons8-youtube-logo-50.png" alt="YouTube" width="28" height="28">
+            </a>
+            <a href="https://www.linkedin.com/in/jamesphillipdeguzman/" target="_blank" rel="noopener noreferrer" aria-label="LinkedIn">
+                <img src="images/icons8-linkedin-50.png" alt="LinkedIn" width="28" height="28">
+            </a>
+        </div>
 
-const logolink = document.createElement('a');
-logolink.setAttribute('href', members[filter - 1].url);
-logolink.setAttribute('target', '_blank');
-logolink.setAttribute('rel', 'noopener noreferrer');
-logolink.append(logo);
+        <div class="horizontal"></div>
 
-stats.append(name);
-stats.append(address);
-stats.append(contact);
-
-card.append(logolink);
-card.append(stats);
-businesses.append(card);
-};
-
-// ============== GRID VIEW ====================
-async function fetchMembersGrid() {
-document.querySelector('#dynamic-businesses').value = '';
-
-try {
-const response = await fetch('data/members.json');
-if (!response.ok) throw new Error('Could not fetch resource');
-const members = await response.json();
-
-const businesses = document.getElementById('businesses');
-businesses.innerHTML = '';
-
-businesses.style.display = 'grid';
-businesses.style.gridTemplateColumns = 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))';
-businesses.style.gap = '1.5rem';
-businesses.style.alignItems = 'stretch';
-businesses.style.justifyContent = 'center';
-businesses.style.padding = '10px 0';
-businesses.style.margin = '0 auto';
-
-members.forEach(member => {
-const container = document.createElement('div');
-container.className = 'container';
-container.style.display = 'flex';
-container.style.flexDirection = 'column';
-container.style.justifyContent = 'space-between';
-container.style.height = 'auto';
-container.style.minHeight = '100%';
-container.style.width = '100%';
-container.style.backgroundColor = '#fff';
-container.style.border = '1px solid rgba(0, 0, 0, 0.08)';
-container.style.borderRadius = '10px';
-container.style.padding = '1.5rem 1.25rem';
-container.style.boxShadow = '0 2px 4px rgba(0,0,0,0.06)';
-
-container.innerHTML = `
-<a href='${member.url}' target='_blank' rel='noopener noreferrer'>
-    <img id='business-img' src='${member.image}' alt='${member.name} logo'
-        style='max-height:60px; max-width:160px; object-fit:contain; display:block; margin:0.5rem auto 1rem;'>
-</a>
-<div class="business-info" style="flex:1; width:100%;">
-    <h4 style="font-size:1.05rem; margin-bottom:0.5rem; text-align:center; color:#1E293B;">${member.name}</h4>
-    <span class='business-labels'>Address:</span>
-    <p>${member.address}</p>
-    <span class='business-labels'>Phone:</span>
-    <p>${member.contact}</p>
-</div>
-`;
-businesses.appendChild(container);
-});
-} catch (error) {
-console.error(error);
-}
-}
-
-// ============== LIST VIEW ====================
-async function fetchMembersList() {
-document.querySelector('#dynamic-businesses').value = '';
-
-try {
-const response = await fetch('data/members.json');
-if (!response.ok) throw new Error('Could not fetch resource');
-const members = await response.json();
-
-const businesses = document.getElementById('businesses');
-businesses.innerHTML = '';
-
-businesses.style.display = 'flex';
-businesses.style.flexDirection = 'column';
-businesses.style.gap = '0.75rem';
-businesses.style.alignItems = 'stretch';
-businesses.style.margin = '0 auto';
-
-members.forEach(member => {
-const container = document.createElement('div');
-container.className = 'container list-card';
-container.style.display = 'flex';
-container.style.flexDirection = 'row';
-container.style.alignItems = 'center';
-container.style.justifyContent = 'space-between';
-container.style.flexWrap = 'wrap';
-container.style.gap = '1rem';
-container.style.backgroundColor = '#fff';
-container.style.border = '1px solid rgba(0, 0, 0, 0.08)';
-container.style.borderRadius = '8px';
-container.style.padding = '1rem 1.25rem';
-container.style.boxShadow = '0 1px 3px rgba(0,0,0,0.05)';
-container.style.height = 'auto';
-container.style.width = '100%';
-
-container.innerHTML = `
-<div style="flex:1; min-width:200px;">
-    <h4 style="font-size:1rem; color:#1E293B; margin-bottom:0.25rem;">${member.name}</h4>
-    <p style="margin:0; font-size:0.875rem; color:#64748B;">${member.address}</p>
-</div>
-<div style="font-size:0.875rem; color:#475569; min-width:140px;">
-    <strong>Phone:</strong> ${member.contact}
-</div>
-<div>
-    <a href='${member.url}' target='_blank' rel='noopener noreferrer'
-        style="font-size:0.875rem; font-weight:600; color:var(--secondary-color); text-decoration:none;">Visit Website
-        →</a>
-</div>
-`;
-businesses.appendChild(container);
-});
-} catch (error) {
-console.error(error);
-}
-}
+        <div class="right-footer">
+            <p>&copy;<span id="currentyear"></span> | James Phillip De Guzman | WDD 231</p>
+            <p>Iloilo, Philippines</p>
+            <p>Last Update: <span id="lastModified"></span></p>
+        </div>
+    </footer>
+</body>
+</html>
