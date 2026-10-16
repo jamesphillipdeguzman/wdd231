@@ -5,25 +5,6 @@ document.addEventListener('DOMContentLoaded', () => {
     getDateTimeInfo();
     windowScroll();
 
-    // Functional Toggle for "Iloilo Overview" Card
-    const showHideBtn = document.querySelector('#showHideBtn');
-    const overviewExtended = document.querySelector('#overviewExtended');
-
-    if (showHideBtn && overviewExtended) {
-        showHideBtn.addEventListener('click', () => {
-            const isCurrentlyHidden = overviewExtended.style.display === 'none' || overviewExtended.style.display === '';
-            if (isCurrentlyHidden) {
-                overviewExtended.style.display = 'block';
-                showHideBtn.textContent = 'See less';
-                showHideBtn.setAttribute('aria-expanded', 'true');
-            } else {
-                overviewExtended.style.display = 'none';
-                showHideBtn.textContent = 'See more';
-                showHideBtn.setAttribute('aria-expanded', 'false');
-            }
-        });
-    }
-
     // Downpicker support if present
     const downPickers = document.querySelectorAll('.downpicker');
     downPickers.forEach((downPicker, index) => {

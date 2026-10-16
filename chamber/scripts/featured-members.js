@@ -49,7 +49,8 @@ const displayFeatured = (members) => {
             a.id = 'business-links';
 
 
-            wrapper.innerHTML = ` <a href='${member.url}' aria-label='This is a ${member.imageAlt}'><img id='business-img' src=${member.image} alt=${member.imageAlt} width='150px' height='auto'></a>
+            const memberImgSrc = member.image.startsWith('http') ? member.image : (member.image.startsWith('/') ? member.image : (member.image.startsWith('chamber/') ? '/' + member.image : '/chamber/' + member.image));
+            wrapper.innerHTML = ` <a href='${member.url}' aria-label='This is a ${member.imageAlt}'><img id='business-img' src='${memberImgSrc}' alt='${member.imageAlt}' onerror="this.onerror=null; this.src='/chamber/images/favicon/android-chrome-192x192.png';" width='150px' height='auto'></a>
                                     <span class='business-labels'> Name: </span> <p>${member.name}</p>  
                                     <span class='business-labels'> Address: </span> <p> ${member.address}</p>
                                     <span class='business-labels'> Phone: </span> <p>${member.contact}</p>
@@ -75,11 +76,9 @@ const displayFeatured = (members) => {
 
 async function fetchFeaturedMembers() {
     try {
-        const response = await fetch('data/members.json'); // fetch the json file from a relative path
-
-
-        if (!response.ok) { // Check if no response 
-            throw new Error('Could not fetch resource');
+        const response = await fetch('/chamber/data/members.json').catch(() => fetch('data/members.json'));
+        if (!response.ok) {
+            throw new Error('Could not fetch /chamber/data/members.json');
         }
 
         const members = await response.json();  // await for Promise to resolve or be rejected and parse the result as json object
@@ -101,7 +100,7 @@ async function fetchFeaturedMembers() {
 function shuffleFeaturedMembers(members) {
     for (let i = members.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
-        [members[i], members[j] = members[j], members[i]];
+        [members[i], members[j]] = [members[j], members[i]];
     }
 
     return members;

@@ -5,6 +5,7 @@
         gap: 1.75rem;
     }
 
+    .discover-layout,
     div.container-discover {
         grid-template-columns: 1fr;
         gap: 2rem;

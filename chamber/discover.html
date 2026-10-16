@@ -15,6 +15,7 @@
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/chamber-large.css">
     <link rel="stylesheet" href="styles/chamber-small.css">
+    <link rel="stylesheet" href="styles/discover.css">
     <script src="scripts/discover.js" type="module"></script>
 </head>
 
@@ -56,174 +57,176 @@
         </div>
     </header>
 
-    <main>
-        <div class="container-discover">
-            <!-- Sidebar: Iloilo Overview with functional See More button -->
-            <aside class="sidebars" aria-labelledby="demographics-title">
-                <div class="sidebar-header" style="display:flex; justify-content:space-between; align-items:center;">
-                    <h3 id="demographics-title">Iloilo Overview</h3>
-                    <button id="showHideBtn" class="see-more-btn" type="button" aria-expanded="false" aria-controls="overview-details">See more</button>
+    <main class="discover-layout">
+        <!-- Iloilo Overview Sidebar (Toggle button removed, rich details dropdown) -->
+        <aside class="sidebar-card overview-card" aria-labelledby="demographics-title">
+            <div class="sidebar-header">
+                <h3 id="demographics-title">Iloilo Overview</h3>
+            </div>
+            <ul class="stats-list">
+                <li><strong>Population:</strong> ~2.5 million (Province & City)</li>
+                <li><strong>Languages:</strong> Hiligaynon, Kinaray-a, English, Filipino</li>
+                <li><strong>Literacy Rate:</strong> ~95%</li>
+                <li><strong>Key Drivers:</strong> Agriculture, Trade, IT-BPO, Tourism, Manufacturing</li>
+                <li><strong>Accolade:</strong> UNESCO Creative City of Gastronomy</li>
+            </ul>
+
+            <details class="see-more-details more-details">
+                <summary class="see-more-btn">See more facts</summary>
+                <div class="more-content details-content">
+                    <p><strong>Regional Hub:</strong> Serves as the administrative and financial capital of Western Visayas (Region VI).</p>
+                    <p><strong>Culture & Heritage:</strong> Renowned for the Dinagyang Festival, well-preserved heritage mansions along Calle Real, and a vibrant arts scene.</p>
+                    <p><strong>Infrastructure:</strong> Home to the Iloilo International Airport, Iloilo River Esplanade, and modern commercial hubs like Festive Walk and Iloilo Business Park.</p>
                 </div>
+            </details>
+        </aside>
 
-                <div class="sidebar-content" id="overview-details">
-                    <ul>
-                        <li class="demo"><strong>Population:</strong> ~2.5 million</li>
-                        <li class="demo"><strong>Languages:</strong> Hiligaynon, Kinaray-a, English, Filipino</li>
-                        <li class="demo"><strong>Literacy Rate:</strong> ~95%</li>
-                        <li class="demo"><strong>Key Drivers:</strong> Agriculture, Trade, IT-BPO, Tourism, Manufacturing</li>
-                        <li class="demo"><strong>Accolade:</strong> UNESCO Creative City of Gastronomy</li>
-                    </ul>
+        <!-- Attraction Grid with See More Details -->
+        <div class="discover-grid" aria-label="Local landmarks and attractions">
 
-                    <!-- Expandable details revealed on clicking "See more" -->
-                    <div id="overviewExtended" class="details-content" style="display: none;">
-                        <p><strong>Historic Title:</strong> Bestowed as the <em>Queen City of the South</em> by royal decree in 1896 for its thriving international sugar trade.</p>
-                        <p><strong>Port of Iloilo:</strong> Opened to foreign merchant ships in 1855, establishing direct global commerce with Europe, the US, and Australia.</p>
-                        <p><strong>Educational Hub:</strong> Centers premier universities including University of the Philippines Visayas, Central Philippine University, and University of San Agustin.</p>
-                        <p><strong>Infrastructure:</strong> Features Iloilo International Airport in Cabatuan, modern seaport terminals, and a Panay-wide road network connecting antique, Capiz, and Aklan.</p>
-                    </div>
+            <!-- Card 1: Santa Barbara Parish Church -->
+            <article class="discover-card">
+                <img src="images/discover-iloilo/images-original/santa-barbara-church.webp" alt="Santa Barbara Parish Church" loading="lazy" width="400" height="220">
+                <div class="card-body">
+                    <h4>Santa Barbara Parish Church</h4>
+                    <p class="summary-text summary">A historical Baroque-Renaissance church built in 1845, which served as the headquarters of the revolutionary forces under General Martin Delgado.</p>
+                    
+                    <details class="see-more-details more-details">
+                        <summary class="see-more-btn">See more</summary>
+                        <div class="more-content details-content">
+                            <p><strong>Location:</strong> Santa Barbara, Iloilo (approx. 15 km north of Iloilo City).</p>
+                            <p><strong>Historical Significance:</strong> Site of the historic "Cry of Santa Barbara" on November 17, 1898, where the Philippine flag was first raised outside Luzon.</p>
+                            <p><strong>Architecture:</strong> Constructed from yellow sandstone and limestone, features a grand convent-museum preserved with Spanish-era artifacts.</p>
+                        </div>
+                    </details>
                 </div>
-            </aside>
+            </article>
 
-            <!-- Tourist Attraction Cards with See More Accordions -->
-            <section class="discover-details" aria-label="Local landmarks and attractions">
+            <!-- Card 2: Guimaras Strait & Eco-Tourism -->
+            <article class="discover-card">
+                <img src="images/discover-iloilo/images-original/guimaras.webp" alt="Guimaras Strait & Eco-Tourism" loading="lazy" width="400" height="220">
+                <div class="card-body">
+                    <h4>Guimaras Strait & Eco-Tourism</h4>
+                    <p class="summary-text summary">A pristine island province located just across the Iloilo Strait, globally celebrated for exporting the sweetest mangoes and tranquil eco-beaches.</p>
+                    
+                    <details class="see-more-details more-details">
+                        <summary class="see-more-btn">See more</summary>
+                        <div class="more-content details-content">
+                            <p><strong>Access:</strong> 15-minute pumpboat or RORO ferry ride from Parola Wharf in Iloilo City.</p>
+                            <p><strong>Key Highlights:</strong> Guisi Lighthouse (18th-century Spanish ruins), Alubihod Beach, marine reserves, Trappist Monastic Food Products, and wind turbine eco-farms.</p>
+                            <p><strong>Eco-Tourism:</strong> Ideal for day tours, island-hopping, snorkeling, and cycling excursions along scenic coastal trails. Best season is the Manggahan Festival held annually every May.</p>
+                        </div>
+                    </details>
+                </div>
+            </article>
 
-                <!-- 1. Santa Barbara Parish Church -->
-                <figure class="discover-card">
-                    <img src="images/discover-iloilo/images-original/santa-barbara-church.webp" alt="Santa Barbara Parish Church" class="img-discover" loading="lazy" width="400" height="220">
-                    <figcaption>
-                        <h4>Santa Barbara Parish Church</h4>
-                        <p>A historic Baroque-Renaissance church built in 1845, which served as the headquarters of the revolutionary forces under General Martin Delgado.</p>
-                        <details class="spot-details">
-                            <summary class="see-more-btn">See more</summary>
-                            <div class="details-content">
-                                <p><strong>Location:</strong> Santa Barbara, Central Iloilo (15 km north of Iloilo City).</p>
-                                <p><strong>Significance:</strong> Declared a National Landmark and Cultural Treasure; site of the historic 1898 "Cry of Santa Barbara" where the Philippine flag was first raised outside Luzon.</p>
-                                <p><strong>Visitor Tips:</strong> Visit the adjoining historic convent and parish museum. Best photographed in the early morning sunlight.</p>
-                            </div>
-                        </details>
-                    </figcaption>
-                </figure>
+            <!-- Card 3: Festive Walk Iloilo -->
+            <article class="discover-card">
+                <img src="images/discover-iloilo/images-original/festive-walk-iloilo.webp" alt="Festive Walk Iloilo" loading="lazy" width="400" height="220">
+                <div class="card-body">
+                    <h4>Festive Walk Iloilo</h4>
+                    <p class="summary-text summary">The centerpiece lifestyle, dining, and retail promenade located within the Iloilo Business Park in Mandurriao.</p>
+                    
+                    <details class="see-more-details more-details">
+                        <summary class="see-more-btn">See more</summary>
+                        <div class="more-content details-content">
+                            <p><strong>Location:</strong> Mandurriao, Iloilo City.</p>
+                            <p><strong>Attractions & Highlights:</strong> Features the Iloilo Museum of Contemporary Art (ILOMOCA), pet-friendly outdoor dining strips, craft breweries, and open-air public art installations.</p>
+                            <p><strong>Nightlife & Events:</strong> Hub for evening entertainment, weekend artisan fairs, and culinary events reflecting Iloilo's UNESCO Gastronomy status.</p>
+                        </div>
+                    </details>
+                </div>
+            </article>
 
-                <!-- 2. Guimaras Strait & Eco-Tourism -->
-                <figure class="discover-card">
-                    <img src="images/discover-iloilo/images-original/guimaras.webp" alt="Guimaras Strait and Island coastline" class="img-discover" loading="lazy" width="400" height="220">
-                    <figcaption>
-                        <h4>Guimaras Strait & Eco-Tourism</h4>
-                        <p>A pristine island province located just across the Iloilo Strait, globally celebrated for exporting the sweetest mangoes and tranquil eco-beaches.</p>
-                        <details class="spot-details">
-                            <summary class="see-more-btn">See more</summary>
-                            <div class="details-content">
-                                <p><strong>Location:</strong> Guimaras Island (15-minute boat crossing from Parola Wharf, Iloilo City).</p>
-                                <p><strong>Significance:</strong> Protected agricultural sanctuary renowned for Carabao mango production with strict biological safeguards.</p>
-                                <p><strong>Visitor Tips:</strong> Don't miss the Trappist Monastery, Guisi 18th-century lighthouse ruins, and the annual Manggahan Festival held every May.</p>
-                            </div>
-                        </details>
-                    </figcaption>
-                </figure>
+            <!-- Card 4: Iloilo River Esplanade -->
+            <article class="discover-card">
+                <img src="images/discover-iloilo/images-original/iloilo-river-esplanade.webp" alt="Iloilo River Esplanade" loading="lazy" width="400" height="220">
+                <div class="card-body">
+                    <h4>Iloilo River Esplanade</h4>
+                    <p class="summary-text summary">An acclaimed 9-kilometer linear river park designed by architect Paulo Alcazaren, revitalizing the historic Iloilo River into an urban recreation greenway.</p>
+                    
+                    <details class="see-more-details more-details">
+                        <summary class="see-more-btn">See more</summary>
+                        <div class="more-content details-content">
+                            <p><strong>Activities:</strong> Popular for sunset jogs, cycling, bird watching, and outdoor waterfront dining across multiple connected sections.</p>
+                            <p><strong>Recognition:</strong> Recipient of national urban design awards for sustainable river rehabilitation, resilience, and public open spaces.</p>
+                        </div>
+                    </details>
+                </div>
+            </article>
 
-                <!-- 3. Festive Walk Iloilo -->
-                <figure class="discover-card">
-                    <img src="images/discover-iloilo/images-original/festive-walk-iloilo.webp" alt="Festive Walk Iloilo retail and dining promenade" class="img-discover" loading="lazy" width="400" height="220">
-                    <figcaption>
-                        <h4>Festive Walk Iloilo</h4>
-                        <p>The premier open-air lifestyle and shopping avenue in the heart of Mandurriao, anchoring the modern commercial boom of Iloilo City.</p>
-                        <details class="spot-details">
-                            <summary class="see-more-btn">See more</summary>
-                            <div class="details-content">
-                                <p><strong>Location:</strong> Iloilo Business Park, Mandurriao, Iloilo City.</p>
-                                <p><strong>Significance:</strong> Recognized as the Best Retail Architectural Design in the Philippines; features a vibrant 1.1 km pedestrian dining strip.</p>
-                                <p><strong>Visitor Tips:</strong> Home to the Iloilo Museum of Contemporary Art (ILOMOCA), pet-friendly parks, and weekend open-air artisan markets.</p>
-                            </div>
-                        </details>
-                    </figcaption>
-                </figure>
+            <!-- Card 5: Miag-ao Church -->
+            <article class="discover-card">
+                <img src="images/discover-iloilo/images-original/santa-barbara-church.webp" alt="Miag-ao Church" loading="lazy" width="400" height="220">
+                <div class="card-body">
+                    <h4>Miag-ao Church (Santo Tomás de Villanueva)</h4>
+                    <p class="summary-text summary">A UNESCO World Heritage Baroque church built in 1797 with native yellow-ochre limestone, renowned for its intricate botanical façade reliefs.</p>
+                    
+                    <details class="see-more-details more-details">
+                        <summary class="see-more-btn">See more</summary>
+                        <div class="more-content details-content">
+                            <p><strong>Location:</strong> Miag-ao, Southern Iloilo (approx. 40 km west of Iloilo City).</p>
+                            <p><strong>Façade Artistry:</strong> Features Saint Christopher carrying the Christ Child flanked by native coconut and papaya trees sculpted in limestone.</p>
+                            <p><strong>Fortress Design:</strong> Built with massive 1.5-meter-thick stone walls and twin watchtowers to protect against coastal pirate raids.</p>
+                        </div>
+                    </details>
+                </div>
+            </article>
 
-                <!-- 4. Iloilo River Esplanade -->
-                <figure class="discover-card">
-                    <img src="images/discover-iloilo/images-original/iloilo-river-esplanade.webp" alt="Iloilo River Esplanade waterfront promenade" class="img-discover" loading="lazy" width="400" height="220">
-                    <figcaption>
-                        <h4>Iloilo River Esplanade</h4>
-                        <p>An award-winning urban waterfront park that restored the ecological vitality of the Iloilo River while providing kilometers of scenic promenades.</p>
-                        <details class="spot-details">
-                            <summary class="see-more-btn">See more</summary>
-                            <div class="details-content">
-                                <p><strong>Location:</strong> Spanning both riverbanks across Mandurriao, Molo, and City Proper districts.</p>
-                                <p><strong>Significance:</strong> Master-planned by architect Paulo Alcazaren; a globally recognized milestone in urban river rehabilitation and flood resilience.</p>
-                                <p><strong>Visitor Tips:</strong> Ideal for sunset walking, jogging, cycling, and dining with scenic river views. Illuminated and secured 24/7.</p>
-                            </div>
-                        </details>
-                    </figcaption>
-                </figure>
+            <!-- Card 6: Molo Church -->
+            <article class="discover-card">
+                <img src="images/discover-iloilo/images-original/molo-plaza.webp" alt="Molo Church" loading="lazy" width="400" height="220">
+                <div class="card-body">
+                    <h4>Molo Church (The Feminist Church)</h4>
+                    <p class="summary-text summary">A Neo-Gothic landmark constructed in 1831, featuring 16 statues of female saints flanking its central nave.</p>
+                    
+                    <details class="see-more-details more-details">
+                        <summary class="see-more-btn">See more</summary>
+                        <div class="more-content details-content">
+                            <p><strong>Location:</strong> Molo Plaza, Iloilo City.</p>
+                            <p><strong>Cultural Note:</strong> Jose Rizal visited this church in 1898, noting its distinctive red spires. Located across the plaza from the historic Molo Mansion.</p>
+                            <p><strong>Local Specialty:</strong> Walk across to sample authentic Pancit Molo right by the plaza.</p>
+                        </div>
+                    </details>
+                </div>
+            </article>
 
-                <!-- 5. Miag-ao Church -->
-                <figure class="discover-card">
-                    <img src="images/discover-iloilo/images-original/santa-barbara-church.webp" alt="Miag-ao Fortress Baroque Church" class="img-discover" loading="lazy" width="400" height="220">
-                    <figcaption>
-                        <h4>Miag-ao Church (Santo Tomás)</h4>
-                        <p>A UNESCO World Heritage Baroque fortress church built in 1797 with native yellow-ochre limestone and iconic botanical reliefs.</p>
-                        <details class="spot-details">
-                            <summary class="see-more-btn">See more</summary>
-                            <div class="details-content">
-                                <p><strong>Location:</strong> Zulueta Avenue, Miagao, Southern Iloilo (40 km west of Iloilo City).</p>
-                                <p><strong>Significance:</strong> Inscribed on the UNESCO World Heritage list in 1993 as one of four Baroque Churches of the Philippines; constructed with massive buttresses to repel pirate incursions.</p>
-                                <p><strong>Architectural Highlight:</strong> The sculptural pediment prominently depicts St. Christopher carrying the Child Jesus surrounded by indigenous coconut, papaya, and guava tree motifs.</p>
-                            </div>
-                        </details>
-                    </figcaption>
-                </figure>
+            <!-- Card 7: Molo Mansion -->
+            <article class="discover-card">
+                <img src="images/discover-iloilo/images-original/molo-mansion.webp" alt="Yusay-Consing Molo Heritage Mansion" loading="lazy" width="400" height="220">
+                <div class="card-body">
+                    <h4>Molo Mansion (Yusay-Consing)</h4>
+                    <p class="summary-text summary">A preserved 1920s heritage mansion showcasing classic Philippine colonial architecture, cultural exhibitions, and artisanal local crafts.</p>
+                    
+                    <details class="see-more-details more-details">
+                        <summary class="see-more-btn">See more</summary>
+                        <div class="more-content details-content">
+                            <p><strong>Location:</strong> Locsin Street, Molo, Iloilo City.</p>
+                            <p><strong>Significance:</strong> Rescued and fully restored as a cultural center featuring high ceilings, hardwood arches, and traditional capiz window panes.</p>
+                            <p><strong>Visitor Tips:</strong> Stroll the manicured garden café, purchase authentic Ilonggo woven textiles (hablon), and enjoy native tablea hot chocolate.</p>
+                        </div>
+                    </details>
+                </div>
+            </article>
 
-                <!-- 6. Molo Church & Plaza -->
-                <figure class="discover-card">
-                    <img src="images/discover-iloilo/images-original/molo-plaza.webp" alt="Historical Molo Plaza and Church" class="img-discover" loading="lazy" width="400" height="220">
-                    <figcaption>
-                        <h4>Molo Church (St. Anne Parish)</h4>
-                        <p>A neoclassical and Gothic-Renaissance landmark built in 1831, famously called "The Feminist Church" for its sixteen female saint statues.</p>
-                        <details class="spot-details">
-                            <summary class="see-more-btn">See more</summary>
-                            <div class="details-content">
-                                <p><strong>Location:</strong> San Pedro Street, Molo District, Iloilo City (facing Molo Plaza).</p>
-                                <p><strong>Significance:</strong> National Historical Landmark constructed from coral stone bonded with egg white mortar; visited by Dr. Jose Rizal in 1896.</p>
-                                <p><strong>Visitor Tips:</strong> Explore the heritage Yusay-Consing Molo Mansion located right across the plaza, and taste authentic local Pancit Molo!</p>
-                            </div>
-                        </details>
-                    </figcaption>
-                </figure>
+            <!-- Card 8: Museum of Philippine Economic History -->
+            <article class="discover-card">
+                <img src="images/discover-iloilo/images-original/iloilo-museum.webp" alt="Museum of Philippine Economic History" loading="lazy" width="400" height="220">
+                <div class="card-body">
+                    <h4>Museum of Philippine Economic History</h4>
+                    <p class="summary-text summary">Housed inside the historic Ynchausti y Compañía building, chronicling the rich trade routes, sugar boom, and mercantile legacy of Iloilo.</p>
+                    
+                    <details class="see-more-details more-details">
+                        <summary class="see-more-btn">See more</summary>
+                        <div class="more-content details-content">
+                            <p><strong>Location:</strong> Ortiz Street, Calle Real Heritage Zone, City Proper, Iloilo City.</p>
+                            <p><strong>Significance:</strong> The first museum in the Philippines exclusively dedicated to economic history, spanning pre-colonial trading to the 19th-century sugar boom.</p>
+                            <p><strong>Visitor Tips:</strong> Admission is free. Interactive multimedia dioramas and century-old artifacts depict the industrialization of Panay.</p>
+                        </div>
+                    </details>
+                </div>
+            </article>
 
-                <!-- 7. Molo Mansion -->
-                <figure class="discover-card">
-                    <img src="images/discover-iloilo/images-original/molo-mansion.webp" alt="Yusay-Consing Molo Heritage Mansion" class="img-discover" loading="lazy" width="400" height="220">
-                    <figcaption>
-                        <h4>Molo Mansion (Yusay-Consing)</h4>
-                        <p>A preserved 1920s heritage mansion showcasing classic Philippine colonial architecture, cultural exhibitions, and artisanal local crafts.</p>
-                        <details class="spot-details">
-                            <summary class="see-more-btn">See more</summary>
-                            <div class="details-content">
-                                <p><strong>Location:</strong> Locsin Street, Molo, Iloilo City.</p>
-                                <p><strong>Significance:</strong> Rescued and fully restored as a cultural center featuring high ceilings, hardwood arches, and traditional capiz window panes.</p>
-                                <p><strong>Visitor Tips:</strong> Stroll the manicured garden café, purchase authentic Ilonggo woven textiles (hablon), and enjoy native tablea hot chocolate.</p>
-                            </div>
-                        </details>
-                    </figcaption>
-                </figure>
-
-                <!-- 8. Museum of Philippine Economic History -->
-                <figure class="discover-card">
-                    <img src="images/discover-iloilo/images-original/iloilo-museum.webp" alt="Museum of Philippine Economic History" class="img-discover" loading="lazy" width="400" height="220">
-                    <figcaption>
-                        <h4>Economic History Museum</h4>
-                        <p>Housed inside the historic Ynchausti y Compañía building, chronicling the rich trade routes, sugar boom, and mercantile legacy of Iloilo.</p>
-                        <details class="spot-details">
-                            <summary class="see-more-btn">See more</summary>
-                            <div class="details-content">
-                                <p><strong>Location:</strong> Ortiz Street, Calle Real Heritage Zone, City Proper, Iloilo City.</p>
-                                <p><strong>Significance:</strong> The first museum in the Philippines exclusively dedicated to economic history, spanning pre-colonial trading to the 19th-century sugar boom.</p>
-                                <p><strong>Visitor Tips:</strong> Admission is free. Interactive multimedia dioramas and century-old artifacts depict the industrialization of Panay.</p>
-                            </div>
-                        </details>
-                    </figcaption>
-                </figure>
-
-            </section>
         </div>
     </main>
 

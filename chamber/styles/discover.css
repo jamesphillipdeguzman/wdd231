@@ -1,0 +1,206 @@
+/* ================= DISCOVER PAGE STYLES (discover.css) ================= */
+
+/* Layout container */
+.discover-layout,
+div.container-discover {
+    display: grid;
+    grid-template-columns: minmax(0, 300px) minmax(0, 1fr);
+    gap: 2rem;
+    max-width: 1200px;
+    margin: 2rem auto;
+    padding: 0 1rem;
+    align-items: start;
+    width: 100%;
+}
+
+@media (max-width: 900px) {
+    .discover-layout,
+    div.container-discover {
+        grid-template-columns: 1fr;
+    }
+}
+
+/* Sidebar overview card */
+.sidebar-card,
+.sidebars {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    padding: 1.5rem;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.04);
+}
+
+.sidebar-header h2,
+.sidebar-header h3,
+.sidebars h3 {
+    color: #106f65;
+    margin-top: 0;
+    margin-bottom: 0.75rem;
+    font-size: 1.35rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.stats-list,
+.sidebar-content ul {
+    list-style: none;
+    padding: 0;
+    margin: 1rem 0;
+    line-height: 1.8;
+    color: #333333;
+}
+
+.stats-list li,
+.sidebar-content li {
+    padding-left: 1.25rem;
+    position: relative;
+    margin-bottom: 0.5rem;
+}
+
+.stats-list li::before,
+.sidebar-content li::before {
+    content: "•";
+    color: #106f65;
+    font-size: 1.2rem;
+    position: absolute;
+    left: 0;
+    top: -2px;
+}
+
+/* Discover Grid */
+.discover-grid,
+.discover-details {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(min(100%, 280px), 1fr));
+    gap: 1.5rem;
+    align-items: stretch;
+    width: 100%;
+}
+
+/* Individual Cards */
+.discover-card {
+    background: #ffffff;
+    border: 1px solid rgba(0, 0, 0, 0.08);
+    border-radius: 12px;
+    overflow: hidden;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.04);
+    transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.discover-card:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.08);
+}
+
+.discover-card img {
+    width: 100%;
+    height: 220px;
+    object-fit: cover;
+    display: block;
+}
+
+.card-body,
+.discover-card figcaption {
+    padding: 1.25rem;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    justify-content: space-between;
+    font-family: var(--default-font, 'Montserrat', sans-serif);
+}
+
+.card-body h3,
+.card-body h4,
+.discover-card figcaption h4 {
+    margin-top: 0;
+    margin-bottom: 0.5rem;
+    font-size: 1.15rem;
+    color: #1b3d39;
+}
+
+.card-body .summary,
+.card-body .summary-text,
+.discover-card figcaption > p {
+    color: #555555;
+    font-size: 0.95rem;
+    line-height: 1.5;
+    margin-bottom: 1rem;
+}
+
+/* "See More" Accordion Details */
+.more-details,
+.see-more-details,
+details.spot-details {
+    border-top: 1px dashed rgba(0, 0, 0, 0.12);
+    padding-top: 0.75rem;
+    margin-top: auto;
+    width: 100%;
+}
+
+.see-more-btn {
+    font-weight: 600;
+    font-size: 0.9rem;
+    color: #106f65;
+    cursor: pointer;
+    user-select: none;
+    list-style: none; /* Hide default arrow */
+    display: inline-flex;
+    align-items: center;
+    gap: 0.4rem;
+    background: transparent;
+    border: none;
+    padding: 0.25rem 0;
+    transition: color 0.15s ease;
+}
+
+.see-more-btn::-webkit-details-marker {
+    display: none;
+}
+
+.see-more-btn::after {
+    content: "▾";
+    font-size: 0.8rem;
+    transition: transform 0.2s ease;
+    display: inline-block;
+}
+
+details[open] .see-more-btn::after {
+    transform: rotate(180deg);
+}
+
+.see-more-btn:hover {
+    color: #0c4d46;
+    text-decoration: underline;
+}
+
+.details-content,
+.more-content {
+    padding-top: 0.75rem;
+    font-size: 0.88rem;
+    line-height: 1.55;
+    color: #444444;
+    border-left: 2px solid #106f65;
+    padding-left: 0.75rem;
+    margin-top: 0.5rem;
+    animation: fadeIn 0.2s ease-in;
+}
+
+.details-content p,
+.more-content p {
+    margin: 0.4rem 0;
+}
+
+@keyframes fadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(-4px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}

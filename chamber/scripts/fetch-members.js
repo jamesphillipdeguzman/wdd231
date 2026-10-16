@@ -2,28 +2,24 @@ export { fetchMembers, dropdownMembers };
 
 async function fetchMembers() {
     try {
-        const response = await fetch('data/members.json'); // fetch the json file from a relative path
-
-
-        if (!response.ok) { // Check if no response 
-            throw new Error('Could not fetch resource');
+        const response = await fetch('/chamber/data/members.json').catch(() => fetch('data/members.json'));
+        if (!response.ok) {
+            throw new Error('Could not fetch /chamber/data/members.json');
         }
 
-        const members = await response.json();  // await for Promise to resolve or be rejected and parse the result as json object
+        const members = await response.json();
         dropdownMembers(members);
         return members;
-
-
     } catch (error) {
-        console.error(error);
+        console.error('Error fetching members in fetchMembers():', error);
+        return [];
     }
 }
 
-// Populate your dropdown with the chamber's  member's names.
-
+// Populate your dropdown with the chamber's member's names.
 const dropdownMembers = (members) => {
-
     const selector = document.querySelector('#dynamic-businesses');
+    if (!selector || !Array.isArray(members)) return;
 
     members.forEach((member) => {
 

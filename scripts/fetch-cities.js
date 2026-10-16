@@ -8,7 +8,7 @@ const FALLBACK_CITIES = [
     id: "1",
     name: "Quezon City",
     postcode: "1100",
-    image: "images/cities/qc.webp",
+    image: "/images/cities/qc.webp",
     rank: "1st",
     latitude: 14.676,
     longitude: 121.0437,
@@ -24,7 +24,7 @@ const FALLBACK_CITIES = [
     id: "2",
     name: "Manila",
     postcode: "1000",
-    image: "images/cities/manila.webp",
+    image: "/images/cities/manila.webp",
     rank: "2nd",
     latitude: 14.5995,
     longitude: 120.9842,
@@ -40,7 +40,7 @@ const FALLBACK_CITIES = [
     id: "3",
     name: "Cebu City",
     postcode: "6000",
-    image: "images/cities/cebu.webp",
+    image: "/images/cities/cebu.webp",
     rank: "3rd",
     latitude: 10.3157,
     longitude: 123.8854,
@@ -56,7 +56,7 @@ const FALLBACK_CITIES = [
     id: "4",
     name: "Davao City",
     postcode: "8000",
-    image: "images/cities/davao.webp",
+    image: "/images/cities/davao.webp",
     rank: "4th",
     latitude: 7.1907,
     longitude: 125.4553,
@@ -72,7 +72,7 @@ const FALLBACK_CITIES = [
     id: "5",
     name: "Zamboanga City",
     postcode: "7000",
-    image: "images/cities/zamboanga.webp",
+    image: "/images/cities/zamboanga.webp",
     rank: "5th",
     latitude: 6.8925,
     longitude: 122.0872,
@@ -88,7 +88,7 @@ const FALLBACK_CITIES = [
     id: "6",
     name: "Antipolo City",
     postcode: "1870",
-    image: "images/cities/antipolo.webp",
+    image: "/images/cities/antipolo.webp",
     rank: "6th",
     latitude: 14.5804,
     longitude: 121.12,
@@ -104,7 +104,7 @@ const FALLBACK_CITIES = [
     id: "7",
     name: "Pasig City",
     postcode: "1600",
-    image: "images/cities/pasig.webp",
+    image: "/images/cities/pasig.webp",
     rank: "7th",
     latitude: 14.5802,
     longitude: 121.085,
@@ -120,7 +120,7 @@ const FALLBACK_CITIES = [
     id: "8",
     name: "Taguig City",
     postcode: "1630",
-    image: "images/cities/taguig.webp",
+    image: "/images/cities/taguig.webp",
     rank: "8th",
     latitude: 14.5304,
     longitude: 121.0509,
@@ -136,7 +136,7 @@ const FALLBACK_CITIES = [
     id: "9",
     name: "Iloilo City",
     postcode: "5000",
-    image: "images/cities/iloilo.webp",
+    image: "/images/cities/iloilo.webp",
     rank: "9th",
     latitude: 10.6918,
     longitude: 122.5621,
@@ -152,7 +152,7 @@ const FALLBACK_CITIES = [
     id: "10",
     name: "General Santos City",
     postcode: "9500",
-    image: "images/cities/gensan.webp",
+    image: "/images/cities/gensan.webp",
     rank: "10th",
     latitude: 6.1045,
     longitude: 125.171,
@@ -170,7 +170,7 @@ let allCities = [];
 
 async function fetchCities() {
   try {
-    const response = await fetch("data/cities.json");
+    const response = await fetch("/data/cities.json").catch(() => fetch("data/cities.json"));
     if (!response.ok) throw new Error("Could not fetch data/cities.json");
     const data = await response.json();
     allCities = data.cities && data.cities.length ? data.cities : FALLBACK_CITIES;
@@ -237,9 +237,11 @@ function buildCityGallery(cities) {
     const popFormatted = Number(city.population).toLocaleString();
     const touristSpot = city.tourist_destinations?.tourist1 || "Cultural Landmark";
 
+    const imgSrc = city.image ? (city.image.startsWith('/') ? city.image : '/' + city.image) : '/images/philippines.png';
+
     card.innerHTML = `
       <a href="${wikiUrl}" target="_blank" rel="noopener noreferrer" class="city-img-link" title="Open Wikipedia article for ${escapeHtml(city.name)}">
-        <img src="${city.image}" alt="The city of ${escapeHtml(city.name)}" width="240" height="150" loading="lazy" onerror="this.onerror=null; this.src='images/philippines.png';">
+        <img src="${imgSrc}" alt="The city of ${escapeHtml(city.name)}" width="240" height="150" loading="lazy" onerror="this.onerror=null; this.src='/images/philippines.png';">
         <span class="city-rank-badge">${escapeHtml(city.rank)} Largest</span>
       </a>
       <div class="city-dataBox">
