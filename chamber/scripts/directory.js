@@ -6,14 +6,15 @@ document.addEventListener('DOMContentLoaded', () => {
     getDateTimeInfo();
     windowScroll();
     fetchMembers();
-    fetchMembersGrid(); // Initialize with grid view on page load
+    fetchMembersGrid(); // Automatically initialize with grid view on page load
 });
 
 const grid = document.querySelector('#grid');
 if (grid) {
     grid.addEventListener('click', () => {
         grid.classList.add('active');
-        if (list) list.classList.remove('active');
+        const listBtn = document.querySelector('#list');
+        if (listBtn) listBtn.classList.remove('active');
         fetchMembersGrid();
     });
 }
@@ -22,7 +23,8 @@ const list = document.querySelector('#list');
 if (list) {
     list.addEventListener('click', () => {
         list.classList.add('active');
-        if (grid) grid.classList.remove('active');
+        const gridBtn = document.querySelector('#grid');
+        if (gridBtn) gridBtn.classList.remove('active');
         fetchMembersList();
     });
 }
@@ -46,14 +48,15 @@ async function main(filter) {
         const members = await fetchMembers();
         filterMembers(members, filter);
     } catch (error) {
-        console.error(error);
+        console.error('Error fetching member by filter:', error);
     }
 }
 
 // ============== FILTER SINGLE MEMBER ====================
 const filterMembers = (members, filter) => {
     const businesses = document.querySelector('#businesses');
-    businesses.innerHTML = '';
+    if (!businesses) return;
+    businesses.innerHTML = ''; // Ensure container is completely emptied
 
     businesses.style.display = 'grid';
     businesses.style.gridTemplateColumns = 'repeat(auto-fit, minmax(min(100%, 300px), 1fr))';
@@ -63,6 +66,9 @@ const filterMembers = (members, filter) => {
     businesses.style.maxWidth = '100%';
     businesses.style.padding = '10px 0';
     businesses.style.margin = '0 auto';
+
+    const member = members[filter - 1];
+    if (!member) return;
 
     const card = document.createElement('section');
     card.className = 'container';
@@ -85,13 +91,13 @@ const filterMembers = (members, filter) => {
     name.style.fontFamily = 'var(--heading-font)';
     name.style.textAlign = 'center';
     name.style.marginBottom = '0.5rem';
-    name.innerHTML = `${members[filter - 1].name}`;
+    name.textContent = member.name;
 
     const address = document.createElement('p');
-    address.innerHTML = `<span class="business-labels">Address:</span> ${members[filter - 1].address}`;
+    address.innerHTML = `<span class="business-labels">Address:</span> ${member.address}`;
 
     const contact = document.createElement('p');
-    contact.innerHTML = `<span class="business-labels">Phone:</span> ${members[filter - 1].contact}`;
+    contact.innerHTML = `<span class="business-labels">Phone:</span> ${member.contact}`;
 
     const stats = document.createElement('div');
     stats.className = 'label';
@@ -100,8 +106,8 @@ const filterMembers = (members, filter) => {
 
     const logo = document.createElement('img');
     logo.id = 'business-img';
-    logo.setAttribute('src', `${members[filter - 1].image}`);
-    logo.setAttribute('alt', `Logo of ${members[filter - 1].name}`);
+    logo.setAttribute('src', member.image);
+    logo.setAttribute('alt', `Logo of ${member.name}`);
     logo.setAttribute('loading', 'lazy');
     logo.style.maxHeight = '60px';
     logo.style.maxWidth = '160px';
@@ -110,7 +116,7 @@ const filterMembers = (members, filter) => {
     logo.style.margin = '0.5rem auto 1rem';
 
     const logolink = document.createElement('a');
-    logolink.setAttribute('href', members[filter - 1].url);
+    logolink.setAttribute('href', member.url);
     logolink.setAttribute('target', '_blank');
     logolink.setAttribute('rel', 'noopener noreferrer');
     logolink.append(logo);
@@ -130,11 +136,12 @@ async function fetchMembersGrid() {
 
     try {
         const response = await fetch('data/members.json');
-        if (!response.ok) throw new Error('Could not fetch resource');
+        if (!response.ok) throw new Error('Could not fetch members resource');
         const members = await response.json();
 
         const businesses = document.getElementById('businesses');
-        businesses.innerHTML = '';
+        if (!businesses) return;
+        businesses.innerHTML = ''; // Always empty before appending new cards
 
         businesses.style.display = 'grid';
         businesses.style.gridTemplateColumns = 'repeat(auto-fit, minmax(min(100%, 280px), 1fr))';
@@ -160,21 +167,21 @@ async function fetchMembersGrid() {
             container.style.boxShadow = '0 2px 4px rgba(0,0,0,0.06)';
 
             container.innerHTML = `
-                <a href='${member.url}' target='_blank' rel='noopener noreferrer' style="display:block; text-align:center;">
-                    <img id='business-img' src='${member.image}' alt='${member.name} logo' style='max-height:60px; max-width:160px; object-fit:contain; display:block; margin:0.5rem auto 1rem;'>
+                <a href="${member.url}" target="_blank" rel="noopener noreferrer" style="display:block; text-align:center;">
+                    <img id="business-img" src="${member.image}" alt="${member.name} logo" style="max-height:60px; max-width:160px; object-fit:contain; display:block; margin:0.5rem auto 1rem;">
                 </a>
                 <div class="business-info" style="flex:1; width:100%; display:flex; flex-direction:column; justify-content:flex-start;">
                     <h4 style="font-size:1.05rem; margin-bottom:0.5rem; text-align:center; color:#1E293B;">${member.name}</h4>
-                    <span class='business-labels'>Address:</span>
+                    <span class="business-labels">Address:</span>
                     <p>${member.address}</p>
-                    <span class='business-labels'>Phone:</span>
+                    <span class="business-labels">Phone:</span>
                     <p>${member.contact}</p>
                 </div>
             `;
             businesses.appendChild(container);
         });
     } catch (error) {
-        console.error(error);
+        console.error('Error rendering grid members:', error);
     }
 }
 
@@ -184,11 +191,12 @@ async function fetchMembersList() {
 
     try {
         const response = await fetch('data/members.json');
-        if (!response.ok) throw new Error('Could not fetch resource');
+        if (!response.ok) throw new Error('Could not fetch members resource');
         const members = await response.json();
 
         const businesses = document.getElementById('businesses');
-        businesses.innerHTML = '';
+        if (!businesses) return;
+        businesses.innerHTML = ''; // Always empty before appending new cards
 
         businesses.style.display = 'flex';
         businesses.style.flexDirection = 'column';
@@ -222,12 +230,12 @@ async function fetchMembersList() {
                     <strong>Phone:</strong> ${member.contact}
                 </div>
                 <div>
-                    <a href='${member.url}' target='_blank' rel='noopener noreferrer' style="font-size:0.875rem; font-weight:600; color:var(--secondary-color); text-decoration:none;">Visit Website →</a>
+                    <a href="${member.url}" target="_blank" rel="noopener noreferrer" style="font-size:0.875rem; font-weight:600; color:var(--secondary-color); text-decoration:none;">Visit Website →</a>
                 </div>
             `;
             businesses.appendChild(container);
         });
     } catch (error) {
-        console.error(error);
+        console.error('Error rendering list members:', error);
     }
 }
