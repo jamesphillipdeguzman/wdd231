@@ -1,4 +1,5 @@
 export { fetchFeaturedMembers };
+import { getMemberImageUrl } from "./utils/member-image.js";
 
 const displayFeatured = (members) => {
     const businesses = document.querySelector('#featured-businesses');
@@ -28,19 +29,12 @@ const displayFeatured = (members) => {
         card.style.border = '1px solid rgba(0, 0, 0, 0.08)';
         card.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.06)';
 
-        const memberImgSrc = member.image
-            ? (member.image.startsWith('http')
-                ? member.image
-                : (member.image.startsWith('/')
-                    ? member.image
-                    : (member.image.startsWith('chamber/')
-                        ? '/' + member.image
-                        : '/chamber/' + member.image)))
-            : '/chamber/images/favicon/android-chrome-192x192.png';
+        const memberImgSrc = getMemberImageUrl(member.image);
+        const fallbackSrc = getMemberImageUrl('');
 
         card.innerHTML = `
             <a href="${member.url}" target="_blank" rel="noopener noreferrer" style="display:block; text-align:center;">
-                <img id="business-img" src="${memberImgSrc}" alt="${member.imageAlt || member.name}" onerror="this.onerror=null; this.src='/chamber/images/favicon/android-chrome-192x192.png';" style="max-height:60px; max-width:160px; object-fit:contain; display:block; margin:0.5rem auto 1rem;">
+                <img id="business-img" src="${memberImgSrc}" alt="${member.imageAlt || member.name}" onerror="this.onerror=null; this.src='${fallbackSrc}';" style="max-height:60px; max-width:160px; object-fit:contain; display:block; margin:0.5rem auto 1rem;">
             </a>
             <div class="business-info" style="flex:1; width:100%;">
                 <h4 style="font-size:1.05rem; margin-bottom:0.5rem; text-align:center; color:#1E293B;">${member.name}</h4>

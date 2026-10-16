@@ -1,5 +1,6 @@
 import { fetchMembers } from "./fetch-members.js";
 import { getDateTimeInfo, showHideHamburger, windowScroll } from "./base.js";
+import { getMemberImageUrl } from "./utils/member-image.js";
 
 document.addEventListener('DOMContentLoaded', () => {
     showHideHamburger();
@@ -109,7 +110,7 @@ const filterMembers = (members, filter) => {
     logo.setAttribute('src', getMemberImageUrl(member.image));
     logo.setAttribute('alt', `Logo of ${member.name}`);
     logo.setAttribute('loading', 'lazy');
-    logo.setAttribute('onerror', "this.onerror=null; this.src='/chamber/images/favicon/android-chrome-192x192.png';");
+    logo.setAttribute('onerror', `this.onerror=null; this.src='${getMemberImageUrl('')}';`);
     logo.style.maxHeight = '60px';
     logo.style.maxWidth = '160px';
     logo.style.objectFit = 'contain';
@@ -130,15 +131,6 @@ const filterMembers = (members, filter) => {
     card.append(stats);
     businesses.append(card);
 };
-
-function getMemberImageUrl(img) {
-    if (!img) return '/chamber/images/favicon/android-chrome-192x192.png';
-    if (img.startsWith('http://') || img.startsWith('https://') || img.startsWith('//')) return img;
-    if (img.startsWith('/chamber/')) return img;
-    if (img.startsWith('chamber/')) return '/' + img;
-    if (img.startsWith('/')) return '/chamber' + img;
-    return '/chamber/' + img;
-}
 
 // ============== GRID VIEW ====================
 
@@ -177,13 +169,12 @@ async function fetchMembersGrid() {
             container.style.padding = '1.5rem 1.25rem';
             container.style.boxShadow = '0 2px 4px rgba(0,0,0,0.06)';
 
-            const imgSrc = typeof getMemberImageUrl === 'function'
-                ? getMemberImageUrl(member.image)
-                : member.image;
+            const imgSrc = getMemberImageUrl(member.image);
+            const fallbackSrc = getMemberImageUrl('');
 
             container.innerHTML = `
                 <a href="${member.url}" target="_blank" rel="noopener noreferrer" style="display:block; text-align:center;">
-                    <img class="business-img" src="${imgSrc}" alt="${member.name} logo" onerror="this.onerror=null; this.src='/chamber/images/favicon/android-chrome-192x192.png';" style="max-height:60px; max-width:160px; object-fit:contain; display:block; margin:0.5rem auto 1rem;">
+                    <img class="business-img" src="${imgSrc}" alt="${member.name} logo" onerror="this.onerror=null; this.src='${fallbackSrc}';" style="max-height:60px; max-width:160px; object-fit:contain; display:block; margin:0.5rem auto 1rem;">
                 </a>
                 <div class="business-info" style="flex:1; width:100%; display:flex; flex-direction:column; justify-content:flex-start;">
                     <h4 style="font-size:1.05rem; margin-bottom:0.5rem; text-align:center; color:#1E293B;">${member.name}</h4>

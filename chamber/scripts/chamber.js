@@ -1,6 +1,9 @@
 
 // Use ES Modules to import fetchMembers and dropdownMembers from fetch-members.js
 import { fetchMembers, dropdownMembers } from "./fetch-members.js";
+import { getMemberImageUrl } from "./utils/member-image.js";
+
+export { getMemberImageUrl };
 
 document.addEventListener('DOMContentLoaded', () => {
 

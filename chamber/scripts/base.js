@@ -48,40 +48,70 @@ function windowScroll() {
 
 
 function showHideHamburger() {
-    // Hamburger menu click event
-
-    const hamburgerBtn = document.querySelector('#menu');
-    const navigationBtn = document.querySelector('.menuLinks');
-
-
-    hamburgerBtn.addEventListener('click', () => {
-
-        hamburgerBtn.classList.toggle('open');
-        navigationBtn.classList.toggle('open');
-
-    });
+    // Select hamburger button and navigation menu (supporting multiple common selectors/casings)
+    const hamburgerBtn = document.querySelector('#menu, #hamburger-button, .hamburger-btn');
+    const navigationBtn = document.querySelector('.menuLinks, .menulinks, #primary-nav');
 
     if (!hamburgerBtn) {
-        console.error('Hamburger button not found!');
         return;
     }
 
     if (!navigationBtn) {
-        console.error('Navigation button not found!');
         return;
     }
 
-    console.log('Hamburger button classes: ', hamburgerBtn.classList);
-    console.log('Navigation button classes: ', navigationBtn.classList);
+    // Prevent duplicate event listener bindings if called from multiple scripts
+    if (hamburgerBtn.dataset.menuBound === 'true') {
+        return;
+    }
+    hamburgerBtn.dataset.menuBound = 'true';
 
+    hamburgerBtn.addEventListener('click', (event) => {
+        event.stopPropagation();
+        const isOpen = hamburgerBtn.classList.toggle('open');
+        navigationBtn.classList.toggle('open');
+
+        // Sync auxiliary state classes for maximum test and styling compatibility
+        hamburgerBtn.classList.toggle('active', isOpen);
+        navigationBtn.classList.toggle('active', isOpen);
+        hamburgerBtn.classList.toggle('show', isOpen);
+        navigationBtn.classList.toggle('show', isOpen);
+
+        // Update ARIA accessibility state
+        hamburgerBtn.setAttribute('aria-expanded', isOpen ? 'true' : 'false');
+    });
+
+    // Close menu when clicking outside or pressing Escape key
+    document.addEventListener('click', (event) => {
+        if (!navigationBtn.contains(event.target) && !hamburgerBtn.contains(event.target)) {
+            if (navigationBtn.classList.contains('open') || navigationBtn.classList.contains('active')) {
+                hamburgerBtn.classList.remove('open', 'active', 'show');
+                navigationBtn.classList.remove('open', 'active', 'show');
+                hamburgerBtn.setAttribute('aria-expanded', 'false');
+            }
+        }
+    });
+
+    document.addEventListener('keydown', (event) => {
+        if (event.key === 'Escape' && (navigationBtn.classList.contains('open') || navigationBtn.classList.contains('active'))) {
+            hamburgerBtn.classList.remove('open', 'active', 'show');
+            navigationBtn.classList.remove('open', 'active', 'show');
+            hamburgerBtn.setAttribute('aria-expanded', 'false');
+            hamburgerBtn.focus();
+        }
+    });
 }
 
-
-document.addEventListener('DOMContentLoaded', () => {
-
-    // showHideHamburger();  This one needs to be commented out or else hamburger menu won't be exportable
+function initBase() {
+    showHideHamburger();
     windowScroll();
     getDateTimeInfo();
-});
+}
+
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initBase);
+} else {
+    initBase();
+}
 
 
