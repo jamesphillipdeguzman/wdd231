@@ -1,109 +1,89 @@
 export { fetchFeaturedMembers };
+
 const displayFeatured = (members) => {
+    const businesses = document.querySelector('#featured-businesses');
+    if (!businesses || !Array.isArray(members)) return;
+    businesses.innerHTML = '';
 
-    members.forEach((member) => {
+    // Filter Gold and Silver members
+    const qualified = members.filter(
+        (member) => member.membershipLevel === 'Gold' || member.membershipLevel === 'Silver'
+    );
 
-        const businesses = document.querySelector('#featured-businesses');
-        // const card = document.createElement('p');
+    if (qualified.length === 0) return;
 
-        // const memberName = `${member.name}`;
-        const membershipLevel = `${member.membershipLevel}`;
+    // Shuffle and pick 2-3 spotlight partners
+    const shuffled = shuffleFeaturedMembers([...qualified]);
+    const spotlights = shuffled.slice(0, 3);
 
-        if (membershipLevel == 'Gold' || membershipLevel == 'Silver') {
+    spotlights.forEach((member) => {
+        const card = document.createElement('div');
+        card.className = 'container spotlight-card';
+        card.style.display = 'flex';
+        card.style.flexDirection = 'column';
+        card.style.justifyContent = 'space-between';
+        card.style.padding = '1.25rem';
+        card.style.backgroundColor = '#fff';
+        card.style.borderRadius = '10px';
+        card.style.border = '1px solid rgba(0, 0, 0, 0.08)';
+        card.style.boxShadow = '0 2px 4px rgba(0, 0, 0, 0.06)';
 
-            // Shuffle members
+        const memberImgSrc = member.image
+            ? (member.image.startsWith('http')
+                ? member.image
+                : (member.image.startsWith('/')
+                    ? member.image
+                    : (member.image.startsWith('chamber/')
+                        ? '/' + member.image
+                        : '/chamber/' + member.image)))
+            : '/chamber/images/favicon/android-chrome-192x192.png';
 
+        card.innerHTML = `
+            <a href="${member.url}" target="_blank" rel="noopener noreferrer" style="display:block; text-align:center;">
+                <img id="business-img" src="${memberImgSrc}" alt="${member.imageAlt || member.name}" onerror="this.onerror=null; this.src='/chamber/images/favicon/android-chrome-192x192.png';" style="max-height:60px; max-width:160px; object-fit:contain; display:block; margin:0.5rem auto 1rem;">
+            </a>
+            <div class="business-info" style="flex:1; width:100%;">
+                <h4 style="font-size:1.05rem; margin-bottom:0.5rem; text-align:center; color:#1E293B;">${member.name}</h4>
+                <span class="business-labels">Membership:</span>
+                <p><strong>${member.membershipLevel} Partner</strong></p>
+                <span class="business-labels">Phone:</span>
+                <p>${member.contact}</p>
+                <span class="business-labels">Address:</span>
+                <p>${member.address}</p>
+            </div>
+        `;
 
-            const wrapper = document.createElement('div'); // create a div 
-            wrapper.className = 'wrapper';
-
-
-
-            const subcontainer = document.createElement('div');
-
-            subcontainer.className = 'subcontainer';
-
-
-
-            const p = document.createElement('p');
-            p.className = 'business-labels';
-
-            const img = document.createElement('img');
-            img.id = 'business-img';
-            img.alt = `${member.imageAlt}`;
-
-
-
-            const ul = document.createElement('ul');
-            ul.id = 'business-ul';
-            ul.style.display = 'flex';
-            ul.style.alignItems = 'center';
-            ul.style.justifyItems = 'center';
-            ul.style.alignContent = 'center';
-            ul.style.margin = '0 auto';
-
-            const li = document.createElement('li');
-            li.id = 'business-li';
-
-            const a = document.createElement('a');
-            a.id = 'business-links';
-
-
-            const memberImgSrc = member.image.startsWith('http') ? member.image : (member.image.startsWith('/') ? member.image : (member.image.startsWith('chamber/') ? '/' + member.image : '/chamber/' + member.image));
-            wrapper.innerHTML = ` <a href='${member.url}' aria-label='This is a ${member.imageAlt}'><img id='business-img' src='${memberImgSrc}' alt='${member.imageAlt}' onerror="this.onerror=null; this.src='/chamber/images/favicon/android-chrome-192x192.png';" width='150px' height='auto'></a>
-                                    <span class='business-labels'> Name: </span> <p>${member.name}</p>  
-                                    <span class='business-labels'> Address: </span> <p> ${member.address}</p>
-                                    <span class='business-labels'> Phone: </span> <p>${member.contact}</p>
-                                    <span class='business-labels'> Membership: </span> <p>${member.membershipLevel}</p>`;
-            subcontainer.appendChild(a);
-            subcontainer.appendChild(li);
-            subcontainer.appendChild(ul);
-            // subcontainer.appendChild(membershipLvl);
-            subcontainer.appendChild(p);
-            subcontainer.appendChild(img);
-            subcontainer.appendChild(wrapper);
-            businesses.appendChild(wrapper);
-
-        }
-
-
-
+        businesses.appendChild(card);
     });
-
-    shuffleFeaturedMembers(members);
-
-}
+};
 
 async function fetchFeaturedMembers() {
     try {
-        const response = await fetch('/chamber/data/members.json').catch(() => fetch('data/members.json'));
+        let response = await fetch('/chamber/data/members.json');
         if (!response.ok) {
-            throw new Error('Could not fetch /chamber/data/members.json');
+            response = await fetch('./data/members.json');
+        }
+        if (!response.ok) {
+            throw new Error(`Failed to load members: ${response.status}`);
+        }
+        const contentType = response.headers.get('content-type');
+        if (contentType && !contentType.includes('application/json')) {
+            throw new Error(`Expected JSON but received ${contentType}`);
         }
 
-        const members = await response.json();  // await for Promise to resolve or be rejected and parse the result as json object
-
-        // console.table(members);
-
+        const members = await response.json();
         displayFeatured(members);
-
         return members;
-
-
     } catch (error) {
-        console.error(error);
+        console.error('Failed to load featured members:', error);
+        return [];
     }
 }
-
-
 
 function shuffleFeaturedMembers(members) {
     for (let i = members.length - 1; i > 0; i--) {
         const j = Math.floor(Math.random() * (i + 1));
         [members[i], members[j]] = [members[j], members[i]];
     }
-
     return members;
 }
-
-

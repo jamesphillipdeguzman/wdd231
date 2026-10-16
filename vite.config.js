@@ -10,14 +10,20 @@ export default defineConfig({
     plugins: [
         viteStaticCopy({
             targets: [
-                { src: 'data/*', dest: 'data' },
-                { src: 'chamber/data/*', dest: 'chamber/data' },
-                { src: 'images/*', dest: 'images' },
-                { src: 'chamber/images/*', dest: 'chamber/images' }
+                // Copies 'data' folder into dist/data
+                { src: 'data', dest: '' },
+                // Copies 'chamber/data' folder into dist/chamber/data
+                { src: 'chamber/data', dest: '' },
+                // Copies 'images' folder into dist/images
+                { src: 'images', dest: '' },
+                // Copies 'chamber/images' folder into dist/chamber/images
+                { src: 'chamber/images', dest: '' }
             ]
         })
     ],
     build: {
+        outDir: 'dist',
+        emptyOutDir: true,
         rollupOptions: {
             input: {
                 main: resolve(__dirname, 'index.html'),

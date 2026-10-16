@@ -2,9 +2,20 @@ export { fetchMembers, dropdownMembers };
 
 async function fetchMembers() {
     try {
-        const response = await fetch('/chamber/data/members.json').catch(() => fetch('data/members.json'));
+        // Try root-absolute first, fallback to relative if needed
+        let response = await fetch('/chamber/data/members.json');
+
         if (!response.ok) {
-            throw new Error('Could not fetch /chamber/data/members.json');
+            response = await fetch('./data/members.json');
+        }
+
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
+        const contentType = response.headers.get('content-type');
+        if (!contentType || !contentType.includes('application/json')) {
+            throw new Error(`Expected JSON but received ${contentType || 'unknown type'}`);
         }
 
         const members = await response.json();
@@ -16,34 +27,23 @@ async function fetchMembers() {
     }
 }
 
-// Populate your dropdown with the chamber's member's names.
+// Populate dropdown with chamber member names
 const dropdownMembers = (members) => {
     const selector = document.querySelector('#dynamic-businesses');
     if (!selector || !Array.isArray(members)) return;
 
+    // Use a Set of existing option values for fast O(1) duplicate checks
+    const existingValues = new Set(Array.from(selector.options, (opt) => opt.value));
+
     members.forEach((member) => {
+        const memberValue = `${member.id} ${member.name}`;
 
-
-        // populate the dropdown with the member's names
-        const memberName = `${member.id} ${member.name}`;
-
-        // Check if the option already exists...
-        const existingOption = Array.from(selector.options).some(option => option.value === `${member.id} ${member.name}`);
-        // Create the dropdown list only if empty initially...
-        if (!existingOption) {
-
+        if (!existingValues.has(memberValue)) {
             const option = document.createElement('option');
-
-            option.value = memberName;
-            option.textContent = memberName;
-
+            option.value = memberValue;
+            option.textContent = member.name; // User-facing label looks cleaner with just the name
             selector.append(option);
-
-
+            existingValues.add(memberValue);
         }
-
-
     });
-
-}
-
+};

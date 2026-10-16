@@ -170,8 +170,17 @@ let allCities = [];
 
 async function fetchCities() {
   try {
-    const response = await fetch("/data/cities.json").catch(() => fetch("data/cities.json"));
-    if (!response.ok) throw new Error("Could not fetch data/cities.json");
+    let response = await fetch("/data/cities.json");
+    if (!response.ok) {
+      response = await fetch("./data/cities.json");
+    }
+    if (!response.ok) {
+      throw new Error(`Failed to load cities: ${response.status}`);
+    }
+    const contentType = response.headers.get("content-type");
+    if (contentType && !contentType.includes("application/json")) {
+      throw new Error(`Expected JSON but received ${contentType}`);
+    }
     const data = await response.json();
     allCities = data.cities && data.cities.length ? data.cities : FALLBACK_CITIES;
   } catch (error) {

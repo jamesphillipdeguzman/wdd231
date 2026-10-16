@@ -141,13 +141,14 @@ function getMemberImageUrl(img) {
 }
 
 // ============== GRID VIEW ====================
+
+
 async function fetchMembersGrid() {
     if (dynamicBusinesses) dynamicBusinesses.value = '';
 
     try {
-        const response = await fetch('/chamber/data/members.json').catch(() => fetch('data/members.json'));
-        if (!response.ok) throw new Error('Could not fetch members resource');
-        const members = await response.json();
+        const members = await fetchMembers();
+        if (!Array.isArray(members) || members.length === 0) return;
 
         const businesses = document.getElementById('businesses');
         if (!businesses) return;
@@ -176,11 +177,13 @@ async function fetchMembersGrid() {
             container.style.padding = '1.5rem 1.25rem';
             container.style.boxShadow = '0 2px 4px rgba(0,0,0,0.06)';
 
-            const imgSrc = getMemberImageUrl(member.image);
+            const imgSrc = typeof getMemberImageUrl === 'function'
+                ? getMemberImageUrl(member.image)
+                : member.image;
 
             container.innerHTML = `
                 <a href="${member.url}" target="_blank" rel="noopener noreferrer" style="display:block; text-align:center;">
-                    <img id="business-img" src="${imgSrc}" alt="${member.name} logo" onerror="this.onerror=null; this.src='/chamber/images/favicon/android-chrome-192x192.png';" style="max-height:60px; max-width:160px; object-fit:contain; display:block; margin:0.5rem auto 1rem;">
+                    <img class="business-img" src="${imgSrc}" alt="${member.name} logo" onerror="this.onerror=null; this.src='/chamber/images/favicon/android-chrome-192x192.png';" style="max-height:60px; max-width:160px; object-fit:contain; display:block; margin:0.5rem auto 1rem;">
                 </a>
                 <div class="business-info" style="flex:1; width:100%; display:flex; flex-direction:column; justify-content:flex-start;">
                     <h4 style="font-size:1.05rem; margin-bottom:0.5rem; text-align:center; color:#1E293B;">${member.name}</h4>
@@ -196,15 +199,13 @@ async function fetchMembersGrid() {
         console.error('Error rendering grid members:', error);
     }
 }
-
 // ============== LIST VIEW ====================
 async function fetchMembersList() {
     if (dynamicBusinesses) dynamicBusinesses.value = '';
 
     try {
-        const response = await fetch('/chamber/data/members.json').catch(() => fetch('data/members.json'));
-        if (!response.ok) throw new Error('Could not fetch members resource');
-        const members = await response.json();
+        const members = await fetchMembers();
+        if (!Array.isArray(members) || members.length === 0) return;
 
         const businesses = document.getElementById('businesses');
         if (!businesses) return;
