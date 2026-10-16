@@ -333,29 +333,22 @@ const FALLBACK_COURSE_LIST = [
    LOAD COURSES
 ================================ */
 async function loadCourses() {
-  const candidateUrls = ["data/courses.json", "data/course.json"];
-  let loaded = false;
-
-  for (const url of candidateUrls) {
-    try {
-      const response = await fetch(url);
-      if (response.ok) {
-        const data = await response.json();
-        if (data && Array.isArray(data.courses) && data.courses.length) {
-          courses = data.courses;
-          loaded = true;
-          break;
-        }
+  try {
+    const response = await fetch("data/courses.json");
+    if (response.ok) {
+      const data = await response.json();
+      if (data && Array.isArray(data.courses) && data.courses.length) {
+        courses = data.courses;
+        buildCourseDropdown();
+        renderAllCourses();
+        return;
       }
-    } catch (e) {
-      // Continue to next candidate
     }
+  } catch (e) {
+    // Fallback for offline or local file:// protocol restrictions
   }
 
-  if (!loaded) {
-    courses = FALLBACK_COURSE_LIST;
-  }
-
+  courses = FALLBACK_COURSE_LIST;
   buildCourseDropdown();
   renderAllCourses();
 }

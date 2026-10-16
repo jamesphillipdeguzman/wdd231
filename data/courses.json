@@ -19,7 +19,7 @@
       ],
       "completed": true,
       "status": "Fulfilled",
-      "courselink": null
+      "courselink": "https://resourcecenter.byupathway.edu/writing/w05-01"
     },
     {
       "subject": "PC",
@@ -40,7 +40,7 @@
       ],
       "completed": true,
       "status": "Fulfilled",
-      "courselink": null
+      "courselink": "https://resourcecenter.byupathway.org/math/m13-01"
     },
     {
       "subject": "CSE",
@@ -63,9 +63,9 @@
       "courselink": "https://byui-cse.github.io/cse110-ww-course/"
     },
     {
-      "subject": "PCI",
+      "subject": "PC",
       "number": 103,
-      "code": "PCI103",
+      "code": "PC103",
       "title": "University Skills (EQUIV)",
       "courseLevel": "Lower Division",
       "credits": 1,
@@ -81,7 +81,7 @@
       ],
       "completed": true,
       "status": "Fulfilled",
-      "courselink": null
+      "courselink": "https://resourcecenter.byupathway.edu/lms/page/pc103-07-gatheringagenda"
     },
     {
       "subject": "REL",
@@ -101,7 +101,7 @@
       ],
       "completed": true,
       "status": "Fulfilled",
-      "courselink": null
+      "courselink": "https://si.instructure.com/courses/82637/modules"
     },
     {
       "subject": "CIT",
@@ -204,7 +204,7 @@
       ],
       "completed": true,
       "status": "Fulfilled",
-      "courselink": null
+      "courselink": "https://libguides.byui.edu/eng150/search"
     },
     {
       "subject": "WDD",
@@ -266,7 +266,7 @@
       ],
       "completed": true,
       "status": "Fulfilled",
-      "courselink": null
+      "courselink": "https://books.byui.edu/math_for_the_real_world"
     },
     {
       "subject": "REL",
@@ -286,7 +286,7 @@
       ],
       "completed": true,
       "status": "Fulfilled",
-      "courselink": null
+      "courselink": "https://www.churchofjesuschrist.org/study/manual/doctrinal-mastery-core-document-2018/doctrinal-topics/1-the-godhead?lang=eng"
     },
     {
       "subject": "WDD",
@@ -329,7 +329,7 @@
       ],
       "completed": true,
       "status": "Fulfilled",
-      "courselink": null
+      "courselink": "https://www.indeed.com/career-advice/resumes-cover-letters/writing-a-resume-with-no-experience"
     },
     {
       "subject": "REL",
@@ -349,7 +349,7 @@
       ],
       "completed": true,
       "status": "Fulfilled",
-      "courselink": null
+      "courselink": "https://www.churchofjesuschrist.org/study/ensign/2011/03/teaching-the-doctrine-of-the-family?lang=eng"
     },
     {
       "subject": "WDD",
@@ -414,7 +414,7 @@
       ],
       "completed": true,
       "status": "Fulfilled",
-      "courselink": null
+      "courselink": "https://www.churchofjesuschrist.org/study/manual/jesus-christ-and-his-everlasting-gospel-class-prep-material-2023/lesson-04-class-prep?lang=eng"
     },
     {
       "subject": "WDD",
@@ -456,7 +456,7 @@
       ],
       "completed": true,
       "status": "Fulfilled",
-      "courselink": null
+      "courselink": "https://www.churchofjesuschrist.org/study/manual/jesus-christ-and-his-everlasting-gospel-class-prep-material-2023/lesson-20-class-prep?lang=eng"
     },
     {
       "subject": "CSE",
@@ -562,7 +562,7 @@
       ],
       "completed": true,
       "status": "Fulfilled",
-      "courselink": null
+      "courselink": "https://www.churchofjesuschrist.org/study/manual/teachings-and-doctrine-of-the-book-of-mormon-class-prep-material-2021/unit-8/lesson-28-class-preparation-material?lang=eng"
     },
     {
       "subject": "REL",
@@ -760,7 +760,7 @@
       ],
       "completed": true,
       "status": "Fulfilled",
-      "courselink": null
+      "courselink": "https://books.byui.edu/FCS_160"
     },
     {
       "subject": "REL",
@@ -780,7 +780,7 @@
       ],
       "completed": true,
       "status": "Fulfilled",
-      "courselink": null
+      "courselink": "https://byupw.instructure.com/courses/48858"
     },
     {
       "subject": "CSE",
@@ -846,7 +846,7 @@
       ],
       "completed": true,
       "status": "Fulfilled",
-      "courselink": null
+      "courselink": "https://byupw.instructure.com/courses/52063"
     },
     {
       "subject": "BUS",
@@ -867,7 +867,7 @@
       ],
       "completed": false,
       "status": "Current",
-      "courselink": null
+      "courselink": "https://books.byui.edu/organizational_leadership_v2"
     },
     {
       "subject": "CSE",

@@ -14,25 +14,21 @@ import { renderCourseModal } from './components/course-modal.js';
 import { COURSES_DATA } from './course-data.js';
 
 /**
- * Loads course dataset from data/courses.json with fallback to data/course.json or embedded dataset
+ * Loads course dataset from data/courses.json with fallback to embedded dataset
  * @returns {Promise<Array<import('./types').Course>>}
  */
 async function loadCourseDataset() {
-  const candidateUrls = ['data/courses.json', 'data/course.json'];
-
-  for (const url of candidateUrls) {
-    try {
-      const response = await fetch(url);
-      if (response.ok) {
-        const data = await response.json();
-        if (data && Array.isArray(data.courses)) {
-          console.info(`[Degree Tracker] Successfully loaded ${data.courses.length} courses from ${url}`);
-          return data.courses;
-        }
+  try {
+    const response = await fetch('data/courses.json');
+    if (response.ok) {
+      const data = await response.json();
+      if (data && Array.isArray(data.courses)) {
+        console.info(`[Degree Tracker] Successfully loaded ${data.courses.length} courses from data/courses.json`);
+        return data.courses;
       }
-    } catch (err) {
-      console.warn(`[Degree Tracker] Could not load from ${url}:`, err.message);
     }
+  } catch (err) {
+    console.warn('[Degree Tracker] Direct fetch note:', err.message);
   }
 
   // Graceful offline & local file:// protocol fallback
@@ -41,7 +37,7 @@ async function loadCourseDataset() {
     return COURSES_DATA.courses;
   }
 
-  throw new Error('Unable to fetch courses dataset from candidate paths.');
+  throw new Error('Unable to fetch courses dataset from data/courses.json.');
 }
 
 /**
