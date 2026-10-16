@@ -4,169 +4,112 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Business Directory | Iloilo Chamber of Commerce</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+    <title>Member Directory | Iloilo Chamber of Commerce</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Montserrat:wght@400;600;700;800&display=swap"
         rel="stylesheet">
     <meta name="description"
-        content="Iloilo Chamber of Commerce | WDD 231 | Web Frontend Development I | James Phillip De Guzman">
+        content="Explore verified members and business partners across Iloilo province through the official Chamber directory.">
     <meta name="author" content="James Phillip K. De Guzman">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Iloilo Chamber of Commerce">
-    <meta property="og:description"
-        content="Iloilo Chamber of Commerce is a webpage for local business connecting consumers to the province's top local products and services!">
-    <meta property="og:image" content="https://jamesphillipdeguzman.github.io/wdd231/chamber/images/hero.jpg">
-    <meta property="og:image:alt" content="Dinagyang: Hero image of Iloilo Chamber of Commerce Business Directory Page">
-    <meta property="og:image:width" content="1400">
-    <meta property="og:image:height" content="630">
-    <meta property="og:url" content="https://jamesphillipdeguzman.github.io/wdd231/chamber/">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-
     <link rel="icon" href="images/favicon/favicon.ico" type="image/x-icon">
 
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/chamber-large.css">
     <link rel="stylesheet" href="styles/chamber-small.css">
-
-
-    <!-- defer is not needed when the type of script is 'module'. -->
     <script src="scripts/directory.js" type="module"></script>
-
 </head>
 
 <body>
     <header>
-
         <div class="nav-links-wrapper full-width">
-            <!-- <nav class="navlinks1">
+            <a href="index.html" aria-label="Iloilo Chamber of Commerce Home">
+                <img id="icc" src="images/favicon/android-chrome-192x192.png" alt="ICC Logo" width="42" height="42">
+            </a>
+
+            <nav class="menuLinks" id="primary-nav" aria-label="Primary Navigation">
+                <span id="data" aria-hidden="true"></span>
                 <ul>
-                    <li><a href="https://jamesdeguzman.com/">James</a></li>
-                    <li><a href="#">About</a></li>
-
-                </ul>
-            </nav> -->
-
-
-            <a href="https://jamesphillipdeguzman.github.io/wdd231/chamber/index.html">
-                <img id="icc" src="images/favicon/android-chrome-192x192.png" alt="ICC: Iloilo Chamber of Commerce"
-                    width="40" height="40"></a>
-
-
-            <nav class="menuLinks">
-                <!-- Show data on window width and device ratio -->
-                <span id="data"></span>
-                <ul>
-                    <li><a href="https://jamesphillipdeguzman.github.io/wdd231/chamber/index.html">Home</a></li>
-                    <li><a href="https://jamesphillipdeguzman.github.io/wdd231/chamber/directory.html"
-                            class="current-menu-item">Directory</a>
-                    </li>
-                    <li><a href="https://jamesphillipdeguzman.github.io/wdd231/chamber/join.html">Join</a></li>
-                    <li><a href="https://jamesphillipdeguzman.github.io/wdd231/chamber/discover.html">Discover</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="directory.html" class="current-menu-item">Directory</a></li>
+                    <li><a href="join.html">Join</a></li>
+                    <li><a href="discover.html">Discover</a></li>
                 </ul>
             </nav>
-            <button id="menu" aria-label="menu"></button>
 
-
+            <button id="menu" aria-label="Toggle navigation menu" aria-controls="primary-nav"
+                aria-expanded="false"></button>
         </div>
 
         <div class="hero-container">
             <div class="hero">
                 <picture>
-                    <source media="(max-width: 680px)" srcset="images/hero.webp">
-                    <img src="images/hero2.jpg" width="1400" height="350"
-                        alt="Seaside: Hero image of Iloilo Chamber of Commerce">
+                    <source media="(max-width: 774px)" srcset="images/hero3.webp" class="hero-img">
+                    <img src="images/hero4.webp" width="1200" height="380" alt="Iloilo City business skyline"
+                        class="hero-img">
                 </picture>
-
                 <div class="overlay-text">
-                    <h1>Business Directory</h1>
+                    <h1>Member Directory</h1>
+                    <p>Connect with reliable local enterprises, services, and innovators.</p>
                 </div>
-
             </div>
         </div>
     </header>
 
-
     <main>
         <div class="container">
+            <h2>Find a Chamber Member</h2>
 
-            <!-- <aside class="left-sidebar">
-                    <h2>Quick Links</h2>
-        
-                    <ul>
-                        <li><a href="https://jamesphillipdeguzman.github.io/wdd231">Course Page</a></li>
-                        <li><a href="https://jamesphillipdeguzman.github.io/wdd231/chamber/directory.html">Chamber</a></li>
-                        <li><a href="https://byui-cse.github.io/wdd231-ww-course/week01/chamber-site-plan.html">Site Plan</a>
-                        </li>
-                    </ul>
-        
-        
-                </aside> -->
-
-            <hr>
-            <h3>Find a chamber member</h3>
-            <label for="dynamic-businesses" aria-label="dynamic-businesses"></label>
-            <select name="dynamic-businesses" id="dynamic-businesses" aria-label="dynamic-businesses">
-                <option value="" id="select">Select</option>
-
+            <label for="dynamic-businesses" style="display:none;">Filter Members by Name</label>
+            <select name="dynamic-businesses" id="dynamic-businesses" aria-label="Filter chamber businesses">
+                <option value="" id="select">All Members</option>
             </select>
-            <div class="layout">
 
-                <button id="grid"><img src="images/grid.svg" alt="grid button for grid layout" width="30"
-                        height="30"></button>
-                <button id="list"><img src="images/list.svg" alt="list button for list layout" width="20"
-                        height="20"></button>
+            <div class="layout" role="toolbar" aria-label="Directory view switcher">
+                <button id="grid" aria-label="Grid view" title="Grid View" class="active">
+                    <img src="images/grid.svg" alt="" width="24" height="24" aria-hidden="true">
+                </button>
+                <button id="list" aria-label="List view" title="List View">
+                    <img src="images/list.svg" alt="" width="20" height="20" aria-hidden="true">
+                </button>
             </div>
 
-            <!-- Populate businesses here dynamically through your javascript code -->
-            <div id="businesses"></div>
-
-
+            <div id="businesses" aria-live="polite"></div>
         </div>
     </main>
+
     <footer class="bottom-details full-width">
         <div class="left-footer">
-            <!-- <a href="https://byui-cse.github.io/wdd231-ww-course/week01/chamber-site-plan.html">Site Plan</a> -->
-            <p>Iloilo Chamber of Commerce </p>
-            <p>info@icc.com.ph </p>
+            <p><strong>Iloilo Chamber of Commerce</strong></p>
+            <p>info@icc.com.ph</p>
             <p>Mandurriao, Iloilo City, 5000</p>
-
-
         </div>
 
         <div class="horizontal"></div>
 
         <div class="socialLinks">
-
-            <a href="https://www.facebook.com/" target="_blank"><img src="images/icons8-facebook-50.png"
-                    alt="Facebook icon 512 x 512" width="30" height="30"></a>
-
-            <a href="https://www.youtube.com/@jamesphillipdeguzman6495" target="_blank"><img
-                    src="images/icons8-youtube-logo-50.png" alt="Youtube icon 512 x 512" width="30" height="30"></a>
-
-            <a href="https://www.linkedin.com/in/jamesphillipdeguzman/" target="_blank"><img
-                    src="images/icons8-linkedin-50.png" alt="LinkedIn icon 512 x 512" width="30" height="30"></a>
-
-
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <img src="images/icons8-facebook-50.png" alt="Facebook" width="28" height="28">
+            </a>
+            <a href="https://www.youtube.com/@jamesphillipdeguzman6495" target="_blank" rel="noopener noreferrer"
+                aria-label="YouTube">
+                <img src="images/icons8-youtube-logo-50.png" alt="YouTube" width="28" height="28">
+            </a>
+            <a href="https://www.linkedin.com/in/jamesphillipdeguzman/" target="_blank" rel="noopener noreferrer"
+                aria-label="LinkedIn">
+                <img src="images/icons8-linkedin-50.png" alt="LinkedIn" width="28" height="28">
+            </a>
         </div>
 
         <div class="horizontal"></div>
+
         <div class="right-footer">
-            <p>&copy;<span id="currentyear"></span> | James Phillip De Guzman | WDD 231 Project </p>
-            <p> Iloilo, Philippines </p>
+            <p>&copy;<span id="currentyear"></span> | James Phillip De Guzman | WDD 231</p>
+            <p>Iloilo, Philippines</p>
             <p>Last Update: <span id="lastModified"></span></p>
-
         </div>
-
-
     </footer>
-
-
 </body>
 
 </html>

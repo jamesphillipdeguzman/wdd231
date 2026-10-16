@@ -4,30 +4,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Join Page | Iloilo Chamber of Commerce</title>
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
-        rel="stylesheet">
+    <title>Join the Chamber | Iloilo Chamber of Commerce</title>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link
-        href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Montserrat+Alternates:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        href="https://fonts.googleapis.com/css2?family=Gowun+Batang:wght@400;700&family=Montserrat:wght@400;600;700;800&display=swap"
         rel="stylesheet">
     <meta name="description"
-        content="Join page of Iloilo Chamber of Commerce | WDD 231 | Web Frontend Development I | James Phillip De Guzman">
+        content="Apply for Chamber of Commerce membership in Iloilo. Select from Non-profit, Bronze, Silver, or Gold tiers to expand your business network.">
     <meta name="author" content="James Phillip K. De Guzman">
-    <meta property="og:type" content="website">
-    <meta property="og:title" content="Join Page | Iloilo Chamber of Commerce">
-    <meta property="og:description"
-        content="Iloilo Chamber of Commerce is a webpage for local business connecting consumers to the province's top local products and services!">
-    <meta property="og:image"
-        content="https://jamesphillipdeguzman.github.io/wdd231/chamber/images/chamber-meeting.webp">
-    <meta property="og:image:alt" content="Dinagyang: Hero image of Iloilo Chamber of Commerce Join Page">
-    <meta property="og:image:width" content="1200">
-    <meta property="og:image:height" content="630">
-    <meta property="og:url" content="https://jamesphillipdeguzman.github.io/wdd231/chamber/">
     <link rel="icon" href="images/favicon/favicon.ico" type="image/x-icon">
+
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/chamber-large.css">
     <link rel="stylesheet" href="styles/chamber-small.css">
@@ -37,113 +24,146 @@
 <body>
     <header>
         <div class="nav-links-wrapper full-width">
-            <a href="https://jamesphillipdeguzman.github.io/wdd231/chamber/index.html">
-                <img id="icc" src="images/favicon/android-chrome-192x192.png" alt="ICC: Iloilo Chamber of Commerce"
-                    width="40" height="40"></a>
-            <nav class="menuLinks">
-                <span id="data"></span>
+            <a href="index.html" aria-label="Iloilo Chamber of Commerce Home">
+                <img id="icc" src="images/favicon/android-chrome-192x192.png" alt="ICC Logo" width="42" height="42">
+            </a>
+
+            <nav class="menuLinks" id="primary-nav" aria-label="Primary Navigation">
+                <span id="data" aria-hidden="true"></span>
                 <ul>
-                    <li><a href="https://jamesphillipdeguzman.github.io/wdd231/chamber/index.html">Home</a></li>
-                    <li><a href="https://jamesphillipdeguzman.github.io/wdd231/chamber/directory.html">Directory</a>
-                    </li>
-                    <li><a href="https://jamesphillipdeguzman.github.io/wdd231/chamber/join.html"
-                            class="current-menu-item">Join</a></li>
-                    <li><a href="https://jamesphillipdeguzman.github.io/wdd231/chamber/discover.html">Discover</a></li>
+                    <li><a href="index.html">Home</a></li>
+                    <li><a href="directory.html">Directory</a></li>
+                    <li><a href="join.html" class="current-menu-item">Join</a></li>
+                    <li><a href="discover.html">Discover</a></li>
                 </ul>
             </nav>
-            <button id="menu" aria-label="menu"></button>
+
+            <button id="menu" aria-label="Toggle navigation menu" aria-controls="primary-nav"
+                aria-expanded="false"></button>
         </div>
 
         <div class="hero-container">
             <div class="hero">
                 <picture>
-                    <source srcset="images/hero.webp" media="(max-width: 680px)" class="hero-img">
-                    <img src="images/hero4.jpg" width="1200" height="350"
-                        alt="Dinagyang: Hero image of Iloilo Chamber of Commerce" class="hero-img">
+                    <source media="(max-width: 680px)" srcset="images/hero.webp" class="hero-img">
+                    <img src="images/hero4.webp" width="1200" height="380" alt="Iloilo business leaders"
+                        class="hero-img">
                 </picture>
                 <div class="overlay-text">
-                    <h1>Join Us!</h1>
+                    <h1>Join the Chamber</h1>
+                    <p>Unlock strategic partnerships, advocacy, and promotional advantages.</p>
                 </div>
             </div>
         </div>
     </header>
 
     <main>
-        <hr>
         <div class="container">
             <div class="join-wrapper">
-                <form action="thanks.html" method="dialog" class="join-form">
+                <form action="thanks.html" method="get" class="join-form">
                     <fieldset>
-                        <h3>Please fill in the form</h3>
+                        <h3>Membership Application</h3>
+
                         <label for="firstname">
-                            First Name
-                            <input type="text" id="firstname" title="Enter your first name" name="firstname"
-                                autocomplete="given-name">
+                            First Name *
+                            <input type="text" id="firstname" name="firstname" required autocomplete="given-name">
                         </label>
+
                         <label for="lastname">
-                            Last Name
-                            <input type="text" id="lastname" title="Enter your last name" name="lastname"
-                                autocomplete="family-name">
+                            Last Name *
+                            <input type="text" id="lastname" name="lastname" required autocomplete="family-name">
                         </label>
+
                         <label for="organization-title">
                             Organization Title
-                            <input type="text" id="organization-title" title="Enter your organization title"
-                                autocomplete="organization-title">
+                            <input type="text" id="organization-title" name="organization-title"
+                                autocomplete="organization-title" placeholder="e.g. Managing Director">
                         </label>
+
                         <label for="email">
-                            Email
-                            <input type="email" aria-required="true" required id="email" title="Enter your email"
-                                name="email" autocomplete="email" placeholder="info@example.com">
+                            Email Address *
+                            <input type="email" id="email" name="email" required autocomplete="email"
+                                placeholder="name@company.com">
                         </label>
+
                         <label for="mobile">
-                            Mobile
-                            <input type="tel" aria-required="true" required id="mobile" title="Enter your mobile"
-                                name="mobile" autocomplete="tel">
+                            Mobile Phone *
+                            <input type="tel" id="mobile" name="mobile" required autocomplete="tel"
+                                placeholder="+63 900 000 0000">
                         </label>
+
                         <label for="business">
-                            Business
-                            <input type="text" id="business" title="Enter your business name" name="business"
-                                autocomplete="organization">
+                            Business / Enterprise Name *
+                            <input type="text" id="business" name="business" required autocomplete="organization">
                         </label>
 
                         <div class="radio-buttons">
-                            <h3>Membership Levels</h3>
+                            <span style="font-weight:600; font-size:0.9rem; margin-bottom:0.25rem;">Select Membership
+                                Level *</span>
                             <label class="radio-label" for="membership1">
-                                <input type="radio" name="options" id="membership1" value="np">Non-Profit
+                                <input type="radio" name="options" id="membership1" value="np" checked> Non-Profit
+                                (Free)
                             </label>
                             <label class="radio-label" for="membership2">
-                                <input type="radio" name="options" id="membership2" value="bronze">Bronze
+                                <input type="radio" name="options" id="membership2" value="bronze"> Bronze (Php
+                                8,400/yr)
                             </label>
                             <label class="radio-label" for="membership3">
-                                <input type="radio" name="options" id="membership3" value="silver">Silver
+                                <input type="radio" name="options" id="membership3" value="silver"> Silver (Php
+                                16,800/yr)
                             </label>
                             <label class="radio-label" for="membership4">
-                                <input type="radio" name="options" id="membership4" value="gold">Gold
+                                <input type="radio" name="options" id="membership4" value="gold"> Gold (Php 33,600/yr)
                             </label>
                         </div>
 
                         <label for="description">
-                            Business Description
+                            Business Overview & Mission
                             <textarea name="description" id="description"
-                                title="Enter your business description"></textarea>
+                                placeholder="Briefly describe your products, services, or organization goals..."></textarea>
                         </label>
 
-                        <label for="timestamp">
-                            <input type="datetime-local" name="timestamp" id="timestamp" aria-hidden="true" hidden>
-                        </label>
+                        <input type="hidden" name="timestamp" id="timestamp">
 
-                        <label for="submit">
-                            <input type="submit" id="submit" name="submit" value="Submit">
-                        </label>
+                        <input type="submit" id="submit" name="submit" value="Submit Application">
                     </fieldset>
                 </form>
 
-                <!-- THANK YOU MODAL -->
+                <!-- Membership Tier Cards -->
+                <div class="membership-cards">
+                    <h2>Membership Levels</h2>
+
+                    <div class="non-profit">
+                        <h3>Non-Profit</h3>
+                        <p>For educational, civic, and registered charitable organizations.</p>
+                        <button id="openModal1" class="membership-btns" type="button">Tier Details</button>
+                    </div>
+
+                    <div class="bronze">
+                        <h3>Bronze</h3>
+                        <p>Essential visibility and quarterly networking for small businesses.</p>
+                        <button id="openModal2" class="membership-btns" type="button">Tier Details</button>
+                    </div>
+
+                    <div class="silver">
+                        <h3>Silver</h3>
+                        <p>Priority directory placement and discounted executive training access.</p>
+                        <button id="openModal3" class="membership-btns" type="button">Tier Details</button>
+                    </div>
+
+                    <div class="gold">
+                        <h3>Gold</h3>
+                        <p>Premier VIP sponsorship, council access, and homepage spotlighting.</p>
+                        <button id="openModal4" class="membership-btns" type="button">Tier Details</button>
+                    </div>
+                </div>
+
+                <!-- Modals -->
                 <div id="modalBackdrop" class="backdrop"></div>
                 <div id="modal" class="modal">
                     <div class="modal-content">
-                        <span id="closeModal" class="close">&times;</span>
-                        <h2>Thanks for subscribing!</h2>
+                        <span id="closeModal" class="close" role="button" aria-label="Close dialog">&times;</span>
+                        <h2>Submission Received</h2>
                         <ul>
                             <li id="fname"></li>
                             <li id="lname"></li>
@@ -155,79 +175,61 @@
                     </div>
                 </div>
 
-                <!-- NON-PROFIT MODAL -->
                 <div id="modalBackdrop1" class="backdrop"></div>
                 <div id="modal1" class="modal">
                     <div class="modal-content">
-                        <span id="closeModal1" class="close">&times;</span>
-                        <h2>Non-Profit Membership <br>(Php 0/Year)</h2>
+                        <span id="closeModal1" class="close" role="button" aria-label="Close dialog">&times;</span>
+                        <h2>Non-Profit Membership</h2>
+                        <p><strong>Fee:</strong> Free (Php 0/Year)</p>
                         <ul>
-                            <li>✔ Access to Networking Events</li>
-                            <li>✔ Resource Library</li>
-                            <li>✔ Community Bulletin</li>
+                            <li>✔ Access to Monthly Chamber Networking Sessions</li>
+                            <li>✔ Access to Online Knowledge & Policy Library</li>
+                            <li>✔ Participation in Community Outreach Events</li>
                         </ul>
                     </div>
                 </div>
 
-                <!-- BRONZE MODAL -->
                 <div id="modalBackdrop2" class="backdrop"></div>
                 <div id="modal2" class="modal">
                     <div class="modal-content">
-                        <span id="closeModal2" class="close">&times;</span>
-                        <h2>Bronze Membership <br>(Php 8,400/Year)</h2>
+                        <span id="closeModal2" class="close" role="button" aria-label="Close dialog">&times;</span>
+                        <h2>Bronze Membership</h2>
+                        <p><strong>Fee:</strong> Php 8,400 / Year</p>
                         <ul>
-                            <li>✔ Access to Networking Events</li>
-                            <li>✔ Discounted Event Fees: 10% off</li>
-                            <li>✔ Business Directory Listing</li>
+                            <li>✔ All Non-Profit benefits included</li>
+                            <li>✔ Official Chamber Business Directory profile</li>
+                            <li>✔ 10% discount on conference & summit tickets</li>
                         </ul>
                     </div>
                 </div>
 
-                <!-- SILVER MODAL -->
                 <div id="modalBackdrop3" class="backdrop"></div>
                 <div id="modal3" class="modal">
                     <div class="modal-content">
-                        <span id="closeModal3" class="close">&times;</span>
-                        <h2>Silver Membership <br>(Php 16,800)</h2>
+                        <span id="closeModal3" class="close" role="button" aria-label="Close dialog">&times;</span>
+                        <h2>Silver Membership</h2>
+                        <p><strong>Fee:</strong> Php 16,800 / Year</p>
                         <ul>
-                            <li>✔ Access to Networking Events</li>
-                            <li>✔ Discounted Event Fees: 20% off</li>
-                            <li>✔ Spotlight Feature</li>
+                            <li>✔ All Bronze benefits included</li>
+                            <li>✔ 20% discount on conferences and workshops</li>
+                            <li>✔ Semi-annual Homepage Business Spotlight</li>
+                            <li>✔ Chamber newsletter feature editorial</li>
                         </ul>
                     </div>
                 </div>
 
-                <!-- GOLD MODAL -->
                 <div id="modalBackdrop4" class="backdrop"></div>
                 <div id="modal4" class="modal">
                     <div class="modal-content">
-                        <span id="closeModal4" class="close">&times;</span>
-                        <h2>Gold Membership <br>(Php 33,600)</h2>
+                        <span id="closeModal4" class="close" role="button" aria-label="Close dialog">&times;</span>
+                        <h2>Gold Membership</h2>
+                        <p><strong>Fee:</strong> Php 33,600 / Year</p>
                         <ul>
-                            <li>✔ Access to Networking Events</li>
-                            <li>✔ Premium Event Access: Free</li>
-                            <li>✔ Exclusive Networking Dinners</li>
+                            <li>✔ All Silver benefits included</li>
+                            <li>✔ Complimentary passes to all Chamber events</li>
+                            <li>✔ Permanent Gold partner banner placement</li>
+                            <li>✔ Invitation to exclusive Chamber Executive Dinners</li>
                         </ul>
-                    </div>
-                </div>
-
-                <div class="membership-cards">
-                    <h2>Choose a membership</h2><br>
-                    <div class="non-profit">
-                        <h3>Non-Profit</h3>
-                        <button id="openModal1" class="membership-btns">Learn More</button>
-                    </div>
-                    <div class="bronze">
-                        <h3>Bronze</h3>
-                        <button id="openModal2" class="membership-btns">Learn More</button>
-                    </div>
-                    <div class="silver">
-                        <h3>Silver</h3>
-                        <button id="openModal3" class="membership-btns">Learn More</button>
-                    </div>
-                    <div class="gold">
-                        <h3>Gold</h3>
-                        <button id="openModal4" class="membership-btns">Learn More</button>
                     </div>
                 </div>
             </div>
@@ -236,30 +238,35 @@
 
     <footer class="bottom-details full-width">
         <div class="left-footer">
-            <p>Iloilo Chamber of Commerce </p>
-            <p>info@icc.com.ph </p>
+            <p><strong>Iloilo Chamber of Commerce</strong></p>
+            <p>info@icc.com.ph</p>
             <p>Mandurriao, Iloilo City, 5000</p>
         </div>
 
         <div class="horizontal"></div>
 
         <div class="socialLinks">
-            <a href="https://www.facebook.com/" target="_blank"><img src="images/icons8-facebook-50.png"
-                    alt="Facebook icon 512 x 512" width="30" height="30"></a>
-            <a href="https://www.youtube.com/@jamesphillipdeguzman6495" target="_blank"><img
-                    src="images/icons8-youtube-logo-50.png" alt="Youtube icon 512 x 512" width="30" height="30"></a>
-            <a href="https://www.linkedin.com/in/jamesphillipdeguzman/" target="_blank"><img
-                    src="images/icons8-linkedin-50.png" alt="LinkedIn icon 512 x 512" width="30" height="30"></a>
+            <a href="https://www.facebook.com/" target="_blank" rel="noopener noreferrer" aria-label="Facebook">
+                <img src="images/icons8-facebook-50.png" alt="Facebook" width="28" height="28">
+            </a>
+            <a href="https://www.youtube.com/@jamesphillipdeguzman6495" target="_blank" rel="noopener noreferrer"
+                aria-label="YouTube">
+                <img src="images/icons8-youtube-logo-50.png" alt="YouTube" width="28" height="28">
+            </a>
+            <a href="https://www.linkedin.com/in/jamesphillipdeguzman/" target="_blank" rel="noopener noreferrer"
+                aria-label="LinkedIn">
+                <img src="images/icons8-linkedin-50.png" alt="LinkedIn" width="28" height="28">
+            </a>
         </div>
 
         <div class="horizontal"></div>
+
         <div class="right-footer">
-            <p>&copy;<span id="currentyear"></span> | James Phillip De Guzman | WDD 231 Project </p>
-            <p> Iloilo, Philippines </p>
+            <p>&copy;<span id="currentyear"></span> | James Phillip De Guzman | WDD 231</p>
+            <p>Iloilo, Philippines</p>
             <p>Last Update: <span id="lastModified"></span></p>
         </div>
     </footer>
-
 </body>
 
 </html>
