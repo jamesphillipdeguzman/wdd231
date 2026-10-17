@@ -159,18 +159,21 @@ export function renderHeroMetrics(container, stats, milestones) {
 
         <div class="space-y-1.5 pt-2 border-t border-slate-100 dark:border-slate-700/60">
           ${milestones
-            .slice(0, 4)
+            .slice(0, 5)
             .map((m) => `
               <div class="flex items-center justify-between text-xs py-0.5">
                 <span class="flex items-center gap-1.5 truncate text-slate-700 dark:text-slate-300">
                   ${m.completed
                     ? `<svg class="w-4 h-4 text-emerald-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>`
-                    : `<svg class="w-4 h-4 text-blue-500 shrink-0 animate-spin" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10" stroke="currentColor" stroke-width="4" class="opacity-25"></circle><path class="opacity-75" fill="currentColor" d="M4 12a8 8 0 018-8v8H4z"></path></svg>`}
-                  <span class="truncate font-medium">${m.title}</span>
+                    : `<span class="relative flex h-2 w-2 mx-1 shrink-0"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-sky-500"></span></span>`}
+                  <span class="truncate font-medium ${!m.completed ? 'text-blue-600 dark:text-sky-400 font-semibold' : ''}">${m.title}</span>
                 </span>
-                <span class="px-2 py-0.5 rounded text-[10px] font-semibold shrink-0 ${m.completed ? 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-300' : 'bg-blue-100 text-blue-800 dark:bg-blue-900/40 dark:text-blue-300'}">
-                  ${m.completed ? 'Earned' : 'In Progress'}
-                </span>
+                <div class="flex items-center gap-1.5 shrink-0">
+                  ${!m.completed ? `<span class="text-[10px] text-slate-400 dark:text-slate-500 font-mono hidden xl:inline">Expected Dec 2026</span>` : ''}
+                  <span class="px-2 py-0.5 rounded text-[10px] font-semibold ${m.completed ? 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-300' : 'bg-blue-600 text-white dark:bg-sky-500/20 dark:text-sky-300 dark:border dark:border-sky-500/40 shadow-xs'}" title="${!m.completed ? 'Expected Dec 2026' : 'Earned'}">
+                    ${m.completed ? 'Earned' : 'In Progress'}
+                  </span>
+                </div>
               </div>
             `)
             .join('')}
@@ -201,30 +204,29 @@ export function renderCredentialBadgesShowcase(container, milestones) {
             <span class="px-2.5 py-0.5 rounded-full text-[11px] font-semibold tracking-wider uppercase bg-amber-400 text-slate-950 shadow-sm">
               BYU-Pathway Worldwide & BYU-Idaho
             </span>
-            <span class="text-xs text-slate-300 font-mono">BS in Software Development Track</span>
+            <span class="text-xs text-slate-300 font-mono">Bachelor of Science in Software Development (BS)</span>
           </div>
           <h2 class="text-2xl font-black tracking-tight text-white">Degree Milestones & Conferred Credentials</h2>
           <p class="text-sm text-slate-300 max-w-2xl">
-            Each credential represents a stackable academic qualification awarded as you progress toward your bachelor's degree.
+            Stackable academic credentials awarded toward your Bachelor of Science degree at BYU-Idaho.
           </p>
         </div>
         <div class="text-right shrink-0">
-          <span class="text-xs uppercase tracking-wider text-slate-400 block font-semibold">Degree Status</span>
+          <span class="text-xs uppercase tracking-wider text-slate-400 block font-semibold">Active Program</span>
           <span class="inline-flex items-center gap-2 px-3 py-1 rounded-full text-xs font-bold bg-blue-500/20 text-blue-300 border border-blue-400/30">
-            <span class="w-2 h-2 rounded-full bg-blue-400 animate-ping"></span> Active Candidate (Block 5)
+            <span class="w-2 h-2 rounded-full bg-blue-400 animate-ping"></span> Active Candidate • Expected Dec 2026 (Block 6)
           </span>
         </div>
       </div>
 
-      <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-4 relative z-10">
+      <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-5 gap-4 relative z-10" style="grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));">
         ${milestones
-          .filter((m) => m.id !== 'bs-software-dev')
           .map(
             (m) => `
-          <div class="bg-white/10 hover:bg-white/15 backdrop-blur-md rounded-xl p-4 border ${m.completed ? 'border-emerald-400/40' : 'border-blue-400/30'} transition-all group flex flex-col justify-between">
+          <div class="bg-white/10 hover:bg-white/15 backdrop-blur-md rounded-xl p-4 border ${m.completed ? 'border-emerald-400/40' : 'border-blue-400/40 bg-gradient-to-b from-blue-900/30 to-slate-900/30 shadow-lg shadow-blue-950/20'} transition-all group flex flex-col justify-between">
             <div>
               <div class="flex items-center justify-between mb-2">
-                <span class="text-[10px] font-mono uppercase tracking-wider px-2 py-0.5 rounded ${m.completed ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/30' : 'bg-blue-500/20 text-blue-300 border border-blue-500/30'}">
+                <span class="text-[10px] font-mono uppercase tracking-wider px-2 py-0.5 rounded ${m.completed ? 'bg-emerald-500/20 text-emerald-300 border border-emerald-500/30' : 'bg-blue-500/25 text-blue-200 border border-blue-400/40 font-semibold'}">
                   ${m.type}
                 </span>
                 ${m.completed
@@ -232,14 +234,17 @@ export function renderCredentialBadgesShowcase(container, milestones) {
                       <svg class="w-4 h-4" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>
                       Earned
                     </span>`
-                  : `<span class="text-[11px] font-semibold text-blue-300">Active</span>`}
+                  : `<span class="flex items-center gap-1.5 px-2 py-0.5 rounded-full text-[10px] font-bold bg-blue-500/30 text-blue-200 border border-blue-400/40">
+                      <span class="w-1.5 h-1.5 rounded-full bg-blue-400 animate-ping"></span>
+                      In Progress &bull; ${m.badgeText || 'Active Block 5'}
+                    </span>`}
               </div>
-              <h4 class="text-sm font-bold text-white group-hover:text-amber-300 transition-colors line-clamp-2">${m.title}</h4>
-              <p class="text-xs text-slate-300 mt-1 line-clamp-2 leading-relaxed">${m.description}</p>
+              <h4 class="text-sm font-bold text-white group-hover:text-amber-300 transition-colors line-clamp-2">${m.fullTitle || m.title}</h4>
+              <p class="text-xs text-slate-300 mt-1 line-clamp-3 leading-relaxed">${m.description}</p>
             </div>
             
             <div class="mt-4 pt-3 border-t border-white/10 flex items-center justify-between text-[11px] text-slate-300">
-              <span>Term: <strong class="text-white">${m.issuedTerm || 'Completed'}</strong></span>
+              <span>${m.completed ? 'Conferred' : 'Target'}: <strong class="text-white">${m.targetCompletion || m.issuedTerm || 'December 2026'}</strong></span>
               <span>Credits: <strong class="text-white">${m.earnedCredits}/${m.requiredCredits}</strong></span>
             </div>
           </div>

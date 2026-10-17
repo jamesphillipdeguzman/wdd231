@@ -169,7 +169,7 @@ export function getCredentialMilestones(courses) {
     });
   };
 
-  const pathwayConnectComplete = hasCourse('PC101') && hasCourse('PC102') && hasCourse('PCI103');
+  const pathwayConnectComplete = hasCourse('PC101') && hasCourse('PC102') && hasCourse('PC103', 'PCI103');
   const webProgramCertComplete = hasCourse('CSE110', 'CSEPC110') &&
     hasCourse('CSE111') &&
     hasCourse('WDD130') &&
@@ -183,81 +183,80 @@ export function getCredentialMilestones(courses) {
     hasCourse('CSE340') &&
     hasCourse('WDD430');
 
-  const swDevCertComplete = hasCourse('CSE212') &&
-    hasCourse('CSE270') &&
-    hasCourse('CSE310') &&
-    hasCourse('CSE325') &&
-    hasCourse('CSE300') &&
-    hasCourse('CSE370');
-
   // Total credits earned towards degrees
   const totalEarned = courses
     .filter((c) => c.completed || c.status === 'Complete' || c.status === 'Fulfilled')
     .reduce((sum, c) => sum + (Number(c.creditsEarned) || 0), 0);
 
-  const aasSoftwareDevComplete = totalEarned >= 60 && webProgramCertComplete && webDevCertComplete;
   const bsSoftwareDevComplete = totalEarned >= 120;
 
   return [
     {
       id: 'pathway-connect',
       title: 'PathwayConnect Certificate',
+      fullTitle: 'PathwayConnect Certificate',
       type: 'Certificate',
       requiredCredits: 7,
       earnedCredits: 7,
-      completed: pathwayConnectComplete,
-      issuedTerm: '2023 Fall',
+      completed: true,
+      status: 'Earned',
+      issuedTerm: 'November 2023',
+      awardDate: 'November 2023',
       description: 'Foundational life, professional, and university transition skills via BYU-Pathway.',
     },
     {
       id: 'web-computer-programming',
       title: 'Web & Computer Programming Certificate',
+      fullTitle: 'Web & Computer Programming Certificate',
       type: 'Certificate',
       requiredCredits: 12,
       earnedCredits: 12,
-      completed: webProgramCertComplete,
+      completed: webProgramCertComplete || true,
+      status: 'Earned',
       issuedTerm: '2024 Fall',
+      awardDate: 'December 2024',
       description: 'Core programming syntax, classes, algorithms, functions, and responsive dynamic frontend foundations.',
     },
     {
       id: 'web-development',
       title: 'Web Development Certificate',
+      fullTitle: 'Web Development Certificate',
       type: 'Certificate',
       requiredCredits: 15,
       earnedCredits: 15,
-      completed: webDevCertComplete,
+      completed: webDevCertComplete || true,
+      status: 'Earned',
       issuedTerm: '2025 Term 6',
+      awardDate: 'December 2025',
       description: 'Comprehensive full-stack development, server APIs, RESTful services, databases, and modern JS architecture.',
     },
     {
-      id: 'software-development-cert',
-      title: 'Software Development Certificate',
-      type: 'Certificate',
-      requiredCredits: 14,
-      earnedCredits: swDevCertComplete ? 14 : 11,
-      completed: swDevCertComplete,
-      issuedTerm: swDevCertComplete ? '2026 Block 4' : 'In Progress',
-      description: 'Advanced engineering, data structures, testing automation, .NET ecosystems, and architecture principles.',
-    },
-    {
       id: 'aas-software-dev',
-      title: 'AAS in Software Development',
-      type: 'Associate',
+      title: 'AAS Software Development',
+      fullTitle: 'Associate of Applied Science (AAS) in Software Development',
+      type: 'Associate Degree',
       requiredCredits: 60,
-      earnedCredits: Math.min(60, totalEarned),
-      completed: aasSoftwareDevComplete,
-      issuedTerm: 'Earned / Complete',
-      description: 'Associate of Applied Science milestone conferred by BYU-Idaho through integrated certificate pathways.',
+      earnedCredits: 60,
+      completed: true,
+      status: 'Earned',
+      issuedTerm: 'April 18, 2026',
+      awardDate: 'April 18, 2026',
+      description: 'Associate of Applied Science (AAS) in Software Development conferred by BYU-Idaho.',
     },
     {
       id: 'bs-software-dev',
-      title: 'BS in Software Development',
-      type: 'Bachelor',
+      title: 'BS Software Development',
+      fullTitle: 'Bachelor of Science (BS) in Software Development',
+      type: "Bachelor's Degree",
       requiredCredits: 120,
       earnedCredits: totalEarned,
-      completed: bsSoftwareDevComplete,
-      issuedTerm: 'Target: 2026 Block 6',
-      description: 'Full Bachelor of Science degree in Software Development at BYU-Idaho.',
+      completed: false,
+      status: 'In Progress',
+      badgeText: 'Active Block 5',
+      issuedTerm: 'Expected: Dec 2026',
+      targetCompletion: 'December 2026',
+      awardDate: 'December 2026 (2026 Block 6 / Fall 2026)',
+      description: 'Encompasses stackable certificates (Web & Computer Programming, Web Development) along with general education, religion, and upper-division software development courses.',
     },
   ];
 }

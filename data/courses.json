@@ -1,4 +1,77 @@
 {
+  "program": {
+    "title": "Bachelor of Science in Software Development",
+    "degree": "BS",
+    "institution": "Brigham Young University - Idaho",
+    "partner": "BYU-Pathway Worldwide",
+    "status": "Active Candidate (In Progress)",
+    "activeTerm": "2026 Block 5",
+    "expectedGraduation": "December 2026 (2026 Block 6 / Fall 2026)",
+    "totalRequiredCredits": 120,
+    "totalEarnedCredits": 87,
+    "creditsInProgress": 6,
+    "creditsScheduled": 9
+  },
+  "credentials": [
+    {
+      "id": "pathway-connect",
+      "title": "PathwayConnect Certificate",
+      "type": "Certificate",
+      "status": "Earned",
+      "completed": true,
+      "awardDate": "November 2023",
+      "requiredCredits": 7,
+      "earnedCredits": 7,
+      "description": "Foundational life, professional, and university transition skills via BYU-Pathway."
+    },
+    {
+      "id": "web-computer-programming",
+      "title": "Web & Computer Programming Certificate",
+      "type": "Certificate",
+      "status": "Earned",
+      "completed": true,
+      "awardDate": "2024 Fall",
+      "requiredCredits": 12,
+      "earnedCredits": 12,
+      "description": "Core programming syntax, classes, algorithms, functions, and responsive dynamic frontend foundations."
+    },
+    {
+      "id": "web-development",
+      "title": "Web Development Certificate",
+      "type": "Certificate",
+      "status": "Earned",
+      "completed": true,
+      "awardDate": "2025 Term 6",
+      "requiredCredits": 15,
+      "earnedCredits": 15,
+      "description": "Comprehensive full-stack development, server APIs, RESTful services, databases, and modern JS architecture."
+    },
+    {
+      "id": "aas-software-dev",
+      "title": "Associate of Applied Science (AAS) in Software Development",
+      "shortTitle": "AAS Software Development",
+      "type": "Associate Degree",
+      "status": "Earned / Conferred",
+      "completed": true,
+      "awardDate": "April 18, 2026",
+      "requiredCredits": 60,
+      "earnedCredits": 60,
+      "description": "Associate of Applied Science (AAS) degree conferred by BYU-Idaho through integrated certificate pathways."
+    },
+    {
+      "id": "bs-software-dev",
+      "title": "Bachelor of Science (BS) in Software Development",
+      "shortTitle": "BS Software Development",
+      "type": "Bachelor's Degree",
+      "status": "In Progress",
+      "badgeText": "In Progress • Active Block 5",
+      "completed": false,
+      "awardDate": "December 2026",
+      "requiredCredits": 120,
+      "earnedCredits": 87,
+      "description": "Encompasses stackable certificates (Web & Computer Programming, Web Development) along with general education, religion, and upper-division software development courses."
+    }
+  ],
   "courses": [
     {
       "subject": "PC",
