@@ -111,10 +111,22 @@ class TrackerState {
     this.allTermsChronological = Array.from(termOrderMap.keys());
 
     // Initialize dark mode from system preference or localStorage
-    const savedTheme = localStorage.getItem('degree-tracker-theme');
+    const savedTheme = localStorage.getItem('dev-courses-theme') || localStorage.getItem('theme') || localStorage.getItem('degree-tracker-theme');
     const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
     this.filters.isDarkMode = savedTheme ? savedTheme === 'dark' : prefersDark;
     this.applyDarkMode(this.filters.isDarkMode);
+
+    // Listen for SET_THEME postMessage if embedded in iframe
+    window.addEventListener('message', (event) => {
+      if (event.data && (event.data.type === 'SET_THEME' || event.data.type === 'THEME_CHANGE')) {
+        const isDark = event.data.theme === 'dark';
+        if (this.filters.isDarkMode !== isDark) {
+          this.filters.isDarkMode = isDark;
+          this.applyDarkMode(isDark);
+          this.notify();
+        }
+      }
+    });
 
     this.recomputeStatsAndFilters();
   }
@@ -146,8 +158,21 @@ class TrackerState {
       }
 
       // Certificate filtering
-      if (certFilter !== 'All' && course.certificate !== certFilter) {
-        return false;
+      if (certFilter !== 'All') {
+        if (certFilter === 'General Education') {
+          const isGE =
+            course.certificate === 'General Education' ||
+            course.certificate === 'Foundational Studies' ||
+            course.certificate === 'Business Core' ||
+            course.certificate === 'Family Studies' ||
+            course.certificate === 'General Studies';
+          if (!isGE) return false;
+        } else if (certFilter === 'Pathway Connect') {
+          const isPC = (course.certificate || '').toLowerCase().includes('pathway');
+          if (!isPC) return false;
+        } else if (course.certificate !== certFilter) {
+          return false;
+        }
       }
 
       // Course Level filtering
@@ -284,7 +309,10 @@ class TrackerState {
   toggleDarkMode() {
     this.filters.isDarkMode = !this.filters.isDarkMode;
     this.applyDarkMode(this.filters.isDarkMode);
-    localStorage.setItem('degree-tracker-theme', this.filters.isDarkMode ? 'dark' : 'light');
+    const themeStr = this.filters.isDarkMode ? 'dark' : 'light';
+    localStorage.setItem('degree-tracker-theme', themeStr);
+    localStorage.setItem('dev-courses-theme', themeStr);
+    localStorage.setItem('theme', themeStr);
     this.notify();
   }
 

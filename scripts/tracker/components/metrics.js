@@ -146,11 +146,16 @@ export function renderHeroMetrics(container, stats, milestones) {
       <!-- Card 4: Credential Milestones Quick Summary -->
       <div class="bg-white dark:bg-slate-800/90 rounded-2xl p-5 shadow-sm border border-slate-200 dark:border-slate-700/60 transition-all hover:shadow-md flex flex-col justify-between">
         <div class="flex items-center space-x-2.5 mb-2">
-          <span class="p-2 rounded-xl bg-amber-50 dark:bg-amber-950/40 text-amber-600 dark:text-amber-400">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
-            </svg>
-          </span>
+          <!-- Adaptive Dual-Brand Milestone Lockup -->
+          <div class="inline-flex items-center gap-2 px-2.5 py-1.5 rounded-lg border shadow-sm transition-colors bg-slate-100 border-slate-200 text-slate-800 dark:bg-slate-800/90 dark:border-slate-700/80 dark:text-white milestone-brand-badge">
+            <!-- BYU-Pathway Logo -->
+            <img src="images/byupw-logo.png" alt="BYU-Pathway Worldwide" class="h-5 w-auto object-contain flex-shrink-0" />
+
+            <span class="text-slate-300 dark:text-slate-600 text-xs select-none">/</span>
+
+            <!-- BYU-Idaho Logo -->
+            <img src="images/byu-idaho-logo.png" alt="BYU-Idaho" class="h-4 w-auto object-contain flex-shrink-0 dark:brightness-0 dark:invert byu-idaho-logo" />
+          </div>
           <div>
             <p class="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">Milestone Badges</p>
             <h3 class="text-xl font-bold text-slate-900 dark:text-white">Credentials</h3>
@@ -161,15 +166,23 @@ export function renderHeroMetrics(container, stats, milestones) {
           ${milestones
             .slice(0, 5)
             .map((m) => `
-              <div class="flex items-center justify-between text-xs py-0.5">
-                <span class="flex items-center gap-1.5 truncate text-slate-700 dark:text-slate-300">
-                  ${m.completed
-                    ? `<svg class="w-4 h-4 text-emerald-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>`
-                    : `<span class="relative flex h-2 w-2 mx-1 shrink-0"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-sky-500"></span></span>`}
-                  <span class="truncate font-medium ${!m.completed ? 'text-blue-600 dark:text-sky-400 font-semibold' : ''}">${m.title}</span>
-                </span>
-                <div class="flex items-center gap-1.5 shrink-0">
-                  ${!m.completed ? `<span class="text-[10px] text-slate-400 dark:text-slate-500 font-mono hidden xl:inline">Expected Dec 2026</span>` : ''}
+              <div class="flex items-center justify-between gap-2 text-xs py-1">
+                <div class="flex items-start gap-2 min-w-0">
+                  <div class="shrink-0 mt-0.5">
+                    ${m.completed
+                      ? `<svg class="w-4 h-4 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>`
+                      : `<span class="relative flex h-2 w-2 mx-1 mt-1"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-sky-500"></span></span>`}
+                  </div>
+                  <div class="flex flex-col min-w-0">
+                    <span class="font-semibold text-slate-800 dark:text-white leading-snug">
+                      ${m.title}
+                    </span>
+                    ${!m.completed
+                      ? `<span class="text-[11px] text-slate-500 dark:text-slate-400 font-medium leading-tight mt-0.5">Expected Dec 2026</span>`
+                      : ''}
+                  </div>
+                </div>
+                <div class="shrink-0 ${!m.completed ? 'self-start mt-0.5' : 'self-center'}">
                   <span class="px-2 py-0.5 rounded text-[10px] font-semibold ${m.completed ? 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-300' : 'bg-blue-600 text-white dark:bg-sky-500/20 dark:text-sky-300 dark:border dark:border-sky-500/40 shadow-xs'}" title="${!m.completed ? 'Expected Dec 2026' : 'Earned'}">
                     ${m.completed ? 'Earned' : 'In Progress'}
                   </span>

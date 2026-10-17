@@ -435,6 +435,119 @@ function renderFilteredCourses(subject) {
   renderCourses(filtered, false);
 }
 
+function getCertificateMetadata(certificateName) {
+  const norm = (certificateName || "").toLowerCase().trim();
+  if (norm.includes("pathway")) {
+    return {
+      title: "Pathway Connect",
+      badgeText: "Earned",
+      badgeClass: "earned",
+      sortOrder: 1,
+    };
+  }
+  if (norm.includes("web and computer") || norm.includes("web & computer")) {
+    return {
+      title: "Web and Computer Programming",
+      badgeText: "Earned",
+      badgeClass: "earned",
+      sortOrder: 2,
+    };
+  }
+  if (norm.includes("web development")) {
+    return {
+      title: "Web Development",
+      badgeText: "Earned",
+      badgeClass: "earned",
+      sortOrder: 3,
+    };
+  }
+  if (norm.includes("software development")) {
+    return {
+      title: "Software Development",
+      badgeText: "Earned (AAS) / Active BS",
+      badgeClass: "in-progress",
+      sortOrder: 4,
+    };
+  }
+  if (norm.includes("religion")) {
+    return {
+      title: "Religion",
+      badgeText: "Earned",
+      badgeClass: "earned",
+      sortOrder: 6,
+    };
+  }
+  if (
+    norm.includes("general education") ||
+    norm.includes("foundational") ||
+    norm.includes("business") ||
+    norm.includes("family") ||
+    norm.includes("general studies")
+  ) {
+    return {
+      title: certificateName || "General Education",
+      badgeText: "Completed",
+      badgeClass: "completed",
+      sortOrder: 5,
+    };
+  }
+  return {
+    title: certificateName || "General Requirements",
+    badgeText: "Curriculum",
+    badgeClass: "scheduled",
+    sortOrder: 99,
+  };
+}
+
+function setupAccordionToggleBtn() {
+  const toggleBtn = document.querySelector("#toggle-all-accordions");
+  if (!toggleBtn) return;
+
+  const accordions = document.querySelectorAll(".cert-accordion");
+  const anyClosed = Array.from(accordions).some((acc) => !acc.open);
+
+  const icon = toggleBtn.querySelector(".toggle-icon");
+  const text = toggleBtn.querySelector(".toggle-text");
+
+  if (icon && text) {
+    if (anyClosed) {
+      icon.textContent = "⤢";
+      text.textContent = "Expand All";
+    } else {
+      icon.textContent = "⤡";
+      text.textContent = "Collapse All";
+    }
+  }
+
+  if (!toggleBtn.dataset.bound) {
+    toggleBtn.dataset.bound = "true";
+    toggleBtn.addEventListener("click", () => {
+      const currentAccordions = document.querySelectorAll(".cert-accordion");
+      const shouldOpen = Array.from(currentAccordions).some((acc) => !acc.open);
+      currentAccordions.forEach((acc) => {
+        acc.open = shouldOpen;
+      });
+      setupAccordionToggleBtn();
+    });
+  }
+
+  accordions.forEach((acc) => {
+    acc.addEventListener("toggle", () => {
+      const allAcc = document.querySelectorAll(".cert-accordion");
+      const isAnyClosed = Array.from(allAcc).some((a) => !a.open);
+      if (icon && text) {
+        if (isAnyClosed) {
+          icon.textContent = "⤢";
+          text.textContent = "Expand All";
+        } else {
+          icon.textContent = "⤡";
+          text.textContent = "Collapse All";
+        }
+      }
+    });
+  });
+}
+
 function renderCourses(courseList, showCompletedTotal) {
   const container = document.querySelector(".courses") || document.querySelector("#courses-container");
   const tallyEl = document.querySelector("#credits-tally");
@@ -454,21 +567,75 @@ function renderCourses(courseList, showCompletedTotal) {
     coursesByCertificate[cert].push(course);
   });
 
-  // Render courses grouped by certificate
-  for (const [certificate, groupCourses] of Object.entries(coursesByCertificate)) {
-    // Certificate subheader banner
-    const certHeader = document.createElement("li");
-    certHeader.classList.add("certificate-header");
-    certHeader.innerHTML = `
-      <span class="cert-title">${escapeHtml(certificate)}</span>
-      <span class="cert-count">${groupCourses.length} course${groupCourses.length > 1 ? 's' : ''}</span>
-    `;
-    container.appendChild(certHeader);
+  // Sort certificate groups according to stackable certificate tree order
+  const sortedCertEntries = Object.entries(coursesByCertificate).sort(([certA], [certB]) => {
+    const metaA = getCertificateMetadata(certA);
+    const metaB = getCertificateMetadata(certB);
+    return metaA.sortOrder - metaB.sortOrder;
+  });
 
-    // Render each course under this certificate
+  // Render each certificate as a collapsible accordion (<details>/<summary>)
+  sortedCertEntries.forEach(([certificate, groupCourses]) => {
+    const meta = getCertificateMetadata(certificate);
+    let groupCredits = 0;
+    let groupCompletedCredits = 0;
+
+    groupCourses.forEach((c) => {
+      const cr = Number(c.credits) || 0;
+      groupCredits += cr;
+      totalCredits += cr;
+
+      const isCompleted = c.completed || c.status === "Complete" || c.status === "Fulfilled";
+      if (isCompleted) {
+        const earned = Number(c.creditsEarned) || cr;
+        groupCompletedCredits += earned;
+        completedCredits += earned;
+      }
+    });
+
+    // Dynamic badge status for general tracks
+    let badgeText = meta.badgeText;
+    let badgeClass = meta.badgeClass;
+    if (meta.sortOrder > 4) {
+      if (groupCompletedCredits >= groupCredits && groupCredits > 0) {
+        badgeText = "Completed";
+        badgeClass = "completed";
+      } else if (groupCourses.some((c) => c.status === "Current")) {
+        badgeText = "In Progress";
+        badgeClass = "in-progress";
+      }
+    }
+
+    const details = document.createElement("details");
+    details.classList.add("cert-accordion");
+    details.dataset.cert = certificate;
+    // Collapsed by default (no open attribute)
+
+    details.innerHTML = `
+      <summary class="cert-accordion-summary">
+        <div class="cert-summary-left">
+          <span class="cert-chevron" aria-hidden="true">
+            <svg class="chevron-svg" viewBox="0 0 20 20" fill="currentColor" width="18" height="18">
+              <path fill-rule="evenodd" d="M7.293 14.707a1 1 0 010-1.414L10.586 10 7.293 6.707a1 1 0 011.414-1.414l4 4a1 1 0 010 1.414l-4 4a1 1 0 01-1.414 0z" clip-rule="evenodd"/>
+            </svg>
+          </span>
+          <span class="cert-title">${escapeHtml(certificate)}</span>
+          <span class="cert-badge ${badgeClass}">${escapeHtml(badgeText)}</span>
+        </div>
+        <div class="cert-summary-right">
+          <span class="cert-credits-pill">${groupCompletedCredits}/${groupCredits} cr</span>
+          <span class="cert-count">${groupCourses.length} ${groupCourses.length === 1 ? "course" : "courses"}</span>
+        </div>
+      </summary>
+      <div class="cert-course-grid"></div>
+    `;
+
+    const grid = details.querySelector(".cert-course-grid");
+
+    // Render course cards in this certificate grid
     groupCourses.forEach((course) => {
-      const li = document.createElement("li");
-      li.classList.add("course-card-item");
+      const card = document.createElement("div");
+      card.classList.add("course-card-item");
 
       const isCompleted = course.completed || course.status === "Complete" || course.status === "Fulfilled";
       const isCurrent = course.status === "Current";
@@ -479,17 +646,14 @@ function renderCourses(courseList, showCompletedTotal) {
       if (isCompleted) {
         statusClass = "complete";
         statusLabel = course.grade ? `Completed (${course.grade})` : "Completed";
-        completedCredits += Number(course.creditsEarned) || Number(course.credits) || 0;
       } else if (isCurrent) {
         statusClass = "in-progress";
         statusLabel = "In Progress";
       }
 
-      totalCredits += Number(course.credits) || 0;
+      card.classList.add(statusClass);
 
-      li.classList.add(statusClass);
-
-      li.innerHTML = `
+      card.innerHTML = `
         <div class="course-card-top">
           <div class="course-code-row">
             <span class="course-code-badge">${escapeHtml(course.subject)} ${escapeHtml(course.number)}</span>
@@ -501,7 +665,7 @@ function renderCourses(courseList, showCompletedTotal) {
         <div class="course-card-bottom">
           <div class="course-meta">
             <span class="credits-pill">⚡ ${course.credits} Credits</span>
-            <span class="term-pill">📅 ${escapeHtml(course.term || '')}</span>
+            <span class="term-pill">📅 ${escapeHtml(course.term || "")}</span>
           </div>
           ${course.courselink ? `
             <a href="${course.courselink}" target="_blank" rel="noopener noreferrer" class="course-link-btn" title="View Syllabus">
@@ -513,9 +677,11 @@ function renderCourses(courseList, showCompletedTotal) {
         </div>
       `;
 
-      container.appendChild(li);
+      grid.appendChild(card);
     });
-  }
+
+    container.appendChild(details);
+  });
 
   // Update credits summary display
   if (tallyEl) {
@@ -523,6 +689,9 @@ function renderCourses(courseList, showCompletedTotal) {
       ? `Credits: ${completedCredits} completed / ${totalCredits} shown`
       : `Credits: ${completedCredits} completed (${totalCredits} total)`;
   }
+
+  // Setup / update Expand All button state
+  setupAccordionToggleBtn();
 }
 
 /* ===============================
@@ -607,6 +776,166 @@ function buildCourseDropdown() {
   }
 }
 
+/* ===============================
+   PERSISTENT THEME SYSTEM & IFRAME POSTMESSAGE
+================================ */
+const THEME_STORAGE_KEY = "dev-courses-theme";
+
+function getActiveTheme() {
+  try {
+    const saved = localStorage.getItem(THEME_STORAGE_KEY) || localStorage.getItem("theme");
+    if (saved === "dark" || saved === "light") return saved;
+  } catch (e) {}
+
+  if (window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches) {
+    return "dark";
+  }
+  return "light";
+}
+
+function applyTheme(theme) {
+  const isDark = theme === "dark";
+  document.documentElement.classList.toggle("dark", isDark);
+  if (document.body) {
+    document.body.classList.toggle("dark", isDark);
+  }
+
+  try {
+    localStorage.setItem(THEME_STORAGE_KEY, theme);
+    localStorage.setItem("theme", theme);
+  } catch (e) {}
+
+  updateThemeToggleUI(theme);
+  sendThemeToIframe(theme);
+}
+
+function toggleTheme() {
+  const current = getActiveTheme();
+  const next = current === "dark" ? "light" : "dark";
+  applyTheme(next);
+}
+
+function updateThemeToggleUI(theme) {
+  const isDark = theme === "dark";
+  const buttons = document.querySelectorAll(".theme-toggle-btn, #preview-theme-toggle, #nav-theme-toggle");
+  buttons.forEach((btn) => {
+    btn.setAttribute("aria-pressed", String(isDark));
+    const icon = btn.querySelector(".theme-toggle-icon");
+    const label = btn.querySelector(".theme-toggle-label");
+    if (icon) icon.textContent = isDark ? "☀️" : "🌙";
+    if (label) label.textContent = isDark ? "Light Mode" : "Dark Mode";
+    btn.title = isDark ? "Switch to Light Mode" : "Switch to Dark Mode";
+  });
+}
+
+function sendThemeToIframe(theme) {
+  const iframe = document.querySelector("#course-iframe");
+  const wrapper = document.querySelector("#course-frame-wrapper");
+  if (!iframe) return;
+
+  const isDark = theme === "dark";
+
+  // Toggle wrapper dark fallback class (for cross-origin preview readability)
+  if (wrapper) {
+    wrapper.classList.toggle("iframe-dark-fallback", isDark);
+  }
+
+  // 1. Transmit SET_THEME via postMessage to iframe content window
+  if (iframe.contentWindow) {
+    try {
+      iframe.contentWindow.postMessage({ type: "SET_THEME", theme: theme }, "*");
+    } catch (err) {
+      console.warn("Unable to postMessage to iframe:", err);
+    }
+  }
+
+  // 2. Direct same-origin injection & class synchronization
+  try {
+    const doc = iframe.contentDocument || iframe.contentWindow.document;
+    if (doc && doc.documentElement) {
+      doc.documentElement.classList.toggle("dark", isDark);
+      if (doc.body) doc.body.classList.toggle("dark", isDark);
+
+      // Inject fallback stylesheet if the previewed course doesn't provide dark styles
+      let fallbackStyle = doc.getElementById("course-dark-fallback-style");
+      if (isDark) {
+        if (!fallbackStyle) {
+          fallbackStyle = doc.createElement("style");
+          fallbackStyle.id = "course-dark-fallback-style";
+          fallbackStyle.textContent = `
+            html.dark, html.dark body, body.dark {
+              background-color: #0f172a !important;
+              color: #f1f5f9 !important;
+              color-scheme: dark !important;
+            }
+            html.dark a, body.dark a { color: #38bdf8 !important; }
+            html.dark header, html.dark nav, html.dark footer, html.dark main,
+            html.dark section, html.dark article, html.dark aside, html.dark .card,
+            body.dark header, body.dark nav, body.dark footer, body.dark main {
+              background-color: #1e293b !important;
+              color: #f1f5f9 !important;
+              border-color: #334155 !important;
+            }
+            html.dark table, html.dark th, html.dark td,
+            body.dark table, body.dark th, body.dark td {
+              border-color: #334155 !important;
+              background-color: #1e293b !important;
+              color: #f1f5f9 !important;
+            }
+            html.dark tr:nth-child(even), body.dark tr:nth-child(even) {
+              background-color: #0f172a !important;
+            }
+            html.dark input, html.dark select, html.dark textarea, html.dark button,
+            body.dark input, body.dark select, body.dark textarea, body.dark button {
+              background-color: #334155 !important;
+              color: #f8fafc !important;
+              border-color: #475569 !important;
+            }
+          `;
+          (doc.head || doc.documentElement).appendChild(fallbackStyle);
+        }
+      } else if (fallbackStyle) {
+        fallbackStyle.remove();
+      }
+    }
+  } catch (corsErr) {
+    // Cross-origin iframe: access restricted by browser policy; postMessage was dispatched above
+  }
+}
+
+function setupThemeSystem() {
+  const currentTheme = getActiveTheme();
+  applyTheme(currentTheme);
+
+  // Bind toggle buttons
+  const toggleButtons = document.querySelectorAll(".theme-toggle-btn, #preview-theme-toggle, #nav-theme-toggle");
+  toggleButtons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      toggleTheme();
+    });
+  });
+
+  // Listen for storage changes from other tabs or degree-tracker
+  window.addEventListener("storage", (e) => {
+    if (e.key === THEME_STORAGE_KEY || e.key === "theme") {
+      if (e.newValue === "dark" || e.newValue === "light") {
+        applyTheme(e.newValue);
+      }
+    }
+  });
+
+  // Setup iframe onload listener
+  const iframe = document.querySelector("#course-iframe");
+  if (iframe) {
+    iframe.addEventListener("load", () => {
+      const active = getActiveTheme();
+      sendThemeToIframe(active);
+      setTimeout(() => sendThemeToIframe(active), 150);
+      setTimeout(() => sendThemeToIframe(active), 500);
+    });
+  }
+}
+
 function escapeHtml(str) {
   if (!str) return "";
   return String(str)
@@ -621,6 +950,7 @@ function escapeHtml(str) {
    INITIALIZE EVERYTHING
 ================================ */
 document.addEventListener("DOMContentLoaded", () => {
+  setupThemeSystem();
   setupHamburgerMenu();
   setupFooterDates();
   setupCourseFilters();

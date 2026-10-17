@@ -6,6 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>James De Guzman's Dev Courses | WDD 231</title>
 
+    <script>
+        // Apply active theme immediately before render to avoid FOUC
+        (function () {
+            try {
+                const savedTheme = localStorage.getItem('dev-courses-theme') || localStorage.getItem('theme');
+                if (savedTheme === 'dark' || (!savedTheme && window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
+                    document.documentElement.classList.add('dark');
+                }
+            } catch (e) {}
+        })();
+    </script>
+
     <link rel="stylesheet" href="styles/normalize.css">
     <link rel="stylesheet" href="styles/course.css">
     <link rel="icon" href="images/byucourses-logo.ico" type="image/x-icon">
@@ -46,6 +58,12 @@
                         rel="noopener noreferrer">GitHub ↗</a></li>
                 <li><a href="https://www.linkedin.com/in/jamesphillipdeguzman/" target="_blank"
                         rel="noopener noreferrer">LinkedIn ↗</a></li>
+                <li class="theme-nav-item">
+                    <button id="nav-theme-toggle" class="theme-toggle-btn nav-theme-btn" type="button"
+                        aria-label="Toggle theme mode" title="Toggle dark mode">
+                        <span class="theme-toggle-icon">🌙</span>
+                    </button>
+                </li>
             </ul>
         </nav>
     </header>
@@ -69,10 +87,17 @@
                 <div class="course-preview-container">
                     <div class="preview-meta-bar">
                         <h4 id="current-course-title">Select a course to view</h4>
-                        <a id="course-external-link" href="degree-tracker.html" class="course-launch-btn"
-                            target="_blank" rel="noopener noreferrer">
-                            Open in Degree Tracker &rarr;
-                        </a>
+                        <div class="preview-actions">
+                            <button id="preview-theme-toggle" class="theme-toggle-btn preview-theme-btn" type="button"
+                                aria-label="Toggle dark mode" title="Toggle dark mode">
+                                <span class="theme-toggle-icon">🌙</span>
+                                <span class="theme-toggle-label">Dark Mode</span>
+                            </button>
+                            <a id="course-external-link" href="degree-tracker.html" class="course-launch-btn"
+                                target="_blank" rel="noopener noreferrer">
+                                Open in Degree Tracker &rarr;
+                            </a>
+                        </div>
                     </div>
 
                     <div id="course-frame-wrapper" class="course-frame-wrapper">
@@ -113,11 +138,18 @@
                         <li><a href="#" id="cse">CSE Courses</a></li>
                         <li><a href="#" id="wdd">WDD Courses</a></li>
                     </ul>
-                    <div class="credits-tally" id="credits-tally">Loading credits...</div>
+                    <div class="course-nav-actions">
+                        <div class="credits-tally" id="credits-tally">Loading credits...</div>
+                        <button id="toggle-all-accordions" class="accordion-toggle-all-btn" type="button"
+                            aria-label="Expand or collapse all certificates">
+                            <span class="toggle-icon">⤢</span>
+                            <span class="toggle-text">Expand All</span>
+                        </button>
+                    </div>
                 </nav>
 
-                <!-- Responsive Auto-Fit Course Card Grid -->
-                <ul class="courses" id="courses-container"></ul>
+                <!-- Collapsible Stackable Certificate Sections -->
+                <div class="courses courses-accordion-container" id="courses-container"></div>
             </section>
 
             <!-- 3. Certificates Section -->

@@ -20,6 +20,7 @@ const statusOptions = [
 
 const trackPills = [
   { label: 'All Tracks', value: 'All' },
+  { label: 'PathwayConnect', value: 'Pathway Connect' },
   { label: 'Web & Computer Programming', value: 'Web and Computer Programming' },
   { label: 'Web Development', value: 'Web Development' },
   { label: 'Software Development', value: 'Software Development' },

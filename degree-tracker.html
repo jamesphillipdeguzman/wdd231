@@ -79,6 +79,42 @@
       display: none;
     }
 
+    /* Adaptive Milestone Brand Badge */
+    .milestone-brand-badge {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.625rem;
+      padding: 0.375rem 0.75rem;
+      border-radius: 0.5rem;
+      background-color: #f1f5f9;
+      border: 1px solid #e2e8f0;
+    }
+
+    .dark .milestone-brand-badge,
+    html.dark .milestone-brand-badge {
+      background-color: rgba(30, 41, 59, 0.9);
+      border: 1px solid #334155;
+    }
+
+    .milestone-brand-badge .byu-text {
+      font-family: 'Times New Roman', 'Georgia', serif;
+      font-weight: 900;
+      letter-spacing: 0.08em;
+      font-size: 0.875rem;
+      line-height: 1;
+      color: #002e5d;
+    }
+
+    .dark .milestone-brand-badge .byu-text,
+    html.dark .milestone-brand-badge .byu-text {
+      color: #38bdf8;
+    }
+
+    .dark .milestone-brand-badge .byu-idaho-logo,
+    html.dark .milestone-brand-badge .byu-idaho-logo {
+      filter: brightness(0) invert(1);
+    }
+
     input[type="search"]::-ms-clear,
     input[type="search"]::-ms-reveal {
       display: none;

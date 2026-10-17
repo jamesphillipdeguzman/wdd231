@@ -312,6 +312,54 @@ nav.top-navlinks ul li a.nav-featured {
   color: var(--text-primary);
 }
 
+.preview-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.theme-toggle-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 6px 12px;
+  font-size: 0.82rem;
+  font-weight: 600;
+  border-radius: var(--radius-sm);
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.theme-toggle-btn:hover {
+  background: var(--byu-light-blue);
+  color: var(--byu-blue);
+  border-color: var(--byu-blue);
+  transform: translateY(-1px);
+}
+
+.theme-toggle-icon {
+  font-size: 1rem;
+  line-height: 1;
+}
+
+.nav-theme-btn {
+  padding: 6px 10px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.3);
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+
+.nav-theme-btn:hover {
+  background: rgba(255, 255, 255, 0.3);
+  color: #ffffff;
+}
+
 .course-launch-btn {
   font-size: 0.82rem;
   font-weight: 600;
@@ -446,39 +494,201 @@ nav.top-navlinks ul li a.nav-featured {
   border: 1px solid #b9d7ea;
 }
 
-/* Course Card Grid */
-.courses {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-  gap: 16px;
-  list-style: none;
-  padding: 0;
-  margin-top: 14px;
+/* Course Nav Actions & Accordion Toggle Button */
+.course-nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
 }
 
-/* Category header spans all columns */
-.certificate-header {
-  grid-column: 1 / -1;
-  display: flex;
-  justify-content: space-between;
+.accordion-toggle-all-btn {
+  display: inline-flex;
   align-items: center;
-  padding: 10px 16px;
+  gap: 6px;
+  font-size: 0.78rem;
+  font-weight: 600;
+  padding: 5px 12px;
+  border-radius: 20px;
+  border: 1px solid #cbd5e1;
+  background: #ffffff;
+  color: var(--text-primary);
+  cursor: pointer;
+  transition: all 0.2s ease;
+  user-select: none;
+}
+
+.accordion-toggle-all-btn:hover {
   background: var(--byu-light-blue);
-  border-left: 4px solid var(--byu-blue);
-  border-radius: var(--radius-sm);
+  color: var(--byu-blue);
+  border-color: var(--byu-blue);
+  transform: translateY(-1px);
+}
+
+.accordion-toggle-all-btn .toggle-icon {
+  font-size: 0.95rem;
+  line-height: 1;
+}
+
+/* Collapsible Stackable Certificate Accordions */
+.courses,
+.courses-accordion-container {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+  list-style: none;
+  padding: 0;
+  margin-top: 16px;
+}
+
+.cert-accordion {
+  border: 1px solid var(--border-light);
+  border-radius: var(--radius-md);
+  background: #ffffff;
+  overflow: hidden;
+  transition: box-shadow 0.2s ease, border-color 0.2s ease;
+}
+
+.cert-accordion:hover {
+  border-color: #94a3b8;
+}
+
+.cert-accordion[open] {
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.06);
+  border-color: var(--byu-blue);
+}
+
+.cert-accordion-summary {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 18px;
+  background: #f8fafc;
+  cursor: pointer;
+  user-select: none;
+  list-style: none;
+  transition: background-color 0.2s ease;
+  gap: 12px;
+}
+
+.cert-accordion-summary::-webkit-details-marker,
+.cert-accordion-summary::marker {
+  display: none;
+}
+
+.cert-accordion-summary:hover {
+  background: #f1f5f9;
+}
+
+.cert-summary-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-wrap: wrap;
+}
+
+.cert-chevron {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 26px;
+  height: 26px;
+  border-radius: 50%;
+  background: rgba(0, 0, 0, 0.05);
+  color: var(--text-secondary);
+  transition: transform 0.25s cubic-bezier(0.4, 0, 0.2, 1), background-color 0.2s ease, color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.cert-accordion[open] .cert-chevron {
+  transform: rotate(90deg);
+  background: var(--byu-light-blue);
+  color: var(--byu-blue);
+}
+
+.cert-title {
+  font-size: 0.98rem;
   font-weight: 700;
   color: var(--byu-navy);
-  font-size: 0.92rem;
-  margin-top: 8px;
+  letter-spacing: -0.01em;
+}
+
+.cert-badge {
+  font-size: 0.72rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  padding: 3px 9px;
+  border-radius: 12px;
+  display: inline-flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.cert-badge.earned,
+.cert-badge.completed {
+  background: #dcfce7;
+  color: #15803d;
+  border: 1px solid #86efac;
+}
+
+.cert-badge.in-progress {
+  background: #e0f2fe;
+  color: #0369a1;
+  border: 1px solid #7dd3fc;
+}
+
+.cert-badge.scheduled {
+  background: #f1f5f9;
+  color: #64748b;
+  border: 1px solid #cbd5e1;
+}
+
+.cert-summary-right {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex-shrink: 0;
+}
+
+.cert-credits-pill {
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--text-secondary);
+  background: #ffffff;
+  padding: 3px 9px;
+  border-radius: 12px;
+  border: 1px solid var(--border-light);
 }
 
 .cert-count {
   font-size: 0.78rem;
-  font-weight: 600;
+  font-weight: 700;
   color: var(--byu-blue);
-  background: #ffffff;
-  padding: 2px 8px;
+  background: var(--byu-light-blue);
+  padding: 3px 10px;
   border-radius: 12px;
+  border: 1px solid rgba(0, 118, 182, 0.2);
+}
+
+.cert-course-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 16px;
+  padding: 16px;
+  background: #ffffff;
+  border-top: 1px solid var(--border-light);
+}
+
+@media (max-width: 640px) {
+  .cert-course-grid {
+    grid-template-columns: 1fr;
+    padding: 12px;
+    gap: 12px;
+  }
+  .cert-accordion-summary {
+    padding: 10px 14px;
+  }
 }
 
 /* Individual course card */
@@ -1055,3 +1265,365 @@ footer.bottom-details {
     grid-template-columns: 1fr;
   }
 }
+
+/* ==========================================================================
+   DARK THEME SYSTEM TOKENS & OVERRIDES
+   ========================================================================== */
+:root.dark,
+html.dark,
+body.dark {
+  --byu-navy: #0f172a;
+  --byu-blue: #38bdf8;
+  --byu-blue-hover: #0ea5e9;
+  --byu-light-blue: rgba(56, 189, 248, 0.15);
+  --byu-gold: #fbbf24;
+  --text-primary: #f1f5f9;
+  --text-secondary: #94a3b8;
+  --text-muted: #64748b;
+  --bg-page: #0b1120;
+  --bg-card: #1e293b;
+  --border-light: #334155;
+  --border-focus: #38bdf8;
+  --shadow-sm: 0 1px 3px rgba(0, 0, 0, 0.4);
+  --shadow-md: 0 4px 12px rgba(0, 0, 0, 0.5);
+  --shadow-lg: 0 10px 25px rgba(0, 0, 0, 0.6);
+  color-scheme: dark;
+}
+
+html.dark body {
+  background-color: var(--bg-page);
+  color: var(--text-primary);
+}
+
+html.dark .card-box {
+  background: var(--bg-card);
+  border-color: var(--border-light);
+  box-shadow: var(--shadow-sm);
+}
+
+html.dark .section-header h3 {
+  color: #f8fafc;
+}
+
+html.dark .section-subtitle {
+  color: #94a3b8;
+}
+
+html.dark #course-dropdown {
+  background-color: #1e293b;
+  color: #f8fafc;
+  border-color: #334155;
+}
+
+html.dark #course-dropdown:focus {
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+}
+
+html.dark #current-course-title {
+  color: #f8fafc;
+}
+
+html.dark .course-frame-wrapper {
+  background: #0f172a;
+  border-color: #334155;
+}
+
+html.dark .course-iframe-placeholder {
+  background: linear-gradient(180deg, #1e293b 0%, #0f172a 100%);
+}
+
+html.dark .placeholder-title {
+  color: #f8fafc;
+}
+
+html.dark .placeholder-text {
+  color: #94a3b8;
+}
+
+html.dark .theme-toggle-btn {
+  background: #1e293b;
+  color: #f1f5f9;
+  border-color: #475569;
+}
+
+html.dark .theme-toggle-btn:hover {
+  background: rgba(56, 189, 248, 0.2);
+  color: #38bdf8;
+  border-color: #38bdf8;
+}
+
+html.dark .course-launch-btn {
+  background: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
+  border-color: rgba(56, 189, 248, 0.3);
+}
+
+html.dark .course-launch-btn:hover {
+  background: #38bdf8;
+  color: #0f172a;
+}
+
+html.dark .course-navlinks ul li a {
+  background: #1e293b;
+  color: #94a3b8;
+  border-color: #334155;
+}
+
+html.dark .course-navlinks ul li a:hover {
+  color: #f1f5f9;
+  border-color: #64748b;
+}
+
+html.dark .course-navlinks ul li a.active {
+  background: #38bdf8;
+  color: #0f172a;
+  border-color: #38bdf8;
+}
+
+html.dark .credits-tally {
+  color: #94a3b8;
+}
+
+html.dark .accordion-toggle-all-btn {
+  background: #1e293b;
+  color: #f1f5f9;
+  border-color: #475569;
+}
+
+html.dark .accordion-toggle-all-btn:hover {
+  background: rgba(56, 189, 248, 0.2);
+  color: #38bdf8;
+  border-color: #38bdf8;
+}
+
+html.dark .cert-accordion {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+html.dark .cert-accordion[open] {
+  border-color: #38bdf8;
+  box-shadow: 0 4px 14px rgba(0, 0, 0, 0.4);
+}
+
+html.dark .cert-accordion-summary {
+  background: #0f172a;
+}
+
+html.dark .cert-accordion-summary:hover {
+  background: #1e293b;
+}
+
+html.dark .cert-chevron {
+  background: rgba(255, 255, 255, 0.08);
+  color: #94a3b8;
+}
+
+html.dark .cert-accordion[open] .cert-chevron {
+  background: rgba(56, 189, 248, 0.2);
+  color: #38bdf8;
+}
+
+html.dark .cert-title {
+  color: #f8fafc;
+}
+
+html.dark .cert-badge.earned,
+html.dark .cert-badge.completed {
+  background: rgba(34, 197, 94, 0.2);
+  color: #4ade80;
+  border-color: rgba(34, 197, 94, 0.4);
+}
+
+html.dark .cert-badge.in-progress {
+  background: rgba(56, 189, 248, 0.2);
+  color: #38bdf8;
+  border-color: rgba(56, 189, 248, 0.4);
+}
+
+html.dark .cert-badge.scheduled {
+  background: rgba(148, 163, 184, 0.15);
+  color: #cbd5e1;
+  border-color: rgba(148, 163, 184, 0.3);
+}
+
+html.dark nav.top-navlinks ul li a {
+  background-color: #1e293b;
+  color: #f8fafc;
+  border: 1px solid #334155;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.4);
+}
+
+html.dark nav.top-navlinks ul li a:hover {
+  background-color: #334155;
+  color: #38bdf8;
+  border-color: #38bdf8;
+}
+
+html.dark nav.top-navlinks ul li a.active {
+  background-color: #0284c7;
+  color: #ffffff;
+  border-color: #38bdf8;
+}
+
+html.dark nav.top-navlinks ul li a.nav-featured {
+  background: linear-gradient(135deg, #0f172a 0%, #1e3a8a 100%);
+  color: #fbbf24;
+  border: 1px solid rgba(251, 191, 36, 0.4);
+}
+
+html.dark nav.top-navlinks ul li a.nav-featured:hover {
+  background: linear-gradient(135deg, #1e293b 0%, #1d4ed8 100%);
+  color: #fde047;
+  border-color: #fbbf24;
+}
+
+html.dark .weather-detail-item {
+  background-color: #0f172a;
+  border-color: #334155;
+}
+
+html.dark .detail-label {
+  color: #94a3b8;
+}
+
+html.dark .detail-value,
+html.dark #weather-humidity,
+html.dark #weather-wind,
+html.dark #weather-feels {
+  color: #f8fafc;
+}
+
+html.dark .cert-credits-pill {
+  background: #0f172a;
+  color: #cbd5e1;
+  border-color: #334155;
+}
+
+html.dark .cert-count,
+html.dark .cert-accordion-summary .cert-count,
+html.dark .cert-summary-right .cert-count,
+html.dark .certificate-header .cert-count {
+  background-color: #1e293b !important;
+  color: #38bdf8 !important;
+  border: 1px solid #334155 !important;
+}
+
+html.dark .cert-course-grid {
+  background: #1e293b;
+  border-top-color: #334155;
+}
+
+html.dark .course-card-item {
+  background: #1e293b;
+  border-color: #334155;
+}
+
+html.dark .course-card-title {
+  color: #f8fafc;
+}
+
+html.dark .course-code-badge {
+  background: #0f172a;
+  color: #38bdf8;
+  border: 1px solid #334155;
+}
+
+html.dark .credits-pill,
+html.dark .term-pill {
+  background: #0f172a;
+  color: #cbd5e1;
+  border: 1px solid #334155;
+}
+
+html.dark .badge-pill {
+  background: rgba(56, 189, 248, 0.15);
+  color: #38bdf8;
+  border-color: rgba(56, 189, 248, 0.3);
+}
+
+html.dark footer {
+  background-color: #0f172a;
+  border-top-color: #334155;
+  color: #94a3b8;
+}
+
+/* ================= DARK MODE: CITY GALLERY & WIDGETS ================= */
+html.dark .widget-header {
+  border-bottom-color: #334155;
+}
+
+html.dark .widget-header h3,
+html.dark .cities-gallery h3 {
+  color: #f8fafc;
+}
+
+html.dark .widget-badge {
+  color: #38bdf8;
+}
+
+html.dark .city-select-label {
+  color: #94a3b8;
+}
+
+html.dark #dynamic-cities {
+  background-color: #0f172a;
+  color: #f8fafc;
+  border: 1.5px solid #334155;
+}
+
+html.dark #dynamic-cities option {
+  background-color: #0f172a;
+  color: #f8fafc;
+}
+
+html.dark #dynamic-cities:focus {
+  border-color: #38bdf8;
+  box-shadow: 0 0 0 3px rgba(56, 189, 248, 0.2);
+}
+
+html.dark .city-section {
+  background-color: #0f172a;
+  border: 1px solid #334155;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.4), 0 2px 4px -2px rgba(0, 0, 0, 0.3);
+}
+
+html.dark .city-card-name {
+  color: #f8fafc;
+}
+
+html.dark .city-meta-grid {
+  color: #94a3b8;
+}
+
+html.dark .city-meta-grid p {
+  color: #94a3b8;
+}
+
+html.dark .city-meta-grid strong {
+  color: #f8fafc;
+}
+
+html.dark .tourist-row {
+  color: #fbbf24;
+}
+
+html.dark .city-wiki-btn {
+  background-color: #1e293b;
+  color: #38bdf8;
+  border: 1px solid #334155;
+}
+
+html.dark .city-wiki-btn:hover {
+  background-color: #334155;
+  color: #ffffff;
+  border-color: #475569;
+}
+
+/* Fallback styling for cross-origin course iframes that lack native dark mode */
+html.dark .course-frame-wrapper.iframe-dark-fallback #course-iframe {
+  filter: invert(0.88) hue-rotate(180deg) contrast(1.05);
+  background-color: #111;
+}
+

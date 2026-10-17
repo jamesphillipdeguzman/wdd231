@@ -1417,10 +1417,22 @@
       this.allTermsChronological = Array.from(termOrderMap.keys());
 
       // Initialize dark mode from system preference or localStorage
-      const savedTheme = localStorage.getItem('degree-tracker-theme');
+      const savedTheme = localStorage.getItem('dev-courses-theme') || localStorage.getItem('theme') || localStorage.getItem('degree-tracker-theme');
       const prefersDark = window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches;
       this.filters.isDarkMode = savedTheme ? savedTheme === 'dark' : prefersDark;
       this.applyDarkMode(this.filters.isDarkMode);
+
+      // Listen for SET_THEME postMessage if embedded in iframe
+      window.addEventListener('message', (event) => {
+        if (event.data && (event.data.type === 'SET_THEME' || event.data.type === 'THEME_CHANGE')) {
+          const isDark = event.data.theme === 'dark';
+          if (this.filters.isDarkMode !== isDark) {
+            this.filters.isDarkMode = isDark;
+            this.applyDarkMode(isDark);
+            this.notify();
+          }
+        }
+      });
 
       this.recomputeStatsAndFilters();
     }
@@ -1452,8 +1464,21 @@
         }
 
         // Certificate filtering
-        if (certFilter !== 'All' && course.certificate !== certFilter) {
-          return false;
+        if (certFilter !== 'All') {
+          if (certFilter === 'General Education') {
+            const isGE =
+              course.certificate === 'General Education' ||
+              course.certificate === 'Foundational Studies' ||
+              course.certificate === 'Business Core' ||
+              course.certificate === 'Family Studies' ||
+              course.certificate === 'General Studies';
+            if (!isGE) return false;
+          } else if (certFilter === 'Pathway Connect') {
+            const isPC = (course.certificate || '').toLowerCase().includes('pathway');
+            if (!isPC) return false;
+          } else if (course.certificate !== certFilter) {
+            return false;
+          }
         }
 
         // Course Level filtering
@@ -1590,7 +1615,10 @@
     toggleDarkMode() {
       this.filters.isDarkMode = !this.filters.isDarkMode;
       this.applyDarkMode(this.filters.isDarkMode);
-      localStorage.setItem('degree-tracker-theme', this.filters.isDarkMode ? 'dark' : 'light');
+      const themeStr = this.filters.isDarkMode ? 'dark' : 'light';
+      localStorage.setItem('degree-tracker-theme', themeStr);
+      localStorage.setItem('dev-courses-theme', themeStr);
+      localStorage.setItem('theme', themeStr);
       this.notify();
     }
 
@@ -1709,6 +1737,218 @@
    * @param {HTMLElement} container
    * @param {Array<import('../types').Course>} courses
    */
+  const TRACK_DEFINITIONS = [
+    {
+      id: 'pathway-connect',
+      name: 'PathwayConnect Certificate',
+      shortName: 'Pathway Connect',
+      matchKeys: ['pathway connect', 'pathwayconnect'],
+      awardBadge: 'Earned',
+      badgeClass: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-700',
+      type: 'Foundational Skills (BYU-Pathway)',
+      order: 1,
+    },
+    {
+      id: 'web-computer-programming',
+      name: 'Web & Computer Programming Certificate',
+      shortName: 'Web and Computer Programming',
+      matchKeys: ['web and computer', 'web & computer', 'web and computer programming'],
+      awardBadge: 'Earned',
+      badgeClass: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-700',
+      type: 'Stackable Certificate 1',
+      order: 2,
+    },
+    {
+      id: 'web-development',
+      name: 'Web Development Certificate',
+      shortName: 'Web Development',
+      matchKeys: ['web development'],
+      awardBadge: 'Earned',
+      badgeClass: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-700',
+      type: 'Stackable Certificate 2',
+      order: 3,
+    },
+    {
+      id: 'software-dev',
+      name: 'Software Development Core (AAS / BS)',
+      shortName: 'Software Development',
+      matchKeys: ['software development'],
+      awardBadge: 'Earned AAS • BS Active',
+      badgeClass: 'bg-blue-100 text-blue-800 dark:bg-blue-900/40 dark:text-blue-300 border border-blue-300 dark:border-blue-700',
+      type: 'Associate (AAS) & Bachelor (BS) Core',
+      order: 4,
+    },
+    {
+      id: 'general-education',
+      name: 'General Education & University Breadth',
+      shortName: 'General Education',
+      matchKeys: ['general education', 'foundational studies', 'business core', 'family studies', 'general studies'],
+      awardBadge: 'Completed',
+      badgeClass: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-700',
+      type: 'University Breadth & Core',
+      order: 5,
+    },
+    {
+      id: 'religion',
+      name: 'Cornerstone Religion',
+      shortName: 'Religion',
+      matchKeys: ['religion'],
+      awardBadge: 'Completed',
+      badgeClass: 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-300 border border-emerald-300 dark:border-emerald-700',
+      type: 'BYU-Idaho Religion Curriculum',
+      order: 6,
+    },
+  ];
+
+  function findTrackForCourse(course) {
+    const cert = (course.certificate || '').toLowerCase().trim();
+    for (const track of TRACK_DEFINITIONS) {
+      if (track.matchKeys.some((k) => cert.includes(k))) {
+        return track;
+      }
+    }
+    return {
+      id: 'other',
+      name: course.certificate || 'General Electives',
+      shortName: course.certificate || 'General Electives',
+      matchKeys: [],
+      awardBadge: 'Curriculum',
+      badgeClass: 'bg-slate-100 text-slate-700 dark:bg-slate-700 dark:text-slate-300 border border-slate-300 dark:border-slate-600',
+      type: 'Academic Requirements',
+      order: 99,
+    };
+  }
+
+  function renderCourseCardHtml(course) {
+    const gradeBadge = getGradeBadgeStyles(course.grade, course.status);
+    const certBadgeClass = getCertificateColor(course.certificate);
+    const isUpper = course.courseLevel === 'Upper Division';
+    const cardId = `card-${course.code.replace(/[^a-zA-Z0-9]/g, '_')}`;
+
+    return `
+      <div
+        id="${cardId}"
+        class="course-card bg-white dark:bg-slate-800/90 rounded-2xl p-5 shadow-sm border border-slate-200/90 dark:border-slate-700/60 hover:shadow-lg hover:border-blue-400/60 dark:hover:border-blue-500/60 transition-all flex flex-col justify-between group relative"
+      >
+        <!-- Card Header -->
+        <div>
+          <div class="flex items-start justify-between gap-2 mb-3">
+            <div class="flex flex-wrap items-center gap-1.5">
+              <!-- Subject & Number Pill -->
+              <span class="inline-flex items-center px-2.5 py-1 rounded-lg text-xs font-mono font-bold bg-slate-900 text-white dark:bg-slate-700 dark:text-slate-100 shadow-sm">
+                ${course.subject} ${course.number}
+              </span>
+
+              <!-- Division Level Pill -->
+              <span class="text-[10px] uppercase font-semibold px-2 py-0.5 rounded ${isUpper ? 'bg-purple-100 text-purple-800 dark:bg-purple-900/40 dark:text-purple-300' : 'bg-slate-100 text-slate-600 dark:bg-slate-700 dark:text-slate-300'}">
+                ${isUpper ? 'Upper Div' : 'Lower Div'}
+              </span>
+            </div>
+
+            <div class="flex items-center gap-1.5 shrink-0">
+              <!-- Credits Badge -->
+              <span class="text-xs font-bold text-slate-700 dark:text-slate-300 bg-slate-100 dark:bg-slate-700/80 px-2 py-1 rounded-lg">
+                ${course.credits} cr
+              </span>
+
+              <!-- Grade / Status Pill -->
+              <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs ${gradeBadge.bg}">
+                ${course.status === 'Current' ? '<span class="w-2 h-2 rounded-full bg-blue-500 animate-ping"></span>' : ''}
+                ${gradeBadge.label}
+              </span>
+            </div>
+          </div>
+
+          <!-- Course Title & Term -->
+          <h3
+            class="text-base font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors cursor-pointer card-title-trigger leading-snug"
+            data-code="${course.code}"
+            title="Click to view details"
+          >
+            ${escapeHtml(course.title)}
+          </h3>
+
+          <!-- Term and Certificate Tag -->
+          <div class="flex flex-wrap items-center gap-1.5 mt-2 mb-3">
+            <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-slate-600 dark:text-slate-300 bg-slate-50 dark:bg-slate-900/80 px-2 py-0.5 rounded-md border border-slate-200 dark:border-slate-700">
+              <svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
+              ${course.term}
+            </span>
+
+            ${course.certificate ? `
+              <span class="text-[11px] font-medium px-2 py-0.5 rounded-md border ${certBadgeClass} truncate max-w-[190px]" title="${escapeHtml(course.certificate)}">
+                ${escapeHtml(course.certificate)}
+              </span>
+            ` : ''}
+          </div>
+
+          <!-- Course Description (Expandable Accordion) -->
+          <div class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed my-2">
+            <p class="description-text line-clamp-2 transition-all">
+              ${escapeHtml(course.description || 'No detailed description available for this course.')}
+            </p>
+            ${(course.description && course.description.length > 90) ? `
+              <button class="toggle-desc-btn text-[11px] text-blue-600 dark:text-blue-400 hover:underline font-semibold mt-1 inline-flex items-center gap-0.5 focus:outline-none">
+                <span class="desc-btn-text">Read more</span>
+                <svg class="w-3 h-3 transform transition-transform desc-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
+              </button>
+            ` : ''}
+          </div>
+
+          <!-- Tech Stack Badges -->
+          ${course.technology && course.technology.length > 0 ? `
+            <div class="mt-3 pt-3 border-t border-slate-100 dark:border-slate-700/60">
+              <span class="text-[10px] uppercase font-bold text-slate-400 tracking-wider block mb-1.5">Tech & Competencies</span>
+              <div class="flex flex-wrap gap-1">
+                ${course.technology
+                  .map(
+                    (tech) => `
+                  <button
+                    class="tech-pill-btn text-[11px] font-medium px-2 py-0.5 rounded-md bg-slate-100 hover:bg-blue-100 dark:bg-slate-700/60 dark:hover:bg-blue-900/40 text-slate-700 dark:text-slate-300 hover:text-blue-700 dark:hover:text-blue-300 transition-colors border border-transparent hover:border-blue-300 dark:hover:border-blue-700 focus:outline-none"
+                    data-tech="${escapeHtml(tech)}"
+                    title="Filter by ${escapeHtml(tech)}"
+                  >
+                    ${escapeHtml(tech)}
+                  </button>
+                `
+                  )
+                  .join('')}
+              </div>
+            </div>
+          ` : ''}
+        </div>
+
+        <!-- Action Footer -->
+        <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-700/60 flex items-center justify-between text-xs">
+          <!-- Details Trigger -->
+          <button
+            class="card-details-btn inline-flex items-center gap-1.5 font-semibold text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors focus:outline-none"
+            data-code="${course.code}"
+          >
+            <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
+            <span>View Details</span>
+          </button>
+
+          <!-- Direct Course Site Link -->
+          ${course.courselink ? `
+            <a
+              href="${course.courselink}"
+              target="_blank"
+              rel="noopener noreferrer"
+              class="inline-flex items-center gap-1 font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors bg-blue-50 dark:bg-blue-950/40 px-2.5 py-1 rounded-lg border border-blue-200 dark:border-blue-800"
+              title="Launch official course site / repo"
+            >
+              <span>Course Site</span>
+              <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
+            </a>
+          ` : `
+            <span class="text-[11px] text-slate-400 dark:text-slate-500 italic">No public link</span>
+          `}
+        </div>
+      </div>
+    `;
+  }
+
   function renderCourseGrid(container, courses) {
     if (!container) return;
 
@@ -1733,147 +1973,177 @@
       return;
     }
 
+    const snapshot = trackerState.getSnapshot();
+    const filters = snapshot.filters;
+    const activeCert = filters.certificate;
+    const hasSearchOrTech = Boolean(
+      (filters.searchQuery && filters.searchQuery.trim()) || filters.technologyTag
+    );
+
+    const trackMap = new Map();
+
+    courses.forEach((course) => {
+      const track = findTrackForCourse(course);
+      if (!trackMap.has(track.id)) {
+        trackMap.set(track.id, {
+          track,
+          courses: [],
+          totalCredits: 0,
+          earnedCredits: 0,
+        });
+      }
+      const entry = trackMap.get(track.id);
+      entry.courses.push(course);
+      const cr = Number(course.credits) || 0;
+      entry.totalCredits += cr;
+      if (course.completed || course.status === 'Complete' || course.status === 'Fulfilled') {
+        entry.earnedCredits += Number(course.creditsEarned) || cr;
+      }
+    });
+
+    const trackGroups = Array.from(trackMap.values()).sort(
+      (a, b) => a.track.order - b.track.order
+    );
+
+    const tracksWithOpenState = trackGroups.map((group) => {
+      let isOpen = false;
+      if (activeCert && activeCert !== 'All') {
+        const activeNorm = activeCert.toLowerCase().trim();
+        const matches =
+          group.track.matchKeys.some((k) => activeNorm.includes(k) || k.includes(activeNorm)) ||
+          group.track.name.toLowerCase().includes(activeNorm) ||
+          group.track.shortName.toLowerCase().includes(activeNorm);
+        isOpen = matches;
+      } else if (hasSearchOrTech) {
+        isOpen = true;
+      } else {
+        isOpen = false;
+      }
+      return { ...group, isOpen };
+    });
+
+    const anyOpen = tracksWithOpenState.some((g) => g.isOpen);
+
     container.innerHTML = `
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
-      ${courses
-        .map((course) => {
-          const gradeBadge = getGradeBadgeStyles(course.grade, course.status);
-          const certBadgeClass = getCertificateColor(course.certificate);
-          const isUpper = course.courseLevel === 'Upper Division';
-          const cardId = `card-${course.code.replace(/[^a-zA-Z0-9]/g, '_')}`;
+      <div class="space-y-4">
+        <!-- Tracks Header Summary & Toggle All Button -->
+        <div class="flex flex-col sm:flex-row sm:items-center justify-between gap-3 pb-2 border-b border-slate-200/80 dark:border-slate-800 text-xs text-slate-500 dark:text-slate-400">
+          <div class="flex items-center gap-2">
+            <span class="inline-flex items-center px-2 py-0.5 rounded text-[10px] font-bold uppercase tracking-wider bg-blue-100 dark:bg-blue-900/40 text-blue-800 dark:text-blue-300">
+              Stackable Tree
+            </span>
+            <span class="font-medium">
+              ${trackGroups.length} certificate track${trackGroups.length === 1 ? '' : 's'} &bull; Click any track banner to expand/collapse
+            </span>
+          </div>
+          <button
+            id="toggle-all-tracks-btn"
+            type="button"
+            class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl text-xs font-semibold bg-white dark:bg-slate-800 text-slate-700 dark:text-slate-300 border border-slate-200 dark:border-slate-700 hover:bg-slate-50 dark:hover:bg-slate-700/80 transition-colors shadow-xs"
+            title="Toggle all certificate accordions"
+          >
+            <span id="toggle-tracks-icon">${anyOpen ? '⤡' : '⤢'}</span>
+            <span id="toggle-tracks-text">${anyOpen ? 'Collapse All Tracks' : 'Expand All Tracks'}</span>
+          </button>
+        </div>
 
-          return `
-            <div
-              id="${cardId}"
-              class="course-card bg-white dark:bg-slate-800/90 rounded-2xl p-5 shadow-sm border border-slate-200/90 dark:border-slate-700/60 hover:shadow-lg hover:border-blue-400/60 dark:hover:border-blue-500/60 transition-all flex flex-col justify-between group relative"
-            >
-              <!-- Card Header -->
-              <div>
-                <div class="flex items-start justify-between gap-2 mb-3">
-                  <div class="flex flex-wrap items-center gap-1.5">
-                    <!-- Subject & Number Pill -->
-                    <span class="inline-flex items-center px-2.5 py-1 rounded-lg text-xs font-mono font-bold bg-slate-900 text-white dark:bg-slate-700 dark:text-slate-100 shadow-sm">
-                      ${course.subject} ${course.number}
-                    </span>
-
-                    <!-- Division Level Pill -->
-                    <span class="text-[10px] uppercase font-semibold px-2 py-0.5 rounded ${isUpper ? 'bg-purple-100 text-purple-800 dark:bg-purple-900/40 dark:text-purple-300' : 'bg-slate-100 text-slate-600 dark:bg-slate-700 dark:text-slate-300'}">
-                      ${isUpper ? 'Upper Div' : 'Lower Div'}
-                    </span>
-                  </div>
-
-                  <div class="flex items-center gap-1.5 shrink-0">
-                    <!-- Credits Badge -->
-                    <span class="text-xs font-bold text-slate-700 dark:text-slate-300 bg-slate-100 dark:bg-slate-700/80 px-2 py-1 rounded-lg">
-                      ${course.credits} cr
-                    </span>
-
-                    <!-- Grade / Status Pill -->
-                    <span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-lg text-xs ${gradeBadge.bg}">
-                      ${course.status === 'Current' ? '<span class="w-2 h-2 rounded-full bg-blue-500 animate-ping"></span>' : ''}
-                      ${gradeBadge.label}
-                    </span>
-                  </div>
-                </div>
-
-                <!-- Course Title & Term -->
-                <h3
-                  class="text-base font-bold text-slate-900 dark:text-white group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors cursor-pointer card-title-trigger leading-snug"
-                  data-code="${course.code}"
-                  title="Click to view details"
+        <!-- Collapsible Track Accordions -->
+        <div class="space-y-4">
+          ${tracksWithOpenState
+            .map(({ track, courses: groupCourses, totalCredits, earnedCredits, isOpen }) => {
+              return `
+                <details
+                  class="cert-track-accordion group bg-white dark:bg-slate-800/90 rounded-2xl border border-slate-200/90 dark:border-slate-700/60 shadow-xs overflow-hidden transition-all hover:border-slate-300 dark:hover:border-slate-600"
+                  data-track-id="${track.id}"
+                  data-cert-short="${escapeHtml(track.shortName)}"
+                  ${isOpen ? 'open' : ''}
                 >
-                  ${escapeHtml(course.title)}
-                </h3>
+                  <summary class="flex items-center justify-between p-4 sm:p-5 cursor-pointer select-none bg-slate-50/80 dark:bg-slate-900/60 hover:bg-slate-100/80 dark:hover:bg-slate-900 transition-colors list-none gap-3">
+                    <div class="flex items-center gap-3 sm:gap-4 flex-wrap">
+                      <!-- Rotating Chevron -->
+                      <span class="w-7 h-7 rounded-full bg-slate-200/70 dark:bg-slate-800 flex items-center justify-center text-slate-500 dark:text-slate-400 group-open:rotate-90 group-open:bg-blue-100 dark:group-open:bg-blue-900/40 group-open:text-blue-600 dark:group-open:text-blue-400 transition-all duration-200 shrink-0">
+                        <svg class="w-4 h-4 transform transition-transform" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                          <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M9 5l7 7-7 7" />
+                        </svg>
+                      </span>
 
-                <!-- Term and Certificate Tag -->
-                <div class="flex flex-wrap items-center gap-1.5 mt-2 mb-3">
-                  <span class="inline-flex items-center gap-1 text-[11px] font-semibold text-slate-600 dark:text-slate-300 bg-slate-50 dark:bg-slate-900/80 px-2 py-0.5 rounded-md border border-slate-200 dark:border-slate-700">
-                    <svg class="w-3 h-3 text-slate-400" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"/></svg>
-                    ${course.term}
-                  </span>
+                      <div>
+                        <div class="flex items-center gap-2 flex-wrap">
+                          <h3 class="text-base sm:text-lg font-black text-slate-900 dark:text-white tracking-tight">
+                            ${escapeHtml(track.name)}
+                          </h3>
+                          <span class="px-2.5 py-0.5 rounded-full text-[10px] font-bold ${track.badgeClass}">
+                            ${escapeHtml(track.awardBadge)}
+                          </span>
+                        </div>
+                        <p class="text-xs text-slate-500 dark:text-slate-400 font-medium">
+                          ${escapeHtml(track.type)}
+                        </p>
+                      </div>
+                    </div>
 
-                  ${course.certificate ? `
-                    <span class="text-[11px] font-medium px-2 py-0.5 rounded-md border ${certBadgeClass} truncate max-w-[190px]" title="${escapeHtml(course.certificate)}">
-                      ${escapeHtml(course.certificate)}
-                    </span>
-                  ` : ''}
-                </div>
+                    <!-- Summary Stats: Credits & Course Count -->
+                    <div class="flex items-center gap-2 sm:gap-3 shrink-0 text-xs">
+                      <span class="hidden sm:inline-flex items-center gap-1 font-semibold text-slate-600 dark:text-slate-300 bg-white dark:bg-slate-800 px-2.5 py-1 rounded-lg border border-slate-200 dark:border-slate-700 shadow-xs">
+                        <span class="font-bold text-slate-900 dark:text-white">${earnedCredits}/${totalCredits}</span> cr
+                      </span>
+                      <span class="inline-flex items-center px-2.5 py-1 rounded-lg font-bold text-xs bg-blue-50 dark:bg-slate-800 text-blue-700 dark:text-sky-400 border border-blue-200 dark:border-slate-700 shadow-xs">
+                        ${groupCourses.length} ${groupCourses.length === 1 ? 'course' : 'courses'}
+                      </span>
+                    </div>
+                  </summary>
 
-                <!-- Course Description (Expandable Accordion) -->
-                <div class="text-xs text-slate-600 dark:text-slate-300 leading-relaxed my-2">
-                  <p class="description-text line-clamp-2 transition-all">
-                    ${escapeHtml(course.description || 'No detailed description available for this course.')}
-                  </p>
-                  ${(course.description && course.description.length > 90) ? `
-                    <button class="toggle-desc-btn text-[11px] text-blue-600 dark:text-blue-400 hover:underline font-semibold mt-1 inline-flex items-center gap-0.5 focus:outline-none">
-                      <span class="desc-btn-text">Read more</span>
-                      <svg class="w-3 h-3 transform transition-transform desc-chevron" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7"/></svg>
-                    </button>
-                  ` : ''}
-                </div>
-
-                <!-- Tech Stack Badges -->
-                ${course.technology && course.technology.length > 0 ? `
-                  <div class="mt-3 pt-3 border-t border-slate-100 dark:border-slate-700/60">
-                    <span class="text-[10px] uppercase font-bold text-slate-400 tracking-wider block mb-1.5">Tech & Competencies</span>
-                    <div class="flex flex-wrap gap-1">
-                      ${course.technology
-                .map(
-                  (tech) => `
-                        <button
-                          class="tech-pill-btn text-[11px] font-medium px-2 py-0.5 rounded-md bg-slate-100 hover:bg-blue-100 dark:bg-slate-700/60 dark:hover:bg-blue-900/40 text-slate-700 dark:text-slate-300 hover:text-blue-700 dark:hover:text-blue-300 transition-colors border border-transparent hover:border-blue-300 dark:hover:border-blue-700 focus:outline-none"
-                          data-tech="${escapeHtml(tech)}"
-                          title="Filter by ${escapeHtml(tech)}"
-                        >
-                          ${escapeHtml(tech)}
-                        </button>
-                      `
-                )
-                .join('')}
+                  <!-- Expanded Course Card Grid -->
+                  <div class="p-4 sm:p-5 border-t border-slate-200/80 dark:border-slate-700/60 bg-slate-50/40 dark:bg-slate-950/30">
+                    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5">
+                      ${groupCourses.map(renderCourseCardHtml).join('')}
                     </div>
                   </div>
-                ` : ''}
-              </div>
+                </details>
+              `;
+            })
+            .join('')}
+        </div>
+      </div>
+    `;
 
-              <!-- Action Footer -->
-              <div class="mt-4 pt-3 border-t border-slate-100 dark:border-slate-700/60 flex items-center justify-between text-xs">
-                <!-- Details Trigger -->
-                <button
-                  class="card-details-btn inline-flex items-center gap-1.5 font-semibold text-slate-700 dark:text-slate-300 hover:text-blue-600 dark:hover:text-blue-400 transition-colors focus:outline-none"
-                  data-code="${course.code}"
-                >
-                  <svg class="w-3.5 h-3.5" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z"/></svg>
-                  <span>View Details</span>
-                </button>
-
-                <!-- Direct Course Site Link -->
-                ${course.courselink ? `
-                  <a
-                    href="${course.courselink}"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="inline-flex items-center gap-1 font-semibold text-blue-600 dark:text-blue-400 hover:text-blue-800 dark:hover:text-blue-300 transition-colors bg-blue-50 dark:bg-blue-950/40 px-2.5 py-1 rounded-lg border border-blue-200 dark:border-blue-800"
-                    title="Launch official course site / repo"
-                  >
-                    <span>Course Site</span>
-                    <svg class="w-3 h-3" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M10 6H6a2 2 0 00-2 2v10a2 2 0 002 2h10a2 2 0 002-2v-4M14 4h6m0 0v6m0-6L10 14"/></svg>
-                  </a>
-                ` : `
-                  <span class="text-[11px] text-slate-400 dark:text-slate-500 italic">No public link</span>
-                `}
-              </div>
-            </div>
-          `;
-        })
-        .join('')}
-    </div>
-  `;
-
-    // Wire Card Interactions
+    // Wire Card and Accordion Interactions
     wireCardEvents(container, courses);
   }
 
+  function updateToggleAllTracksBtn(container) {
+    const toggleBtn = container.querySelector('#toggle-all-tracks-btn');
+    if (!toggleBtn) return;
+    const accordions = container.querySelectorAll('.cert-track-accordion');
+    const isAnyClosed = Array.from(accordions).some((acc) => !acc.open);
+    const icon = toggleBtn.querySelector('#toggle-tracks-icon');
+    const text = toggleBtn.querySelector('#toggle-tracks-text');
+    if (icon && text) {
+      icon.textContent = isAnyClosed ? '⤢' : '⤡';
+      text.textContent = isAnyClosed ? 'Expand All Tracks' : 'Collapse All Tracks';
+    }
+  }
+
   function wireCardEvents(container, courses) {
+    // Toggle all tracks button
+    const toggleAllBtn = container.querySelector('#toggle-all-tracks-btn');
+    if (toggleAllBtn) {
+      toggleAllBtn.addEventListener('click', () => {
+        const allTrackAccordions = container.querySelectorAll('.cert-track-accordion');
+        const isAnyClosed = Array.from(allTrackAccordions).some((acc) => !acc.open);
+        allTrackAccordions.forEach((acc) => {
+          acc.open = isAnyClosed;
+        });
+        updateToggleAllTracksBtn(container);
+      });
+    }
+
+    // Sync toggle all button when any accordion is opened/closed
+    container.querySelectorAll('.cert-track-accordion').forEach((acc) => {
+      acc.addEventListener('toggle', () => {
+        updateToggleAllTracksBtn(container);
+      });
+    });
     // Expand/collapse description accordion
     container.querySelectorAll('.toggle-desc-btn').forEach((btn) => {
       btn.addEventListener('click', (e) => {
@@ -2730,11 +3000,16 @@
       <!-- Card 4: Credential Milestones Quick Summary -->
       <div class="bg-white dark:bg-slate-800/90 rounded-2xl p-5 shadow-sm border border-slate-200 dark:border-slate-700/60 transition-all hover:shadow-md flex flex-col justify-between">
         <div class="flex items-center space-x-2.5 mb-2">
-          <span class="p-2 rounded-xl bg-amber-50 dark:bg-amber-950/40 text-amber-600 dark:text-amber-400">
-            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z"/>
-            </svg>
-          </span>
+          <!-- Adaptive Dual-Brand Milestone Lockup -->
+          <div class="inline-flex items-center gap-2 px-2.5 py-1.5 rounded-lg border shadow-sm transition-colors bg-slate-100 border-slate-200 text-slate-800 dark:bg-slate-800/90 dark:border-slate-700/80 dark:text-white milestone-brand-badge">
+            <!-- BYU-Pathway Logo -->
+            <img src="images/byupw-logo.png" alt="BYU-Pathway Worldwide" class="h-5 w-auto object-contain flex-shrink-0" />
+
+            <span class="text-slate-300 dark:text-slate-600 text-xs select-none">/</span>
+
+            <!-- BYU-Idaho Logo -->
+            <img src="images/byu-idaho-logo.png" alt="BYU-Idaho" class="h-4 w-auto object-contain flex-shrink-0 dark:brightness-0 dark:invert byu-idaho-logo" />
+          </div>
           <div>
             <p class="text-xs font-semibold uppercase tracking-wider text-slate-500 dark:text-slate-400">Milestone Badges</p>
             <h3 class="text-xl font-bold text-slate-900 dark:text-white">Credentials</h3>
@@ -2745,15 +3020,23 @@
           ${milestones
         .slice(0, 5)
         .map((m) => `
-              <div class="flex items-center justify-between text-xs py-0.5">
-                <span class="flex items-center gap-1.5 truncate text-slate-700 dark:text-slate-300">
-                  ${m.completed
-            ? `<svg class="w-4 h-4 text-emerald-500 shrink-0" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>`
-            : `<span class="relative flex h-2 w-2 mx-1 shrink-0"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-sky-500"></span></span>`}
-                  <span class="truncate font-medium ${!m.completed ? 'text-blue-600 dark:text-sky-400 font-semibold' : ''}">${m.title}</span>
-                </span>
-                <div class="flex items-center gap-1.5 shrink-0">
-                  ${!m.completed ? `<span class="text-[10px] text-slate-400 dark:text-slate-500 font-mono hidden xl:inline">Expected Dec 2026</span>` : ''}
+              <div class="flex items-center justify-between gap-2 text-xs py-1">
+                <div class="flex items-start gap-2 min-w-0">
+                  <div class="shrink-0 mt-0.5">
+                    ${m.completed
+              ? `<svg class="w-4 h-4 text-emerald-500" fill="currentColor" viewBox="0 0 20 20"><path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/></svg>`
+              : `<span class="relative flex h-2 w-2 mx-1 mt-1"><span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-sky-400 opacity-75"></span><span class="relative inline-flex rounded-full h-2 w-2 bg-sky-500"></span></span>`}
+                  </div>
+                  <div class="flex flex-col min-w-0">
+                    <span class="font-semibold text-slate-800 dark:text-white leading-snug">
+                      ${m.title}
+                    </span>
+                    ${!m.completed
+              ? `<span class="text-[11px] text-slate-500 dark:text-slate-400 font-medium leading-tight mt-0.5">Expected Dec 2026</span>`
+              : ''}
+                  </div>
+                </div>
+                <div class="shrink-0 ${!m.completed ? 'self-start mt-0.5' : 'self-center'}">
                   <span class="px-2 py-0.5 rounded text-[10px] font-semibold ${m.completed ? 'bg-emerald-100 text-emerald-800 dark:bg-emerald-900/40 dark:text-emerald-300' : 'bg-blue-600 text-white dark:bg-sky-500/20 dark:text-sky-300 dark:border dark:border-sky-500/40 shadow-xs'}" title="${!m.completed ? 'Expected Dec 2026' : 'Earned'}">
                     ${m.completed ? 'Earned' : 'In Progress'}
                   </span>
@@ -2863,6 +3146,7 @@
 
   const trackPills = [
     { label: 'All Tracks', value: 'All' },
+    { label: 'PathwayConnect', value: 'Pathway Connect' },
     { label: 'Web & Computer Programming', value: 'Web and Computer Programming' },
     { label: 'Web Development', value: 'Web Development' },
     { label: 'Software Development', value: 'Software Development' },

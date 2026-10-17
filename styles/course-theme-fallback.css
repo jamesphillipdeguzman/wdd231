@@ -1,0 +1,106 @@
+/* ==========================================================================
+   Shared Course Theme Fallback Stylesheet
+   Ensures any previewed course respects dark mode even without custom dark CSS.
+   ========================================================================== */
+
+html.dark,
+body.dark,
+.dark {
+  color-scheme: dark;
+}
+
+html.dark,
+html.dark body,
+body.dark {
+  background-color: #0f172a !important;
+  color: #f1f5f9 !important;
+}
+
+/* Headings */
+html.dark h1, html.dark h2, html.dark h3, html.dark h4, html.dark h5, html.dark h6,
+body.dark h1, body.dark h2, body.dark h3, body.dark h4, body.dark h5, body.dark h6 {
+  color: #f8fafc !important;
+}
+
+/* Text & Paragraphs */
+html.dark p, html.dark span, html.dark li, html.dark label,
+body.dark p, body.dark span, body.dark li, body.dark label {
+  color: #cbd5e1;
+}
+
+/* Links */
+html.dark a,
+body.dark a {
+  color: #38bdf8 !important;
+  transition: color 0.2s ease;
+}
+
+html.dark a:hover,
+body.dark a:hover {
+  color: #7dd3fc !important;
+}
+
+/* Structural containers, cards, headers, footers */
+html.dark header, html.dark nav, html.dark footer, html.dark main,
+html.dark section, html.dark article, html.dark aside,
+html.dark .card, html.dark .card-box, html.dark .module, html.dark .container,
+body.dark header, body.dark nav, body.dark footer, body.dark main,
+body.dark section, body.dark article, body.dark aside,
+body.dark .card, body.dark .card-box, body.dark .module, body.dark .container {
+  background-color: #1e293b !important;
+  color: #f1f5f9 !important;
+  border-color: #334155 !important;
+}
+
+/* Tables */
+html.dark table,
+body.dark table {
+  border-color: #334155 !important;
+  background-color: #1e293b !important;
+  color: #f1f5f9 !important;
+}
+
+html.dark th, html.dark td,
+body.dark th, body.dark td {
+  border-color: #334155 !important;
+  color: #e2e8f0 !important;
+}
+
+html.dark th,
+body.dark th {
+  background-color: #0f172a !important;
+  color: #f8fafc !important;
+}
+
+html.dark tr:nth-child(even),
+body.dark tr:nth-child(even) {
+  background-color: #162032 !important;
+}
+
+/* Form Controls */
+html.dark input, html.dark select, html.dark textarea, html.dark button,
+body.dark input, body.dark select, body.dark textarea, body.dark button {
+  background-color: #1e293b !important;
+  color: #f8fafc !important;
+  border: 1px solid #475569 !important;
+}
+
+html.dark input:focus, html.dark select:focus, html.dark textarea:focus,
+body.dark input:focus, body.dark select:focus, body.dark textarea:focus {
+  border-color: #38bdf8 !important;
+  outline: none;
+}
+
+/* Code & Preformatted Blocks */
+html.dark pre, html.dark code,
+body.dark pre, body.dark code {
+  background-color: #020617 !important;
+  color: #38bdf8 !important;
+  border-color: #1e293b !important;
+}
+
+/* Media subtle dimming */
+html.dark img, html.dark video,
+body.dark img, body.dark video {
+  filter: brightness(0.92) contrast(1.05);
+}
