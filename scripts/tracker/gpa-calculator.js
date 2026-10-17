@@ -76,7 +76,7 @@ export function calculateDegreeStats(courses, totalRequiredCredits = 120) {
         majorCreditsEarned += earned;
       } else if (course.subject === 'REL') {
         religionCreditsEarned += earned;
-      } else if (['ENG', 'MATH', 'PUBH', 'ART', 'BIO', 'PEACE', 'GS'].includes(course.subject) || course.certificate === 'General Education') {
+      } else if (['ENG', 'MATH', 'PUBH', 'HUM', 'GESCI', 'PEACE', 'GS'].includes(course.subject) || course.certificate === 'General Education') {
         generalEdCreditsEarned += earned;
       }
 

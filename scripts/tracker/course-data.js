@@ -897,9 +897,9 @@ export const COURSES_DATA = {
       "courselink": "https://byui-cse.github.io/cse499-ww-course/"
     },
     {
-      "subject": "ART",
+      "subject": "HUM",
       "number": 110,
-      "code": "ART110",
+      "code": "HUM110",
       "title": "Discovery and Discernment Through the Arts",
       "courseLevel": "Lower Division",
       "credits": 3,
@@ -918,9 +918,9 @@ export const COURSES_DATA = {
       "courselink": null
     },
     {
-      "subject": "BIO",
+      "subject": "GESCI",
       "number": 110,
-      "code": "BIO110",
+      "code": "GESCI110",
       "title": "Sustaining Human Life",
       "courseLevel": "Lower Division",
       "credits": 3,

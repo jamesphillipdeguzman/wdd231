@@ -54,7 +54,7 @@
       "term": "2023 Fall Block 1",
       "courseCompletionDate": "10/28/2023",
       "certificate": "Web and Computer Programming",
-      "description": "This course will introduce heros to programming. It will introduce the building blocks of programming languages (variables, decisions, calculations, loops, array, and input/output) and use them to solve problems.",
+      "description": "Students learn programming from the aspect of a non-programmer. Basic concepts of computer science and programming are introduced including variables, operators, input, output, conditional logic, loops, functions, strings, and arrays. Students develop problem-solving techniques and computational thinking skills to solve many basic problems.",
       "technology": [
         "Python"
       ],
@@ -95,7 +95,7 @@
       "term": "Transfer Term",
       "courseCompletionDate": "10/30/2024",
       "certificate": "Religion",
-      "description": "Study of the central role of the family in the plan of salvation as taught in the scriptures and by modern prophets.",
+      "description": "Learn the doctrine of the family and the central role families play in Heavenly Father's plan of salvation. Course content is based on the \"\"The Family: A Proclamation to the World,\"\" other teachings of latter-day prophets, and the scriptures.",
       "technology": [
         "Religious Studies"
       ],
@@ -115,7 +115,7 @@
       "term": "2024 Winter Semester",
       "courseCompletionDate": "4/10/2024",
       "certificate": "Web Development",
-      "description": "Introductory course covering basic database concepts and SQL.",
+      "description": "This course covers the basic elements of database management systems. It introduces students to the concepts of logical and physical relationships in a data model and the concepts of inner and outer joins. Students will use a computer aided software engineering (CASE) tool to design, create, and query a database",
       "technology": [
         "SQL"
       ],
@@ -135,7 +135,7 @@
       "term": "2024 Winter Semester",
       "courseCompletionDate": "4/10/2024",
       "certificate": "Web and Computer Programming",
-      "description": "CSE 111 heros become more organized, efficient, and powerful computer programmers by learning to research and call functions written by others; to write, call, debug, and test their own functions; and to handle errors within functions. CSE 111 heros write programs with functions to solve problems in many disciplines, including business, physical science, human performance, and humanities.",
+      "description": "This course helps students become more organized, efficient, and powerful computer programmers by learning to research and call functions written by others; to write, call, debug, and test their own functions; and to handle errors within functions. CSE 111 students write programs with functions to solve problems in many disciplines, including business, physical science, human performance, and humanities.",
       "technology": [
         "Python"
       ],
@@ -197,7 +197,7 @@
       "term": "2024 Winter Semester",
       "courseCompletionDate": "4/17/2024",
       "certificate": "General Education",
-      "description": "Emphasizes academic argument, critical thinking, rhetorical analysis, and evidence-based composition across diverse disciplines.",
+      "description": "An introduction to academic inquiry and writing, laying the foundation for further academic and professional development. Students will learn to think and read critically and practice the writing process, including invention, research, summary, synthesis and analysis, revision, and editing. Students will work on several major writing assignments, including a research project in which they will gather information from a range of valid sources, demonstrating they can analyze and use that information purposefully, following appropriate documentation.",
       "technology": [
         "Academic Writing",
         "Critical Reasoning"
@@ -218,7 +218,7 @@
       "term": "2024 Winter Semester",
       "courseCompletionDate": "4/10/2024",
       "certificate": "Web and Computer Programming",
-      "description": "This course introduces heros to the World Wide Web and to careers in web site design and development. The course is hands on with heros actually participating in simple web designs and programming. It is anticipated that heros who complete this course will understand the fields of web design and development and will have a good idea if they want to pursue this degree as a major.",
+      "description": "This course introduces students to the World Wide Web and to careers in web site design and development. The course is hands on with heros actually participating in simple web designs and programming. It is anticipated that heros who complete this course will understand the fields of web design and development and will have a good idea if they want to pursue this degree as a major.",
       "technology": [
         "HTML",
         "CSS"
@@ -259,7 +259,7 @@
       "term": "2024 Spring Semester",
       "courseCompletionDate": "7/31/2024",
       "certificate": "General Education",
-      "description": "Practical quantitative reasoning and applied problem-solving using algebraic tools, financial formulas, statistical charts, and spreadsheet modeling.",
+      "description": "This course prepares students to understand, analyze, and solve real-life problems that require quantitative reasoning. Topics include the meaning of probabilities, how to read, critique, and apply statistical information found in news reports, public policy debates, consumer reports, and other daily life and professional situations; the use of mathematical models in describing, understanding, and making predictions about real world phenomena; and the mathematics of budgeting, loans, and investments. Topics will be illustrated by examples and application from daily life and natural phenomena. Math for the Real World is to inspire students to act wisely when faced with quantitative challenges in collegiate coursework, employment, and daily living.",
       "technology": [
         "Applied Mathematics",
         "Spreadsheet Modeling"
@@ -280,7 +280,7 @@
       "term": "2024 Spring Semester",
       "courseCompletionDate": "7/31/2024",
       "certificate": "Religion",
-      "description": "Studies foundational events, doctrinal revelations, and historical developments in the restoration of the Church of Jesus Christ.",
+      "description": "This course is required for graduation. In this course students will study key revelations, doctrine, people, and events related to the Restoration of the Church of Jesus Christ. As they do so, they will build upon their previous sequential and topical gospel study experiences. This course will provide the doctrinal foundation and historical context needed to gain an accurate understanding of Church doctrine and history. Students will study the scriptures, doctrine, and Church history in ways that relate to their lives and circumstances.",
       "technology": [
         "Religious Studies"
       ],
@@ -300,7 +300,7 @@
       "term": "2024 Spring Semester",
       "courseCompletionDate": "7/24/2024",
       "certificate": "Web and Computer Programming",
-      "description": "This course builds on prior experience in Web Fundamentals and programming. heros will learn to create dynamic websites that use JavaScript to respond to events, update content, and create responsive user experiences.",
+      "description": "This course builds on prior experience in Web Fundamentals and programming. Students will learn to create dynamic websites that use JavaScript to respond to events, update content, and create responsive user experiences.",
       "technology": [
         "HTML",
         "CSS",
@@ -322,7 +322,7 @@
       "term": "2024 Fall Semester",
       "courseCompletionDate": "12/18/2024",
       "certificate": "Business Core",
-      "description": "Advanced workplace communications, including business reports, proposals, digital correspondence, and executive presentations.",
+      "description": "Introduces the fundamentals of rhetorical principles and writing practices using a number of typical business situations. During the course, students will produce effective business letters, memos, reports, and employment packages — some of which will be created independently and some of which will involve collaborative efforts. This will prepare students for the demands of business careers that require significant time reading, drafting, and revising written communication",
       "technology": [
         "Professional Writing",
         "Executive Communication"
@@ -343,7 +343,7 @@
       "term": "2024 Fall Semester",
       "courseCompletionDate": "12/18/2024",
       "certificate": "Religion",
-      "description": "In-depth study of the doctrines and principles governing eternal marriage, family relationships, and parenting within the restored gospel.",
+      "description": "Required for graduation, this course centers on the The Family: A Proclamation to the World and develops gospel doctrines and principles pertaining to a successful and happy marriage and family life. Practical skills required to achieve and sustain provident living will also be explored and practiced.",
       "technology": [
         "Religious Studies"
       ],
@@ -363,7 +363,7 @@
       "term": "2024 Fall Semester",
       "courseCompletionDate": "12/18/2024",
       "certificate": "Web and Computer Programming",
-      "description": "This course builds on prior experience with Dynamic Web Fundamentals and programming. heros will focus on user experience, accessibility, compliance, performance optimization, and basic API usage.",
+      "description": "This course builds on prior experience with Dynamic Web Fundamentals and programming. Students will focus on user experience, accessibility, compliance, performance optimization, and basic API usage.",
       "technology": [
         "HTML",
         "CSS",
@@ -428,7 +428,7 @@
       "term": "2025 Term 1",
       "courseCompletionDate": "2/22/2025",
       "certificate": "Web Development",
-      "description": "Advanced frontend development with responsive design and JavaScript frameworks.",
+      "description": "This course will continue with the topics presented in WDD 231 Web Front-end Development I: Building websites with HTML, CSS, and Javascript. This course will have a stronger emphasis on Javascript development and mobile design as students create mobile web applications.",
       "technology": [
         "HTML",
         "CSS",
@@ -470,7 +470,7 @@
       "term": "2025 Term 3",
       "courseCompletionDate": "6/21/2025",
       "certificate": "Web Development",
-      "description": "RESTful web services and integration with frontend applications.",
+      "description": "This course focuses on the backend development of dynamic, service-oriented web applications. Students will learn how to design and implement web services, how to interact with data storage, and how to use these tools to build functioning web application.",
       "technology": [
         "Node.js",
         "REST API",
@@ -493,7 +493,7 @@
       "term": "2025 Term 4",
       "courseCompletionDate": "8/20/2025",
       "certificate": "Software Development",
-      "description": "Introduction to data structures and algorithms.",
+      "description": "This course will introduce students to the common programming data structures with an emphasis on how to use them to solve practical, real-world problems.",
       "technology": [
         "C#"
       ],
@@ -533,7 +533,7 @@
       "term": "2025 Term 5",
       "courseCompletionDate": "10/18/2025",
       "certificate": "Web Development",
-      "description": "Server-side programming, APIs, and database integration.",
+      "description": "This programming course focuses on constructing dynamic web sites using server-side languages, making use of databases and design patterns. The concepts introduced in Web Frontend Development courses are expected to be continued and implemented.",
       "technology": [
         "Node.js",
         "Express",
@@ -596,7 +596,7 @@
       "term": "2025 Term 6",
       "courseCompletionDate": "12/13/2025",
       "certificate": "Web Development",
-      "description": "Combines frontend and backend skills to build full-stack web applications.",
+      "description": "This course will teach you how to design and build interactive web based applications using HTML, CSS, JavaScript, and a web development stack.",
       "technology": [
         "HTML",
         "CSS",
@@ -619,7 +619,7 @@
       "term": "2026 Block 1",
       "courseCompletionDate": "2/25/2026",
       "certificate": "Software Development",
-      "description": "Covers software testing concepts, methodologies, and tools.",
+      "description": "Software Testing is a systematic process of verifying requirements and design elements, features, or standards against the implementation to increase product success. The verification process uses a set of test paths starting from the minor units up to the entire deliverable system using predetermined or live data to build confidence that the product works right (as specified). CSE 270 will explore testing standards, techniques, tools, and cases.",
       "technology": [
         "Software Testing",
         "Test Automation",
@@ -663,7 +663,7 @@
       "term": "2026 Block 2",
       "courseCompletionDate": "4/18/2026",
       "certificate": "Software Development",
-      "description": "Practical programming projects applying advanced programming techniques.",
+      "description": "This course will teach students to work in teams on large projects using new technology on self-defined projects. The class will simulate real-world programming projects with the aim of producing workable solutions that have potential impact.",
       "technology": [
         "Applied Programming Projects",
         "SQL Relational Databases",
@@ -688,7 +688,7 @@
       "term": "2026 Block 2",
       "courseCompletionDate": "4/22/2026",
       "certificate": "General Education",
-      "description": "Comprehensive introduction to personal fitness, nutrition, stress resilience, chronic disease prevention, and lifelong healthy behaviors.",
+      "description": "This course is designed to give students the knowledge and tools to achieve optimal wellness. Students learn how positive daily choices contribute to a balanced life across five areas of wellness: physical, social, emotional, spiritual, and intellectual/mental.The course explores principles of healthy living, encourages students to apply those principles in their own lives, and helps them recognize activities that diminish wellness. Students also learn strategies to overcome challenges and make positive lifestyle changes that support a higher quality of life.",
       "technology": [
         "Health Sciences",
         "Wellness Practices"
@@ -729,7 +729,7 @@
       "term": "2026 Block 3",
       "courseCompletionDate": "6/20/2026",
       "certificate": "Software Development",
-      "description": ".NET framework and software development best practices.",
+      "description": "This course leverages a student's fundamental software development and core web technology background with the Microsoft .NET framework with C# using the Visual Studio Integrated Development Environment. Students will build upon a C# foundation using the ASP.NET framework to design and develop scalable, standards-based web sites, applications, and services using contemporary methodologies and established design patterns. Team work and programming deliverables will be required.",
       "technology": [
         "C#",
         ".NET Ecosystem",
@@ -753,7 +753,7 @@
       "term": "2026 Block 3",
       "courseCompletionDate": "6/20/2026",
       "certificate": "Family Studies",
-      "description": "Covers foundational principles of managing family resources, budgeting, decision-making, and strengthening domestic leadership.",
+      "description": "This course examines the basic, timeless concepts underlying the field of management including values, goal-setting, decision-making, resources, and planning as it relates to the home and family. Practical application of course content with the 7 Habits of Highly Effective College Students to build new, lasting behaviors of effectiveness as an individual and within families will be explored.",
       "technology": [
         "Resource Management",
         "Family Leadership"
@@ -794,7 +794,7 @@
       "term": "2026 Block 4",
       "courseCompletionDate": "8/19/2026",
       "certificate": "Software Development",
-      "description": "This course will help prepare students to be professionals in their major by completing activities that will provide professional connections, confidence, and employability.",
+      "description": "This course will help prepare students to be professionals in their major by completing activities that will provide the professional connections, confidence, and employability.",
       "technology": [
         "Professional Networking",
         "Interview Preparation",
@@ -860,7 +860,7 @@
       "term": "2026 Block 5",
       "courseCompletionDate": null,
       "certificate": "Business Core",
-      "description": "Studies organizational behavior, strategic change management, interpersonal dynamics, motivational theories, and leadership principles.",
+      "description": "This course incorporates Organizational Effectiveness at three levels: individual, group, and organizations.  Students will examine these areas: motivation, team, group behavior, organizational design, structure, culture, communication, leadership, decision making, and managing change.",
       "technology": [
         "Organizational Leadership",
         "Change Management"
@@ -897,9 +897,9 @@
       "courselink": "https://byui-cse.github.io/cse499-ww-course/"
     },
     {
-      "subject": "ART",
+      "subject": "HUM",
       "number": 110,
-      "code": "ART110",
+      "code": "HUM110",
       "title": "Discovery and Discernment Through the Arts",
       "courseLevel": "Lower Division",
       "credits": 3,
@@ -908,7 +908,7 @@
       "term": "2026 Block 6",
       "courseCompletionDate": null,
       "certificate": "General Education",
-      "description": "Introduces visual analysis, artistic techniques, cultural heritage, and aesthetic discernment across historic and modern art forms.",
+      "description": "This course introduces students to the basic elements of creation in theatre, the visual arts, music, literature and film. The class also presents principles of interpretation to find meaning in the arts and promotes discovery of that which is “virtuous, lovely, good report or praiseworthy” in the humanities.",
       "technology": [
         "Visual Arts",
         "Aesthetic Analysis"
@@ -918,9 +918,9 @@
       "courselink": null
     },
     {
-      "subject": "BIO",
+      "subject": "GESCI",
       "number": 110,
-      "code": "BIO110",
+      "code": "GESCI110",
       "title": "Sustaining Human Life",
       "courseLevel": "Lower Division",
       "credits": 3,
@@ -929,7 +929,7 @@
       "term": "2026 Block 6",
       "courseCompletionDate": null,
       "certificate": "General Education",
-      "description": "Explores essential biological systems, environmental balance, cellular mechanisms, and sustainable practices supporting human physical life.",
+      "description": "This course addresses two crucial and compelling questions facing the world: how will we feed 9 billion people by the year 2050, and how will we care for those 9 billion people? Students will investigate the challenges and opportunities involved with creating a sustainable food supply, promoting healthy lifestyles, and providing health care for everyone. Students will also be introduced to the wide range of programs and degrees within the College of Agriculture and Life Sciences and the resulting opportunities for promising careers. This is the recommended Natural Science GE course for those majoring in the Life Sciences, such as Biology, Agriculture, Exercise Physiology, and Healthcare related fields, and is one of two recommended courses for non-science majors.",
       "technology": [
         "Biological Sciences",
         "Ecology"
@@ -950,7 +950,7 @@
       "term": "2026 Block 6",
       "courseCompletionDate": null,
       "certificate": "General Education",
-      "description": "Examines conflict dynamics, negotiation frameworks, interpersonal mediation, and principles of promoting enduring community peace.",
+      "description": "This class introduces core theories and practices related to conflict and peace. It explores key principles, tensions, and dynamics that are fundamental to conflict and teaches students how to engage conflict in collaborative problem-solving ways. This class is designed to enhance capacity for creative conflict transformation in multiple contexts, including families and workplaces as well as local, national, and global communities.",
       "technology": [
         "Conflict Resolution",
         "Peacebuilding"
