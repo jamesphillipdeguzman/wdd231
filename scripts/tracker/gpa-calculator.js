@@ -252,7 +252,7 @@ export function getCredentialMilestones(courses) {
       earnedCredits: totalEarned,
       completed: false,
       status: 'In Progress',
-      badgeText: 'Active Block 5',
+      badgeText: totalEarned >= 93 ? 'Active Block 6' : 'Active Block 5',
       issuedTerm: 'Expected: Dec 2026',
       targetCompletion: 'December 2026',
       awardDate: 'December 2026 (2026 Block 6 / Fall 2026)',
@@ -260,3 +260,72 @@ export function getCredentialMilestones(courses) {
     },
   ];
 }
+
+// Academic Period / Term Completion Date Mapping (Standard Wednesday Grade Posting / End of Term)
+export const ACADEMIC_TERM_COMPLETION_MAP = {
+  '2023 Spring Block 1': '6/7/2023',
+  '2023 Spring Block 2': '7/22/2023',
+  '2023 Fall Block 1': '10/28/2023',
+  'Transfer Term': '10/30/2024',
+  '2024 Winter Semester': '4/10/2024',
+  '2024 Spring Semester': '7/24/2024',
+  '2024 Fall Semester': '12/18/2024',
+  '2025 Term 1': '2/26/2025',
+  '2025 Term 3': '6/25/2025',
+  '2025 Term 4': '8/20/2025',
+  '2025 Term 5': '10/22/2025',
+  '2025 Term 6': '12/18/2025',
+  '2026 Block 1': '2/25/2026',
+  '2026 Block 2': '4/22/2026',
+  '2026 Block 3': '6/20/2026',
+  '2026 Block 4': '8/19/2026',
+  '2026 Block 5': '10/21/2026',
+};
+
+/**
+ * Resolves courseCompletionDate using course enrollment and grade records:
+ * 1. Honors explicit, authoritative courseCompletionDate if present.
+ * 2. Scheduled/Future courses strictly return null (never assigned premature dates).
+ * 3. Completed courses with Grade Posted resolve via academic term schedule if unpopulated.
+ * 4. Missing/unresolvable dates remain null without fabricating arbitrary timestamps.
+ *
+ * @param {import('./types').Course | Object} course
+ * @returns {string|null}
+ */
+export function resolveCourseCompletionDate(course) {
+  if (!course) return null;
+
+  // 1. Future or Scheduled courses must never have a completion date
+  const isFutureOrScheduled =
+    course.pw_chronology === 'Future' ||
+    course.mshied_registrationstatus === 'Scheduled' ||
+    course.status === 'Scheduled' ||
+    (course.completed === false && course.status !== 'Complete' && course.status !== 'Fulfilled');
+
+  if (isFutureOrScheduled) {
+    return null;
+  }
+
+  // 2. Authoritative date already present on course record
+  if (course.courseCompletionDate && typeof course.courseCompletionDate === 'string' && course.courseCompletionDate.trim() !== '') {
+    return course.courseCompletionDate.trim();
+  }
+
+  // 3. Completed courses with Grade Posted or completed status
+  const isCompleted =
+    course.completed === true ||
+    course.status === 'Complete' ||
+    course.status === 'Fulfilled' ||
+    course.mshied_registrationstatus === 'Grade Posted';
+
+  if (isCompleted) {
+    const term = course.term || (course.year && course.academicperiodname ? `${course.year} ${course.academicperiodname}` : null);
+    if (term && Object.prototype.hasOwnProperty.call(ACADEMIC_TERM_COMPLETION_MAP, term.trim())) {
+      return ACADEMIC_TERM_COMPLETION_MAP[term.trim()];
+    }
+  }
+
+  // Preserve null if date cannot be determined from available authoritative fields
+  return null;
+}
+

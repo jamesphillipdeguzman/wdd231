@@ -9,11 +9,11 @@
       "institution": "Brigham Young University - Idaho",
       "partner": "BYU-Pathway Worldwide",
       "status": "Active Candidate (In Progress)",
-      "activeTerm": "2026 Block 5",
+      "activeTerm": "2026 Block 6",
       "expectedGraduation": "December 2026 (2026 Block 6 / Fall 2026)",
       "totalRequiredCredits": 120,
-      "totalEarnedCredits": 87,
-      "creditsInProgress": 6,
+      "totalEarnedCredits": 93,
+      "creditsInProgress": 0,
       "creditsScheduled": 9
     },
     "credentials": [
@@ -68,11 +68,11 @@
         "shortTitle": "BS Software Development",
         "type": "Bachelor's Degree",
         "status": "In Progress",
-        "badgeText": "In Progress • Active Block 5",
+        "badgeText": "In Progress • Active Block 6",
         "completed": false,
         "awardDate": "December 2026",
         "requiredCredits": 120,
-        "earnedCredits": 87,
+        "earnedCredits": 93,
         "description": "Encompasses stackable certificates (Web & Computer Programming, Web Development) along with general education, religion, and upper-division software development courses."
       }
     ],
@@ -932,19 +932,19 @@
         "title": "Organizational Leadership",
         "courseLevel": "Upper Division",
         "credits": 3,
-        "creditsEarned": 0.0,
-        "grade": null,
+        "creditsEarned": 3.0,
+        "grade": "A",
         "term": "2026 Block 5",
-        "courseCompletionDate": null,
+        "courseCompletionDate": "10/21/2026",
         "certificate": "Business Core",
-        "description": "Studies organizational behavior, strategic change management, interpersonal dynamics, motivational theories, and leadership principles.",
+        "description": "This course incorporates Organizational Effectiveness at three levels: individual, group, and organizations.  Students will examine these areas: motivation, team, group behavior, organizational design, structure, culture, communication, leadership, decision making, and managing change.",
         "technology": [
           "Organizational Leadership",
           "Change Management"
         ],
-        "completed": false,
-        "status": "Current",
-        "courselink": null
+        "completed": true,
+        "status": "Fulfilled",
+        "courselink": "https://books.byui.edu/organizational_leadership_v2"
       },
       {
         "subject": "CSE",
@@ -953,10 +953,10 @@
         "title": "Senior Project",
         "courseLevel": "Upper Division",
         "credits": 3,
-        "creditsEarned": 0.0,
-        "grade": null,
+        "creditsEarned": 3.0,
+        "grade": "A",
         "term": "2026 Block 5",
-        "courseCompletionDate": null,
+        "courseCompletionDate": "10/21/2026",
         "certificate": "Software Development",
         "description": "In this course, students will gain experience with directed individual or group research and study of a topic in computer science not covered by the curriculum. Students will demonstrate their ability to learn and apply new material by completing a significant project.",
         "technology": [
@@ -969,8 +969,8 @@
           "Google Gemini API",
           "Docker"
         ],
-        "completed": false,
-        "status": "Current",
+        "completed": true,
+        "status": "Complete",
         "courselink": "https://byui-cse.github.io/cse499-ww-course/"
       },
       {
@@ -1294,13 +1294,81 @@
         earnedCredits: totalEarned,
         completed: false,
         status: 'In Progress',
-        badgeText: 'Active Block 5',
+        badgeText: totalEarned >= 93 ? 'Active Block 6' : 'Active Block 5',
         issuedTerm: 'Expected: Dec 2026',
         targetCompletion: 'December 2026',
         awardDate: 'December 2026 (2026 Block 6 / Fall 2026)',
         description: 'Encompasses stackable certificates (Web & Computer Programming, Web Development) along with general education, religion, and upper-division software development courses.',
       },
     ];
+  }
+
+  // Academic Period / Term Completion Date Mapping (Standard Wednesday Grade Posting / End of Term)
+  const ACADEMIC_TERM_COMPLETION_MAP = {
+    '2023 Spring Block 1': '6/7/2023',
+    '2023 Spring Block 2': '7/22/2023',
+    '2023 Fall Block 1': '10/28/2023',
+    'Transfer Term': '10/30/2024',
+    '2024 Winter Semester': '4/10/2024',
+    '2024 Spring Semester': '7/24/2024',
+    '2024 Fall Semester': '12/18/2024',
+    '2025 Term 1': '2/26/2025',
+    '2025 Term 3': '6/25/2025',
+    '2025 Term 4': '8/20/2025',
+    '2025 Term 5': '10/22/2025',
+    '2025 Term 6': '12/18/2025',
+    '2026 Block 1': '2/25/2026',
+    '2026 Block 2': '4/22/2026',
+    '2026 Block 3': '6/20/2026',
+    '2026 Block 4': '8/19/2026',
+    '2026 Block 5': '10/21/2026',
+  };
+
+  /**
+   * Resolves courseCompletionDate using course enrollment and grade records:
+   * 1. Honors explicit, authoritative courseCompletionDate if present.
+   * 2. Scheduled/Future courses strictly return null (never assigned premature dates).
+   * 3. Completed courses with Grade Posted resolve via academic term schedule if unpopulated.
+   * 4. Missing/unresolvable dates remain null without fabricating arbitrary timestamps.
+   *
+   * @param {Object} course
+   * @returns {string|null}
+   */
+  function resolveCourseCompletionDate(course) {
+    if (!course) return null;
+
+    // 1. Future or Scheduled courses must never have a completion date
+    const isFutureOrScheduled =
+      course.pw_chronology === 'Future' ||
+      course.mshied_registrationstatus === 'Scheduled' ||
+      course.status === 'Scheduled' ||
+      (course.completed === false && course.status !== 'Complete' && course.status !== 'Fulfilled');
+
+    if (isFutureOrScheduled) {
+      return null;
+    }
+
+    // 2. Authoritative date already present on course record
+    if (course.courseCompletionDate && typeof course.courseCompletionDate === 'string' && course.courseCompletionDate.trim() !== '') {
+      return course.courseCompletionDate.trim();
+    }
+
+    // 3. Completed courses with Grade Posted or completed status
+    const isCompleted =
+      course.completed === true ||
+      course.status === 'Complete' ||
+      course.status === 'Fulfilled' ||
+      course.mshied_registrationstatus === 'Grade Posted';
+
+    if (isCompleted) {
+      const term = course.term || (course.year && course.academicperiodname ? `${course.year} ${course.academicperiodname}` : null);
+      if (term && Object.prototype.hasOwnProperty.call(ACADEMIC_TERM_COMPLETION_MAP, term.trim())) {
+        return ACADEMIC_TERM_COMPLETION_MAP[term.trim()];
+      }
+    }
+
+    // Preserve null if date cannot be determined from available authoritative fields
+    return null;
   }
 
 
@@ -1387,6 +1455,7 @@
         creditsEarned: Number(course.creditsEarned) || 0,
         technology: Array.isArray(course.technology) ? course.technology : [],
         status: course.status || (course.completed ? 'Complete' : 'Scheduled'),
+        courseCompletionDate: resolveCourseCompletionDate(course),
       }));
 
       // Extract unique certificates
@@ -2710,7 +2779,7 @@
             <div class="bg-slate-50 dark:bg-slate-900/60 p-3 rounded-xl border border-slate-200/80 dark:border-slate-700/60">
               <span class="text-[10px] uppercase font-bold text-slate-400 block mb-0.5">Completion Date</span>
               <span class="text-xs font-semibold text-slate-800 dark:text-slate-200">
-                ${course.courseCompletionDate || (course.status === 'Current' ? 'Target: Oct 2026' : 'Target: Dec 2026')}
+                ${course.courseCompletionDate || ((course.completed || course.status === 'Complete' || course.status === 'Fulfilled') ? 'Grade Posted' : course.status === 'Current' ? 'Target: Oct 2026' : 'Target: Dec 2026')}
               </span>
             </div>
 

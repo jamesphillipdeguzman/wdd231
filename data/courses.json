@@ -5,11 +5,11 @@
     "institution": "Brigham Young University - Idaho",
     "partner": "BYU-Pathway Worldwide",
     "status": "Active Candidate (In Progress)",
-    "activeTerm": "2026 Block 5",
+    "activeTerm": "2026 Block 6",
     "expectedGraduation": "December 2026 (2026 Block 6 / Fall 2026)",
     "totalRequiredCredits": 120,
-    "totalEarnedCredits": 87,
-    "creditsInProgress": 6,
+    "totalEarnedCredits": 93,
+    "creditsInProgress": 0,
     "creditsScheduled": 9
   },
   "credentials": [
@@ -64,11 +64,11 @@
       "shortTitle": "BS Software Development",
       "type": "Bachelor's Degree",
       "status": "In Progress",
-      "badgeText": "In Progress • Active Block 5",
+      "badgeText": "In Progress • Active Block 6",
       "completed": false,
       "awardDate": "December 2026",
       "requiredCredits": 120,
-      "earnedCredits": 87,
+      "earnedCredits": 93,
       "description": "Encompasses stackable certificates (Web & Computer Programming, Web Development) along with general education, religion, and upper-division software development courses."
     }
   ],
@@ -928,18 +928,18 @@
       "title": "Organizational Leadership",
       "courseLevel": "Upper Division",
       "credits": 3,
-      "creditsEarned": 0.0,
-      "grade": null,
+      "creditsEarned": 3.0,
+      "grade": "A",
       "term": "2026 Block 5",
-      "courseCompletionDate": null,
+      "courseCompletionDate": "10/21/2026",
       "certificate": "Business Core",
       "description": "This course incorporates Organizational Effectiveness at three levels: individual, group, and organizations.  Students will examine these areas: motivation, team, group behavior, organizational design, structure, culture, communication, leadership, decision making, and managing change.",
       "technology": [
         "Organizational Leadership",
         "Change Management"
       ],
-      "completed": false,
-      "status": "Current",
+      "completed": true,
+      "status": "Fulfilled",
       "courselink": "https://books.byui.edu/organizational_leadership_v2"
     },
     {
@@ -949,10 +949,10 @@
       "title": "Senior Project",
       "courseLevel": "Upper Division",
       "credits": 3,
-      "creditsEarned": 0.0,
-      "grade": null,
+      "creditsEarned": 3.0,
+      "grade": "A",
       "term": "2026 Block 5",
-      "courseCompletionDate": null,
+      "courseCompletionDate": "10/21/2026",
       "certificate": "Software Development",
       "description": "In this course, students will gain experience with directed individual or group research and study of a topic in computer science not covered by the curriculum. Students will demonstrate their ability to learn and apply new material by completing a significant project.",
       "technology": [
@@ -965,8 +965,8 @@
         "Google Gemini API",
         "Docker"
       ],
-      "completed": false,
-      "status": "Current",
+      "completed": true,
+      "status": "Complete",
       "courselink": "https://byui-cse.github.io/cse499-ww-course/"
     },
     {

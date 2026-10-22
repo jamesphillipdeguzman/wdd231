@@ -3,7 +3,7 @@
  * Provides centralized reactive store for courses, filters, view modes, and modal states.
  */
 
-import { calculateDegreeStats, getCredentialMilestones } from './gpa-calculator.js';
+import { calculateDegreeStats, getCredentialMilestones, resolveCourseCompletionDate } from './gpa-calculator.js';
 
 class TrackerState {
   constructor() {
@@ -81,6 +81,7 @@ class TrackerState {
       creditsEarned: Number(course.creditsEarned) || 0,
       technology: Array.isArray(course.technology) ? course.technology : [],
       status: course.status || (course.completed ? 'Complete' : 'Scheduled'),
+      courseCompletionDate: resolveCourseCompletionDate(course),
     }));
 
     // Extract unique certificates

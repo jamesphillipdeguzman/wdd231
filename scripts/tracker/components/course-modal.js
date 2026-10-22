@@ -105,7 +105,7 @@ export function renderCourseModal(modalContainer, course) {
             <div class="bg-slate-50 dark:bg-slate-900/60 p-3 rounded-xl border border-slate-200/80 dark:border-slate-700/60">
               <span class="text-[10px] uppercase font-bold text-slate-400 block mb-0.5">Completion Date</span>
               <span class="text-xs font-semibold text-slate-800 dark:text-slate-200">
-                ${course.courseCompletionDate || (course.status === 'Current' ? 'Target: Oct 2026' : 'Target: Dec 2026')}
+                ${course.courseCompletionDate || ((course.completed || course.status === 'Complete' || course.status === 'Fulfilled') ? 'Grade Posted' : course.status === 'Current' ? 'Target: Oct 2026' : 'Target: Dec 2026')}
               </span>
             </div>
 
