@@ -987,7 +987,7 @@
         "Aesthetic Analysis"
       ],
       "completed": false,
-      "status": "Scheduled",
+      "status": "In Progress",
       "courselink": null
     },
     {
@@ -1008,7 +1008,7 @@
         "Ecology"
       ],
       "completed": false,
-      "status": "Scheduled",
+      "status": "In Progress",
       "courselink": null
     },
     {
@@ -1029,7 +1029,7 @@
         "Peacebuilding"
       ],
       "completed": false,
-      "status": "Scheduled",
+      "status": "In Progress",
       "courselink": null
     }
   ]
